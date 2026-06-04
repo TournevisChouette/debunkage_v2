@@ -37,4 +37,4 @@ dépôt, les dossiers sont consultables directement en ligne.)*
 Citations littérales : orthographe et ponctuation d'origine conservées.
 
 ---
-▶️ La série : chaîne YouTube **Tournevis** — *[ttps://www.youtube.com/@TourneChouette]*
+▶️ La série : chaîne YouTube **Tournevis** — *[https://www.youtube.com/@TourneChouette]*
