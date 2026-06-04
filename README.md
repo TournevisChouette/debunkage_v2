@@ -1,5 +1,7 @@
 # Tournevis — La Chouette d'Or, débunkage V2 · Dossiers d'accompagnement
 
+▶️ **La chaîne YouTube : [Tournevis](https://www.youtube.com/@TourneChouette)**
+
 Documents de référence de la série vidéo **Tournevis**, qui confronte la
 « solution officielle » de la Chouette d'Or (avril 2025) à ce que Max Valentin,
 l'auteur des énigmes, a dit pendant six ans sur le serveur Maxval (1995-2001).
@@ -38,6 +40,3 @@ dépôt, les dossiers sont consultables directement en ligne.)*
   (la même solution est reprise dans le livre d'octobre 2025).
 
 Citations littérales : orthographe et ponctuation d'origine conservées.
-
----
-▶️ La série : chaîne YouTube **Tournevis** — *[https://www.youtube.com/@TourneChouette]*
