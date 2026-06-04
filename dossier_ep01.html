@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tournevis — Chouette d’Or, débunkage V2 · Épisode 1 — dossier</title>
+<style>
+  :root { --gold:#b8860b; --gold2:#d4af37; --ink:#1c2230; --paper:#fbf8f1; --soft:#6a6256; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+    font-family:Georgia,'Times New Roman',serif; line-height:1.62; }
+  .wrap { max-width:820px; margin:0 auto; padding:48px 22px 120px; }
+  header h1 { font-size:20px; letter-spacing:.16em; text-transform:uppercase; color:var(--soft);
+    font-weight:normal; margin:0 0 6px; }
+  .tagline { font-size:14.5px; font-style:italic; color:var(--gold); margin:0 0 16px; }
+  header h2.ep { font-size:34px; margin:0 0 18px; line-height:1.2; }
+  .intro { background:#fff; border:1px solid #e7ddc4; border-left:4px solid var(--gold2);
+    padding:16px 20px; border-radius:8px; font-size:15.5px; color:#3a3a3a; }
+  .intro b { color:var(--gold); }
+  h2.chunk { font-size:15px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold);
+    border-bottom:2px solid #e7ddc4; padding-bottom:6px; margin:54px 0 14px; }
+  h3.enigme { font-size:22px; margin:34px 0 10px; color:var(--ink); }
+  #script p { margin:0 0 16px; }
+  .refs { display:inline; }
+  a.ref { display:inline-block; font-family:system-ui,sans-serif; font-size:11.5px;
+    text-decoration:none; color:#5a4a10; background:#f3e9c8; border:1px solid #e0d090;
+    border-radius:11px; padding:1px 9px; margin:1px 3px; white-space:nowrap; vertical-align:1px; }
+  a.ref:hover { background:var(--gold2); color:#221c05; }
+  section.madits { margin-top:70px; }
+  article.madit { background:#fff; border:1px solid #e7ddc4; border-radius:10px;
+    padding:16px 20px 12px; margin:0 0 16px; scroll-margin-top:14px; }
+  article.madit:target { border-color:var(--gold2); box-shadow:0 0 0 3px rgba(212,175,55,.25); }
+  .m-head { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:10px; }
+  .m-date { font-family:system-ui,sans-serif; font-size:13px; font-weight:700; color:#fff;
+    background:var(--gold); padding:2px 11px; border-radius:7px; }
+  .m-titre { font-family:system-ui,sans-serif; font-size:13px; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--soft); }
+  .m-id { margin-left:auto; font-family:ui-monospace,monospace; font-size:11px; color:#b8b09c; }
+  .m-q, .m-r { margin:0 0 8px; font-size:16px; }
+  .m-q { color:#4a4a4a; }
+  .lbl { display:inline-block; width:20px; height:20px; line-height:20px; text-align:center;
+    font-family:system-ui,sans-serif; font-size:12px; font-weight:700; border-radius:50%;
+    margin-right:8px; vertical-align:1px; }
+  .m-q .lbl { border:1.5px solid #c9c0a6; color:#9a9078; }
+  .m-r .lbl { border:1.5px solid var(--gold2); color:var(--gold); }
+  .m-back { margin-top:6px; }
+  a.back { font-family:system-ui,sans-serif; font-size:12px; text-decoration:none;
+    color:var(--gold); border:1px solid #e0d090; border-radius:11px; padding:1px 10px; margin-right:6px; }
+  a.back:hover { background:#f3e9c8; }
+  footer { margin-top:60px; font-size:13px; color:var(--soft); border-top:1px solid #e7ddc4; padding-top:14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Tournevis — La Chouette d’Or, débunkage V2</h1>
+  <p class="tagline">Tournevis · la chaîne YouTube qui enquête sur l’affaire de la Chouette d’Or — l’enquête, madit par madit.</p>
+  <h2 class="ep">Épisode 1 — L’affaire &amp; les premières énigmes</h2>
+  <div class="intro">
+    Ce document réunit le <b>script intégral</b> de l’épisode et les <b>57 madits cités</b>,
+    reproduits dans leur <b>format brut</b> (questions-réponses du serveur Maxval, orthographe et
+    ponctuation d’origine conservées). Dans le script, la puce <b>↓ date · titre</b> ouvre le madit
+    correspondant ; sur chaque madit, le bouton <b>↩ retour</b> ramène au passage qui le cite.
+    Tout est vérifiable, traçable.
+  </div>
+</header>
+
+<section id="script">
+<h2 class="chunk">Cold open — l’affaire</h2>
+<p>Une nuit. 24 avril 1993, quelque part en France. Un homme à la pelle. Un trou de quatre-vingts centimètres. Au fond, une statuette de bronze, recouverte de quelques pierres et d&#x27;un peu de terre. </p>
+<p>23 avril 2009, Paris. Seize ans jour pour jour après cette nuit-là. Régis Hauser, alias Max Valentin, l&#x27;auteur des énigmes, meurt sans avoir révélé la solution. La chasse continue. </p>
+<p>3 octobre 2024, trente et un ans plus tard. Michel Becker — illustrateur du livre original, mais pas auteur des énigmes — annonce dans une vidéo YouTube que la chouette a été déterrée. Les deux découvreurs restent anonymes. </p>
+<p>La chouette, est-il dit, dormait à six mètres et quatre-vingt-treize centimètres précisément du centre d&#x27;un triangle de pierres, dans une forêt de Moselle. Au lieu-dit Pierre Saint-Martin, à trois kilomètres au nord-est de Dabo. </p>
+<p>Le 30 avril 2025, avant même que la solution officielle ne soit publiée, l&#x27;Association des Chercheurs de la Chouette d&#x27;Or, l&#x27;A2CO, dépose plainte. Pour escroquerie en bande organisée. La plainte est suivie d&#x27;effet : un juge d&#x27;instruction est nommé pour instruire l&#x27;affaire. </p>
+<p>Quelques jours plus tard, paraît la « solution officielle », en trois temps. D&#x27;abord un film documentaire, « La Découverte de la Chouette d&#x27;Or », réalisé par Alexandre Largeron, en sortie événementielle limitée à deux jours, les 2 et 3 mai 2025. </p>
+<p>Deux jours après, le 4 mai, un PDF de neuf pages publié sur le site des Éditions de la Chouette d&#x27;Or, intitulé « Solutions de la course au trésor sur la trace de la Chouette d&#x27;Or ». </p>
+<p>Et en octobre 2025, un livre publié par les Éditions de la Chouette d&#x27;Or, qui reprend la même solution. Trois supports successifs. Mais une seule et même version, attribuée par Becker à une disquette datée d&#x27;un samedi, trois jours après le dépôt des solutions chez un huissier. </p>
+<p>Le 19 mai 2025, Michel Becker annonce que la nouvelle chasse qu&#x27;il avait préparée — la Chouette 2 — ne pourra pas être lancée. Le sponsor du lot, la maison Christofle, s&#x27;est retiré dans les jours précédents, après la reprise médiatique nationale de la plainte de l&#x27;A2CO. On comprend la prudence : associer la signature d&#x27;une maison de luxe à un projet désormais visé par une instruction pénale pour escroquerie en bande organisée n&#x27;aurait pas été un atout commercial. </p>
+<p>En avril 2026, c&#x27;est l&#x27;A2CO qui se retrouve à son tour poursuivie, en diffamation cette fois, par Michel Becker. Audience devant la 7ème chambre correctionnelle de Strasbourg. </p>
+<p>Trente-deux ans après le début, la chasse au trésor la plus longue de France s&#x27;est muée en affaire judiciaire. Et dans la communauté des chercheurs, une grande partie de ceux qui ont lu cette solution officielle — quel que soit le support — n&#x27;y reconnaissent pas la solution authentique de Max Valentin. </p>
+<p>Aujourd&#x27;hui, on prend cette solution officielle. On la confronte, ligne par ligne, à ce que Max Valentin lui-même a dit pendant six ans, sur le serveur Maxval, entre 1995 et 2001. </p>
+<p>Trente-huit mille questions-réponses, conservées intégralement. Ce qu&#x27;on appelle les madits : la contraction de « Max a dit ». </p>
+<p>Et on pose, à la fin, une question simple. La solution publiée par Michel Becker en 2025 est-elle, oui ou non, la solution authentique de Max Valentin ? </p>
+<p>Une dernière chose, qui éclaire tout ce qui va suivre. </p>
+<p>En octobre 2021, Michel Becker se rend sur le site de la cache, accompagné par Maître Neige-Schmitt, huissière de justice. Il creuse à l&#x27;endroit même où, selon lui, dort la chouette en bronze de Max Valentin. Il trouve un sac plastique. Dedans, pas la chouette. Un canard en fer, rouillé. </p>
+<p>Première version, donnée par Becker à l&#x27;époque : Max lui-même serait venu, en 2005, déterrer la chouette pour la remplacer par ce canard. En oubliant, au passage, de remettre les instructions de jeu. </p>
+<p>Seconde version, racontée plus tard dans son livre d&#x27;octobre 2025 : un inconnu aurait enterré ce canard par hasard, sur ce même lieu — précisément l&#x27;emplacement où la solution officielle place la cache. </p>
+<p>Quoi qu&#x27;il en soit, à l&#x27;endroit indiqué par sa solution, il n&#x27;y a pas la chouette. Il y a un canard. C&#x27;est pour cette raison que, dans cette enquête, on appellera la solution publiée par Michel Becker : la solution Canard. </p>
+<p>Bienvenue dans Tournevis. La Chouette d&#x27;Or — débunkage v2. </p>
+<p>Pour y répondre, on reprend la solution officielle, énigme par énigme — en quatre épisodes. Voici le premier. </p>
+<h2 class="chunk">Préambule · énigmes 530 · 780 · 470 · 580</h2>
+<h3 class="enigme">Préambule méthodologique</h3>
+<p>Avant de commencer, deux mots sur ce qui suit. </p>
+<p>Cette enquête repose sur un travail de fond. L&#x27;intégralité des trente-huit mille madits a été passée au crible. Plus de trois cent cinquante ont été retenus comme pertinents, classés, et confrontés un à un à la solution publiée par Michel Becker en 2025. </p>
+<p>Elle se déroule en quatre épisodes, selon deux grands mouvements. D&#x27;abord, les contradictions énigme par énigme — de la 530 à la 520, dans l&#x27;ordre du livre. Plus d&#x27;une vingtaine de points de friction massifs avec ce que l&#x27;auteur des énigmes lui-même a dit, pendant six années consécutives. </p>
+<p>Ensuite, les contradictions sur la structure même du jeu. Les clés de passage, dont Max disait qu&#x27;elles relient chaque énigme à la suivante. La zone-cible, qui devrait avoir la taille d&#x27;une ville moyenne. La douzième énigme cachée, dont Max parle dans plus de deux mille madits, et qui est absente de la solution Canard. </p>
+<p>Une convention de production. Chaque fois qu&#x27;une affirmation de Max apparaîtra à l&#x27;écran, sa source sera affichée — date de la question, intitulé. Vous pouvez mettre pause. Tout est sourcé, traçable, vérifiable. Le script complet et les transcriptions intégrales des madits cités sont disponibles : le lien est dans la description de la vidéo. </p>
+<p>On ne tranche rien à votre place. On confronte. Vous concluez. </p>
+<h3 class="enigme">Énigme 530 — Ouverture</h3>
+<p>Énigme 530. C&#x27;est une charade — mais ce n&#x27;est pas elle qui va nous occuper. Ce qui compte, c&#x27;est la phrase sur laquelle elle se referme : « Pour trouver mon tout, il suffit d&#x27;être Sage, Car la Vérité, en vérité, ne sera pas affaire de Devin. » </p>
+<p>Trois mots. Sage. Vérité. Devin. </p>
+<p>On pourrait croire à un ornement, trois mots choisis pour la rime. Un chercheur a posé la question tout net : faut-il avoir une idée précise de ces trois mots ? </p>
+<p>Réponse de Max : « Ils ne sont pas là pour faire joli. » <span class="refs"><a class="ref" id="b-12_06_01_48-1" href="#m-12_06_01_48" title="voir le madit">↓ 12 juin 2001 · 530</a></span></p>
+<p>Et il l&#x27;a précisé, en août 1996 : « Si vous interprétez bien le texte de la 530, vous saurez ce que signifient ces trois mots. » <span class="refs"><a class="ref" id="b-06_08_96_8-1" href="#m-06_08_96_8" title="voir le madit">↓ 6 août 1996 · Divers Fg</a></span></p>
+<p>Deux mois plus tard, même fermeté : « En 530, vous devez avoir compris la signification de toute cette phrase. » <span class="refs"><a class="ref" id="b-08_10_96_19-1" href="#m-08_10_96_19" title="voir le madit">↓ 8 octobre 1996 · Verite</a></span></p>
+<p>Un chercheur, un jour, lui écrit : j&#x27;ai résolu la charade, mais je ne vois aucun rapport avec éternité, devin, vérité — me suis-je trompé ? La réponse tombe : « Je pense que oui ! » <span class="refs"><a class="ref" id="b-04_09_95_48-1" href="#m-04_09_95_48" title="voir le madit">↓ 4 septembre 1995 · Ouverture</a></span></p>
+<p>Autrement dit : une solution de la 530 qui ne rend pas compte de ces mots est, de l&#x27;aveu même de l&#x27;auteur, probablement fausse. Or la solution Canard ne décode aucun des trois. Ni Sage, ni Vérité, ni Devin. </p>
+<h3 class="enigme">Énigme 780 — Premier pas</h3>
+<p>L&#x27;énigme 780. Selon la solution Canard, elle livre deux choses : l&#x27;étalon de mesure — le pied français, 33 centimètres — et l&#x27;instruction « qu&#x27;il faut se munir d&#x27;une boussole ». </p>
+<p>Premier problème. Max a dit, des dizaines de fois, qu&#x27;une boussole n&#x27;est pas indispensable dans cette chasse. </p>
+<p>« La boussole n&#x27;est absolument pas indispensable. » <span class="refs"><a class="ref" id="b-17_05_97_50-1" href="#m-17_05_97_50" title="voir le madit">↓ 17 mai 1997 · La Boussole</a></span></p>
+<p>« Je vous confirme bien volontiers qu&#x27;une boussole n&#x27;est pas nécessaire. » <span class="refs"><a class="ref" id="b-02_10_01_37-1" href="#m-02_10_01_37" title="voir le madit">↓ 2 octobre 2001 · Boussole</a></span></p>
+<p>Quinze madits convergents sur la même position. La solution Canard, elle, recommande l&#x27;inverse. <span class="refs"><a class="ref" id="b-01_12_95_49-1" href="#m-01_12_95_49" title="voir le madit">↓ 1 décembre 1995 · 2 Questions A La Trappe!Pp</a><a class="ref" id="b-17_05_97_50-2" href="#m-17_05_97_50" title="voir le madit">↓ 17 mai 1997 · La Boussole</a><a class="ref" id="b-16_03_98_2-1" href="#m-16_03_98_2" title="voir le madit">↓ 16 mars 1998 · Inutile</a><a class="ref" id="b-06_04_96_47-1" href="#m-06_04_96_47" title="voir le madit">↓ 6 avril 1996 · Keva</a><a class="ref" id="b-04_05_96_22-1" href="#m-04_05_96_22" title="voir le madit">↓ 4 mai 1996 · Arbre Ou Boussole ?</a><a class="ref" id="b-03_07_97_10-1" href="#m-03_07_97_10" title="voir le madit">↓ 3 juillet 1997 · Bouli</a><a class="ref" id="b-05_08_96_16-1" href="#m-05_08_96_16" title="voir le madit">↓ 5 août 1996 · 11Eme</a><a class="ref" id="b-17_08_96_16-1" href="#m-17_08_96_16" title="voir le madit">↓ 17 août 1996 · Le Nord</a><a class="ref" id="b-02_06_98_40-1" href="#m-02_06_98_40" title="voir le madit">↓ 2 juin 1998 · Boussole</a><a class="ref" id="b-06_07_00_40-1" href="#m-06_07_00_40" title="voir le madit">↓ 6 juillet 2000 · Necessaire Plus</a><a class="ref" id="b-07_03_00_44-1" href="#m-07_03_00_44" title="voir le madit">↓ 7 mars 2000 · Low Cost</a><a class="ref" id="b-13_07_00_30-1" href="#m-13_07_00_30" title="voir le madit">↓ 13 juillet 2000 · Comment Se Hasarder...</a><a class="ref" id="b-13_09_97_23-1" href="#m-13_09_97_23" title="voir le madit">↓ 13 septembre 1997 · Double Emploi</a><a class="ref" id="b-17_02_99_39-1" href="#m-17_02_99_39" title="voir le madit">↓ 17 février 1999 · Le Doute : Suite</a><a class="ref" id="b-02_10_01_37-2" href="#m-02_10_01_37" title="voir le madit">↓ 2 octobre 2001 · Boussole</a></span></p>
+<p>Deuxième problème, plus structurel. Pour Max, la 780 livre une direction générale qui sert de clé de passage vers l&#x27;énigme suivante. </p>
+<p>« La direction est la clé qui relie la 780 à la suivante, c&#x27;est tout ! » <span class="refs"><a class="ref" id="b-02_10_95_24-1" href="#m-02_10_95_24" title="voir le madit">↓ 2 octobre 1995 · Confirmer V.T. (Lat. Confirmare)</a></span></p>
+<p>Cette clé — élément que Max a martelé pendant six ans — ne figure nulle part dans les neuf pages. La direction générale disparaît purement et simplement de l&#x27;analyse. </p>
+<h3 class="enigme">Énigme 470 — Ce n&#x27;est le bon chemin que si la flèche vise le cœur</h3>
+<p>Énigme 470. Texte final : « Trouve mon tout, et, par l&#x27;Ouverture, tu verras la lumière. » </p>
+<p>Selon la solution Canard, la phrase signifie qu&#x27;on regarde depuis Roncevaux par l&#x27;ouverture — Bourges — et que c&#x27;est le bon chemin. Et c&#x27;est tout. Pas de point géographique nommé pour la lumière. </p>
+<p>Or Max, en mai 1996 : « Si vous n&#x27;avez pas cette lumière à la fin de la 470, vous n&#x27;aurez pas la réponse complète de cette énigme. » <span class="refs"><a class="ref" id="b-04_05_96_13-1" href="#m-04_05_96_13" title="voir le madit">↓ 4 mai 1996 · Classique Ou Halogene?</a></span></p>
+<p>Et il précise : « Tout, ouverture, lumière, alignés ! » <span class="refs"><a class="ref" id="b-01_03_00_12-1" href="#m-01_03_00_12" title="voir le madit">↓ 1 mars 2000 · 470</a></span></p>
+<p>Il l&#x27;a reformulé cent fois : de mon tout, vers la lumière, en passant par l&#x27;ouverture — en ligne droite. <span class="refs"><a class="ref" id="b-02_09_99_9-1" href="#m-02_09_99_9" title="voir le madit">↓ 2 septembre 1999 · Rhodantrait2</a></span></p>
+<p>La même réponse, à des dizaines de chercheurs, six ans durant. <span class="refs"><a class="ref" id="b-23_08_96_18-1" href="#m-23_08_96_18" title="voir le madit">↓ 23 août 1996 · 470 Toujours Et Encore</a><a class="ref" id="b-06_07_97_7-1" href="#m-06_07_97_7" title="voir le madit">↓ 6 juillet 1997 · Alignement</a><a class="ref" id="b-09_10_97_11-1" href="#m-09_10_97_11" title="voir le madit">↓ 9 octobre 1997 · Gral-1</a><a class="ref" id="b-05_12_97_23-1" href="#m-05_12_97_23" title="voir le madit">↓ 5 décembre 1997 · P-470</a><a class="ref" id="b-08_01_98_23-1" href="#m-08_01_98_23" title="voir le madit">↓ 8 janvier 1998 · Graal-1</a><a class="ref" id="b-18_03_98_48-1" href="#m-18_03_98_48" title="voir le madit">↓ 18 mars 1998 · 470 (++)</a><a class="ref" id="b-17_11_98_16-1" href="#m-17_11_98_16" title="voir le madit">↓ 17 novembre 1998 · Gany Suite</a><a class="ref" id="b-29_01_99_17-1" href="#m-29_01_99_17" title="voir le madit">↓ 29 janvier 1999 · Pas De Probleme</a><a class="ref" id="b-29_03_99_21-1" href="#m-29_03_99_21" title="voir le madit">↓ 29 mars 1999 · Lolo</a><a class="ref" id="b-23_06_99_33-1" href="#m-23_06_99_33" title="voir le madit">↓ 23 juin 1999 · Totem</a><a class="ref" id="b-05_08_99_23-1" href="#m-05_08_99_23" title="voir le madit">↓ 5 août 1999 · Alignement 470</a><a class="ref" id="b-19_10_99_15-1" href="#m-19_10_99_15" title="voir le madit">↓ 19 octobre 1999 · Graal</a><a class="ref" id="b-21_01_00_13-1" href="#m-21_01_00_13" title="voir le madit">↓ 21 janvier 2000 · 470</a><a class="ref" id="b-07_03_00_23-1" href="#m-07_03_00_23" title="voir le madit">↓ 7 mars 2000 · Questions</a><a class="ref" id="b-27_09_01_45-1" href="#m-27_09_01_45" title="voir le madit">↓ 27 septembre 2001 · Rene 470</a></span></p>
+<p>Trois points, sur une droite. Tout — Roncevaux. Ouverture — Bourges. Lumière — quelque part au-delà. Cette droite, prolongée, file vers le nord-est de la France — Bourgogne, Champagne-Ardenne — et au-delà vers la frontière belge. On retiendra l&#x27;orientation. On y reviendra quand la solution Canard nommera la lumière, dans la 560. </p>
+<h3 class="enigme">Énigme 580 — Le bon sens, c&#x27;est le sens du contresens</h3>
+<p>Énigme 580. Dix lignes de chiffres à décrypter. Selon le PDF, le résultat est dix villes dont les initiales suivent l&#x27;alphabet, de A à J — d&#x27;Angers à Jarnac. </p>
+<p>Et un détail textuel troublant. En tête de section 580, le PDF cite la dixième ligne exactement comme dans le livre : la suite de chiffres, suivie de « vaudra 0 ». Le texte canonique. </p>
+<p>Mais quelques lignes plus bas, dans un exemple de décryptage, la solution Canard reprend cette même suite de chiffres et la conclut cette fois par : « est dixième, soit Angers est dixième ». </p>
+<p>« Vaudra 0 » est devenu « est dixième ». </p>
+<p>Or « est dixième » n&#x27;apparaît nulle part dans le livre publié à l&#x27;été 1993. Et Max veillait à la lettre de cette formulation : </p>
+<p>quand des chercheurs proposaient de lire « vaut » ou « égal » à la place de « vaudra », il refusait — « vaudra », répétait-il, parce que l&#x27;action se situe dans le futur. Quatre fois, en six ans, sur ce seul mot. <span class="refs"><a class="ref" id="b-20_05_96_47-1" href="#m-20_05_96_47" title="voir le madit">↓ 20 mai 1996 · Keva</a><a class="ref" id="b-05_07_96_34-1" href="#m-05_07_96_34" title="voir le madit">↓ 5 juillet 1996 · Keva</a><a class="ref" id="b-17_12_96_44-1" href="#m-17_12_96_44" title="voir le madit">↓ 17 décembre 1996 · Keva</a><a class="ref" id="b-01_10_99_4-1" href="#m-01_10_99_4" title="voir le madit">↓ 1 octobre 1999 · Graal 1</a></span></p>
+<p>Le PDF cite donc, en tête de section, la formulation du livre. Mais dans son décryptage, il s&#x27;appuie sur une formulation que le livre ne contient pas. </p>
+<p>Cette formulation vient d&#x27;un autre document : un « Cahier des charges » publié par Becker dans ses « Cahiers secrets », et qu&#x27;il présente comme un brouillon préparatoire écrit par Max. </p>
+<p>Aucune source indépendante n&#x27;a jamais certifié cette attribution. La seule personne à affirmer que ce document est de la main de Max, c&#x27;est Michel Becker lui-même. </p>
+<h2 class="chunk">Énigmes 600 · 500</h2>
+<h3 class="enigme">Énigme 600 — Le navire noir perché</h3>
+<p>Énigme 600. Décryptage chimique : on remplace les lettres par les masses atomiques d&#x27;éléments du tableau périodique. Le résultat est une phrase : la clef se cache sur un navire noir perché. </p>
+<p>Selon la solution Canard, ce « navire noir perché », c&#x27;est le rocher de Dabo, en Moselle. Justification, citée mot pour mot dans le PDF : « C&#x27;est d&#x27;ailleurs ainsi qu&#x27;il est décrit dans la plupart des ouvrages traitant des Vosges du Nord. » </p>
+<p>1993. Avant internet. Comment un joueur de Bordeaux, de Bretagne ou de Marseille était-il censé identifier « navire noir perché » à un rocher mosellan en consultant « la plupart des ouvrages traitant des Vosges du Nord » ? Or pour aller chercher un tel ouvrage, il faut déjà avoir une raison de regarder vers les Vosges du Nord. Et aucune énigme jusqu&#x27;à la 600 n&#x27;en donne. </p>
+<p>L&#x27;identification est circulaire. </p>
+<p>Et même si, par miracle, un joueur tombait sur le bon ouvrage — encore aurait-il fallu qu&#x27;une énigme précédente l&#x27;oriente vers les Vosges plutôt que vers les Pyrénées, les Alpes ou le Massif central, où l&#x27;on trouve aussi des rochers en forme de navire. Aucune ne le fait. </p>
+<p>Dans la solution Canard, identifier Dabo à la 600, sans le secours des énigmes suivantes, relève du coup de chance. Pas de la résolution. </p>
+<h3 class="enigme">Énigme 500 — La spirale à quatre centres</h3>
+<p>Énigme 500. Le décryptage est élégant : un morse codé en valeurs musicales, qui donne « CARIGNAN ». Puis une orthogonale, et la spirale à quatre centres. </p>
+<p>Reprenons ce cheminement. De « CARIGNAN », et d&#x27;une droite déjà connue, la solution Canard trace une orthogonale — une perpendiculaire. Cette droite est censée filer jusqu&#x27;à Dabo. Mais reportée sur la carte, elle s&#x27;arrête à près de six kilomètres du rocher. </p>
+<p>Six kilomètres. Et là, l&#x27;échelle change tout. La carte du jeu — celle que Max impose pour les onze énigmes — est au millionième : un millimètre sur la carte, c&#x27;est un kilomètre sur le terrain. L&#x27;orthogonale de la solution Canard manque donc Dabo de près de six millimètres sur la carte. </p>
+<p>Or un chercheur avait demandé à Max : si, en vérifiant une hypothèse, mon traçage tombe à quatre ou cinq millimètres à côté, est-ce encore valable ? Réponse : « cinq millimètres, ça commence à faire beaucoup ». Et encore, Max parlait des déformations du papier — pas d&#x27;une solution qui tombe à côté. La solution Canard, elle, est à six millimètres de Dabo. <span class="refs"><a class="ref" id="b-09_11_96_29-1" href="#m-09_11_96_29" title="voir le madit">↓ 9 novembre 1996 · Question D&#x27;Ordre General</a></span></p>
+<p>Selon le PDF, cette spirale, c&#x27;est « la petite route qui monte vers l&#x27;église Saint-Léon, à Dabo ; et qui a exactement la forme géométrique d&#x27;une spirale à 4 centres. » </p>
+<p>Une route de montagne. Exactement la forme géométrique. L&#x27;adverbe « exactement » est dans le texte. </p>
+<p>Voyons ce que Max disait de cette figure. </p>
+<p>« Il s&#x27;agit bien d&#x27;une spirale à 4 centres, dans l&#x27;acception académique du terme. » <span class="refs"><a class="ref" id="b-04_01_99_39-1" href="#m-04_01_99_39" title="voir le madit">↓ 4 janvier 1999 · Fredibule Et La Spirale Ile Etait..</a></span></p>
+<p>« La spirale à 4 centres est une figure géométrique classique, j&#x27;allais dire de base. » <span class="refs"><a class="ref" id="b-12_09_97_20-1" href="#m-12_09_97_20" title="voir le madit">↓ 12 septembre 1997 · Spirale A Quatre Centres ? (Suite)</a></span></p>
+<p>« Ouvrez un précis de géométrie et regardez sous spirale à 4 centres. » <span class="refs"><a class="ref" id="b-21_10_98_38-1" href="#m-21_10_98_38" title="voir le madit">↓ 21 octobre 1998 · Spirale (Suite)</a></span></p>
+<p>Quatorze madits convergents. Toujours la même réponse, six années durant. <span class="refs"><a class="ref" id="b-04_08_95_39-1" href="#m-04_08_95_39" title="voir le madit">↓ 4 août 1995 · Spirale</a><a class="ref" id="b-06_08_95_2-1" href="#m-06_08_95_2" title="voir le madit">↓ 6 août 1995 · Spirale - 2</a><a class="ref" id="b-11_10_96_50-1" href="#m-11_10_96_50" title="voir le madit">↓ 11 octobre 1996 · Trop Precis (Suite)</a><a class="ref" id="b-03_11_96_20-1" href="#m-03_11_96_20" title="voir le madit">↓ 3 novembre 1996 · 500</a><a class="ref" id="b-03_11_96_29-1" href="#m-03_11_96_29" title="voir le madit">↓ 3 novembre 1996 · Spirale</a><a class="ref" id="b-12_11_96_34-1" href="#m-12_11_96_34" title="voir le madit">↓ 12 novembre 1996 · Intox</a><a class="ref" id="b-06_02_97_39-1" href="#m-06_02_97_39" title="voir le madit">↓ 6 février 1997 · 4 Centres</a><a class="ref" id="b-12_09_97_20-2" href="#m-12_09_97_20" title="voir le madit">↓ 12 septembre 1997 · Spirale A Quatre Centres ? (Suite)</a><a class="ref" id="b-16_09_97_50-1" href="#m-16_09_97_50" title="voir le madit">↓ 16 septembre 1997 · Spirale</a><a class="ref" id="b-23_02_98_28-1" href="#m-23_02_98_28" title="voir le madit">↓ 23 février 1998 · Fridolin Spirale</a><a class="ref" id="b-21_10_98_38-2" href="#m-21_10_98_38" title="voir le madit">↓ 21 octobre 1998 · Spirale (Suite)</a><a class="ref" id="b-04_01_99_39-2" href="#m-04_01_99_39" title="voir le madit">↓ 4 janvier 1999 · Fredibule Et La Spirale Ile Etait..</a><a class="ref" id="b-01_02_00_33-1" href="#m-01_02_00_33" title="voir le madit">↓ 1 février 2000 · 500</a><a class="ref" id="b-24_10_00_39-1" href="#m-24_10_00_39" title="voir le madit">↓ 24 octobre 2000 · Carte Et Indices</a></span></p>
+<p>Une figure mathématique, construite à la règle et au compas. Pas une métaphore. </p>
+<p>Or une petite route de montagne, tracée en lacets pour franchir un dénivelé sur un piton rocheux conique, n&#x27;est pas une spirale à quatre centres au sens géométrique. La projection sur un plan d&#x27;une route qui s&#x27;enroule autour d&#x27;un cône donne, au mieux, une spirale logarithmique. Que Max a explicitement écartée. </p>
+<p>« Dans le cas qui nous occupe, la précision quant à son nombre de centres impose l&#x27;appellation spirale à 4 centres. » <span class="refs"><a class="ref" id="b-04_08_95_39-2" href="#m-04_08_95_39" title="voir le madit">↓ 4 août 1995 · Spirale</a></span></p>
+<p>Et c&#x27;est précisément là que la solution Canard bute. Une spirale à quatre centres n&#x27;est pas seulement une courbe enroulée. Elle est définie par quatre points précis — quatre centres — autour desquels s&#x27;enchaînent quatre arcs de cercle de rayons croissants. Sans ces quatre points, pas de figure. </p>
+<p>Et ces quatre arcs de cercle, ces quatre centres, ne se rencontrent pas dans la nature. Une spirale à quatre centres ne naît pas d&#x27;un relief ni d&#x27;un hasard : c&#x27;est une figure construite. Pour qu&#x27;une route en soit vraiment une, il aurait fallu que ses bâtisseurs la tracent à la règle et au compas, arc après arc, autour de quatre centres choisis — et, surtout, qu&#x27;ils aient eu l&#x27;intention d&#x27;en dessiner une. </p>
+<p>Or une route de montagne ne se trace pas au compas. Elle épouse la pente, contourne le rocher, suit le passage le plus praticable. Rencontrer une vraie spirale à quatre centres suppose, forcément, une intention humaine. La petite route qui monte à Saint-Léon n&#x27;en porte aucune. </p>
+<p>Et le nombre est important. Un chercheur demande à Max : « Est-il important que la spirale soit à 4 centres ? Ou se peut-il que ce soit une spirale toute bête ? » Réponse : « Si j&#x27;ai précisé à 4 centres, c&#x27;est qu&#x27;il y a vraiment une raison. » <span class="refs"><a class="ref" id="b-03_11_96_20-2" href="#m-03_11_96_20" title="voir le madit">↓ 3 novembre 1996 · 500</a></span></p>
+<p>Une raison. Pas un détail. Pas une ornementation. Pour Max, les quatre centres ont une position, un statut, un rôle dans le décryptage. </p>
+<p>Et sur la route qui monte vers Saint-Léon de Dabo, où sont ces quatre centres ? </p>
+<p>La solution Canard ne le dit pas. Elle décrit la route, sa forme générale, son enroulement. Mais elle ne nomme aucun point précis comme centre. Elle ne localise aucun centre sur la carte. Elle ne les exploite ni dans le décryptage de la 500, ni dans l&#x27;enchaînement vers la suite. Les quatre centres, structure fondamentale de la figure que Max impose, disparaissent purement et simplement de l&#x27;analyse. </p>
+<p>Or sans les quatre centres, l&#x27;appellation « spirale à quatre centres » perd son sens — celui-là même que Max disait imposé par la précision du nom. </p>
+<p>On objectera — et beaucoup le font — que Max lui-même a reconnu qu&#x27;une spirale à quatre centres ne serait pas forcément parfaite. C&#x27;est exact : si on doit la tracer, elle est parfaite ; si on doit la trouver dans la nature, elle l&#x27;est moins. Et l&#x27;on en conclut que la route de Dabo, toute difforme qu&#x27;elle soit, ferait l&#x27;affaire. <span class="refs"><a class="ref" id="b-03_11_96_29-2" href="#m-03_11_96_29" title="voir le madit">↓ 3 novembre 1996 · Spirale</a></span></p>
+<p>Mais c&#x27;est confondre l&#x27;exécution et la figure. Tracez une spirale à quatre centres à la craie, sur le bitume : elle sera tremblée, maladroite — et ce sera pourtant, par construction et par intention, une vraie spirale à quatre centres. Quatre centres, quatre arcs, une figure voulue, simplement mal tracée. </p>
+<p>La route de Saint-Léon, elle, n&#x27;a pas des centres maladroits : elle n&#x27;en a aucun. Pas des arcs approximatifs : aucun arc. Elle n&#x27;est pas une spirale à quatre centres imparfaite. Elle n&#x27;en est pas une du tout. Imparfait ne veut pas dire n&#x27;importe quoi. </p>
+<p>Et il y a un madit que Max a lâché — un seul, et c&#x27;est rare. Octobre 2000. Il sort de sa règle de non-validation. </p>
+<p>Question d&#x27;un chercheur, Klaus : « Vous dites qu&#x27;une carte ne contient pas d&#x27;indice. Par conséquent, la forme d&#x27;une route ne peut pas être un indice, et encore moins une solution. OK ? » </p>
+<p>Réponse de Max : « Un indice, sûrement pas. Pour la solution, je ne peux pas répondre, par principe, sauf à vous dire que si le tracé de cette route, relevé sur une carte, était votre hypothèse de solution, il faudrait peut-être revoir votre copie. » <span class="refs"><a class="ref" id="b-24_10_00_39-2" href="#m-24_10_00_39" title="voir le madit">↓ 24 octobre 2000 · Carte Et Indices</a></span></p>
+<p>C&#x27;est fini pour aujourd&#x27;hui. La suite au prochain épisode, avec trois nouvelles énigmes : « du ciel vient la lumière », un passage qui se mérite — « ad augusta per angusta » — et l&#x27;avant-dernière, celle que beaucoup tiennent pour la plus difficile de toute la chasse. On verra si la solution officielle leur résiste mieux. On se retrouve très vite, pour la suite, sur Tournevis. </p>
+</section>
+
+<section class="madits">
+  <h2 class="chunk">Les madits cités — texte intégral</h2>
+<article class="madit" id="m-12_06_01_48">
+  <div class="m-head"><span class="m-date">12 juin 2001</span>
+    <span class="m-titre">530</span>
+    <span class="m-id">12_06_01_48</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Faut-il avoir une idée très précise des mots sage, vérité, devin ? Cogito</p>
+  <p class="m-r"><span class="lbl">R</span>Ils ne sont pas là pour faire joli, Cogito. Mais à quoi ils servent exactement, je ne peux pas vous le dire, évidemment. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-12_06_01_48-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-06_08_96_8">
+  <div class="m-head"><span class="m-date">6 août 1996</span>
+    <span class="m-titre">DIVERS FG</span>
+    <span class="m-id">06_08_96_8</span></div>
+  <p class="m-q"><span class="lbl">Q</span>En 560, il faut faire quelque chose entre le s 2 fois ou Neptune intervient. Vous voulez dire quelque chose de spécial et important, pas seulement marcher sur la terre ferme, par exemple ? En 530, est-ce que je sais à la fin de l&#x27;énigme la signification de sage, idem pour vérité et pour devin ? Amitiés Fg</p>
+  <p class="m-r"><span class="lbl">R</span>Il faut faire quelque chose. C&#x27;est tout ce que je peux vous dire. Si vous interprétez bien ce que vous dit le texte de la 530, vous saurez ce que signifient ces 3 mots. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-06_08_96_8-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-08_10_96_19">
+  <div class="m-head"><span class="m-date">8 octobre 1996</span>
+    <span class="m-titre">VERITE</span>
+    <span class="m-id">08_10_96_19</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Vous avez dit que la vérité de la 530 pouvait être comprise dans la 530 or celle-ci est présentée au futur ce qui laisse penser qu&#x27;on la trouve plus tard. En est-il ?</p>
+  <p class="m-r"><span class="lbl">R</span>En 530, vous devez avoir compris la signification de toute cette phrase ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-08_10_96_19-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-04_09_95_48">
+  <div class="m-head"><span class="m-date">4 septembre 1995</span>
+    <span class="m-titre">OUVERTURE</span>
+    <span class="m-id">04_09_95_48</span></div>
+  <p class="m-q"><span class="lbl">Q</span>J&#x27;ai résolu la charade de la 530 mais je ne vois aucun rapport avec éternité, devin, vérité... Peut-on raisonnablement en déduire que je me suis trompé dans cette résolution ? Amitiés</p>
+  <p class="m-r"><span class="lbl">R</span>Je pense que oui ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-04_09_95_48-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-17_05_97_50">
+  <div class="m-head"><span class="m-date">17 mai 1997</span>
+    <span class="m-titre">LA BOUSSOLE</span>
+    <span class="m-id">17_05_97_50</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour max, la boussole est-elle indispensable sur le terrain ou peut-on faire sans ? et ceci pour déterminer avec précision le trou. merci</p>
+  <p class="m-r"><span class="lbl">R</span>La boussole n&#x27;est absolument pas indispensable. amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-17_05_97_50-1">↩ retour 1</a> <a class="back" href="#b-17_05_97_50-2">↩ retour 2</a></div>
+</article>
+<article class="madit" id="m-02_10_01_37">
+  <div class="m-head"><span class="m-date">2 octobre 2001</span>
+    <span class="m-titre">BOUSSOLE</span>
+    <span class="m-id">02_10_01_37</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Navrée de vous poser une fois de plus cette question, Max, mais je voudrais être tout à fait sûre de devoir abandonner ma piste : vous confirmez bien qu&#x27;une boussole ne me sera d&#x27;aucune utilité quand je serai à quelques mètres de la cache (j&#x27;y crois toujours). Amitiés -- Nelly</p>
+  <p class="m-r"><span class="lbl">R</span>Je confirme. Bon, il est maintenant de notoriété publique que j&#x27;enterre des aimants en même temps que les contremarques, ce qui me permet, en approchant une boussole de la cache, de vérifier que tout est en place. Si c&#x27;est à cela que vous faites allusion, je voudrais préciser que cela ne concerne pas les chercheurs, mais seulement moi. Les chercheurs ne sont pas supposés chercher des aimants ! De plus, je n&#x27;ai jamais dit que la cache de la chouette contenait un aimant en plus de la contremarque. Si ce n&#x27;est pas à cela que vous faites allusion, je vous confirme bien volontiers qu&#x27;une boussole n&#x27;est pas nécessaire. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-02_10_01_37-1">↩ retour 1</a> <a class="back" href="#b-02_10_01_37-2">↩ retour 2</a></div>
+</article>
+<article class="madit" id="m-01_12_95_49">
+  <div class="m-head"><span class="m-date">1 décembre 1995</span>
+    <span class="m-titre">2 Questions a la trappe!PP</span>
+    <span class="m-id">01_12_95_49</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Je réitère : si il y a besoin de mesures dans la 12eme, il y a-t-il toujours qu&#x27;un e seule mesure? -2/est-ce que sur le terrain, on aura besoin d&#x27;une boussole? (vous m&#x27;avez déjà dit non pour un décamètre et une jumelle) amitiés, pp</p>
+  <p class="m-r"><span class="lbl">R</span>Mesure : désolé, no comment dès lors qu&#x27;il s&#x27;agit de la 12eme ! boussole : j&#x27;ai déjà précisé qu&#x27;une boussole n&#x27;est pas absolument indispensable. amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-01_12_95_49-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-16_03_98_2">
+  <div class="m-head"><span class="m-date">16 mars 1998</span>
+    <span class="m-titre">Inutile</span>
+    <span class="m-id">16_03_98_2</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Confirmez-vous que, in situ, je n&#x27;aurai pas besoin de boussole ? Amicalement. Phil.</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;ai déjà dit qu&#x27;une boussole n&#x27;est absolument pas indispensable. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-16_03_98_2-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-06_04_96_47">
+  <div class="m-head"><span class="m-date">6 avril 1996</span>
+    <span class="m-titre">KEVA</span>
+    <span class="m-id">06_04_96_47</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour Max. Je suis un petit nouveau. Je suis très nerveux et j&#x27;ai du mal à tenir une boussole, l&#x27;aiguille bouge tout le temps. Malgré ça, est-ce que je peux trouver la cache facilement?</p>
+  <p class="m-r"><span class="lbl">R</span>Une boussole n&#x27;est pas indispensable sur le terrain. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-06_04_96_47-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-04_05_96_22">
+  <div class="m-head"><span class="m-date">4 mai 1996</span>
+    <span class="m-titre">ARBRE OU BOUSSOLE ?</span>
+    <span class="m-id">04_05_96_22</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, vous avez dit qu&#x27;une boussole n&#x27;est pas indispensable pour déterrer la chouette. Est-ce à dire que les énigmes donnent un point précis sur la 2ème carte ainsi que la façon de se comporter sur le terrain pour atteindre la chouette, ceci sans boussole, bien que l&#x27;arbuste soit mort ? Merci Fulcanelli.</p>
+  <p class="m-r"><span class="lbl">R</span>C&#x27;est exact. La 12ème vous amène sur l&#x27;endroit pile poil, et une boussole n&#x27;est pas indispensable pour cela. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-04_05_96_22-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-03_07_97_10">
+  <div class="m-head"><span class="m-date">3 juillet 1997</span>
+    <span class="m-titre">BOULI</span>
+    <span class="m-id">03_07_97_10</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, tu as dit qu&#x27;on avait pas besoin de boussole pour cette chasse; mais sans boussole pour s&#x27;orienter, on peut pas vraiment être précis en direction. Or un jour tu m&#x27;as dit qu&#x27;on pouvait la trouver pile poil cette chouette.... Alors quoi? Tu m&#x27;as quand même pas induit en erreur???</p>
+  <p class="m-r"><span class="lbl">R</span>Je confirme que la solution finale vous amène sur la chouette pile poil. Une boussole n&#x27;est pas indispensable pour cela... Il m&#x27;est impossible, bien sûr, de vous dire comment on fait. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-03_07_97_10-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-05_08_96_16">
+  <div class="m-head"><span class="m-date">5 août 1996</span>
+    <span class="m-titre">11EME</span>
+    <span class="m-id">05_08_96_16</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Savoir utiliser une boussole est-il utile pour résoudre la 11ème énigme... malte se?</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;ai déjà dit qu&#x27;une boussole n&#x27;était pas indispensable pour cette chasse, malte se. ceci répond, je pense, à votre question. amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-05_08_96_16-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-17_08_96_16">
+  <div class="m-head"><span class="m-date">17 août 1996</span>
+    <span class="m-titre">LE NORD</span>
+    <span class="m-id">17_08_96_16</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Sur place, si on estime qu&#x27;il faut se diriger vers le nord pour découvrir la cache, est-ce plus sûr d&#x27;avoir sa boussole, ou la configuration du lieu suffit-elle à nous faire comprendre où est le nord ?</p>
+  <p class="m-r"><span class="lbl">R</span>Pas besoin d&#x27;une boussole sur place. La super-solution ne vous envoie pas dans les environs, mais sur la cache pile-poil ! Donc, il n&#x27;est pas nécessaire de faire des recherches sur place. Les éventuelles recherches doivent être faites avant votre déplacement. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-17_08_96_16-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-02_06_98_40">
+  <div class="m-head"><span class="m-date">2 juin 1998</span>
+    <span class="m-titre">BOUSSOLE</span>
+    <span class="m-id">02_06_98_40</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Hello max, j&#x27;ai lu qu&#x27;il n&#x27;y avait pas besoin de boussole sur place. Ca veut dire que sur place, il y a même pas besoin de savoir où se trouve vaguement l&#x27;ouest, l&#x27;est, le nord ou le sud ? Merci d&#x27;avance. -- tom</p>
+  <p class="m-r"><span class="lbl">R</span>Je pense que pour repérer les points cardinaux, nul besoin de boussole ! (mais je ne peux vous dire si le repérage des points cardinaux intervient sur place. Je ne donne aucune info concernant la supersolution, désolé.) amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-02_06_98_40-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-06_07_00_40">
+  <div class="m-head"><span class="m-date">6 juillet 2000</span>
+    <span class="m-titre">NECESSAIRE PLUS</span>
+    <span class="m-id">06_07_00_40</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Suite à qr n°10 du 29/6, la boussole peut-elle être utile sur le terrain pour localiser la cache pile-poil ou elle ne servirait réellement à rien, ou pourrait-on jouer aux castors juniors avec le soleil et une montre ou regarder où se trouve la mousse des arbres ? En un mot, on n&#x27;a aucune orientation pour trouver la bête ger main.</p>
+  <p class="m-r"><span class="lbl">R</span>Tout ce que je peux dire, c&#x27;est qu&#x27;une boussole n&#x27;est pas nécessaire. Mais pour le reste, je ne peux donner aucune info. Tout ce qui concerne la fin du jeu est tabou ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-06_07_00_40-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-07_03_00_44">
+  <div class="m-head"><span class="m-date">7 mars 2000</span>
+    <span class="m-titre">LOW COST</span>
+    <span class="m-id">07_03_00_44</span></div>
+  <p class="m-q"><span class="lbl">Q</span>bonsoir max. 580 : ai-je l&#x27;utilité de la boussole dans cette énigme ? merci. john</p>
+  <p class="m-r"><span class="lbl">R</span>par principe, je ne réponds pas à cette question, john. pour ce qui concerne les boussoles, j&#x27;ai simplement dit qu&#x27;elles n&#x27;étaient pas nécessaires pour localiser la cache. amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-07_03_00_44-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-13_07_00_30">
+  <div class="m-head"><span class="m-date">13 juillet 2000</span>
+    <span class="m-titre">COMMENT SE HASARDER...</span>
+    <span class="m-id">13_07_00_30</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Et distinguer un lieu précis au mètre près, alors que l&#x27;on ne dispose ni de boussole ni de détecteur... Amitiés A.M.G</p>
+  <p class="m-r"><span class="lbl">R</span>Eh bien, c&#x27;est en gros ce que la supersolution vous apprendra ! (plus d&#x27;une vingtaine de chasses au trésor que j&#x27;ai organisées sont aujourd&#x27;hui terminées, et hormis pour une seule, il n&#x27;a jamais été nécessaire de disposer d&#x27;une boussole. Et aucune ne nécessitait un détecteur.) Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-13_07_00_30-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-13_09_97_23">
+  <div class="m-head"><span class="m-date">13 septembre 1997</span>
+    <span class="m-titre">Double emploi</span>
+    <span class="m-id">13_09_97_23</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Cher Max, un même élément - disons par exemple la boussole - peut-il servir deux fois : 1 - pour la zone uniquement, 2 - pour la ss ensuite ? Amitiés -- Soryu et Yamato. Ps : Yamamoto = amiral ; Yamato = cuirassé.</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;ai déjà dit qu&#x27;une boussole n&#x27;était absolument pas indispensable dans la zone... mais vous parlez &quot;d&#x27;éléments&quot; : là, je ne peux pas vous répondre car ce mot peut recouvrir un nombre infini de choses. Amitiés -- Max Ps : vous avez raison, je pensais à l&#x27;amiral.</p>
+  <div class="m-back"><a class="back" href="#b-13_09_97_23-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-17_02_99_39">
+  <div class="m-head"><span class="m-date">17 février 1999</span>
+    <span class="m-titre">LE DOUTE : SUITE</span>
+    <span class="m-id">17_02_99_39</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Je pense avoir - d&#x27;après mes solutions - trouvé le site à 99 %. Que dois-je faire des 1000 % dont vous parlez ? Sur place, un crayon, une feuille et une boussole me seront-ils d&#x27;une utilité ? Simple anticipation - Merci - Éole</p>
+  <p class="m-r"><span class="lbl">R</span>99 % ne suffisent pas. Regardez combien de chercheurs sont partis creuser et sont revenus bredouilles. Je suis sûr qu&#x27;ils n&#x27;avaient pas tout. D&#x27;ailleurs, la plupart d&#x27;entre eux l&#x27;ont honnêtement reconnu par la suite... Tout ce que je peux vous dire, c&#x27;est qu&#x27;une boussole n&#x27;est pas indispensable. Pour le reste, vous déciderez en fonction de la supersolution... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-17_02_99_39-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-02_10_95_24">
+  <div class="m-head"><span class="m-date">2 octobre 1995</span>
+    <span class="m-titre">CONFIRMER v.t. (lat. Confirmare)</span>
+    <span class="m-id">02_10_95_24</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Rendre qqch plus sur ; en assurer l&#x27;authenticité. D&#x27;après la définition, l&#x27;élément qui permet de confirmer ne peut en aucun cas avoir servi à trouver. Sinon c&#x27;est au mieux une redondance. Vous confirmez Larousse ?</p>
+  <p class="m-r"><span class="lbl">R</span>Servi à trouver quoi ? Vous n&#x27;êtes pas très clair... Dans ma réponse ci-dessous au message intitulé &quot;Confirmer quoi ?&quot;, je précise que cet élément &quot;permet de confirmer quelque chose dans l&#x27;énigme suivante&quot;. La direction est la clé qui relie la 780 à la suivante, c&#x27;est tout ! J&#x27;ai toujours dit que les clés étaient nature &quot;diverses et variées&quot;. Cette nature change donc d&#x27;une énigme à l&#x27;autre, même si parfois il peut y avoir des airs de ressemblance... Je trouve qu&#x27;on fait beaucoup de cas de cette histoire de &quot;direction&quot;, alors qu&#x27;il y a quelque chose de bien plus important à trouver dans la 780 que la clé ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-02_10_95_24-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-04_05_96_13">
+  <div class="m-head"><span class="m-date">4 mai 1996</span>
+    <span class="m-titre">CLASSIQUE OU HALOGENE?</span>
+    <span class="m-id">04_05_96_13</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Je cherche depuis un bon moment ce que pourrait bien être la lumière, indispensable à trouver en 470, avant de passer à la suite. Pensez-vous qu&#x27;on puisse avoir trouvé mon tout (470) et l&#x27;ouverture, sans être foutu d&#x27;identifier cette lumière ? Ou ce blocus est-il révélateur d&#x27;une erreur passée ?</p>
+  <p class="m-r"><span class="lbl">R</span>Si vous n&#x27;avez pas cette lumière à la fin de la 470, vous n&#x27;aurez pas la réponse complète de cette énigme. C&#x27;est tout ce que je peux dire.</p>
+  <div class="m-back"><a class="back" href="#b-04_05_96_13-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-01_03_00_12">
+  <div class="m-head"><span class="m-date">1 mars 2000</span>
+    <span class="m-titre">470</span>
+    <span class="m-id">01_03_00_12</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Flèche - ouverture - cœur sont-ils alignés ? Mon tout ouverture cœur alignés ?</p>
+  <p class="m-r"><span class="lbl">R</span>&quot;Tout&quot;, ouverture, lumière, alignés ! Pour le reste, à vous de vous faire une opinion ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-01_03_00_12-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-02_09_99_9">
+  <div class="m-head"><span class="m-date">2 septembre 1999</span>
+    <span class="m-titre">RHODANTRAIT2</span>
+    <span class="m-id">02_09_99_9</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Suite à ma question rhodantrait ci-dessus et pour qu&#x27;il n&#x27;y ait pas de quiproquo, vous me confirmez qu&#x27;il faut tracer une droite entre le tout de la 470 et la lul ière en passant par l&#x27;ouverture ? Cordialement -- rhodan ps : chapeau pour la manière d&#x27;éviter le p iège de straits et de la spirale !</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;ai souvent précisé : de mon &quot;tout&quot; vers la lumière, en passant par l&#x27;ouverture. Cela se fait bien sur en ligne droite. Amitiés -- max ps. Piège : c&#x27;est un métier, monsieur !</p>
+  <div class="m-back"><a class="back" href="#b-02_09_99_9-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-23_08_96_18">
+  <div class="m-head"><span class="m-date">23 août 1996</span>
+    <span class="m-titre">470 toujours et encore</span>
+    <span class="m-id">23_08_96_18</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Vous dites que l&#x27;on voit la lumière de mon tout (470) à travers l&#x27;ouverture. Mais vous ne dites pas (ou ne confirmez pas l&#x27;alignement entre mon tout, l&#x27;ouverture et la lumière. Est-ce par principe ou pour ne pas révéler quelque chose d&#x27;important ? Amicalement -- Guillaume</p>
+  <p class="m-r"><span class="lbl">R</span>Si, je l&#x27;ai confirmé d&#x27;une certaine façon puisque j&#x27;ai dit qu&#x27;on allait de &quot;mon tout&quot; à la lumière par l&#x27;ouverture. Or, comme on &quot;voit&quot; la lumière et que - sauf ivresse grave - la vision est rectiligne, cet alignement est donc avéré ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-23_08_96_18-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-06_07_97_7">
+  <div class="m-head"><span class="m-date">6 juillet 1997</span>
+    <span class="m-titre">ALIGNEMENT</span>
+    <span class="m-id">06_07_97_7</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Dans la 470, vous avez dit que mon tout, l&#x27;ouverture et la lumière étaient alignés. S&#x27;agit-il d&#x27;un alignement géographique ? C&#x27;est sans doute beaucoup vous demander, mais on ne sait jamais... ==Pfff</p>
+  <p class="m-r"><span class="lbl">R</span>Tout alignement est géographique... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-06_07_97_7-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-09_10_97_11">
+  <div class="m-head"><span class="m-date">9 octobre 1997</span>
+    <span class="m-titre">GRAL-1</span>
+    <span class="m-id">09_10_97_11</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Vous avez répondu cet été : mon tout de la 470 -- ouverture -- lumière sont alignés. Il s&#x27;agit bien sur d&#x27;un alignement sur carte ? Amitiés -- Graal</p>
+  <p class="m-r"><span class="lbl">R</span>Si c&#x27;est un alignement sur une carte, c&#x27;est également -- et forcément -- un alignement sur le terrain. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-09_10_97_11-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-05_12_97_23">
+  <div class="m-head"><span class="m-date">5 décembre 1997</span>
+    <span class="m-titre">P-470</span>
+    <span class="m-id">05_12_97_23</span></div>
+  <p class="m-q"><span class="lbl">Q</span>1- Mon tout, ouverture et cœur sont-ils alignés ? 2- La dernière chose à trouver en 470 est le &#x27;cœur&#x27; ok ? 3- Mon tout est-il seulement le résultat de la charade ou autre chose ? 4- La 470 me permet-elle avec certitude de répondre à la question 3 ci-dessus ?</p>
+  <p class="m-r"><span class="lbl">R</span>Mon tout, ouverture et lumière sont alignés. C&#x27;est tout ce que je peux dire ! 2 - non ! 3 - oui. 4 - je préfère ne pas répondre de crainte de vous induire en erreur. Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-05_12_97_23-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-08_01_98_23">
+  <div class="m-head"><span class="m-date">8 janvier 1998</span>
+    <span class="m-titre">GRAAL-1</span>
+    <span class="m-id">08_01_98_23</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Je pense que vous avez déjà dit à plusieurs fois: en 470: mon tout-ouverture-coeur pas alignés? Est-ce cela merci -amitiés graal*</p>
+  <p class="m-r"><span class="lbl">R</span>Non, je n&#x27;ai jamais dit ça. J&#x27;ai dit: tout, ouverture, lumière alignés. Et je ne peux en dire davantage. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-08_01_98_23-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-18_03_98_48">
+  <div class="m-head"><span class="m-date">18 mars 1998</span>
+    <span class="m-titre">470 (++)</span>
+    <span class="m-id">18_03_98_48</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bsr Max. Votre phrase du Figaro &quot;De mon tout,...&quot; signifie-t-il &quot;De mon tout, en ligne droite, pour atteindre la lumière...&quot; dans le style &quot;sur le même trait sur la carte&quot; ? Merci. Velo</p>
+  <p class="m-r"><span class="lbl">R</span>En ligne droite, oui. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-18_03_98_48-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-17_11_98_16">
+  <div class="m-head"><span class="m-date">17 novembre 1998</span>
+    <span class="m-titre">GANY SUITE</span>
+    <span class="m-id">17_11_98_16</span></div>
+  <p class="m-q"><span class="lbl">Q</span>470 : flèche connue à la fin de cette énigme ? C&#x27;est ça ? 2 - mon tout - cœur de destination alignés ??? 3 - flèche est-elle &#x27;mon tout&#x27; de la 470 ? 4 - 560 : l&#x27;ouverture qui révèle la lumière l&#x27;est-elle connue à ce moment ? Ou est-elle la même chose qu&#x27;en 530 ?</p>
+  <p class="m-r"><span class="lbl">R</span>1 - il faut l&#x27;utiliser dans cette énigme, et le titre se comprend à la fin de cette énigme. Je ne peux pas vous répondre spécifiquement sur le mot &quot;connue&quot;. 2 - j&#x27;ai dit : tout, ouverture, lumière alignés. À vous d&#x27;interpréter correctement cette énigme. Je ne peux pas en dire plus. 3 et 4 - je ne peux pas répondre à ces questions. Elles sont bien trop précises. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-17_11_98_16-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-29_01_99_17">
+  <div class="m-head"><span class="m-date">29 janvier 1999</span>
+    <span class="m-titre">PAS DE PROBLEME</span>
+    <span class="m-id">29_01_99_17</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bien entendu, sans rancune, je veux juste me remettre dans le ton du jeu et vérifier si je n&#x27;ai pas raté certaines évolutions. Je vais relire les résumés Figmag, mais il m&#x27;en manque 4. Pour la 470, je ne cherchais pas à établir de passerelle, je parlais de l&#x27;alignement éventuel de la charade, cœur et ouverture. Merci. -- Picsou</p>
+  <p class="m-r"><span class="lbl">R</span>&quot;Tout&quot;, ouverture et lumière sont alignés. C&#x27;est tout ce que je peux dire, Picsou. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-29_01_99_17-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-29_03_99_21">
+  <div class="m-head"><span class="m-date">29 mars 1999</span>
+    <span class="m-titre">LOLO</span>
+    <span class="m-id">29_03_99_21</span></div>
+  <p class="m-q"><span class="lbl">Q</span>En 470, si je suis dans la lumière, je vois mon tout en regardant par l&#x27;ouverture? Mais ce peut-il que tout en regardant de la lumière passant par l&#x27;ouverture, je ne puisse voir mon tout (470)?</p>
+  <p class="m-r"><span class="lbl">R</span>Ces 3 éléments sont alignés. Donc quoi que vous fassiez, vous verrez toujours l&#x27;un ou l&#x27;autre. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-29_03_99_21-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-23_06_99_33">
+  <div class="m-head"><span class="m-date">23 juin 1999</span>
+    <span class="m-titre">TOTEM</span>
+    <span class="m-id">23_06_99_33</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Confirmez-vous avoir dit : (alignés : qui appartiennent à une même droite) 1 : Ouverture, Destination 470, Lumière alignés. 2 : Ouverture, Dest 470, Lumière, 2424 non alignés. (et que donc si 1 et 2 vrais, Ouverture, Dest 470 et 2424 non alignés)</p>
+  <p class="m-r"><span class="lbl">R</span>1 - &quot;Tout&quot; de la 470, Ouverture, Lumière alignés. 2 - Je n&#x27;ai jamais dit cela. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-23_06_99_33-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-05_08_99_23">
+  <div class="m-head"><span class="m-date">5 août 1999</span>
+    <span class="m-titre">ALIGNEMENT 470</span>
+    <span class="m-id">05_08_99_23</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour Max, confirmes-tu en 470 que mon tout de la 470, lumière et ouverture (mon tout 530) sont alignés sur une même droite ? Merci</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;ai dit que ce qu&#x27;il fallait comprendre, c&#x27;est : de mon tout, vers la lumière, en passant par l&#x27;ouverture. À partir de là, à vous de vous faire une opinion. Si vous me demandez de confirmer, c&#x27;est que vous faites allusion à un message particulier. Merci de me donner son titre et la date. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-05_08_99_23-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-19_10_99_15">
+  <div class="m-head"><span class="m-date">19 octobre 1999</span>
+    <span class="m-titre">GRAAL</span>
+    <span class="m-id">19_10_99_15</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Résumons la 470: 1: mon tout ouverture cœur sont-ils aig nés? 2: mon tout cœur destination sont-ils alignés? 3: mon tout: y a-t-il plusieurs &quot;mon tout&quot; en 470? *</p>
+  <p class="m-r"><span class="lbl">R</span>Houla, graal! par principe, je ne valide pas les hypothèses. tout ce que j&#x27;ai confirmé, c&#x27;est que mon &quot;tout&quot;, lumière et ouverture étaient alignés. à partir de là - et de la synthèse que vous faites de mes réponses - à vous de jouer! je ne peux vraiment pas aller plus loin que ça dans mes réponses, et confirmer vos conclusions. merci de comprendre. amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-19_10_99_15-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-21_01_00_13">
+  <div class="m-head"><span class="m-date">21 janvier 2000</span>
+    <span class="m-titre">470</span>
+    <span class="m-id">21_01_00_13</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour max 1# pouvez-vous confirmer que la destination ouverture et lumière alignés 2# mon tout et la destination sont-ils un même lieu géographique? Merci pour ces deux réponses.</p>
+  <p class="m-r"><span class="lbl">R</span>Mon &quot;tout&quot;, ouverture et lumière sont alignés. À vous de déduire ce qu&#x27;il faut en déduire! Je ne peux pas répondre à la 2ème question, désolé. Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-21_01_00_13-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-07_03_00_23">
+  <div class="m-head"><span class="m-date">7 mars 2000</span>
+    <span class="m-titre">QUESTIONS</span>
+    <span class="m-id">07_03_00_23</span></div>
+  <p class="m-q"><span class="lbl">Q</span>470: la flèche cœur destination aligée ? 2: si on admet que destination est un lieu, puis-je trouver un autre lieu qui me dise d&#x27;une certaine façon ce que c&#x27;est la destination ? ex: vatican est destination et je trouve : résidence du pape romain. 530: &quot;par&quot; l&#x27;ouverture veut-il dire aussi en traitant des infos sur celle-ci ?</p>
+  <p class="m-r"><span class="lbl">R</span>470: je crois que j&#x27;ai répondu à cette question avant le week-end. &quot;Tout&quot;, ouverture et lumière sont alignés, mais c&#x27;est tout ce que je peux en dire. autre lieu: désolé, mais cette question est trop précise. 530: elle ne dit pas &quot;par l&#x27;ouverture&quot;. si vous faites allusion à la 470, d&#x27;une certaine façon, je ne peux que répondre &quot;oui&quot;. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-07_03_00_23-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-27_09_01_45">
+  <div class="m-head"><span class="m-date">27 septembre 2001</span>
+    <span class="m-titre">RENE 470</span>
+    <span class="m-id">27_09_01_45</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Dans le figmag il a été écrit que l&#x27;épée du visuel est plantée dans un rocher. Peut-on remplacer le mot rocher par le mot roc ? L&#x27;épée du visuel plantée dans un rocher nous permet-elle de symboliser un lieu ? Le lieu à trouver dans la 470 est-il aligné avec ouverture et lumière ?</p>
+  <p class="m-r"><span class="lbl">R</span>Roc : si vous voulez. Lieu : à vous de vous faire une idée. &quot;Mon tout&quot;, ouverture et lumière sont alignés. Je ne peux pas vous dire si &quot;mon tout&quot; est le lieu, par principe, compte tenu de la manière dont vous posez la question. Enfin, je me comprends... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-27_09_01_45-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-20_05_96_47">
+  <div class="m-head"><span class="m-date">20 mai 1996</span>
+    <span class="m-titre">KEVA</span>
+    <span class="m-id">20_05_96_47</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour max. la 580. personne ne te pose des questions. je n&#x27;ai pas trouvé la ch ose importante. je suis nul ou les autre s font l&#x27;impasse. &#x27;vaudra&#x27; pourrait être remplacé par &#x27;vaut&#x27; ou &#x27;égal&#x27; ?</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne sais pas exactement où on en est sur cette énigme. il est vrai qu&#x27;elle ne suscite pas beaucoup de questions. non : &quot;vaudra&quot;, car l&#x27;action se situe dans le futur. amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-20_05_96_47-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-05_07_96_34">
+  <div class="m-head"><span class="m-date">5 juillet 1996</span>
+    <span class="m-titre">KEVA</span>
+    <span class="m-id">05_07_96_34</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour Max. 580. La contrebasse aurait-elle pu être remplacée par un autre instrument de musique ? &quot;Vaudra&quot; est un futur proche ou plus lointain ?</p>
+  <p class="m-r"><span class="lbl">R</span>Contrebasse : désolé, je ne peux pas répondre aux questions de substitution. &quot;Vaudra&quot; est un futur proche. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-05_07_96_34-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-17_12_96_44">
+  <div class="m-head"><span class="m-date">17 décembre 1996</span>
+    <span class="m-titre">KEVA</span>
+    <span class="m-id">17_12_96_44</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour max. Dans la 580, &quot;vaudra&quot; devient &quot;vaut&quot;. Mais faut-il démontrer l&#x27;égalité ou la rétablir? -- Keva</p>
+  <p class="m-r"><span class="lbl">R</span>Keva, je lis &quot;vaudra&quot;. Je ne peux donc pas confirmer votre hypothèse. Pour la deuxième partie de votre question, je dirais &quot;ni l&#x27;un ni l&#x27;autre&quot;. C&#x27;est une affirmation. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-17_12_96_44-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-01_10_99_4">
+  <div class="m-head"><span class="m-date">1 octobre 1999</span>
+    <span class="m-titre">GRAAL 1</span>
+    <span class="m-id">01_10_99_4</span></div>
+  <p class="m-q"><span class="lbl">Q</span>580 : &#x27;vaudra&#x27; 1... dois-je comprendre va ut 1... déjà en 580 ou ce &#x27;vaudra&#x27; 1 se ra comprendra après la 580. 2 : puis-je trouver des soluces au cours d&#x27;énigmes et n&#x27;en n&#x27;utiliser qu&#x27;une partie à ce moment-là puis utiliser le reste de soluces non utilisées un peu plus tard ? Je ne parle pas de reliquats bien sûr *</p>
+  <p class="m-r"><span class="lbl">R</span>&quot;Vaudra&quot;, dans la 580, est un futur proche... votre deuxième question : tout dépend. J&#x27;ai déjà dit que certains éléments trouvés servent plus tard. Mais je ne peux pas être plus précis. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-01_10_99_4-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-09_11_96_29">
+  <div class="m-head"><span class="m-date">9 novembre 1996</span>
+    <span class="m-titre">question d&#x27;ordre general</span>
+    <span class="m-id">09_11_96_29</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Si lorsque je vérifie une hypothèse de lieu sur la carte préconisée, pour me confirmer une solution que je crois avoir trouvée, en faisant mon traçage je tombe à 4 ou 5 mm à côté, est-ce que mon hypothèse n&#x27;est plus valide ? Amitiés -- Barbu</p>
+  <p class="m-r"><span class="lbl">R</span>De petites différences sont acceptables, et le jeu a été conçu pour les gommer. (Il y a de notables différences d&#x27;une carte à l&#x27;autre, même de marque et de modèle identique.) Toutefois, 5 mm, ça commence à faire beaucoup. Mais ça reste possible (je parle des erreurs qui pourraient être dues à la structure des cartes, pas de vos éventuelles imprécisions dans les traces. Car là, je ne peux pas me prononcer.) Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-09_11_96_29-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-04_01_99_39">
+  <div class="m-head"><span class="m-date">4 janvier 1999</span>
+    <span class="m-titre">FREDIBULE ET LA SPIRALE ILE ETAIT..</span>
+    <span class="m-id">04_01_99_39</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, le terme &quot;spirale à 4 centres&quot; a-t-il son sens académique, c&#x27;est-à-dire un chat est un chat, ou bien à nous de voir à travers ?</p>
+  <p class="m-r"><span class="lbl">R</span>Non, il s&#x27;agit bien d&#x27;une spirale à 4 centres, dans l&#x27;acception académique du terme. Mais bien sûr, cela &quot;cache&quot; quelque chose que vous devez découvrir. (Je rappelle toutefois que je ne peux pas révéler s&#x27;il faut tracer cette spirale ou la trouver.) Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-04_01_99_39-1">↩ retour 1</a> <a class="back" href="#b-04_01_99_39-2">↩ retour 2</a></div>
+</article>
+<article class="madit" id="m-12_09_97_20">
+  <div class="m-head"><span class="m-date">12 septembre 1997</span>
+    <span class="m-titre">SPIRALE A QUATRE CENTRES ? (suite)</span>
+    <span class="m-id">12_09_97_20</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Allez, Max, vous êtes bien sûr de vous ! Pourtant, il me semble qu&#x27;un autre modèle de spirale (j&#x27;ai quelques restes en ma tête) peut tout aussi bien convenir et que le modèle &quot;à quatre centres&quot; n&#x27;est peut-être pas le meilleur ! Réactions ? Amitiés. Arthur</p>
+  <p class="m-r"><span class="lbl">R</span>Aucune, Arthur ! La spirale à 4 centres est une figure géométrique classique (j&#x27;allais dire : de base), et c&#x27;est de celle-là qu&#x27;il est question ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-12_09_97_20-1">↩ retour 1</a> <a class="back" href="#b-12_09_97_20-2">↩ retour 2</a></div>
+</article>
+<article class="madit" id="m-21_10_98_38">
+  <div class="m-head"><span class="m-date">21 octobre 1998</span>
+    <span class="m-titre">SPIRALE (SUITE)</span>
+    <span class="m-id">21_10_98_38</span></div>
+  <p class="m-q"><span class="lbl">Q</span>D&#x27;une manière générale, pour toi, une spirale à quatre centres est-elle une spirale de longueur finie ou infinie ? Merci -- Chouettophil</p>
+  <p class="m-r"><span class="lbl">R</span>Chouettophil, ouvrez un précis de géométrie et regardez sous &quot;spirale à 4 centres&quot; ! Cette figure n&#x27;a rien de mystérieux, c&#x27;est un classique de la géométrie. Je ne peux pas me substituer à vous pour indiquer ici de quoi il s&#x27;agit ou pour vous en donner une définition, car cela fait partie des recherches que vous devez faire. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-21_10_98_38-1">↩ retour 1</a> <a class="back" href="#b-21_10_98_38-2">↩ retour 2</a></div>
+</article>
+<article class="madit" id="m-04_08_95_39">
+  <div class="m-head"><span class="m-date">4 août 1995</span>
+    <span class="m-titre">SPIRALE</span>
+    <span class="m-id">04_08_95_39</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Une spirale à 4 centres -ou plus- est-elle davantage connue sous l&#x27;appellation de &#x27;spirale logarithmique&#x27; ?</p>
+  <p class="m-r"><span class="lbl">R</span>Dans le cas qui nous occupe, la précision quant à son nombre de centres impose l&#x27;appellation &quot;spirale à 4 centres&quot; ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-04_08_95_39-1">↩ retour 1</a> <a class="back" href="#b-04_08_95_39-2">↩ retour 2</a></div>
+</article>
+<article class="madit" id="m-06_08_95_2">
+  <div class="m-head"><span class="m-date">6 août 1995</span>
+    <span class="m-titre">SPIRALE - 2</span>
+    <span class="m-id">06_08_95_2</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bon... la spirale à 4 centres est-elle une spirale logarithmique ?</p>
+  <p class="m-r"><span class="lbl">R</span>La spirale à 4 centres est appelée ainsi parce que c&#x27;est une figure géométrique classique, et que cette appellation me convenait parfaitement ! (bis repetita placent, mais il y a des exceptions !) amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-06_08_95_2-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-11_10_96_50">
+  <div class="m-head"><span class="m-date">11 octobre 1996</span>
+    <span class="m-titre">TROP PRECIS (suite)</span>
+    <span class="m-id">11_10_96_50</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Sans ce &quot;savoir&quot; particulier, qui ne relève pas des ouvrages courants, il me paraît difficile d&#x27;être convaincu de l&#x27;orthodoxie de ma spirale à quatre centres. D&#x27;où ma question précise (!) : faut-il acquérir des connaissances dans un domaine très particulier pour comprendre en quoi la spirale est à 4 centres ? Merci.</p>
+  <p class="m-r"><span class="lbl">R</span>Non ! C&#x27;est une spirale à 4 centres, tout simplement. Mais si vous me dites &quot;je n&#x27;avais jamais entendu parler d&#x27;une spirale à 4 centres avant d&#x27;ouvrir votre bouquin&quot;, je vous rétorquerais que cela fait partie de la culture générale et qu&#x27;en cas de lacune dans ce domaine bien particulier, il est facile d&#x27;apprendre ce qu&#x27;est une spirale à 4 centres. (Mais cette remarque est toute théorique car je me doute bien que ce n&#x27;est pas votre cas. On ne peut décentement pas s&#x27;intéresser à la géométrie fractale et ignorer ce qu&#x27;est une s4c !) Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-11_10_96_50-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-03_11_96_20">
+  <div class="m-head"><span class="m-date">3 novembre 1996</span>
+    <span class="m-titre">500</span>
+    <span class="m-id">03_11_96_20</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Est-il important que la spirale est à 4 centres? Ou se peut-il que ce soit une spirale toute bête? Nouveau nez</p>
+  <p class="m-r"><span class="lbl">R</span>Non, nn. Si j&#x27;ai précisé &quot;à 4 centres&quot;, c&#x27;est qu&#x27;il y a vraiment une raison. Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-03_11_96_20-1">↩ retour 1</a> <a class="back" href="#b-03_11_96_20-2">↩ retour 2</a></div>
+</article>
+<article class="madit" id="m-03_11_96_29">
+  <div class="m-head"><span class="m-date">3 novembre 1996</span>
+    <span class="m-titre">SPIRALE</span>
+    <span class="m-id">03_11_96_29</span></div>
+  <p class="m-q"><span class="lbl">Q</span>La spirale à 4 centres est-elle géométriquement parlant une véritable spirale à 4 centres avec tout ce que cela implique de précision dans sa construction.</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;ai déjà répondu souvent à cette question. Si vous deviez la tracer, elle serait &quot;parfaite&quot;. Si vous deviez la trouver dans la nature, elle serait bien sûr moins précise. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-03_11_96_29-1">↩ retour 1</a> <a class="back" href="#b-03_11_96_29-2">↩ retour 2</a></div>
+</article>
+<article class="madit" id="m-12_11_96_34">
+  <div class="m-head"><span class="m-date">12 novembre 1996</span>
+    <span class="m-titre">INTOX</span>
+    <span class="m-id">12_11_96_34</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, je n&#x27;ai jamais dit que vous faisiez de l&#x27;intox. J&#x27;ai dit que &quot;ce serait de l&#x27;intox si...&quot;. Bref : si toute la spirale est à 560606 mesures de là, ça veut bien dire que ses quatre centres sont à 560606 mesures de là ? C&#x27;est bien cela ? Merci. -- Arthur</p>
+  <p class="m-r"><span class="lbl">R</span>C&#x27;est ce qui est écrit dans le livre, Arthur ! Cela précise, pourquoi les 4 centres seraient-ils seuls concernés ? Pourquoi pas la spirale elle-même ? C&#x27;est à vous de résoudre cette énigme, désolé d&#x27;insister ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-12_11_96_34-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-06_02_97_39">
+  <div class="m-head"><span class="m-date">6 février 1997</span>
+    <span class="m-titre">4 CENTRES</span>
+    <span class="m-id">06_02_97_39</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Le terme &quot;spirale à 4 centres&quot; est-il utilisé avec sa signification géométrique précise - courbe plane etc. - ou bien est-il empreint d&#x27;une certaine licence poétique ? Salutations -- Karl</p>
+  <p class="m-r"><span class="lbl">R</span>Il s&#x27;agit d&#x27;une spirale à 4 centres, normale ! Simplement, je ne peux pas vous dire si cette spirale doit être tracée ou si elle doit être découverte. Je ne peux donc pas répondre à votre question, Karl ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-06_02_97_39-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-16_09_97_50">
+  <div class="m-head"><span class="m-date">16 septembre 1997</span>
+    <span class="m-titre">SPIRALE</span>
+    <span class="m-id">16_09_97_50</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Je suppose que si la spirale devait être imparfaite, vous n&#x27;auriez utilisé que le terme &quot;spirale&quot;. Le fait de préciser &quot;à 4 centres&quot; suppose une figure rigoureuse. Ai-je raison? -- Max</p>
+  <p class="m-r"><span class="lbl">R</span>Une spirale à 4 centres n&#x27;est pas une spirale quelconque. Dans ce sens, cette précision s&#x27;imposait donc. Pour le reste, je vous laisse parvenir à vos propres conclusions. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-16_09_97_50-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-23_02_98_28">
+  <div class="m-head"><span class="m-date">23 février 1998</span>
+    <span class="m-titre">FRIDOLIN SPIRALE</span>
+    <span class="m-id">23_02_98_28</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Qr du 11 2 98, vous espérez que le terme géométrique n&#x27;est pas piégeux. Mais la spirale a 4 c a une définition math préci se et ce le cas pour le jeu ? Bien entendu à trouver ou à tracer. Amitiés..</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne me souviens plus de la question à laquelle vous faites allusion. Que la spirale ait une définition de nature géométrique, c&#x27;est sûr. Mais quant à sa précision, cela dépend bien sûr de type de spirale : à tracer (dans ce cas, cette précision est totale) ; ou à trouver (dans ce cas, elle ne peut prétendre à la même précision). Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-23_02_98_28-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-01_02_00_33">
+  <div class="m-head"><span class="m-date">1 février 2000</span>
+    <span class="m-titre">500</span>
+    <span class="m-id">01_02_00_33</span></div>
+  <p class="m-q"><span class="lbl">Q</span>500 : confirmez-vous que la spirale a 4 centres et est géométrique ?</p>
+  <p class="m-r"><span class="lbl">R</span>Une spirale à 4 centres est bien une figure géométrique, de surcroît bien connue et expliquée dans un grand nombre de manuels... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-01_02_00_33-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-24_10_00_39">
+  <div class="m-head"><span class="m-date">24 octobre 2000</span>
+    <span class="m-titre">CARTE ET INDICES</span>
+    <span class="m-id">24_10_00_39</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, vous dites qu&#x27;une carte ne contient pas d&#x27;indice. Par conséquent, la forme d&#x27;une route ne peut pas être un indice, et encore moins une solution. Ok ? Klaus</p>
+  <p class="m-r"><span class="lbl">R</span>Un indice, sûrement pas. Pour la solution, je ne peux pas répondre, par principe, sauf à vous dire que si le tracé de cette route, relevé sur une carte, était votre hypothèse de solution, il faudrait peut-être revoir votre copie... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-24_10_00_39-1">↩ retour 1</a> <a class="back" href="#b-24_10_00_39-2">↩ retour 2</a></div>
+</article>
+</section>
+
+<footer>
+  Sources : serveur Maxval (1995-2001), archive intégrale des « madits » (« Max a dit »).
+  Citations littérales, fautes de frappe de Max Valentin comprises.
+</footer>
+</div>
+<script>
+/* Navigation : on mémorise la position de l'ascenseur au clic « ↓ » (script → madit)
+   et on la restaure au clic « ↩ retour » (madit → script) — au lieu de placer
+   l'ancre en haut de la fenêtre. Les attributs href restent le repli si JS off. */
+(function(){
+  var saved = null;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if (!a) return;
+    if (a.classList.contains('ref')) {
+      saved = window.scrollY;            // position AVANT le saut vers le madit
+    } else if (a.classList.contains('back')) {
+      if (saved !== null) {
+        e.preventDefault();              // on neutralise le saut d'ancre…
+        window.scrollTo({ top: saved, behavior: 'smooth' });  // …et on restaure
+      }                                 // sinon : repli sur l'ancre href
+    }
+  });
+})();
+</script>
+</body>
+</html>
