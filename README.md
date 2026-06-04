@@ -30,9 +30,12 @@ dépôt, les dossiers sont consultables directement en ligne.)*
 
 ## Sources
 
-- Serveur Maxval (1995-2001) — archive des madits.
-- « Solutions de la course au trésor… » (PDF, Éditions de la Chouette d'Or, 2025)
-  et le livre d'octobre 2025.
+- **Madits** — archive des questions-réponses de Max Valentin sur le serveur Maxval
+  (1995-2001), conservée par la communauté des chercheurs : <https://lachouette.net/>
+- **Solution officielle** — « Solutions de la course au trésor sur la trace de la
+  Chouette d'Or » (PDF, Éditions de la Chouette d'Or, 2025) :
+  <https://chouettedor.com/sol/SOLUTION-FR.pdf>
+  (la même solution est reprise dans le livre d'octobre 2025).
 
 Citations littérales : orthographe et ponctuation d'origine conservées.
 
