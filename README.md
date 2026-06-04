@@ -18,12 +18,12 @@ Le but : que chaque citation de la vidéo soit **vérifiable et traçable** d'un
 
 ## Épisodes
 
-| Épisode | Contenu | Dossier |
-|---|---|---|
-| 1 — L'affaire & les premières énigmes | 530 · 780 · 470 · 580 · 600 · 500 | [`dossier_ep01.html`](https://tournevischouette.github.io/debunkage_v2/dossier_ep01.html) |
-| 2 — *(à venir)* | 420 · 560 · 650 | — |
-| 3 — *(à venir)* | 520 · les 30 ans | — |
-| 4 — *(à venir)* | architecture du jeu · Dabo · conclusion | — |
+| Épisode | Contenu | Vidéo | Dossier |
+|---|---|---|---|
+| 1 — L'affaire & les premières énigmes | 530 · 780 · 470 · 580 · 600 · 500 | [▶️ YouTube](https://www.youtube.com/watch?v=KVdlIKB-7IA) | [`dossier_ep01.html`](https://tournevischouette.github.io/debunkage_v2/dossier_ep01.html) |
+| 2 — *(à venir)* | 420 · 560 · 650 | — | — |
+| 3 — *(à venir)* | 520 · les 30 ans | — | — |
+| 4 — *(à venir)* | architecture du jeu · Dabo · conclusion | — | — |
 
 ## Consulter
 
