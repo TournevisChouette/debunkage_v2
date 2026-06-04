@@ -1,2 +1,40 @@
-# debunkage_v2
-Dossiers d'accompagnement de la série Tournevis — La Chouette d'Or, débunkage V2. Pour chaque épisode : le script intégral + tous les madits cités (texte de la base), avec navigation par ancres. Tout est sourcé, traçable, vérifiable.
+# Tournevis — La Chouette d'Or, débunkage V2 · Dossiers d'accompagnement
+
+Documents de référence de la série vidéo **Tournevis**, qui confronte la
+« solution officielle » de la Chouette d'Or (avril 2025) à ce que Max Valentin,
+l'auteur des énigmes, a dit pendant six ans sur le serveur Maxval (1995-2001).
+
+Chaque épisode est accompagné d'**un fichier HTML autonome** contenant :
+
+- le **script intégral** de l'épisode ;
+- **tous les madits cités**, reproduits depuis la base de données des
+  questions-réponses de Max (« madits » = « Max a dit ») ;
+- une **navigation bidirectionnelle** : depuis le script, une puce ouvre le madit
+  correspondant ; sur chaque madit, un bouton ramène à l'endroit exact du script.
+
+Le but : que chaque citation de la vidéo soit **vérifiable et traçable** d'un clic.
+
+## Épisodes
+
+| Épisode | Contenu | Dossier |
+|---|---|---|
+| 1 — L'affaire & les premières énigmes | 530 · 780 · 470 · 580 · 600 · 500 | [`dossier_ep01.html`](dossier_ep01.html) |
+| 2 — *(à venir)* | 420 · 560 · 650 | — |
+| 3 — *(à venir)* | 520 · les 30 ans | — |
+| 4 — *(à venir)* | architecture du jeu · Dabo · conclusion | — |
+
+## Consulter
+
+Ouvrir le fichier `.html` dans un navigateur. *(Si GitHub Pages est activé sur ce
+dépôt, les dossiers sont consultables directement en ligne.)*
+
+## Sources
+
+- Serveur Maxval (1995-2001) — archive des madits.
+- « Solutions de la course au trésor… » (PDF, Éditions de la Chouette d'Or, 2025)
+  et le livre d'octobre 2025.
+
+Citations littérales : orthographe et ponctuation d'origine conservées.
+
+---
+▶️ La série : chaîne YouTube **Tournevis** — *[ttps://www.youtube.com/@TourneChouette]*
