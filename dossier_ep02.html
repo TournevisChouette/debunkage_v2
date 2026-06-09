@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tournevis — Chouette d’Or, débunkage V2 · Épisode 2 — dossier</title>
+<style>
+  :root { --gold:#b8860b; --gold2:#d4af37; --ink:#1c2230; --paper:#fbf8f1; --soft:#6a6256; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+    font-family:Georgia,'Times New Roman',serif; line-height:1.62; }
+  .wrap { max-width:820px; margin:0 auto; padding:48px 22px 120px; }
+  header h1 { font-size:20px; letter-spacing:.16em; text-transform:uppercase; color:var(--soft);
+    font-weight:normal; margin:0 0 6px; }
+  .tagline { font-size:14.5px; font-style:italic; color:var(--gold); margin:0 0 16px; }
+  header h2.ep { font-size:34px; margin:0 0 14px; line-height:1.2; }
+  .watch { margin:0 0 20px; }
+  .watch a { display:inline-block; text-decoration:none; font-family:system-ui,sans-serif;
+    font-size:15px; font-weight:600; color:#fff; background:#c0392b; padding:9px 18px;
+    border-radius:8px; }
+  .watch a:hover { background:#a23226; }
+  .watch .soon { display:inline-block; font-family:system-ui,sans-serif; font-size:15px;
+    font-weight:600; color:var(--soft); background:#efe7d3; padding:9px 18px; border-radius:8px; }
+  .intro { background:#fff; border:1px solid #e7ddc4; border-left:4px solid var(--gold2);
+    padding:16px 20px; border-radius:8px; font-size:15.5px; color:#3a3a3a; }
+  .intro b { color:var(--gold); }
+  .intro a, footer a { color:var(--gold); }
+  h2.chunk { font-size:15px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold);
+    border-bottom:2px solid #e7ddc4; padding-bottom:6px; margin:54px 0 14px; }
+  h3.enigme { font-size:22px; margin:34px 0 10px; color:var(--ink); }
+  #script p { margin:0 0 16px; }
+  .refs { display:inline; }
+  a.ref { display:inline-block; font-family:system-ui,sans-serif; font-size:11.5px;
+    text-decoration:none; color:#5a4a10; background:#f3e9c8; border:1px solid #e0d090;
+    border-radius:11px; padding:1px 9px; margin:1px 3px; white-space:nowrap; vertical-align:1px; }
+  a.ref:hover { background:var(--gold2); color:#221c05; }
+  section.madits { margin-top:70px; }
+  article.madit { background:#fff; border:1px solid #e7ddc4; border-radius:10px;
+    padding:16px 20px 12px; margin:0 0 16px; scroll-margin-top:14px; }
+  article.madit:target { border-color:var(--gold2); box-shadow:0 0 0 3px rgba(212,175,55,.25); }
+  .m-head { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:10px; }
+  .m-date { font-family:system-ui,sans-serif; font-size:13px; font-weight:700; color:#fff;
+    background:var(--gold); padding:2px 11px; border-radius:7px; }
+  .m-titre { font-family:system-ui,sans-serif; font-size:13px; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--soft); }
+  .m-id { margin-left:auto; font-family:ui-monospace,monospace; font-size:11px; color:#b8b09c; }
+  .m-q, .m-r { margin:0 0 8px; font-size:16px; }
+  .m-q { color:#4a4a4a; }
+  .lbl { display:inline-block; width:20px; height:20px; line-height:20px; text-align:center;
+    font-family:system-ui,sans-serif; font-size:12px; font-weight:700; border-radius:50%;
+    margin-right:8px; vertical-align:1px; }
+  .m-q .lbl { border:1.5px solid #c9c0a6; color:#9a9078; }
+  .m-r .lbl { border:1.5px solid var(--gold2); color:var(--gold); }
+  .m-back { margin-top:6px; }
+  a.back { font-family:system-ui,sans-serif; font-size:12px; text-decoration:none;
+    color:var(--gold); border:1px solid #e0d090; border-radius:11px; padding:1px 10px; margin-right:6px; }
+  a.back:hover { background:#f3e9c8; }
+  footer { margin-top:60px; font-size:13px; color:var(--soft); border-top:1px solid #e7ddc4; padding-top:14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Tournevis — La Chouette d’Or, débunkage V2</h1>
+  <p class="tagline">Tournevis · la chaîne YouTube qui enquête sur l’affaire de la Chouette d’Or — l’enquête, madit par madit.</p>
+  <h2 class="ep">Épisode 2 — Lumière, passage &amp; l’avant-dernière</h2>
+  <p class="watch"><a href="https://www.youtube.com/watch?v=xIth4rMxkxI" target="_blank" rel="noopener">▶ Voir l’épisode sur YouTube</a></p>
+  <div class="intro">
+    Ce document réunit le <b>script intégral</b> de l’épisode et les <b>79 madits cités</b>
+    (questions-réponses de Max Valentin sur le serveur Maxval, 1995-2001). Le texte des madits
+    est présenté ici dans une <b>version normalisée</b> — orthographe et casse corrigées pour la
+    lisibilité : ce sont la <b>date et le titre</b> de chaque madit qui font foi pour l’identifier.
+    Les madits d’origine sont consultables sur <a href="https://lachouette.net/">lachouette.net</a>.
+    Dans le script, la puce <b>↓ date · titre</b> ouvre le madit correspondant ; sur chaque madit,
+    le bouton <b>↩ retour</b> ramène au passage qui le cite. Tout est vérifiable, traçable.
+  </div>
+</header>
+
+<section id="script">
+<h2 class="chunk">Énigmes 420 · 560 — la lumière &amp; le passage</h2>
+<h3 class="enigme">Épisode 2 / 4 — Lumière, passage &amp; l&#x27;avant-dernière</h3>
+<p>Deuxième épisode. </p>
+<p>Et si vous n&#x27;avez pas vu le premier, arrêtez-vous tout de suite et commencez par lui. Le lien est juste en dessous. Allez-y, on vous attend. </p>
+<p>Le principe ne change pas. On confronte une seule chose à une seule autre : la solution officielle de Michel Becker, et ce que Max Valentin — l&#x27;auteur des énigmes — a écrit pendant six ans sur le serveur Maxval, entre 1995 et 2001. Ces messages, ce sont les madits : « Max a dit ». </p>
+<p>Chaque fois qu&#x27;une affirmation de Max apparaît à l&#x27;écran, vous pouvez mettre en pause et la vérifier vous-même. <span class="refs"><a class="ref" id="b-17_09_96_6-1" href="#m-17_09_96_6" title="voir le madit">↓ 17 septembre 1996 · L Aidant De La Mer</a></span></p>
+<p>Dans le premier épisode, six énigmes ont déjà refusé de coller. On en ajoute trois. On commence. </p>
+<h3 class="enigme">Énigme 420 — La flèche d&#x27;Apollon</h3>
+<p>Énigme 420. Apollon tire une flèche. Le chercheur doit trouver le point d&#x27;impact. </p>
+<p>Selon la solution Canard, ce point est, encore, le rocher de Dabo. </p>
+<p>Encore. Parce que Dabo a déjà été nommé en 600 par le décryptage chimique. Et en 500 par la spirale à quatre centres. Et il le sera encore par la 560. </p>
+<p>C&#x27;est, dans l&#x27;ordre du livre, la troisième occurrence de Dabo dans la solution Canard. Sur quatre. On commence à voir un motif. On y reviendra. </p>
+<h3 class="enigme">Énigme 560 — Ad Augusta per Angusta</h3>
+<p>Énigme 560. Selon la solution Canard, c&#x27;est dans cette énigme que la lumière trouvée à la 470 est enfin identifiée. </p>
+<p>Et cette lumière, pour la solution Canard, c&#x27;est Golfe-Juan, sur la Côte d&#x27;Azur. </p>
+<p>Souvenons-nous de la 470. Max y a posé une géométrie nette : « Tout, ouverture, lumière, alignés ! ». Il l&#x27;a martelé, sur six ans, dans une vingtaine de madits. Trois points sur une droite — Roncevaux, Bourges, et la lumière, au-delà. <span class="refs"><a class="ref" id="b-01_03_00_12-1" href="#m-01_03_00_12" title="voir le madit">↓ 1 mars 2000 · 470</a></span></p>
+<p>Cette droite, prolongée, file vers le nord-est : Bourgogne, Champagne-Ardenne, et au-delà vers la frontière belge. Pas vers la Côte d&#x27;Azur. </p>
+<p>Golfe-Juan n&#x27;est pas sur cette droite. La géométrie imposée par la 470 — « alignés », dit Max, sans ambiguïté — n&#x27;est pas compatible avec l&#x27;identification proposée par la 560. </p>
+<p>La 560, elle, place Golfe-Juan sur une autre droite. Voici son décryptage. « Carusburc » : Cherbourg. « L&#x27;ouverture » : Bourges. « Lumière céleste » : Golfe-Juan. Et, je cite : « dos tourné à l&#x27;Angleterre, Golfe-Juan est exactement à l&#x27;opposé, sur une droite passant par Bourges. » </p>
+<p>Une droite. Cherbourg, Bourges, Golfe-Juan, sur une seule ligne. Carusburc, l&#x27;ouverture, la lumière céleste — alignés. </p>
+<p>C&#x27;est, mot pour mot, ce que Max a passé six ans à démentir. </p>
+<p>Carusburc, l&#x27;ouverture et la lumière céleste alignés ? La question lui a été posée des dizaines de fois, pendant cinq ans. La réponse n&#x27;a jamais changé : non. Jamais. <span class="refs"><a class="ref" id="b-31_08_97_23-1" href="#m-31_08_97_23" title="voir le madit">↓ 31 août 1997 · 560</a><a class="ref" id="b-17_09_97_3-1" href="#m-17_09_97_3" title="voir le madit">↓ 17 septembre 1997 · Bis Repetita Placent</a><a class="ref" id="b-19_09_97_2-1" href="#m-19_09_97_2" title="voir le madit">↓ 19 septembre 1997 · Bleu</a><a class="ref" id="b-23_10_97_17-1" href="#m-23_10_97_17" title="voir le madit">↓ 23 octobre 1997 · 560</a><a class="ref" id="b-16_11_98_25-1" href="#m-16_11_98_25" title="voir le madit">↓ 16 novembre 1998 · 560</a><a class="ref" id="b-18_08_99_28-1" href="#m-18_08_99_28" title="voir le madit">↓ 18 août 1999 · 470 Et 560</a><a class="ref" id="b-21_01_00_3-1" href="#m-21_01_00_3" title="voir le madit">↓ 21 janvier 2000 · Lumiere</a><a class="ref" id="b-02_11_00_26-1" href="#m-02_11_00_26" title="voir le madit">↓ 2 novembre 2000 · Alignement</a></span></p>
+<p>Mieux. Un chercheur lui demande, très précisément : depuis Carusburc, en regardant par l&#x27;ouverture, verra-t-il la lumière céleste ? Réponse de Max. <span class="refs"><a class="ref" id="b-09_12_97_24-1" href="#m-09_12_97_24" title="voir le madit">↓ 9 décembre 1997 · Quoi ?</a></span></p>
+<p>Depuis Carusburc, par l&#x27;ouverture, on ne voit pas la lumière céleste. C&#x27;est exactement la ligne de vue que trace la solution Canard. Max dit qu&#x27;elle n&#x27;existe pas. </p>
+<p>Et sur ce point, Max ne laisse aucune place au doute. Un chercheur lui objecte que le livre, lui, dit bien qu&#x27;à Carusburc on cherche l&#x27;ouverture qui révèle la lumière céleste — donc qu&#x27;ils devraient être alignés. Réponse. <span class="refs"><a class="ref" id="b-16_09_97_45-1" href="#m-16_09_97_45" title="voir le madit">↓ 16 septembre 1997 · Catastrophe</a></span></p>
+<p>« Ce que dit le livre n&#x27;est absolument pas en contradiction avec la solution. » Autrement dit : la vraie solution n&#x27;aligne pas ces trois points. </p>
+<p>La solution Canard, elle, les aligne. Golfe-Juan est donc absent de la droite que la 470 réclame, et posé sur celle que la 560 interdit. Une seule lumière, et aucune des deux géométries que Max a posées. </p>
+<p>Reste un dernier problème. Et il vient, lui, du Livre des Solutions lui-même. </p>
+<p>La solution Canard pour la 560 demande au chercheur de tracer une droite depuis Cherbourg, à travers la Manche, prolonger jusque dans le Golfe de Gascogne, couper la perpendiculaire de la 500, tirer une troisième droite vers Bourges, et trouver Dabo dans son prolongement. </p>
+<p>Mais dans quelle direction part-elle, cette première droite ? Une infinité passent par Cherbourg, traversent la Manche et plongent dans le Golfe de Gascogne. Le PDF n&#x27;en désigne aucune en particulier. Aucune consigne d&#x27;orientation, aucun angle, aucun cap. </p>
+<p>Et le Livre des Solutions le reconnaît — textuellement, à la page 47. Je cite : </p>
+<p>« Cette énigme est sans conteste celle qui a le plus dérouté les participants au jeu. Pour tenter de mettre fin à leurs vaines recherches, je l&#x27;ai comparée à la notion de &quot;référence circulaire&quot; qui s&#x27;applique en informatique lorsque deux variables se réfèrent l&#x27;une à l&#x27;autre. Pour déterminer l&#x27;orientation précise de la droite à tirer au-dessus de la France, il aurait fallu faire exactement l&#x27;inverse. D&#x27;abord tracer celle depuis Dabo en passant par Bourges, puis la perpendiculaire à la droite Carignan-Roncevaux depuis Roncevaux et enfin tirer Cherbourg au point de rencontre des deux précédentes. La perpendiculaire à la droite Bourges-Roncevaux n&#x27;ayant jamais été suggérée ou mentionnée par Max, la solution ne pouvait être qu&#x27;intuitive. » </p>
+<p>Lisons ce que le Livre des Solutions vient d&#x27;écrire. </p>
+<p>Premier point. La solution Canard y est qualifiée de « référence circulaire ». Le terme vient de l&#x27;informatique. Il désigne deux variables qui se définissent l&#x27;une par l&#x27;autre, et ne peuvent donc jamais se résoudre seules. C&#x27;est, dans le vocabulaire technique, l&#x27;aveu d&#x27;une logique impossible à exécuter directement. </p>
+<p>Deuxième point. Le Livre des Solutions écrit qu&#x27;il aurait fallu « faire exactement l&#x27;inverse » — c&#x27;est-à-dire partir de Dabo, tirer la droite vers Bourges, puis la perpendiculaire, puis Cherbourg. Il décrit, en clair, une construction rétrograde. Pour résoudre la 560, il faut connaître Dabo à l&#x27;avance. </p>
+<p>Troisième point, le plus tranchant. Le Livre des Solutions constate que la perpendiculaire qui sert de pivot à toute la construction n&#x27;a jamais été suggérée ni mentionnée par Max. Et il en conclut, je cite, que « la solution ne pouvait être qu&#x27;intuitive ». </p>
+<p>Cette dernière phrase mérite qu&#x27;on s&#x27;y arrête. </p>
+<p>La solution Canard s&#x27;appuie sur une perpendiculaire qui est l&#x27;élément central du décryptage. Le livre constate lui-même qu&#x27;aucune source Max ne la suggère. Et au lieu d&#x27;en déduire que cette construction n&#x27;est probablement pas celle de Max, il en déduit que Max aurait dû la suggérer. </p>
+<p>C&#x27;est l&#x27;inversion de la charge de la preuve. Ce n&#x27;est pas à Max de fournir au chercheur les éléments d&#x27;une construction que la solution Canard pose. C&#x27;est à la solution Canard de prouver que Max les a fournis. </p>
+<p>Or le Livre des Solutions le reconnaît textuellement : Max ne les a pas fournis. </p>
+<p>Et même en lui accordant tout cela — même en admettant qu&#x27;on parvienne malgré tout à tracer cette droite —, il reste un dernier obstacle. Le plus concret de tous : il ne tient pas à un mot, mais à la carte elle-même. </p>
+<p>Reportons le tracé de la solution Canard sur la carte du jeu — la Michelin au millionième. </p>
+<p>De Carusburc, à Cherbourg, le trait plonge au sud-ouest, traverse la Bretagne, et file au large, jusqu&#x27;au golfe de Gascogne. </p>
+<p>Et sur ce trajet, il franchit l&#x27;eau. Plusieurs fois. Or franchir l&#x27;eau, dans la 560, ça a un nom : marcher sur les eaux. Et quand on marche sur les eaux, c&#x27;est Neptune qui aide. </p>
+<p>Max l&#x27;a dit, mot pour mot. <span class="refs"><a class="ref" id="b-17_09_96_6-2" href="#m-17_09_96_6" title="voir le madit">↓ 17 septembre 1996 · L Aidant De La Mer</a></span></p>
+<p>Deux fois. Donc deux traversées, pas une de plus. </p>
+<p>Il l&#x27;a dit et redit des dizaines de fois, sur quatre ans : deux aides, jamais plus. <span class="refs"><a class="ref" id="b-09_08_96_40-1" href="#m-09_08_96_40" title="voir le madit">↓ 9 août 1996 · Neptune Sobre ?</a><a class="ref" id="b-09_08_96_36-1" href="#m-09_08_96_36" title="voir le madit">↓ 9 août 1996 · Neptune(Bis)</a><a class="ref" id="b-12_03_97_40-1" href="#m-12_03_97_40" title="voir le madit">↓ 12 mars 1997 · 560 Bis 31416</a><a class="ref" id="b-01_08_97_26-1" href="#m-01_08_97_26" title="voir le madit">↓ 1 août 1997 · 560</a><a class="ref" id="b-17_08_97_26-1" href="#m-17_08_97_26" title="voir le madit">↓ 17 août 1997 · Neptune</a><a class="ref" id="b-02_03_97_1-1" href="#m-02_03_97_1" title="voir le madit">↓ 2 mars 1997 · Neptune</a><a class="ref" id="b-21_07_99_35-1" href="#m-21_07_99_35" title="voir le madit">↓ 21 juillet 1999 · Aides</a><a class="ref" id="b-05_05_00_34-1" href="#m-05_05_00_34" title="voir le madit">↓ 5 mai 2000 · Graal 560</a></span></p>
+<p>Alors comptons, sur la vraie carte. Première traversée : de Carteret à la plage des Quatre Vaux, à travers la Manche. Une. </p>
+<p>Deuxième, dans le golfe du Morbihan : de Vannes au Ranquin. Deux — la limite de Max est déjà atteinte. </p>
+<p>Mais le trait ne s&#x27;arrête pas. Troisième traversée : du Ranquin au Ruaud. Trois. </p>
+<p>Quatrième : de Kercambre, il replonge vers le large, vers la mer Cantabrique. Quatre. </p>
+<p>Quatre traversées. Là où l&#x27;auteur des énigmes n&#x27;en autorise que deux. </p>
+<p>Et Max avait fermé la porte d&#x27;avance. Un chercheur lui demande : et si l&#x27;on prolonge le trait jusqu&#x27;à une frontière, Neptune doit-il aider une troisième fois ? Réponse. <span class="refs"><a class="ref" id="b-30_10_97_49-1" href="#m-30_10_97_49" title="voir le madit">↓ 30 octobre 1997 · Neptune 2</a></span></p>
+<p>Deux fois. En tout et pour tout. Le tracé de la solution Canard en exige le double. </p>
+<p>Soit Neptune désobéit à l&#x27;auteur des énigmes — soit ce tracé n&#x27;est pas le sien. </p>
+<h2 class="chunk">Énigme 650 · Les Sentinelles</h2>
+<h3 class="enigme">Énigme 650 — Les sentinelles</h3>
+<p>Énigme 650. Les Sentinelles. « Dos au Ponant, cherche les Sentinelles. À 8000 mesures de là, elles t&#x27;attendent. » </p>
+<p>Selon la solution Canard : les sentinelles sont les trois pierres de la Borne Saint-Martin, dans une clairière en forêt de Moselle. Deux probables menhirs et une borne forestière du dix-huitième siècle. </p>
+<p>Cinq problèmes touchent l&#x27;identification même de ces pierres aux sentinelles de Max. </p>
+<h3 class="enigme">Problème 1 — La direction est fausse</h3>
+<p>Premier. La direction est fausse. </p>
+<p>Reprenons l&#x27;énoncé même de la 650 : « Dos au Ponant, cherche les Sentinelles. À 8000 mesures de là, elles t&#x27;attendent. » </p>
+<p>Max a été clair, dès août 1995 : </p>
+<p>« Dos au Ponant, cherchez les sentinelles : c&#x27;est donc bien qu&#x27;elles sont vers l&#x27;est du point où l&#x27;on se trouve. Je n&#x27;ai jamais rien dit d&#x27;autre. » <span class="refs"><a class="ref" id="b-04_08_95_47-1" href="#m-04_08_95_47" title="voir le madit">↓ 4 août 1995 · Ca Va Sans Dire (Message 171 Apres</a></span></p>
+<p>Et en juin 1996, à un chercheur qui s&#x27;interrogeait sur le sens du mot : « Le Ponant égale occident. Donc dos à l&#x27;occident. Les sentinelles ne se trouvent donc pas à l&#x27;occident ! » <span class="refs"><a class="ref" id="b-04_06_96_12-1" href="#m-04_06_96_12" title="voir le madit">↓ 4 juin 1996 · Toujours Au Sujet De La 650</a></span></p>
+<p>Direction imposée : plein Est depuis le point « la ». </p>
+<p>Confrontons maintenant la solution Canard. La solution Canard identifie « la » au rocher de Dabo — le piton qui domine le village, surmonté de la chapelle Saint-Léon. Depuis ce point, plein Est, qu&#x27;y a-t-il ? </p>
+<p>Pas les Bornes Saint-Martin. </p>
+<p>Les Bornes Saint-Martin sont au nord-nord-est du rocher de Dabo, à environ dix-sept degrés depuis le Nord — alors que l&#x27;énigme exige plein Est, soit quatre-vingt-dix degrés. Même en accordant une tolérance généreuse de quarante-cinq degrés — la zone où pourrait, à la rigueur, se trouver la première sentinelle —, les Bornes Saint-Martin restent au-delà : à plus de soixante-dix degrés du plein Est. La droite « plein Est » tracée depuis le rocher ne passe nulle part près d&#x27;elles. </p>
+<p>Pour faire des Bornes Saint-Martin les sentinelles trouvées « dos au Ponant », il faut admettre que « dos au Ponant » veut dire en réalité « dos au sud-sud-ouest » — concession que Max a explicitement refusée. </p>
+<h3 class="enigme">Problème 2 — Le décryptage est inaccessible au chercheur de 1993</h3>
+<p>Deuxième. En 1993, le décryptage Canard est tout simplement hors de portée du chercheur. </p>
+<p>Pour décrypter la 650, la solution Canard envoie le chercheur relever les chiffres gravés sur les pierres : 1747, 1750, 1828 — et un quatrième, gravé sur la face opposée de la borne : 223. Ces gravures serviront, plus loin, au calcul de la cache. Mais ce 223 — gardez-le en tête : on verra, le moment venu, ce que la solution Canard en fait. </p>
+<p>Reste une question : ces chiffres, en 1993, comment se les procurer ? Deux voies, deux seulement. Soit on se rend physiquement aux Bornes Saint-Martin, dans une clairière de Moselle. Soit on consulte un ouvrage qui décrit ces inscriptions. Or Max a fermé les deux portes. </p>
+<p>La première : se déplacer. Dès septembre 1995, à un chercheur qui l&#x27;interroge précisément sur les sentinelles, Max répond : </p>
+<p>« Toutes les solutions peuvent être trouvées de chez soi. Il suffit pour cela d&#x27;une bonne culture générale, de consulter des ouvrages courants, et de se procurer de la documentation, très facile à obtenir, même gratuitement. » <span class="refs"><a class="ref" id="b-04_09_95_38-1" href="#m-04_09_95_38" title="voir le madit">↓ 4 septembre 1995 · Sentinelles</a></span></p>
+<p>Tout, dans les onze premières énigmes, se résout depuis le fauteuil. Max le répète d&#x27;année en année : on ne se déplace que pour une seule chose, déterrer la chouette, tout à la fin. Relever soi-même des chiffres sur le terrain ne peut donc pas être une étape de décryptage. <span class="refs"><a class="ref" id="b-26_07_95_37-1" href="#m-26_07_95_37" title="voir le madit">↓ 26 juillet 1995 · 11 Et 12</a><a class="ref" id="b-12_08_95_14-1" href="#m-12_08_95_14" title="voir le madit">↓ 12 août 1995 · DBeplacement</a><a class="ref" id="b-02_11_95_9-1" href="#m-02_11_95_9" title="voir le madit">↓ 2 novembre 1995 · Deplacements</a><a class="ref" id="b-11_11_95_17-1" href="#m-11_11_95_17" title="voir le madit">↓ 11 novembre 1995 · 650</a><a class="ref" id="b-03_05_96_5-1" href="#m-03_05_96_5" title="voir le madit">↓ 3 mai 1996 · Napoleon 76</a><a class="ref" id="b-06_05_96_49-1" href="#m-06_05_96_49" title="voir le madit">↓ 6 mai 1996 · Mauvais Temps</a><a class="ref" id="b-13_06_96_18-1" href="#m-13_06_96_18" title="voir le madit">↓ 13 juin 1996 · 650</a><a class="ref" id="b-03_07_96_22-1" href="#m-03_07_96_22" title="voir le madit">↓ 3 juillet 1996 · Les Sentinelles</a><a class="ref" id="b-20_09_96_45-1" href="#m-20_09_96_45" title="voir le madit">↓ 20 septembre 1996 · Position</a><a class="ref" id="b-01_02_97_11-1" href="#m-01_02_97_11" title="voir le madit">↓ 1 février 1997 · De Son Fauteuil</a><a class="ref" id="b-20_01_97_45-1" href="#m-20_01_97_45" title="voir le madit">↓ 20 janvier 1997 · Deplacement Obligatoire?</a><a class="ref" id="b-21_02_97_5-1" href="#m-21_02_97_5" title="voir le madit">↓ 21 février 1997 · Royrogers</a><a class="ref" id="b-23_04_97_36-1" href="#m-23_04_97_36" title="voir le madit">↓ 23 avril 1997 · 12</a><a class="ref" id="b-07_09_97_33-1" href="#m-07_09_97_33" title="voir le madit">↓ 7 septembre 1997 · Marval</a><a class="ref" id="b-19_10_97_45-1" href="#m-19_10_97_45" title="voir le madit">↓ 19 octobre 1997 · 2 Eme Carte Fin</a><a class="ref" id="b-11_11_97_49-1" href="#m-11_11_97_49" title="voir le madit">↓ 11 novembre 1997 · Passage En Revue Des Sentinelles</a><a class="ref" id="b-05_02_98_36-1" href="#m-05_02_98_36" title="voir le madit">↓ 5 février 1998 · Pas D&#x27;Accord</a><a class="ref" id="b-19_06_98_34-1" href="#m-19_06_98_34" title="voir le madit">↓ 19 juin 1998 · Question</a><a class="ref" id="b-04_12_98_7-1" href="#m-04_12_98_7" title="voir le madit">↓ 4 décembre 1998 · 12Eme Enigme</a><a class="ref" id="b-26_02_99_23-1" href="#m-26_02_99_23" title="voir le madit">↓ 26 février 1999 · Gaetan 650</a></span></p>
+<p>La seconde porte : l&#x27;ouvrage spécialisé. Les inscriptions d&#x27;une borne-frontière obscure n&#x27;étaient décrites, à l&#x27;époque, que dans des bulletins archéologiques ou des publications d&#x27;érudition locale. </p>
+<p>Et là encore, Max a tranché : </p>
+<p>« Si pour décrypter une énigme, vous faites appel à un bouquin confidentiel, rare, ultra-technique, et que les données qu&#x27;il contient sont exclusives, vous faites obligatoirement fausse route. » <span class="refs"><a class="ref" id="b-05_05_00_3-1" href="#m-05_05_00_3" title="voir le madit">↓ 5 mai 2000 · 560 7</a></span></p>
+<p>Le jeu, rappelle-t-il sans cesse, s&#x27;adresse au grand public, pas à des experts. Rien, dans la chasse, ne relève d&#x27;une quelconque spécialisation. Seuls les ouvrages d&#x27;usage courant sont nécessaires et suffisants. <span class="refs"><a class="ref" id="b-20_11_95_2-1" href="#m-20_11_95_2" title="voir le madit">↓ 20 novembre 1995 · Dodument</a><a class="ref" id="b-25_11_95_19-1" href="#m-25_11_95_19" title="voir le madit">↓ 25 novembre 1995 · Enigme 600 Connaissances A Avoir</a><a class="ref" id="b-01_12_95_21-1" href="#m-01_12_95_21" title="voir le madit">↓ 1 décembre 1995 · Religion 2</a><a class="ref" id="b-04_01_96_29-1" href="#m-04_01_96_29" title="voir le madit">↓ 4 janvier 1996 · Precision - Bis</a><a class="ref" id="b-26_03_96_25-1" href="#m-26_03_96_25" title="voir le madit">↓ 26 mars 1996 · Question???</a><a class="ref" id="b-06_06_96_14-1" href="#m-06_06_96_14" title="voir le madit">↓ 6 juin 1996 · Question</a><a class="ref" id="b-23_08_96_42-1" href="#m-23_08_96_42" title="voir le madit">↓ 23 août 1996 · Vous Avez Dit Optique !</a><a class="ref" id="b-09_09_96_21-1" href="#m-09_09_96_21" title="voir le madit">↓ 9 septembre 1996 · (Suite Et Fin)</a><a class="ref" id="b-11_10_96_49-1" href="#m-11_10_96_49" title="voir le madit">↓ 11 octobre 1996 · Et Si Ce N&#x27;Est Pas Trop Precis...</a><a class="ref" id="b-04_11_96_11-1" href="#m-04_11_96_11" title="voir le madit">↓ 4 novembre 1996 · Coordonnees</a><a class="ref" id="b-13_11_96_47-1" href="#m-13_11_96_47" title="voir le madit">↓ 13 novembre 1996 · Sentinelles Xieme</a><a class="ref" id="b-28_03_97_17-1" href="#m-28_03_97_17" title="voir le madit">↓ 28 mars 1997 · Lumiere</a><a class="ref" id="b-03_07_97_8-1" href="#m-03_07_97_8" title="voir le madit">↓ 3 juillet 1997 · Genie?</a><a class="ref" id="b-07_09_97_49-1" href="#m-07_09_97_49" title="voir le madit">↓ 7 septembre 1997 · Materiels</a><a class="ref" id="b-05_08_99_10-1" href="#m-05_08_99_10" title="voir le madit">↓ 5 août 1999 · Ciel</a><a class="ref" id="b-07_12_99_8-1" href="#m-07_12_99_8" title="voir le madit">↓ 7 décembre 1999 · Geometrie ?</a><a class="ref" id="b-03_11_99_15-1" href="#m-03_11_99_15" title="voir le madit">↓ 3 novembre 1999 · Confirmation</a><a class="ref" id="b-05_10_99_47-1" href="#m-05_10_99_47" title="voir le madit">↓ 5 octobre 1999 · Bonsoir Max</a><a class="ref" id="b-05_04_00_5-1" href="#m-05_04_00_5" title="voir le madit">↓ 5 avril 2000 · Chasseur Debutant</a></span></p>
+<p>Et il y a plus. Même lorsqu&#x27;on ouvre un livre, ce n&#x27;est jamais pour y puiser la solution. </p>
+<p>Mars 1996 : </p>
+<p>« Les ouvrages et documents ne servent qu&#x27;à vérifier, contrôler, corroborer, confirmer ou infirmer. » La solution Canard fait précisément l&#x27;inverse : elle fait des chiffres gravés la source même du décryptage — ce qu&#x27;on va chercher pour obtenir le résultat. <span class="refs"><a class="ref" id="b-21_03_96_47-1" href="#m-21_03_96_47" title="voir le madit">↓ 21 mars 1996 · Profondeurs</a></span></p>
+<p>La solution Canard exige donc du chercheur de 1993 exactement ce que Max a dit que le jeu n&#x27;exigeait jamais : aller sur place, ou ouvrir un livre d&#x27;expert. </p>
+<h3 class="enigme">Problème 3 — Le chiffre-clé de la 650 n&#x27;est résolu qu&#x27;à la 520</h3>
+<p>Troisième. Le chiffre-clé de la 650 n&#x27;est résolu qu&#x27;à la 520. </p>
+<p>Le visuel de la 650 porte une séquence de huit chiffres : 71721075. </p>
+<p>Dans la solution Canard, ces chiffres ne sont pas exploités au sein de la 650. Le chercheur se rend aux Bornes Saint-Martin et relève les chiffres gravés sur les pierres. </p>
+<p>Et là, le livre ne décrypte rien : il renvoie, je cite la solution Canard, à « voir plus loin ». </p>
+<p>C&#x27;est seulement à l&#x27;énigme suivante, la 520, que la solution Canard s&#x27;en sert. On compare les chiffres des pierres à la séquence 71721075, on ne garde que ceux qui n&#x27;y figurent pas — 4, 1, 8, 8 — qu&#x27;on additionne pour obtenir 21, soit 6,93 mètres. La cache. </p>
+<p>Et c&#x27;est, de l&#x27;aveu même de la solution Canard, le principe de base pour localiser la cache. Tout entier dans la 520. </p>
+<p>Or Max a répondu, mot pour mot, à la question. </p>
+<p>En octobre 1996, un chercheur lui demande s&#x27;il a, en 650, tout ce qu&#x27;il faut pour décrypter ces chiffres. </p>
+<p>Réponse de Max : « Oui. Pour décrypter les énigmes, il n&#x27;est pas nécessaire d&#x27;aller chercher des éléments dans les énigmes ultérieures. Vous avez tout en 650 pour trouver 7172. » <span class="refs"><a class="ref" id="b-01_10_96_47-1" href="#m-01_10_96_47" title="voir le madit">↓ 1 octobre 1996 · Anais1</a></span></p>
+<p>C&#x27;est une règle de toute la chasse. Il serait, dit Max, « inconcevable que, pour résoudre une énigme, on ait besoin d&#x27;éléments puisés dans les énigmes ultérieures ». <span class="refs"><a class="ref" id="b-26_05_96_5-1" href="#m-26_05_96_5" title="voir le madit">↓ 26 mai 1996 · Cache</a></span></p>
+<p>Et le sens de ces chiffres, ajoute-t-il, doit faire partie de la solution de la 650. <span class="refs"><a class="ref" id="b-09_11_96_38-1" href="#m-09_11_96_38" title="voir le madit">↓ 9 novembre 1996 · Pile Poil</a></span></p>
+<p>La solution Canard fait exactement l&#x27;inverse : elle vide la 650 de son chiffre-clé pour ne le résoudre qu&#x27;à la 520. Chez elle, le décryptage de la 650 dépend d&#x27;une énigme postérieure — précisément ce que Max a exclu. </p>
+<h3 class="enigme">Problème 4 — La solution Canard se contredit sur le mot « sentinelle »</h3>
+<p>Quatrième. La solution Canard se contredit elle-même — sur le sens même du mot « sentinelle ». </p>
+<p>La solution Canard écrit, je cite encore le PDF : « les Sentinelles, car elles gardent le trésor ». Voilà sa justification pour baptiser « sentinelles » les Bornes Saint-Martin : elles garderaient le trésor. </p>
+<p>Mais une sentinelle, justement, ne garde pas. Elle veille. Et Max l&#x27;a dit, mot pour mot. </p>
+<p>Le 3 juillet 1996 : </p>
+<p>« Elles ne &quot;gardent&quot; rien, elles veillent — ce qui est, précise-t-il, le rôle d&#x27;une sentinelle. » <span class="refs"><a class="ref" id="b-03_07_96_31-1" href="#m-03_07_96_31" title="voir le madit">↓ 3 juillet 1996 · Sentinelle</a></span></p>
+<p>Huit jours plus tard, un autre chercheur insiste : « Elles ne gardent rien, soit. Mais ne veillent-elles pas sur quelque chose ? » </p>
+<p>« Elles &quot;veillent&quot; tout court, pas &quot;sur quelque chose&quot;. » <span class="refs"><a class="ref" id="b-11_07_96_2-1" href="#m-11_07_96_2" title="voir le madit">↓ 11 juillet 1996 · Sentinelles</a></span></p>
+<p>Et l&#x27;année suivante, en avril 1997, à qui leur suppose un « rôle actif de protection », Max répond une fois de plus à l&#x27;identique : </p>
+<p>« Elles n&#x27;ont pas de rôle actif de protection, mais &quot;veillent&quot;. » <span class="refs"><a class="ref" id="b-01_04_97_45-1" href="#m-01_04_97_45" title="voir le madit">↓ 1 avril 1997 · Sentinel</a></span></p>
+<p>La justification de la solution Canard s&#x27;effondre sur son propre mot. Elle baptise ces pierres « sentinelles » parce qu&#x27;elles garderaient le trésor — mais elles ne gardent rien, elles ne protègent rien. Et lorsqu&#x27;on a demandé à Max si elles veillaient au moins « sur » quelque chose, il a répondu : non, elles veillent, tout court. Une sentinelle veille. C&#x27;est, mot pour mot, tout ce qu&#x27;il a jamais voulu en dire. </p>
+<h3 class="enigme">Problème 5 — Les sentinelles n&#x27;ont pas de nom propre</h3>
+<p>Cinquième. Les sentinelles, dit Max, n&#x27;ont pas de nom propre. </p>
+<p>Avril 2000. Question : « Les sentinelles est écrit avec un s majuscule, cela signifie-t-il que c&#x27;est un nom propre ? » Réponse : « Non, les sentinelles n&#x27;ont pas de nom propre. » <span class="refs"><a class="ref" id="b-05_04_00_22-1" href="#m-05_04_00_22" title="voir le madit">↓ 5 avril 2000 · Sentinelles</a></span></p>
+<p>Huit madits convergents sur ce point. Les sentinelles ne portent qu&#x27;un nom commun. Pas de nom individuel. <span class="refs"><a class="ref" id="b-05_04_00_22-2" href="#m-05_04_00_22" title="voir le madit">↓ 5 avril 2000 · Sentinelles</a><a class="ref" id="b-04_04_97_28-1" href="#m-04_04_97_28" title="voir le madit">↓ 4 avril 1997 · Sans Nom</a><a class="ref" id="b-04_04_97_49-1" href="#m-04_04_97_49" title="voir le madit">↓ 4 avril 1997 · Sentinelles Sans Nom Propre</a><a class="ref" id="b-15_04_97_41-1" href="#m-15_04_97_41" title="voir le madit">↓ 15 avril 1997 · 1727</a><a class="ref" id="b-03_05_97_46-1" href="#m-03_05_97_46" title="voir le madit">↓ 3 mai 1997 · 650</a><a class="ref" id="b-24_02_99_48-1" href="#m-24_02_99_48" title="voir le madit">↓ 24 février 1999 · Suite Groseille En 650</a><a class="ref" id="b-31_03_00_48-1" href="#m-31_03_00_48" title="voir le madit">↓ 31 mars 2000 · Sentinnelles Pascal</a><a class="ref" id="b-07_12_01_42-1" href="#m-07_12_01_42" title="voir le madit">↓ 7 décembre 2001 · Sentielles</a></span></p>
+<p>Or, à Dabo, le site que les chercheurs appellent au pluriel « les Bornes Saint-Martin » n&#x27;en comporte en réalité qu&#x27;une seule. </p>
+<p>La « Borne Saint-Martin » au sens strict, c&#x27;est uniquement la plus petite des trois pierres du site : une borne forestière parallélépipédique du dix-huitième siècle, élevée en 1750 pour marquer l&#x27;ancienne limite entre le comté de Dabo et la forêt de l&#x27;abbaye de Marmoutier. C&#x27;est son nom propre, gravé sur ses faces : MARTIN sous la date 1828, STEIN sur un autre côté. </p>
+<p>Et ce n&#x27;est pas la seule de son espèce : des dizaines de bornes du même type jalonnaient cette ancienne limite, et plusieurs subsistent encore le long de la ligne de crête. </p>
+<p>Et la grande pierre triangulaire d&#x27;à côté — un probable menhir néolithique réutilisé — porte, elle, un autre nom propre : la « Pierre Saint-Martin ». Son inscription : « St Martin Stein 1747 », gravée lors d&#x27;une réérection en 1872. </p>
+<p>La base Mérimée du patrimoine français référence le site sous le numéro IA57000669, intitulé exactement : « Borne Saint-Martin et menhir appelé la pierre Saint-Martin ». </p>
+<p>Deux noms propres individuels distincts, attestés sur place et dans les bases documentaires officielles depuis le dix-huitième siècle. Pas un nom commun. </p>
+<p>C&#x27;est précisément ce que Max a exclu, six fois, en six ans, pour les sentinelles. </p>
+<p>C&#x27;est fini pour aujourd&#x27;hui. La suite au prochain épisode : la dernière énigme du parcours — « la terre s&#x27;ouvre » — puis une question que la solution officielle préfère éviter : comment une cache aurait-elle pu rester en place pendant trente ans ? On se retrouve très vite, pour la suite, sur Tournevis. </p>
+</section>
+
+<section class="madits">
+  <h2 class="chunk">Les madits cités — texte intégral</h2>
+<article class="madit" id="m-17_09_96_6">
+  <div class="m-head"><span class="m-date">17 septembre 1996</span>
+    <span class="m-titre">L AIDANT DE LA MER</span>
+    <span class="m-id">17_09_96_6</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour Max. Et c&#x27;est le simple fait de voir Neptune qui nous aide ou bien il vient vraiment à notre secours nous voyant en difficulté ? Amicalement. Hulul</p>
+  <p class="m-r"><span class="lbl">R</span>C&#x27;est bien sûr une image. Neptune vous aide deux fois à marcher sur les eaux. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-17_09_96_6-1">↩ retour 1</a> <a class="back" href="#b-17_09_96_6-2">↩ retour 2</a></div>
+</article>
+<article class="madit" id="m-01_03_00_12">
+  <div class="m-head"><span class="m-date">1 mars 2000</span>
+    <span class="m-titre">470</span>
+    <span class="m-id">01_03_00_12</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Flèche - ouverture - cœur sont-ils alignés ? Mon tout ouverture cœur alignés ?</p>
+  <p class="m-r"><span class="lbl">R</span>&quot;Tout&quot;, ouverture, lumière, alignés ! Pour le reste, à vous de vous faire une opinion ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-01_03_00_12-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-31_08_97_23">
+  <div class="m-head"><span class="m-date">31 août 1997</span>
+    <span class="m-titre">560</span>
+    <span class="m-id">31_08_97_23</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Cher max, est-ce que carusburc, l&#x27;ouverture et la lumière céleste sont alignés ? Merci d&#x27;avance. Signé personne</p>
+  <p class="m-r"><span class="lbl">R</span>Là, vous m&#x27;en demandez (un peu) trop ! Mais je vous réponds quand même, en précisant que je ne répondrai à aucune autre question concernant d&#x27;éventuels alignements. La réponse est non. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-31_08_97_23-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-17_09_97_3">
+  <div class="m-head"><span class="m-date">17 septembre 1997</span>
+    <span class="m-titre">BIS REPETITA PLACENT</span>
+    <span class="m-id">17_09_97_3</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, en 560, Carusburc ouverture et lumière céleste sont-ils alignés? Merci Chris</p>
+  <p class="m-r"><span class="lbl">R</span>Non, non et non!!! Je répète cela depuis 2 ans, et sans arrêt depuis quelques jours!... Excusez-moi, je ne peux pas répéter et confirmer sans arrêt les mêmes réponses. Il y a ainsi des sujets qui reviennent à la mode, alors que la première fois qu&#x27;ils avaient été abordés, ils ne faisaient réagir personne! Chris, excusez-moi, mais à la relecture de cette réponse, je m&#x27;aperçois qu&#x27;elle est très sèche. Ce n&#x27;était pas mon intention, bien sûr. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-17_09_97_3-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-19_09_97_2">
+  <div class="m-head"><span class="m-date">19 septembre 1997</span>
+    <span class="m-titre">BLEU</span>
+    <span class="m-id">19_09_97_2</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Carusburc, ouverture et lumière céleste n&#x27;ont-ils jamais été alignés?</p>
+  <p class="m-r"><span class="lbl">R</span>Jamais. amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-19_09_97_2-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-23_10_97_17">
+  <div class="m-head"><span class="m-date">23 octobre 1997</span>
+    <span class="m-titre">560</span>
+    <span class="m-id">23_10_97_17</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Résumons-nous : Carusburc --&gt; 2 aides de Neptune --&gt; ouverture puis lumière céleste --&gt; ouverture --&gt; nef. Est-ce ça ? Bises Lilibelle</p>
+  <p class="m-r"><span class="lbl">R</span>Non ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-23_10_97_17-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-16_11_98_25">
+  <div class="m-head"><span class="m-date">16 novembre 1998</span>
+    <span class="m-titre">560</span>
+    <span class="m-id">16_11_98_25</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour à tous. J&#x27;ai du lire que Carusburc, ouverture et lumière céleste n&#x27;étaient pas alignés. Pouvez-vous confirmer, s&#x27;il vous plaît ? Amitiés.</p>
+  <p class="m-r"><span class="lbl">R</span>Je le confirme. Amitiés -- Max.</p>
+  <div class="m-back"><a class="back" href="#b-16_11_98_25-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-18_08_99_28">
+  <div class="m-head"><span class="m-date">18 août 1999</span>
+    <span class="m-titre">470 ET 560</span>
+    <span class="m-id">18_08_99_28</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Salut max! En 470 tout-ouverture-lumière sont-ils alignés? Même question en 560 carusburc-ouverture-lumière céleste? Merci a+</p>
+  <p class="m-r"><span class="lbl">R</span>470: j&#x27;ai déjà confirmé cela. 560: non. Je l&#x27;ai déjà dit également. Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-18_08_99_28-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-21_01_00_3">
+  <div class="m-head"><span class="m-date">21 janvier 2000</span>
+    <span class="m-titre">LUMIERE</span>
+    <span class="m-id">21_01_00_3</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Est-ce que Carusburc, Lumière et Ouverture sont alignés ? Vagabond 57</p>
+  <p class="m-r"><span class="lbl">R</span>Je l&#x27;ai déjà dit : non. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-21_01_00_3-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-02_11_00_26">
+  <div class="m-head"><span class="m-date">2 novembre 2000</span>
+    <span class="m-titre">ALIGNEMENT</span>
+    <span class="m-id">02_11_00_26</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Est-ce que Carusburc, l&#x27;ouverture et la lumière céleste sont alignés ?</p>
+  <p class="m-r"><span class="lbl">R</span>Non. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-02_11_00_26-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-09_12_97_24">
+  <div class="m-head"><span class="m-date">9 décembre 1997</span>
+    <span class="m-titre">QUOI ?</span>
+    <span class="m-id">09_12_97_24</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Dans la q/r &quot;neptune&quot; en cours, vous avez répondu non à &quot;à carusburc, si je regarde par l&#x27;ouverture, puis-je voir la lumière céleste?&quot; merci de confirmer tolive.</p>
+  <p class="m-r"><span class="lbl">R</span>Si vous êtes à carusburc et que vous regardez par l&#x27;ouverture, vous ne verrez pas la lumière céleste. Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-09_12_97_24-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-16_09_97_45">
+  <div class="m-head"><span class="m-date">16 septembre 1997</span>
+    <span class="m-titre">CATASTROPHE</span>
+    <span class="m-id">16_09_97_45</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Salut max, je viens de lire les réponses publiques, et c&#x27;est la catastrophe ! comment le livre peut-il dire qu&#x27;à carus burc on doit chercher l&#x27;ouverture qui révèle la lumière céleste, et vous dites ensuite que carusburc +ouverture+lumière céleste ne sont pas alignés ? aurais-je mal lu ? d&#x27;autant qu&#x27;il s&#x27;agit de droit</p>
+  <p class="m-r"><span class="lbl">R</span>Ils ne sont pas alignés, je l&#x27;ai dit au moins 100 fois ici même... ce que dit le livre n&#x27;est absolument pas en contradiction avec la solution, je peux vous l&#x27;assurer !... amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-16_09_97_45-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-09_08_96_40">
+  <div class="m-head"><span class="m-date">9 août 1996</span>
+    <span class="m-titre">NEPTUNE SOBRE ?</span>
+    <span class="m-id">09_08_96_40</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Vous avez dit neptune est le dieu de toutes les eaux. ne nous aidera-t-il effectivement que 2 fois &quot;toutes eaux confondues [salée et douce] ?&quot; amitié, franck ps: en 560</p>
+  <p class="m-r"><span class="lbl">R</span>Oui, il ne vous aidera que 2 fois, toutes eaux confondues (mais cela n&#x27;est pas une confirmation quant à la nature de ces eaux). amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-09_08_96_40-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-09_08_96_36">
+  <div class="m-head"><span class="m-date">9 août 1996</span>
+    <span class="m-titre">NEPTUNE(BIS)</span>
+    <span class="m-id">09_08_96_36</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, je vous repose ma q moins précisément. sur la 1ère carte (où on doit travailler à ce stade du jeu, vous en conviendrez), neptune ne nous aide-t-il que 2 fois sans ambiguïté ? amitiés mpox*</p>
+  <p class="m-r"><span class="lbl">R</span>En effet, neptune ne vous aide que deux fois. amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-09_08_96_36-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-12_03_97_40">
+  <div class="m-head"><span class="m-date">12 mars 1997</span>
+    <span class="m-titre">560 bis 31416</span>
+    <span class="m-id">12_03_97_40</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Une fois qu&#x27;on voit la nef par l&#x27;ouverture en compagnie de Neptune, nous abandonne-t-il à ce moment ou alors son aide ne nous est plus nécessaire ? Merci cordialement 31416</p>
+  <p class="m-r"><span class="lbl">R</span>Tout ce que je peux dire, c&#x27;est que Neptune ne vous aide que 2 fois ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-12_03_97_40-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-01_08_97_26">
+  <div class="m-head"><span class="m-date">1 août 1997</span>
+    <span class="m-titre">560</span>
+    <span class="m-id">01_08_97_26</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Suite QR 31.07. N40. Désolé de revenir sur ce trait : si on suit le trait du visuel de Carusburc à la pointe du crayon, Neptune nous aide sur ce trajet par deux fois. Vous dites bien deux fois.</p>
+  <p class="m-r"><span class="lbl">R</span>Pourquoi &quot;à la pointe du crayon&quot; ? Neptune vous aide deux fois sur le trait de ce crayon, entre Carusburc et l&#x27;endroit où se trait s&#x27;arrêtera. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-01_08_97_26-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-17_08_97_26">
+  <div class="m-head"><span class="m-date">17 août 1997</span>
+    <span class="m-titre">NEPTUNE</span>
+    <span class="m-id">17_08_97_26</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Neptune se retrouve-t-il là où est la nef ? Encalminée neptune ne vient-il que deux fois à notre secours ?</p>
+  <p class="m-r"><span class="lbl">R</span>Neptune n&#x27;est pas là où se trouve la nef et il ne vient que deux fois à votre secours, oui. Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-17_08_97_26-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-02_03_97_1">
+  <div class="m-head"><span class="m-date">2 mars 1997</span>
+    <span class="m-titre">NEPTUNE</span>
+    <span class="m-id">02_03_97_1</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Dans la 560, Neptune vient-il à notre secours en nous évitant de marcher sur le s eaux?</p>
+  <p class="m-r"><span class="lbl">R</span>Non. Il vous aide 2 fois. Mais pas en vous évitant de marcher sur les eaux. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-02_03_97_1-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-21_07_99_35">
+  <div class="m-head"><span class="m-date">21 juillet 1999</span>
+    <span class="m-titre">AIDES</span>
+    <span class="m-id">21_07_99_35</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Comment dois-je poser la question pour que vous répondiez ? Sont-elles bout à bout ? Il y a-t-il une coupure entre les 2 ? Sont-elles continues ? Sont-elles distinctes ? Toutes aides directes ou indirectes confondues, nept. ne ns aide-t-il que 2 fois en 560 ? Roberto</p>
+  <p class="m-r"><span class="lbl">R</span>Roberto, je ne peux pas vous dévoiler la solution ! Ca n&#x27;a rien à voir avec la façon dont vous posez la question. Simplement, je ne peux pas répondre ! Oui, il n&#x27;y a que 2 aides. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-21_07_99_35-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-05_05_00_34">
+  <div class="m-head"><span class="m-date">5 mai 2000</span>
+    <span class="m-titre">GRAAL 560</span>
+    <span class="m-id">05_05_00_34</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Si neptune m&#x27;aide 2 fois de la même façon (eau douce ou mer) puis-je raisonnablement penser qu&#x27;une fois que les 2 aides de même nature ont été apportées je n&#x27;attends pas une aide de l&#x27;autre nature (dans la même énigme bien sûr) cad 2 fois eau douce et donc pas mer ou 2 fois mer et donc pas eau douce ? Amitiés graal*.</p>
+  <p class="m-r"><span class="lbl">R</span>Non, il n&#x27;y a pas deux aides d&#x27;une nature puis 2 autres aides d&#x27;une autre nature. Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-05_05_00_34-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-30_10_97_49">
+  <div class="m-head"><span class="m-date">30 octobre 1997</span>
+    <span class="m-titre">Neptune 2</span>
+    <span class="m-id">30_10_97_49</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Je trace un trait ouverture-nef. bien. s&#x27;il me prend l&#x27;envie de poursuivre ce trait jusqu&#x27;à une frontière (terrestre ou maritime), est-ce que neptune doit m&#x27;aider une 3ème fois, et seulement une 3ème fois. amitiés trempées elise</p>
+  <p class="m-r"><span class="lbl">R</span>Non, il ne vous aide que deux fois en tout et pour tout. amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-30_10_97_49-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-04_08_95_47">
+  <div class="m-head"><span class="m-date">4 août 1995</span>
+    <span class="m-titre">CA VA SANS DIRE (message 171 apres</span>
+    <span class="m-id">04_08_95_47</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Celui-ci. Il dit : &quot;Et mieux encore si vous le confirmez. Dans la 650, &quot;de la&quot; est bien le point d&#x27;où l&#x27;on doit se placer dos au ponant pour trouver les sentinelles ? Vous répondez : c&#x27;est exact. Avouez que l&#x27;on peut alors penser que les sentinelles sont bien vers l&#x27;orient. On joue sur les mots ! Amitiés. Arthur</p>
+  <p class="m-r"><span class="lbl">R</span>???? Lorsque vous vous placez dos à l&#x27;occident, vers où regardez-vous ? Je dois avouer que je ne comprends pas où est le problème... Dos au ponant, cherchez les sentinelles : c&#x27;est donc bien qu&#x27;elles sont vers l&#x27;est du point où l&#x27;on se trouve... Je n&#x27;ai jamais rien dit d&#x27;autre, Arthur ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-04_08_95_47-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-04_06_96_12">
+  <div class="m-head"><span class="m-date">4 juin 1996</span>
+    <span class="m-titre">TOUJOURS AU SUJET DE LA 650</span>
+    <span class="m-id">04_06_96_12</span></div>
+  <p class="m-q"><span class="lbl">Q</span>La phrase &quot;dos au ponant, cherchez les sentinelles&quot; peut-elle avoir pour sens : &quot;cherchez les sentinelles qui se trouvent dos au ponant&quot; ou le ponant peut-il représenter une ville comme la été l&#x27;ouverture dans la 530 ? ?????? Colargol</p>
+  <p class="m-r"><span class="lbl">R</span>Non, le ponant = occident. Donc &quot;dos à l&#x27;occident&quot;. Les sentinelles ne se trouvent donc pas à l&#x27;occident ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-04_06_96_12-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-04_09_95_38">
+  <div class="m-head"><span class="m-date">4 septembre 1995</span>
+    <span class="m-titre">SENTINELLES</span>
+    <span class="m-id">04_09_95_38</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Peut-on trouver les sentinelles en étant chez soi ? Merci dp</p>
+  <p class="m-r"><span class="lbl">R</span>Toutes les solutions peuvent être trouvées de chez soi. Il suffit pour cela d&#x27;une bonne culture générale, de consulter des ouvrages courants, et de se procurer de la documentation (très facile à obtenir, même gratuitement). Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-04_09_95_38-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-26_07_95_37">
+  <div class="m-head"><span class="m-date">26 juillet 1995</span>
+    <span class="m-titre">11 ET 12</span>
+    <span class="m-id">26_07_95_37</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Les 11 énigmes donnent la zone, la 12ème énigme doit-elle être résolue sur place ou peut-on la décrypter tranquillement chez soi ? Amitiés cia bis</p>
+  <p class="m-r"><span class="lbl">R</span>On peut tout décrypter de chez soi. Il suffit d&#x27;une bonne culture générale et de ne pas hésiter à aller à la pêche aux infos... Mais, tôt ou tard, il faudra tout de même que vous vous déplaciez, ne serait-ce que pour déterrer l&#x27;oiseau ! Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-26_07_95_37-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-12_08_95_14">
+  <div class="m-head"><span class="m-date">12 août 1995</span>
+    <span class="m-titre">DBeplacement</span>
+    <span class="m-id">12_08_95_14</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Cher Max, j&#x27;ai beaucoup progressé dans la résolution des énigmes de ce jeu si passionnant et j&#x27;aboutis à un lieu (secret !) situé très loin de chez moi. Je me permets donc de vous poser cette question : le déplacement sur place est-il nécessaire à la résolution des dernières énigmes (10, 11, 12ème) ? Merci. TD.</p>
+  <p class="m-r"><span class="lbl">R</span>La réponse figure en toutes lettres dans le livre : vous pouvez tout trouver depuis votre fauteuil. Sauf la chouette. Là, vous devez vous déplacer... ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-12_08_95_14-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-02_11_95_9">
+  <div class="m-head"><span class="m-date">2 novembre 1995</span>
+    <span class="m-titre">DEPLACEMENTS</span>
+    <span class="m-id">02_11_95_9</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, j&#x27;aimerais savoir à quel moment il est nécessaire de se déplacer. Est-ce qu&#x27;il est nécessaire de se déplacer pour comprendre véritablement la signification des sentinelles ? Êtes-vous certain que la supersolution ne donne l&#x27;emplacement précis, cela sur moins de 5 mètres carrés ? Merci</p>
+  <p class="m-r"><span class="lbl">R</span>Vous &quot;pouvez&quot; vous déplacer quand vous voulez, mais vous &quot;devez&quot; vous déplacer pour déterrer la chouette ! Tout est dans le livre. Et ce qui vous ferait éventuellement défaut se trouve dans des ouvrages d&#x27;usage courant ou dans de la doc facile à obtenir. La supersolution ne vous donne pas l&#x27;endroit à 5 mètres carrés près, mais avec une absolue précision. Mais compte tenu des erreurs que vous pourriez éventuellement commettre sur le terrain (je dis bien &quot;éventuellement&quot;), comptez sur une précision à 2 m près... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-02_11_95_9-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-11_11_95_17">
+  <div class="m-head"><span class="m-date">11 novembre 1995</span>
+    <span class="m-titre">650</span>
+    <span class="m-id">11_11_95_17</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Faut-il se déplacer pour décrypter la 650 et son visuel ?</p>
+  <p class="m-r"><span class="lbl">R</span>Toutes les énigmes peuvent être décryptées depuis votre fauteuil. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-11_11_95_17-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-03_05_96_5">
+  <div class="m-head"><span class="m-date">3 mai 1996</span>
+    <span class="m-titre">NAPOLEON 76</span>
+    <span class="m-id">03_05_96_5</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour max, si la zone porte le même nom que la grande dame, j&#x27;ai peut-être une chance de ramener l&#x27;oiseau. Est-ce que les chiffres servent seulement à nous guider sur le terrain ? -- daniel</p>
+  <p class="m-r"><span class="lbl">R</span>Non, tous les éléments qui composent les 11 énigmes peuvent être trouvés depuis votre fauteuil, même si certains d&#x27;entre eux sont visibles sur le terrain (je ne peux ni infirmer ni confirmer que cela soit le cas pour ces chiffres, bien sûr, ou que ces chiffres renvoient sur un élément présent sur le terrain). Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-03_05_96_5-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-06_05_96_49">
+  <div class="m-head"><span class="m-date">6 mai 1996</span>
+    <span class="m-titre">MAUVAIS TEMPS</span>
+    <span class="m-id">06_05_96_49</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour. Si je vois une sentinelle (malgré le mauvais temps), je les vois toutes ? Vous êtes sûr ? Quelles que soient les conditions météo ? Amitiés interloquées... Arthur</p>
+  <p class="m-r"><span class="lbl">R</span>Arthur, vous ne suivez pas ! J&#x27;ai déjà précisé maintes fois &quot;sauf brouillard ou conditions météo exceptionnelles&quot;. Excusez-moi, mais je ne peux pas réécrire cette phrase chaque fois que je dis &quot;quand vous voyez la première, vous les voyez toutes&quot; ! De toutes façons, cela ne pourrait concerner le jeu que dans l&#x27;hypothèse où vous vous rendriez sur place. Or, tout est dans le livre et tout peut être trouvé depuis votre fauteuil ! Le brouillard n&#x27;a donc qu&#x27;un intérêt anecdotique dans l&#x27;affaire. Ne vous déplacez que lorsque vous aurez décrypté la 12ème, pas avant ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-06_05_96_49-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-13_06_96_18">
+  <div class="m-head"><span class="m-date">13 juin 1996</span>
+    <span class="m-titre">650</span>
+    <span class="m-id">13_06_96_18</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Dans la 650, il faut les passer en revue, est-ce sur la carte ou il faut les voir en vrai, soit aller sur place ? N&#x27;auriez-vous pas dit il y a déjà un moment que 2 des sentinelles apparaissaient sur la carte ? Je vous remercie pour les réponses car rechercher sur le minitel ça coûte cher. Amitiés riri50</p>
+  <p class="m-r"><span class="lbl">R</span>Il n&#x27;est pas nécessaire de se déplacer avant d&#x27;aller creuser. Donc tout peut être trouvé depuis votre fauteuil. J&#x27;ai dit que les sentinelles étaient sur l&#x27;une des cartes. Mais je ne peux pas vous dire si elles sont 2 ou plus. Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-13_06_96_18-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-03_07_96_22">
+  <div class="m-head"><span class="m-date">3 juillet 1996</span>
+    <span class="m-titre">LES SENTINELLES</span>
+    <span class="m-id">03_07_96_22</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Faut-il être sur le site pour les passer en revue ? Salut -- Kad</p>
+  <p class="m-r"><span class="lbl">R</span>Non, tout peut être fait depuis votre fauteuil. À condition bien sûr que vous disposiez des informations nécessaires... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-03_07_96_22-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-20_09_96_45">
+  <div class="m-head"><span class="m-date">20 septembre 1996</span>
+    <span class="m-titre">POSITION</span>
+    <span class="m-id">20_09_96_45</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Devrait-on se trouver à &quot;de la&quot; en abordant l&#x27;énigme ou doit-on s&#x27;y rendre ? [dans l&#x27;énig 650] amitié, franck</p>
+  <p class="m-r"><span class="lbl">R</span>S&#x27;y rendre ? non ! je rappelle que vous pouvez décrypter toutes les énigmes depuis votre fauteuil... ce n&#x27;est qu&#x27;au terme de la supersolution qu&#x27;il faudra aller creuser ! amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-20_09_96_45-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-01_02_97_11">
+  <div class="m-head"><span class="m-date">1 février 1997</span>
+    <span class="m-titre">De son fauteuil</span>
+    <span class="m-id">01_02_97_11</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Avez-vous vérifié que tout peut être visualisé de puis notre fauteuil, max ? J&#x27;ai tel. en me faisant passer pour : géologu e, botaniste, historien, touriste &#x27;bob ricard&#x27;, prof. (ou vais-je trouver les 10 gamins qu&#x27;ils me demandent ?). J&#x27;ai photo aérienne, maque satellite espion et écologistes (j&#x27;essaye !). Amitiés alcuin</p>
+  <p class="m-r"><span class="lbl">R</span>Tout peut être trouvé depuis votre fauteuil. À condition d&#x27;être un peu débrouillard, bien sûr ! Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-01_02_97_11-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-20_01_97_45">
+  <div class="m-head"><span class="m-date">20 janvier 1997</span>
+    <span class="m-titre">Deplacement obligatoire?</span>
+    <span class="m-id">20_01_97_45</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour, est-il obligatoire de se déplacer pour résoudre les énigmes du livre? Et pour la &quot;douzième&quot; faut-il être sur place? Merci!</p>
+  <p class="m-r"><span class="lbl">R</span>Non, vous pouvez tout trouver depuis votre fauteuil. Mais pour vérifier la validité de votre supersolution, il faudra bien que vous alliez creuser! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-20_01_97_45-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-21_02_97_5">
+  <div class="m-head"><span class="m-date">21 février 1997</span>
+    <span class="m-titre">ROYROGERS</span>
+    <span class="m-id">21_02_97_5</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Peut-on identifier les sentinelles seule ment en y allant ?</p>
+  <p class="m-r"><span class="lbl">R</span>Non. Toutes les énigmes peuvent se résoudre depuis votre fauteuil. Vous n&#x27;avez à aller sur place qu&#x27;à la fin du jeu, pour creuser. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-21_02_97_5-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-23_04_97_36">
+  <div class="m-head"><span class="m-date">23 avril 1997</span>
+    <span class="m-titre">12</span>
+    <span class="m-id">23_04_97_36</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Reprenant une hypothèse, qu&#x27;un correspondant vous avait soumise il y a quelque temps, et que vous n&#x27;aviez ni confirmée ni infirmée, et qui en substance disait : &quot;Une fois sur le site, si on trouve l&#x27;élément X, on trouvera la cache de la manière Y&quot;, pourriez-vous me dire si l&#x27;élément X (s&#x27;il existe) est trouvable chez soi ? T.S.V.P.</p>
+  <p class="m-r"><span class="lbl">R</span>Tout est trouvable de chez soi, il suffirait de se renseigner. Mais cette réponse ne confirme en rien votre hypothèse. Je réponds simplement - et en pure théorie - à votre question. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-23_04_97_36-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-07_09_97_33">
+  <div class="m-head"><span class="m-date">7 septembre 1997</span>
+    <span class="m-titre">MARVAL</span>
+    <span class="m-id">07_09_97_33</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Faut-il se rendre sur les lieux pour certaines énigmes ou tout peut-il se &quot;jouer&quot; sur la carte ? Amitiés Xav</p>
+  <p class="m-r"><span class="lbl">R</span>Tout peut se jouer depuis chez vous (la carte, c&#x27;est une autre histoire !). Il ne faut vous déplacer que pour aller déterrer la bestiole. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-07_09_97_33-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-19_10_97_45">
+  <div class="m-head"><span class="m-date">19 octobre 1997</span>
+    <span class="m-titre">2 EME CARTE FIN</span>
+    <span class="m-id">19_10_97_45</span></div>
+  <p class="m-q"><span class="lbl">Q</span>J&#x27;ai bien compris que la 2ème carte est utile après résolution des 11 énigmes, pour appliquer la ss, mais dans votre esprit cela veut-il dire qu&#x27;on arrive jusqu&#x27;aux sentinelles et eux sans en avoir besoin, de façon certaine c&#x27;est-à-dire sans aucune ambiguïté, ou est-ce qu&#x27;on a déterminé en chambre où aller, -suite...</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne peux pas vous dire s&#x27;il existe le moindre rapport entre les sentinelles et &quot;eux&quot;, et la 2ème carte. Mais je vous confirme bien volontiers que vous pouvez décrypter les 11 premières énigmes depuis votre fauteuil (si vous vous y prenez bien !) Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-19_10_97_45-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-11_11_97_49">
+  <div class="m-head"><span class="m-date">11 novembre 1997</span>
+    <span class="m-titre">PASSAGE EN REVUE DES SENTINELLES</span>
+    <span class="m-id">11_11_97_49</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Le passage en revue des sentinelles : 1- doit-il se faire en allant voir les sentinelles sur place ? 2- ce déplacement peut-il faciliter ce passage en revue ? 3- ce déplacement ne présente aucun intérêt. Amitiés -- 76Rouen</p>
+  <p class="m-r"><span class="lbl">R</span>Vous pouvez tout faire depuis votre fauteuil ! Vous n&#x27;avez à vous déplacer que pour aller creuser, une fois la supersolution trouvée. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-11_11_97_49-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-05_02_98_36">
+  <div class="m-head"><span class="m-date">5 février 1998</span>
+    <span class="m-titre">PAS D&#x27;ACCORD</span>
+    <span class="m-id">05_02_98_36</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Tu dis qu&#x27;il est possible de la trouver de son fauteuil. Faux ; j&#x27;ai terminé et j&#x27;ai plus d&#x27;une solution ! Confirmes-tu ? Slts. Darni</p>
+  <p class="m-r"><span class="lbl">R</span>Confirmer quoi ? Qu&#x27;on peut décrypter les 11 énigmes dans son fauteuil ? Je le confirme volontiers ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-05_02_98_36-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-19_06_98_34">
+  <div class="m-head"><span class="m-date">19 juin 1998</span>
+    <span class="m-titre">QUESTION</span>
+    <span class="m-id">19_06_98_34</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Êtes-vous sûr que la chouette et la clé se trouvent toujours à leur cachette initiale et que l&#x27;on peut tout résoudre de chez soi sans en bouger ?</p>
+  <p class="m-r"><span class="lbl">R</span>Oui. D&#x27;ailleurs, je pense que si quelqu&#x27;un avait trouvé la chouette ou la clé d&#x27;orval, il n&#x27;attendrait sûrement pas pour réclamer son dû ! Vous pouvez tout résoudre de chez vous, mais vous devrez vous rendre sur place pour appliquer la dernière solution et déterrer. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-19_06_98_34-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-04_12_98_7">
+  <div class="m-head"><span class="m-date">4 décembre 1998</span>
+    <span class="m-titre">12EME ENIGME</span>
+    <span class="m-id">04_12_98_7</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, dans la Q/R &quot;Chiffres&quot; du 03/07/98, vous dites que nous n&#x27;avons à nous déplacer que pour la 12ème énigme. Vous entendez par là qu&#x27;il faut nous déplacer pour la résoudre, ou bien après l&#x27;avoir résolue ? Merci et bonne soirée, amitiés soulagées (journée de boulot finie, je rentre) - Nataly :O)</p>
+  <p class="m-r"><span class="lbl">R</span>Après l&#x27;avoir résolue. Je rappelle que vous pouvez décrypter l&#x27;ensemble des énigmes depuis votre fauteuil. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-04_12_98_7-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-26_02_99_23">
+  <div class="m-head"><span class="m-date">26 février 1999</span>
+    <span class="m-titre">GAETAN 650</span>
+    <span class="m-id">26_02_99_23</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Vous avez écrit que le passage en revue des sentinelles pouvait se faire de chez soi avec la bonne documentation, pouvez-vous confirmer s.v.p. amitiés</p>
+  <p class="m-r"><span class="lbl">R</span>De chez soi, sûrement ! Il suffit de bien se débrouiller, et on peut résoudre toutes les énigmes depuis son fauteuil (y compris la 650, bien sûr). Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-26_02_99_23-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-05_05_00_3">
+  <div class="m-head"><span class="m-date">5 mai 2000</span>
+    <span class="m-titre">560 7</span>
+    <span class="m-id">05_05_00_3</span></div>
+  <p class="m-q"><span class="lbl">Q</span>L&#x27;énigme 560 m&#x27;a fait consulter un ouvrage particulier. Cet ouvrage est l&#x27;œuvre d&#x27;un écrivain. Est-ce imaginable que la solution partielle de cette énigme découle d&#x27;une information rencontrée dans cet ouvrage et dans nul autre, encore moins une encyclopédie ou un dictionnaire ? Merci</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;ai dit que des documents et ouvrages &quot;d&#x27;usage courant&quot; étaient nécessaires. Par conséquent, si pour décrypter une énigme, vous faites appel à un bouquin confidentiel, rare, ultra-technique, etc., et que les données qu&#x27;il contient sont exclusives, vous faites obligatoirement fausse route... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-05_05_00_3-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-20_11_95_2">
+  <div class="m-head"><span class="m-date">20 novembre 1995</span>
+    <span class="m-titre">DODUMENT</span>
+    <span class="m-id">20_11_95_2</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Quels sont les documents utiles et nécessaires pour résoudre les énigmes ? Une carte de France est-elle suffisante ? Merci</p>
+  <p class="m-r"><span class="lbl">R</span>Tous les moyens sont bons. Mais vous n&#x27;avez pas besoin de vous procurer des ouvrages de collection ou des ouvrages rares. Les livres que vous possédez sans doute à la maison peuvent vous être d&#x27;un grand secours. Oui, une carte est conseillée : son échelle est donnée dans l&#x27;une des énigmes, et sa marque dans l&#x27;une des indications supplémentaires. À la fin de la 11ème énigme, il vous faudra une autre carte, la plus précise possible. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-20_11_95_2-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-25_11_95_19">
+  <div class="m-head"><span class="m-date">25 novembre 1995</span>
+    <span class="m-titre">ENIGME 600 CONNAISSANCES A AVOIR</span>
+    <span class="m-id">25_11_95_19</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Pour comprendre le titre de l&#x27;énigme 600 faut-il avoir une grande érudition, lire beaucoup, ou seulement avoir un certain esprit logique ? D&#x27;une façon générale faut-il avoir à consulter souvent dans des bibliothèques pour trouver les énigmes ? Merci d&#x27;avance.</p>
+  <p class="m-r"><span class="lbl">R</span>Il m&#x27;est pratiquement impossible de répondre à ces deux questions. Il faut une bonne culture générale (donc de l&#x27;érudition) ou être capable de trouver ailleurs les infos qui vous feraient défaut. Je ne peux pas estimer le niveau de culture de chaque chercheur, ou ses lacunes... En règle générale, des ouvrages ou docs d&#x27;usage courant sont suffisants si vous avez un niveau d&#x27;études secondaires... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-25_11_95_19-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-01_12_95_21">
+  <div class="m-head"><span class="m-date">1 décembre 1995</span>
+    <span class="m-titre">RELIGION 2</span>
+    <span class="m-id">01_12_95_21</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Est-ce que qqun de par ses connaissances religieuses mettra en évidence plus facilement des indices dans les énigmes et ainsi résoudra plus rapidement des énigmes? Lo</p>
+  <p class="m-r"><span class="lbl">R</span>Aucune spécialisation n&#x27;est nécessaire, religieuse ou autre! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-01_12_95_21-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-04_01_96_29">
+  <div class="m-head"><span class="m-date">4 janvier 1996</span>
+    <span class="m-titre">PRECISION - BIS</span>
+    <span class="m-id">04_01_96_29</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Si toute carte routière est une représentation d&#x27;une portion de la surface du globe, l&#x27;inverse n&#x27;est pas vrai, mais bravo ! Vous êtes doué pour la sophistique !</p>
+  <p class="m-r"><span class="lbl">R</span>Quel &quot;inverse&quot; ?... En m&#x27;accusant de sophisme, vous faites fausse route. Me croyez-vous assez stupide pour faire des réponses dolosives, sachant qu&#x27;on ne manquera pas de me les renvoyer dans les gencives le jour où les solutions seront publiées ? Je ne suis pas masochiste ! Si je dis qu&#x27;il faut une carte pour les 11 premières énigmes et une autre, plus précise, pour la supersolution, je sais de quoi je parle ! Et lorsque le livre prétend, sur sa 4e de couverture, que vous avez besoin de &quot;quelques instruments simples, ouvrages et documents d&#x27;usage courant&quot;, je pense que cela est assez clair pour que vous puissiez au moins vous douter - sinon savoir - de quoi il s&#x27;agit !... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-04_01_96_29-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-26_03_96_25">
+  <div class="m-head"><span class="m-date">26 mars 1996</span>
+    <span class="m-titre">QUESTION???</span>
+    <span class="m-id">26_03_96_25</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Si j&#x27;étais un marin, est-ce que cela me faciliterait la tâche pour certaine énigme ? Amitié à Max</p>
+  <p class="m-r"><span class="lbl">R</span>Aucune spécialisation n&#x27;est nécessaire. Mais je ne peux vous dire si l&#x27;une des énigmes contient un aspect maritime ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-26_03_96_25-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-06_06_96_14">
+  <div class="m-head"><span class="m-date">6 juin 1996</span>
+    <span class="m-titre">QUESTION</span>
+    <span class="m-id">06_06_96_14</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max. Q&#x27;appelles-tu i.s. et reliquats. Autre question, faut-il avoir des documents perfectionnés pour trouver les énigmes. Merci. Terre.</p>
+  <p class="m-r"><span class="lbl">R</span>&quot;I.S.&quot; : &quot;Indications supplémentaires&quot; (voyez la rubrique no 7 sur le sommaire général). &quot;Reliquats&quot; : ce sont des éléments qui subsistent après décryptage des 11 énigmes, et qu&#x27;il vous faut assembler et décrypter pour trouver la supersolution (celle qui vous indique la localisation précise de la cache). Documents : des documents d&#x27;usage courant. Mais tous les moyens de vous documenter sont bons ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-06_06_96_14-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-23_08_96_42">
+  <div class="m-head"><span class="m-date">23 août 1996</span>
+    <span class="m-titre">VOUS AVEZ DIT OPTIQUE !</span>
+    <span class="m-id">23_08_96_42</span></div>
+  <p class="m-q"><span class="lbl">Q</span>La seule piste que j&#x27;ai trouvée pour résoudre le casse-tête de la 780, c&#x27;est des références aux principes d&#x27;optique (changements de direction d&#x27;une lumière par un prisme ou une ouverture). Vous dites pourtant que ce jeu est à la portée de tous avec ouvrages d&#x27;usage courant. Pourtant, ça ne semble pas être le cas. Vrai ?</p>
+  <p class="m-r"><span class="lbl">R</span>Je confirme que le jeu est à la portée de tous, et que vous trouvez tout ce qu&#x27;il faut dans des ouvrages d&#x27;usage courant. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-23_08_96_42-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-09_09_96_21">
+  <div class="m-head"><span class="m-date">9 septembre 1996</span>
+    <span class="m-titre">(SUITE ET FIN)</span>
+    <span class="m-id">09_09_96_21</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Alors je vous pose une question (avec la gravité que vous subodorez) : ne doit-on utiliser nécessairement cette carte qu&#x27;à partir de l&#x27;énigme où elle est mentionnée ??? (L&#x27;utilisation antérieure n&#x27;étant absolument pas nécessaire) Salutations et respects du samedi. -- Aiglon</p>
+  <p class="m-r"><span class="lbl">R</span>Ok. Je vais donc répéter une fois de plus. Oublions la carte, et remplaçons-la par le mot &quot;dictionnaire&quot;. Si je vous dis en quatrième de couverture que tout document ou ouvrage d&#x27;usage courant peut vous aider, cela signifie qu&#x27;un dictionnaire a de fortes chances de faire l&#x27;affaire. Supposons maintenant que l&#x27;énigme &quot;444&quot; précise, sous une forme cryptée, qu&#x27;à partir de ce moment il vous faut un larousse, cela ne signifie pas qu&#x27;avant la 444 il ne fallait pas de dictionnaire ! Enfin, supposons qu&#x27;un chercheur me demande s&#x27;il fallait un larousse dans la toute première énigme, que puis-je répondre d&#x27;autre que &quot;non&quot; ? Je précise une fois de plus que je réponds toujours au premier degré, et que si on me demande si une carte est nécessaire pour &quot;résoudre&quot; (par opposition à &quot;comprendre&quot;) telle ou telle énigme, et que cela n&#x27;est pas le cas, je ne peux que répondre également &quot;non&quot;. Ceci est au moins la 6ème ou la 7ème fois que je le précise en deux jours ! (Et je ne compte plus le nombre de fois où je l&#x27;ai précisé auparavant.) Bref, que vous utilisiez cette carte ou une autre avant l&#x27;énigme qui la mentionne pour la première fois, c&#x27;est votre droit le plus absolu. Seulement, à partir de celle qui la mentionne pour la première fois, c&#x27;est celle-là qui devient indispensable. J&#x27;espère que les choses sont plus claires maintenant... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-09_09_96_21-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-11_10_96_49">
+  <div class="m-head"><span class="m-date">11 octobre 1996</span>
+    <span class="m-titre">ET SI CE N&#x27;EST PAS TROP PRECIS...</span>
+    <span class="m-id">11_10_96_49</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Ni trop ceci ou cela : j&#x27;ai bien une idée pour la spirale. Mais je fais appel à des connaissances très en marge de l&#x27;actuel enseignement scolaire, lesquelles connaissances ne se trouvent que dans des ouvrages d&#x27;un type bien particulier, assez rares dans les bibliothèques de tout un chacun (sauf dans la mienne).</p>
+  <p class="m-r"><span class="lbl">R</span>Il y a les connaissances scolastiques et la culture générale. Cela n&#x27;a bien sûr rien à voir. Mais je répète qu&#x27;aucun élément du jeu n&#x27;exige de connaissances spécialisées. J&#x27;aimerais bien vous le prouver, mais hélas, ce serait la fin du jeu ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-11_10_96_49-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-04_11_96_11">
+  <div class="m-head"><span class="m-date">4 novembre 1996</span>
+    <span class="m-titre">COORDONNEES</span>
+    <span class="m-id">04_11_96_11</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Cher Max, votre souci de précision vous a t-il conduit à utiliser le besoin échéant des systèmes de repérage cartographique complexes (exemple : Lambert I ou Lambert III), quitte à ce que les chercheurs ne trouvent pas, ignorant ces derniers</p>
+  <p class="m-r"><span class="lbl">R</span>Une fois encore, je ne peux donner aucune info sur les méthodes de décryptage (ou de cryptage, donc). De toutes façons, je ne peux préjuger de ce que les chercheurs - dans leur ensemble - savent ou ignorent. Il y a une frontière nette entre &quot;culture générale&quot; (ou possibilité de se documenter) et connaissances de spécialistes. Le jeu n&#x27;est pas destiné à des experts, mais au grand public... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-04_11_96_11-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-13_11_96_47">
+  <div class="m-head"><span class="m-date">13 novembre 1996</span>
+    <span class="m-titre">SENTINELLES Xieme</span>
+    <span class="m-id">13_11_96_47</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Puis-je &quot;identifier&quot; les sentinelles de chez moi avec le livre ou faut-il une étude livresque bibli... ? Merci</p>
+  <p class="m-r"><span class="lbl">R</span>Tous les moyens sont bons ! Je répète encore une fois ce qui est écrit sur la 4ème de couverture du bouquin : vous avez besoin d&#x27;une bonne culture générale et de quelques documents d&#x27;usage courants. Et d&#x27;un peu de débrouillardise pour vous procurer les renseignements qui pourraient vous faire défaut. Si le &quot;mode d&#x27;emploi&quot; de toutes les énigmes figurait dans le livre, il n&#x27;y aurait pas de jeu possible ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-13_11_96_47-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-28_03_97_17">
+  <div class="m-head"><span class="m-date">28 mars 1997</span>
+    <span class="m-titre">LUMIERE</span>
+    <span class="m-id">28_03_97_17</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Vue par un homme (disons un chercheur de chouette), est-ce que la lumière se déplace en ligne droite ?</p>
+  <p class="m-r"><span class="lbl">R</span>Ce jeu est destiné au grand public, pas aux spécialistes. Si donc le déplacement de la lumière avait un rôle à jouer - et sauf obstacle - nous partirions du principe qu&#x27;elle se déplacerait en ligne droite. Ceci n&#x27;est bien sûr pas une confirmation quant à la validité de l&#x27;hypothèse ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-28_03_97_17-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-03_07_97_8">
+  <div class="m-head"><span class="m-date">3 juillet 1997</span>
+    <span class="m-titre">GENIE?</span>
+    <span class="m-id">03_07_97_8</span></div>
+  <p class="m-q"><span class="lbl">Q</span>À la lecture des différentes rubriques, moi qui suis un débutant, je vous demande s&#x27;il faut être un génie des maths ou de scientifique, pour réussir à vous déchiffrer. Ou bien, la logique et une bonne documentation peuvent-ils suffire? Fanfan 36</p>
+  <p class="m-r"><span class="lbl">R</span>Bonne culture générale (ou débrouillardise) + logique + astuce, cela devrait suffire. Rien, dans le jeu, ne relève d&#x27;une quelconque spécialisation. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-03_07_97_8-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-07_09_97_49">
+  <div class="m-head"><span class="m-date">7 septembre 1997</span>
+    <span class="m-titre">MATERIELS</span>
+    <span class="m-id">07_09_97_49</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Vous indiquez &quot;il suffit de quelques instruments simples, etc...&quot; (couverture du livre). Où arrêtez-vous cette définition ? À quelques dictionnaires, à une encyclopédie ou à la bibliothèque nationale. Félicitations pour nous avoir à tous référer un virus sympa. Amitiés.</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne peux pas expliciter la notion de &quot;documents d&#x27;usage courant&quot;. Mais ce jeu ne nécessite pas de consulter des ouvrages rares. La plupart des renseignements peuvent s&#x27;obtenir de différentes manières. En fait, tous les moyens sont bons, y compris de faire un tour dans une bibliothèque municipale si ces fameux &quot;documents d&#x27;usage courant&quot; vous font défaut. Je ne les explicite pas parce que ce n&#x27;est pas mon rôle de stimuler l&#x27;achat d&#x27;un dictionnaire, par exemple... Je rappelle aussi qu&#x27;il peut être utile d&#x27;appeler des syndicats d&#x27;initiative ou des offices du tourisme en cas de nécessité. Amitiés -- Max.</p>
+  <div class="m-back"><a class="back" href="#b-07_09_97_49-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-05_08_99_10">
+  <div class="m-head"><span class="m-date">5 août 1999</span>
+    <span class="m-titre">CIEL</span>
+    <span class="m-id">05_08_99_10</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Faut-il être astronome pour comprendre les reliquats ng ?</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne peux pas vous dire si les reliquats font appel à l&#x27;astronomie, mais une chose est sûre : pas besoin d&#x27;être astronome. Je rappelle à ce propos que ce jeu n&#x27;exige aucune spécialisation. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-05_08_99_10-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-07_12_99_8">
+  <div class="m-head"><span class="m-date">7 décembre 1999</span>
+    <span class="m-titre">GEOMETRIE ?</span>
+    <span class="m-id">07_12_99_8</span></div>
+  <p class="m-q"><span class="lbl">Q</span>n&#x27;ai pas fait d&#x27;études au-delà de la 3em e et n&#x27;ai que très peu de connaissances en géométrie. puis-je malgré tout trouver la chouette ?</p>
+  <p class="m-r"><span class="lbl">R</span>Ce jeu ne nécessite aucune spécialisation, ni en géométrie, ni en autre chose. si vous sentez que vous avez des lacunes, il est facile de trouver les réponses dans des ouvrages d&#x27;usage courants, dans de la documentation, ou auprès d&#x27;amis... tout dépend de votre culture générale ou de votre débrouillardise. amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-07_12_99_8-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-03_11_99_15">
+  <div class="m-head"><span class="m-date">3 novembre 1999</span>
+    <span class="m-titre">CONFIRMATION</span>
+    <span class="m-id">03_11_99_15</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour max ? Pourrions-nous avoir une confirmation de nos déductions en lisant par exemple les contes et légendes de la région concernée ? Merci gaia</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;ai dit que seuls les documentations et ouvrages d&#x27;usage courant sont à la fois nécessaires et suffisants. Cela dit, que vous trouviez certaines confirmations dans des ouvrages de contes et légendes, cela ne m&#x27;étonnerait pas. Mais moi, je n&#x27;en ai pas tenu compte. Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-03_11_99_15-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-05_10_99_47">
+  <div class="m-head"><span class="m-date">5 octobre 1999</span>
+    <span class="m-titre">BONSOIR MAX</span>
+    <span class="m-id">05_10_99_47</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Peut-on résoudre entièrement la 500 sans consulter d ouvrage(s) peu courants (que l&#x27;on trouve plus facilement à la fnac que dans un foyer)? merci sénégal</p>
+  <p class="m-r"><span class="lbl">R</span>Vous pouvez résoudre toutes les énigmes (et pas seulement la 500) avec votre culture générale, votre sagacité, et avec des ouvrages d&#x27;usage courant. pas question de vous demander de consulter des bouquins rares ou confidentiels. amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-05_10_99_47-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-05_04_00_5">
+  <div class="m-head"><span class="m-date">5 avril 2000</span>
+    <span class="m-titre">CHASSEUR DEBUTANT</span>
+    <span class="m-id">05_04_00_5</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour Max, j&#x27;aimerais savoir s&#x27;il est possible encore de commencer la chasse aujourd&#x27;hui, malgré le fait que beaucoup semblent être très proches de la solution. Quel genre d&#x27;ouvrages est nécessaire pour se lancer dans l&#x27;aventure ? Amitiés -- Philippe</p>
+  <p class="m-r"><span class="lbl">R</span>Il n&#x27;est jamais trop tard. J&#x27;ai vu des débutants rattraper leur retard à vitesse turbo... Ouvrages : ouvrages d&#x27;usage courant. Donc pas de bouquins rares, confidentiels, ou de documentations difficiles à obtenir... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-05_04_00_5-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-21_03_96_47">
+  <div class="m-head"><span class="m-date">21 mars 1996</span>
+    <span class="m-titre">PROFONDEURS</span>
+    <span class="m-id">21_03_96_47</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Pour résoudre un point précis d&#x27;une énigme en partant d&#x27;un indice trouvé dans un ouvrage d&#x27;usage courant, faut-il ou doit-on approfondir les recherches en utilisant des ouvrages spécialisés pour progresser dans la résolution de cette énigme ? Amitiés</p>
+  <p class="m-r"><span class="lbl">R</span>Il n&#x27;y a pas à trouver d&#x27;indices dans un ouvrage d&#x27;usage courant. Les ouvrages et documents ne servent qu&#x27;à vérifier, contrôler, corroborer, confirmer ou infirmer tel ou tel élément. Vous les utilisez lorsque vous avez une lacune, au même titre que vous pouvez par exemple passer un coup de téléphone pour vous renseigner, ou faire des recherches dans une bibliothèque municipale. Tous les moyens sont bons. Mais je répète qu&#x27;il n&#x27;est pas nécessaire d&#x27;avoir des connaissances spécialisées. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-21_03_96_47-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-01_10_96_47">
+  <div class="m-head"><span class="m-date">1 octobre 1996</span>
+    <span class="m-titre">ANAIS1</span>
+    <span class="m-id">01_10_96_47</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, en 650 j&#x27;ai tout ce qu&#x27;il faut pour trouver 717121075 ? Merci Max</p>
+  <p class="m-r"><span class="lbl">R</span>Oui. Pour décrypter les énigmes, il n&#x27;est pas nécessaire d&#x27;aller chercher des éléments dans les énigmes ultérieures, ainsi que je l&#x27;ai déjà dit. Par conséquent, vous avez tout en 650 pour trouver 7172... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-01_10_96_47-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-26_05_96_5">
+  <div class="m-head"><span class="m-date">26 mai 1996</span>
+    <span class="m-titre">CACHE</span>
+    <span class="m-id">26_05_96_5</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Je voulais dire : vous souvenez-vous de l&#x27;hypothèse de la cache (mes solutions quoi) que je vous avais soumise en mars ? Il y a-t-il un ou deux chevaux en 780 ? Quand on quitte la 500, a-t-on la spirale si on a tout décrypté ou faut-il compléter avec des éléments ultérieurs ? Roberto</p>
+  <p class="m-r"><span class="lbl">R</span>Roberto, vous savez que je ne commente jamais les solutions ! Il y a 2 chevaux en 780. Spirale : oui, vous devriez l&#x27;avoir. De toutes façons, il serait inconcevable que, pour résoudre une énigme, on ait besoin d&#x27;éléments puisés dans les énigmes ultérieures. Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-26_05_96_5-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-09_11_96_38">
+  <div class="m-head"><span class="m-date">9 novembre 1996</span>
+    <span class="m-titre">PILE POIL</span>
+    <span class="m-id">09_11_96_38</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Localiser le pile poil est-il impossible si on a pas élucidé le 7172 de la 650?</p>
+  <p class="m-r"><span class="lbl">R</span>Il faut impérativement décrypter toutes les énigmes. Et si vous laissez quelque chose de côté, vous n&#x27;y arriverez pas. Le sens de ces chiffres doit donc faire partie de la solution de la 650, sous peine de ne pas arriver au bout du jeu. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-09_11_96_38-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-03_07_96_31">
+  <div class="m-head"><span class="m-date">3 juillet 1996</span>
+    <span class="m-titre">SENTINELLE</span>
+    <span class="m-id">03_07_96_31</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Les sentinelles sont-elles plus importantes que la chose qu&#x27;elles gardent pousse-pousse?</p>
+  <p class="m-r"><span class="lbl">R</span>Elles ne &quot;gardent&quot; rien, elles veillent (ce qui est le rôle d&#x27;une sentinelle). Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-03_07_96_31-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-11_07_96_2">
+  <div class="m-head"><span class="m-date">11 juillet 1996</span>
+    <span class="m-titre">SENTINELLES</span>
+    <span class="m-id">11_07_96_2</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Elles ne gardent rien. Mais n&#x27;avez-vous pas dit qu&#x27;elles veillaient sur quelque chose (je ne retrouve plus votre réponse à ce sujet) ?</p>
+  <p class="m-r"><span class="lbl">R</span>Elles &quot;veillent&quot; tout court, pas &quot;sur quelque chose&quot;... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-11_07_96_2-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-01_04_97_45">
+  <div class="m-head"><span class="m-date">1 avril 1997</span>
+    <span class="m-titre">SENTINEL</span>
+    <span class="m-id">01_04_97_45</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Les sentinelles sont-elles appelées ainsi pour ce qu&#x27;elles font ou pour l&#x27;endroit où elles se trouvent? Dans l&#x27;hypothèse où elles auraient un rôle actif de protection, leur localisation leur permettrait-elle de le remplir dans les meilleures conditions? À 1000 ans près, sont-elles récentes? Ciao</p>
+  <p class="m-r"><span class="lbl">R</span>Elles sont appelées ainsi dans le cadre du jeu, pas dans leur utilité intrinsèque en dehors de ce cadre. Elles n&#x27;ont pas de rôle actif de protection, mais &quot;veillent&quot;. Navré, je ne peux pas répondre à votre dernière question. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-01_04_97_45-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-05_04_00_22">
+  <div class="m-head"><span class="m-date">5 avril 2000</span>
+    <span class="m-titre">SENTINELLES</span>
+    <span class="m-id">05_04_00_22</span></div>
+  <p class="m-q"><span class="lbl">Q</span>1-&#x27;&#x27;Les sentinelles&#x27;&#x27; est écrit avec un &#x27;&#x27;s&#x27;&#x27; majuscule, cela signifie-t-il que c&#x27;est un nom propre ? 2-Faut-il avoir résolu toutes les énigmes avant de déterminer et d&#x27;utiliser le zoom de la première carte ? Merci d&#x27;avance... -- Tibo</p>
+  <p class="m-r"><span class="lbl">R</span>Non, les sentinelles n&#x27;ont pas de nom propre. Mais le mot &quot;sentinelles&quot; n&#x27;est justifiable que dans le cadre de ce jeu. Lorsque vous aurez les réponses à toutes les énigmes, vous aurez localisé la zone. Dès lors, le zoom s&#x27;impose, et la 2ème carte aussi. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-05_04_00_22-1">↩ retour 1</a> <a class="back" href="#b-05_04_00_22-2">↩ retour 2</a></div>
+</article>
+<article class="madit" id="m-04_04_97_28">
+  <div class="m-head"><span class="m-date">4 avril 1997</span>
+    <span class="m-titre">SANS NOM</span>
+    <span class="m-id">04_04_97_28</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour. Si aucune sentinelle ne porte un nom permettant de la différencier des autres, alors une sentinelle ne saurait s&#x27;appeler (par exemple) la borne saint-g linglin ou la tour ja-jar... exact non ? Merci de me rassurer quant à mon maigre pouvoir de déduction, usé par trois ans de quête ! Amicalement. Arthur</p>
+  <p class="m-r"><span class="lbl">R</span>Arthur, je suis surpris que les mêmes questions reviennent épisodiquement, et que mes réponses suscitent à leur tour les mêmes nouvelles questions ! J&#x27;ai dit qu&#x27;on ne pouvait nommer les sentinelles, qu&#x27;elles ne portaient pas de nom propre individuel, mais seulement un nom commun. Je ne peux vraiment pas être plus précis que cela, car j&#x27;ai dit et redit tout ce que je pouvais à ce sujet. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-04_04_97_28-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-04_04_97_49">
+  <div class="m-head"><span class="m-date">4 avril 1997</span>
+    <span class="m-titre">SENTINELLES SANS NOM PROPRE</span>
+    <span class="m-id">04_04_97_49</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Êtes-vous certain qu&#x27;aucune des entités appelées &quot;sentinelle&quot; dans le cadre du jeu ne porte un nom propre, ni en France ni à l&#x27;étranger ? S&#x27;il en est ainsi, j&#x27;en conclurai que si par exemple une borne porte le nom propre de borne Saint-Martin il me faut éliminer les bornes du cadre du jeu, car au moins une a un nom propre.</p>
+  <p class="m-r"><span class="lbl">R</span>Je vous renvoie à ma réponse faite ce jour à cette question, et à celle faite hier. Bien évidemment, si vous incluez une solution (fausse ou juste) dans vos questions, il m&#x27;est absolument impos-sible de vous répondre ! Je ne vois d&#x27;ailleurs pas pourquoi soudain cette question de noms propres des sentinelles revient sur le tapis : j&#x27;ai fourni la même réponse il y a déjà deux ans ! Afin de clore ce chapitre une fois pour toutes, je vous confirme qu&#x27;on ne peut nommer les sentinelles par des noms propres. À partir de là, à vous de tirer les conclusions qui s&#x27;imposent. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-04_04_97_49-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-15_04_97_41">
+  <div class="m-head"><span class="m-date">15 avril 1997</span>
+    <span class="m-titre">1727</span>
+    <span class="m-id">15_04_97_41</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour ! Désolé d&#x27;insister, mais vous avez bien dit qu&#x27;aucune sentinelle ne portait un nom propre ? Merci. Arthur</p>
+  <p class="m-r"><span class="lbl">R</span>Arthur, je vous ai répondu au moins 5 ou 6 fois à ce sujet les derniers jours ! Je répète donc : on ne peut nommer les sentinelles individuellement car elles ne portent pas de nom propre. Avant que vous ne me demandiez si elles portent un nom propre collectif, je vous arrête en répétant que je ne peux pas vous répondre ! (merci de vous reporter aux réponses que je vous ai faites ici-même avant le long week-end pascal). Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-15_04_97_41-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-03_05_97_46">
+  <div class="m-head"><span class="m-date">3 mai 1997</span>
+    <span class="m-titre">650</span>
+    <span class="m-id">03_05_97_46</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, vous avez dit que les sentinelles n&#x27;avaient pas de noms propres. Vous voulez dire qu&#x27;elles n&#x27;en ont ni dans le livre ni sur la carte. M</p>
+  <p class="m-r"><span class="lbl">R</span>Elles n&#x27;ont pas de noms propres. C&#x27;est tout ce que je peux dire. Mais je précise une fois encore que je ne peux pas répondre aux questions concernant un éventuel nom collectif. (Ce qui ne signifie nullement que ce soit de cas, ni l&#x27;inverse d&#x27;ailleurs !) Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-03_05_97_46-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-24_02_99_48">
+  <div class="m-head"><span class="m-date">24 février 1999</span>
+    <span class="m-titre">SUITE GROSEILLE EN 650</span>
+    <span class="m-id">24_02_99_48</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Donc aucune des sentinelles ne porte de nom propre... c&#x27;est bien ça ? Amitiés</p>
+  <p class="m-r"><span class="lbl">R</span>Les sentinelles ne portent pas de nom propre, mais uniquement un nom commun. Navré, mais je ne donnerai aucune précision supplémentaire. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-24_02_99_48-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-31_03_00_48">
+  <div class="m-head"><span class="m-date">31 mars 2000</span>
+    <span class="m-titre">SENTINNELLES PASCAL</span>
+    <span class="m-id">31_03_00_48</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Info ou intox, les sentinelles portent-elles des noms propres ? Deuxième question, lors d&#x27;un is on dit trajet Orthez Bordeaux, doit-on inclure ou exclure les deux v ille de la valeur du trajet ? Merci d&#x27;avance pour les réponses -- Pascal</p>
+  <p class="m-r"><span class="lbl">R</span>Les sentinelles ne portent pas de noms propres, je l&#x27;ai déjà souvent dit. Je ne peux pas valider Orthez et Bordeaux, Pascal. Je ne peux donc pas non plus répondre. De toutes façons, votre question relevant des méthodes de décryptage, il m&#x27;aurait été impossible de vous répondre. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-31_03_00_48-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-07_12_01_42">
+  <div class="m-head"><span class="m-date">7 décembre 2001</span>
+    <span class="m-titre">SENTIELLES</span>
+    <span class="m-id">07_12_01_42</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Après enquête sur le terrain, il s&#x27;avère que les sentinelles &quot;que j&#x27;ai trouvées&quot; bien qu&#x27;ayant une existence en tant que sentinelles possèdent aussi un nom propre en plus, qui les complètent ou les distinguent des autres sentinelles, ce nom propre est-il à ignorer ou a-t-il de l&#x27;importance ? amitiés -- daniel</p>
+  <p class="m-r"><span class="lbl">R</span>&quot;Mes&quot; sentinelles n&#x27;ont pas de noms propres. À vous de tirer les conclusions qui s&#x27;imposent ! amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-07_12_01_42-1">↩ retour </a></div>
+</article>
+</section>
+
+<footer>
+  Sources : serveur Maxval (1995-2001), archive des « madits » (« Max a dit »), consultable sur
+  <a href="https://lachouette.net/">lachouette.net</a>. Texte normalisé pour la lisibilité —
+  la <b>date et le titre</b> de chaque madit font foi pour le retrouver.
+</footer>
+</div>
+<script>
+/* Navigation : on mémorise la position de l'ascenseur au clic « ↓ » (script → madit)
+   et on la restaure au clic « ↩ retour » (madit → script) — au lieu de placer
+   l'ancre en haut de la fenêtre. Les attributs href restent le repli si JS off. */
+(function(){
+  var saved = null;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if (!a) return;
+    if (a.classList.contains('ref')) {
+      saved = window.scrollY;            // position AVANT le saut vers le madit
+    } else if (a.classList.contains('back')) {
+      if (saved !== null) {
+        e.preventDefault();              // on neutralise le saut d'ancre…
+        window.scrollTo({ top: saved, behavior: 'smooth' });  // …et on restaure
+      }                                 // sinon : repli sur l'ancre href
+    }
+  });
+})();
+</script>
+</body>
+</html>
