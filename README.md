@@ -21,8 +21,8 @@ Le but : que chaque citation de la vidéo soit **vérifiable et traçable** d'un
 | Épisode | Contenu | Vidéo | Dossier |
 |---|---|---|---|
 | 1 — L'affaire & les premières énigmes | 530 · 780 · 470 · 580 · 600 · 500 | [▶️ YouTube](https://www.youtube.com/watch?v=KVdlIKB-7IA) | [`dossier_ep01.html`](https://tournevischouette.github.io/debunkage_v2/dossier_ep01.html) |
-| 2 — *(à venir)* | 420 · 560 · 650 | — | — |
-| 3 — *(à venir)* | 520 · les 30 ans | — | — |
+| 2 — Lumière, passage & l'avant-dernière | 420 · 560 · 650 | [▶️ YouTube](https://www.youtube.com/watch?v=xIth4rMxkxI) | [`dossier_ep02.html`](https://tournevischouette.github.io/debunkage_v2/dossier_ep02.html) |
+| 3 — La 520 & la cache impossible | 520 · les 30 ans | [▶️ YouTube](https://www.youtube.com/watch?v=odEdlkoaMSY) | [`dossier_ep03.html`](https://tournevischouette.github.io/debunkage_v2/dossier_ep03.html) |
 | 4 — *(à venir)* | architecture du jeu · Dabo · conclusion | — | — |
 
 ## Consulter

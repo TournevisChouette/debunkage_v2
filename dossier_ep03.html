@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tournevis — Chouette d’Or, débunkage V2 · Épisode 3 — dossier</title>
+<style>
+  :root { --gold:#b8860b; --gold2:#d4af37; --ink:#1c2230; --paper:#fbf8f1; --soft:#6a6256; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+    font-family:Georgia,'Times New Roman',serif; line-height:1.62; }
+  .wrap { max-width:820px; margin:0 auto; padding:48px 22px 120px; }
+  header h1 { font-size:20px; letter-spacing:.16em; text-transform:uppercase; color:var(--soft);
+    font-weight:normal; margin:0 0 6px; }
+  .tagline { font-size:14.5px; font-style:italic; color:var(--gold); margin:0 0 16px; }
+  header h2.ep { font-size:34px; margin:0 0 14px; line-height:1.2; }
+  .watch { margin:0 0 20px; }
+  .topnav { margin:0 0 22px; font-family:system-ui,sans-serif; font-size:13.5px; }
+  .topnav a { text-decoration:none; color:var(--gold); border:1px solid #e0d090;
+    background:#f3e9c8; border-radius:999px; padding:4px 14px; margin-right:8px; white-space:nowrap; }
+  .topnav a:hover { background:var(--gold2); color:#221c05; }
+  .watch a { display:inline-block; text-decoration:none; font-family:system-ui,sans-serif;
+    font-size:15px; font-weight:600; color:#fff; background:#c0392b; padding:9px 18px;
+    border-radius:8px; }
+  .watch a:hover { background:#a23226; }
+  .watch .soon { display:inline-block; font-family:system-ui,sans-serif; font-size:15px;
+    font-weight:600; color:var(--soft); background:#efe7d3; padding:9px 18px; border-radius:8px; }
+  .intro { background:#fff; border:1px solid #e7ddc4; border-left:4px solid var(--gold2);
+    padding:16px 20px; border-radius:8px; font-size:15.5px; color:#3a3a3a; }
+  .intro b { color:var(--gold); }
+  .intro a, footer a { color:var(--gold); }
+  h2.chunk { font-size:15px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold);
+    border-bottom:2px solid #e7ddc4; padding-bottom:6px; margin:54px 0 14px; }
+  h3.enigme { font-size:22px; margin:34px 0 10px; color:var(--ink); }
+  #script p { margin:0 0 16px; }
+  .refs { display:inline; }
+  a.ref { display:inline-block; font-family:system-ui,sans-serif; font-size:11.5px;
+    text-decoration:none; color:#5a4a10; background:#f3e9c8; border:1px solid #e0d090;
+    border-radius:11px; padding:1px 9px; margin:1px 3px; white-space:nowrap; vertical-align:1px; }
+  a.ref:hover { background:var(--gold2); color:#221c05; }
+  a.vlink { color:#b8860b; text-decoration:underline; text-decoration-color:#d4af37;
+    text-underline-offset:2px; font-weight:600; }
+  a.vlink:hover { color:#a23226; }
+  a.vlink::after { content:" ↗"; font-size:.78em; color:var(--gold); vertical-align:1px; }
+  a.vlink.vid::after { content:" ▶"; font-size:.82em; color:#c0392b; }
+  section.madits { margin-top:70px; }
+  article.madit { background:#fff; border:1px solid #e7ddc4; border-radius:10px;
+    padding:16px 20px 12px; margin:0 0 16px; scroll-margin-top:14px; }
+  article.madit:target { border-color:var(--gold2); box-shadow:0 0 0 3px rgba(212,175,55,.25); }
+  .m-head { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:10px; }
+  .m-date { font-family:system-ui,sans-serif; font-size:13px; font-weight:700; color:#fff;
+    background:var(--gold); padding:2px 11px; border-radius:7px; }
+  .m-titre { font-family:system-ui,sans-serif; font-size:13px; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--soft); }
+  .m-id { margin-left:auto; font-family:ui-monospace,monospace; font-size:11px; color:#b8b09c; }
+  .m-q, .m-r { margin:0 0 8px; font-size:16px; }
+  .m-q { color:#4a4a4a; }
+  .lbl { display:inline-block; width:20px; height:20px; line-height:20px; text-align:center;
+    font-family:system-ui,sans-serif; font-size:12px; font-weight:700; border-radius:50%;
+    margin-right:8px; vertical-align:1px; }
+  .m-q .lbl { border:1.5px solid #c9c0a6; color:#9a9078; }
+  .m-r .lbl { border:1.5px solid var(--gold2); color:var(--gold); }
+  .m-back { margin-top:6px; }
+  a.back { font-family:system-ui,sans-serif; font-size:12px; text-decoration:none;
+    color:var(--gold); border:1px solid #e0d090; border-radius:11px; padding:1px 10px; margin-right:6px; }
+  a.back:hover { background:#f3e9c8; }
+  section.sources { margin-top:70px; }
+  .sources h3.src-cat { font-size:14px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--soft); margin:26px 0 8px; }
+  .sources ul.src-list { margin:0 0 4px; padding-left:22px; }
+  .sources li { font-size:15px; margin:0 0 9px; }
+  .sources a { color:var(--gold); }
+  .sources .det { color:var(--soft); font-size:13.5px; font-style:italic; }
+  footer { margin-top:60px; font-size:13px; color:var(--soft); border-top:1px solid #e7ddc4; padding-top:14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="topnav"><a href="./">← Accueil</a><a href="dossier_ep01.html">Épisode 1</a><a href="dossier_ep02.html">Épisode 2</a><a href="#sources">Sources externes</a></nav>
+<header>
+  <h1>Tournevis — La Chouette d’Or, débunkage V2</h1>
+  <p class="tagline">Tournevis · la chaîne YouTube qui enquête sur l’affaire de la Chouette d’Or — l’enquête, madit par madit.</p>
+  <h2 class="ep">Épisode 3 — La 520 &amp; la cache impossible</h2>
+  <p class="watch"><a href="https://www.youtube.com/watch?v=odEdlkoaMSY" target="_blank" rel="noopener">▶ Voir l’épisode sur YouTube</a></p>
+  <div class="intro">
+    Ce document réunit le <b>script intégral</b> de l’épisode, les <b>108 madits cités</b>
+    (questions-réponses de Max Valentin, serveur Maxval 1995-2001) et les <b>sources externes</b>
+    (documentations constructeurs, géoradar, témoignages, documents Becker, références patrimoniales).
+    Le texte des madits est présenté en <b>version normalisée</b> — ce sont la <b>date et le titre</b>
+    de chaque madit qui font foi pour l’identifier ; les madits d’origine sont sur
+    <a href="https://lachouette.net/">lachouette.net</a>. Dans le script, la puce <b>↓ date · titre</b>
+    ouvre le madit ; le bouton <b>↩ retour</b> ramène au passage. Tout est vérifiable, traçable.
+  </div>
+</header>
+
+<section id="script">
+<h2 class="chunk">Énigme 520 · la cache (où ?) — sept problèmes</h2>
+<h3 class="enigme">Épisode 3 / 4 — La terre s&#x27;ouvre &amp; l&#x27;épreuve du temps</h3>
+<p>Troisième épisode. </p>
+<p>Et si vous n&#x27;avez pas vu le début, arrêtez-vous et commencez par le premier épisode : le lien est juste en dessous. On vous attend. </p>
+<p>Le principe ne change pas. On confronte une seule chose à une seule autre : la « solution Canard », la solution officielle, et ce que Max Valentin — l&#x27;auteur des énigmes — a écrit pendant six ans sur le serveur Maxval. Ces messages, ce sont les madits : « Max a dit ». </p>
+<p>Chaque fois qu&#x27;une de ses phrases apparaît à l&#x27;écran, vous pouvez mettre en pause et la vérifier vous-même. En voici une, tout de suite. <span class="refs"><a class="ref" id="b-26_07_95_35-1" href="#m-26_07_95_35" title="voir le madit">↓ 26 juillet 1995 · Contradiction</a></span></p>
+<p>Dans les deux premiers épisodes, neuf énigmes ont déjà refusé de coller. Il n&#x27;en reste qu&#x27;une : la onzième — « la terre s&#x27;ouvre ». Une fois cette dernière énigme passée, on posera la question du temps : trente ans. </p>
+<h3 class="enigme">Énigme 520 — La terre s&#x27;ouvre</h3>
+<p>La dernière énigme du livre. La terre s&#x27;ouvre. </p>
+<p>Selon la solution Canard, c&#x27;est dans cette énigme qu&#x27;on creuse — à six mètres et quatre-vingt-treize centimètres du centre du triangle des Bornes Saint-Martin. </p>
+<p>Sept problèmes contre cet emplacement précis. On va remonter la chaîne : d&#x27;abord le calcul, puis le texte, puis le terrain. </p>
+<h3 class="enigme">Problème 1 — Le calcul 6,93 m repose sur un critère subjectif</h3>
+<p>Le calcul, d&#x27;abord. </p>
+<p>Premier problème : ce six mètres quatre-vingt-treize repose sur un critère de sélection subjectif. </p>
+<p>Le PDF énumère cinq lectures possibles des chiffres à additionner. Il en rejette quatre — « manquent évidemment d&#x27;élégance » — et garde la cinquième. </p>
+<p>« Manquent d&#x27;élégance. » C&#x27;est le critère retenu. Aucune règle interne à l&#x27;énigme ne dicte la lecture choisie. </p>
+<p>Et le problème ne s&#x27;arrête pas au choix de lecture. Six mètres quatre-vingt-treize au centimètre, ça se mesure depuis un point : le centre du triangle des trois pierres. Or ces pierres sont difformes — des blocs irréguliers, sans sommet ni centre nets. </p>
+<p>En mai 1997, un chercheur pose la question, noir sur blanc : </p>
+<p>« Est-il possible de prendre des mesures précises sur un rocher tout difforme ? » — « Non. » <span class="refs"><a class="ref" id="b-03_05_97_49-1" href="#m-03_05_97_49" title="voir le madit">↓ 3 mai 1997 · Zebulon</a></span></p>
+<p>Un seul mot. La précision au centimètre que revendique la solution Canard s&#x27;appuie sur un point que l&#x27;auteur des énigmes déclare lui-même impossible à mesurer. </p>
+<h3 class="enigme">Problème 2 — La solution Canard ne relève pas tous les chiffres gravés</h3>
+<p>Et ce calcul s&#x27;effrite encore. </p>
+<p>Deuxième problème : la solution Canard ne relève même pas tous les chiffres gravés. </p>
+<p>Le calcul de la cache part des chiffres gravés sur les pierres. Et la solution Canard est formelle, je cite le PDF : « il doit relever tous les chiffres qui y sont gravés. » </p>
+<p>Elle en relève trois : 1747, 1750, 1828. Comparés à la séquence du visuel de la 650, ils donnent 4-1-8-8, puis 21, puis six mètres quatre-vingt-treize. </p>
+<p>Mais la borne en porte un quatrième, gravé sur la pierre : « 223 » — un numéro d&#x27;abornement de la forêt domaniale, <a class="vlink doc" href="https://www.pop.culture.gouv.fr/notice/merimee/IA57000669" target="_blank" rel="noopener" title="Base Mérimée — notice IA57000669 (POP / Ministère de la Culture)">officiellement relevé par l&#x27;inventaire du patrimoine</a>. </p>
+<p>Or la règle est formelle — relever tous les chiffres gravés. La solution Canard, elle, s&#x27;arrête à trois et laisse le 223 de côté : précisément le chiffre en trop. Son six mètres quatre-vingt-treize repose donc sur un relevé tronqué — un relevé qui écarte, comme par hasard, la seule gravure capable de fausser le compte. </p>
+<p>La solution Canard ne relève donc pas « tous » les chiffres : elle s&#x27;arrête à ceux qui donnent six mètres quatre-vingt-treize. Le pile-poil de la cache tient à un relevé tronqué. </p>
+<h3 class="enigme">Problème 3 — « Eux » n&#x27;est pas les sentinelles</h3>
+<p>Le calcul écarté, passons au texte. </p>
+<p>Troisième problème : le « eux » de la 520 ne désigne pas les sentinelles — et c&#x27;est Max lui-même qui les distingue. </p>
+<p>Le texte de la 520 dit « entre eux » — un pronom masculin. Un chercheur, en mars 2000, demande si ce n&#x27;est pas une faute pour « entre elles ». Réponse de Max : « C&#x27;est eux, pas elles, je vous le confirme très volontiers ! » <span class="refs"><a class="ref" id="b-07_03_00_13-1" href="#m-07_03_00_13" title="voir le madit">↓ 7 mars 2000 · Un Nouveau Chercheur -Suite2-</a></span></p>
+<p>Le masculin est donc voulu. Or, pendant six ans, Max parle toujours des sentinelles au féminin — « elles sont toutes en France », « tangibles et massives ». Jamais « eux ». </p>
+<p>La solution Canard, elle, lit « eux » comme désignant les sentinelles. Mais Max refuse cette fusion. En septembre 1997, un chercheur fait justement le raccourci : « eux » est tangible, les sentinelles sont tangibles — donc c&#x27;est pareil. Réponse de Max : <span class="refs"><a class="ref" id="b-08_09_97_13-1" href="#m-08_09_97_13" title="voir le madit">↓ 8 septembre 1997 · Max Le Retour</a></span></p>
+<p>Trois entités tangibles, que Max énumère séparément, exprès, pour casser le raccourci. La solution Canard fond en une seule ce que l&#x27;auteur des énigmes a toujours tenu distinct. </p>
+<h3 class="enigme">Problème 4 — Sentinelles et cache ne sont pas liées</h3>
+<p>Et Max va plus loin que le texte. </p>
+<p>Quatrième problème — et c&#x27;est le cœur : il a dit, lui-même, que les sentinelles et la cache ne sont pas liées. </p>
+<p>Cette affirmation est rare. Max refuse, en règle générale, de valider ou d&#x27;invalider une hypothèse — sa règle de conduite invariable, sur six ans, est de ne pas commenter les pistes des chercheurs. Mais en juillet 1996, à un chercheur surnommé Loute, il en sort exceptionnellement : </p>
+<p>« Votre question était joliment troussée, mais je ne peux vous donner la route. Sentinelles et cache ne sont pas liées, aussi vrai que vous vous appelez Loute. » <span class="refs"><a class="ref" id="b-05_07_96_39-1" href="#m-05_07_96_39" title="voir le madit">↓ 5 juillet 1996 · Toujours Besoin Qu&#x27;On Me Pousse</a></span></p>
+<p>« Aussi vrai que vous vous appelez Loute. » La forme est amusée, en rimes. Le contenu, lui, est sans ambiguïté : pas de lien entre les sentinelles et la cache. Et il le complète dans le même message : « rien n&#x27;était enterré au pied des sentinelles. » </p>
+<p>Ce « rien au pied », ce n&#x27;est pas une remarque en l&#x27;air. C&#x27;est l&#x27;une des choses que Max a le plus répétées — au moins huit fois, sur six ans, à des chercheurs différents. <span class="refs"><a class="ref" id="b-01_01_96_50-1" href="#m-01_01_96_50" title="voir le madit">↓ 1 janvier 1996 · Sentinelles</a><a class="ref" id="b-06_06_96_40-1" href="#m-06_06_96_40" title="voir le madit">↓ 6 juin 1996 · Surprise Napoleon 76</a><a class="ref" id="b-21_06_97_13-1" href="#m-21_06_97_13" title="voir le madit">↓ 21 juin 1997 · Sentinelles</a><a class="ref" id="b-06_07_97_13-1" href="#m-06_07_97_13" title="voir le madit">↓ 6 juillet 1997 · Senpi</a><a class="ref" id="b-19_01_98_50-1" href="#m-19_01_98_50" title="voir le madit">↓ 19 janvier 1998 · 650</a><a class="ref" id="b-25_03_99_16-1" href="#m-25_03_99_16" title="voir le madit">↓ 25 mars 1999 · Meme Forme?</a><a class="ref" id="b-05_05_99_10-1" href="#m-05_05_99_10" title="voir le madit">↓ 5 mai 1999 · Sentinelles</a><a class="ref" id="b-01_03_00_5-1" href="#m-01_03_00_5" title="voir le madit">↓ 1 mars 2000 · Manu En 650</a></span></p>
+<p>Dès janvier 1996 : « Non, je n&#x27;ai rien enterré au pied des sentinelles. Je n&#x27;ai laissé aucun indice sur le terrain. Donc pas la peine de les passer en revue avec votre pelle ! » <span class="refs"><a class="ref" id="b-01_01_96_50-2" href="#m-01_01_96_50" title="voir le madit">↓ 1 janvier 1996 · Sentinelles</a></span></p>
+<p>On pourrait objecter que six mètres quatre-vingt-treize, ce n&#x27;est pas tout à fait « au pied » d&#x27;une sentinelle. Mais Max a fermé cette porte lui-même : interrogé sur la présence de la cache « aux alentours proches » des sentinelles, il répond que « rien au pied » revient à peu près à la même chose. Six mètres quatre-vingt-treize, c&#x27;est précisément les alentours proches. <span class="refs"><a class="ref" id="b-06_07_97_13-2" href="#m-06_07_97_13" title="voir le madit">↓ 6 juillet 1997 · Senpi</a></span></p>
+<p>« Pas la peine de les passer en revue avec votre pelle. » La solution Canard, elle, fait précisément l&#x27;inverse : elle envoie le chercheur sur le site des Bornes Saint-Martin, pelle à la main, creuser à six mètres quatre-vingt-treize du centre de leur triangle. Le geste que Max déclare inutile devient l&#x27;étape finale ; le lien qu&#x27;il a nié entre les sentinelles et la cache devient le cœur de la méthode. </p>
+<h3 class="enigme">Problème 5 — Au pied de la cache : un site classé et une route</h3>
+<p>Quittons les mots. Allons sur le terrain. </p>
+<p>Cinquième problème : le lieu lui-même contredit Max — son nom, et ce qui l&#x27;entoure. </p>
+<p>Pour présenter ses sentinelles, la solution Canard détaille les pierres du site. L&#x27;une d&#x27;elles, je cite, est « de forme quadrangulaire ; elle porte les inscriptions &quot;Martinsstein&quot;, &quot;1750&quot;, ainsi que son numéro, &quot;1828&quot;, et une crosse épiscopale chevauchant le &quot;M&quot; de l&#x27;ancienne abbaye de Marmoutier ». </p>
+<p>Un lieu nommé, daté, gravé, répertorié au patrimoine, entouré de légendes. Tout sauf un endroit anodin. </p>
+<p>Or « anodin », c&#x27;est précisément le mot de Max. Interrogé sur le site de la cache, il s&#x27;en tient à sa règle — aucun descriptif — mais lâche quand même ceci : « ledit site est anodin ». <span class="refs"><a class="ref" id="b-14_04_99_29-1" href="#m-14_04_99_29" title="voir le madit">↓ 14 avril 1999 · Arbre</a></span></p>
+<p>« Anodin » : sans rien de remarquable. Or le site de la solution Canard est tout l&#x27;inverse — des bornes-frontières taillées, gravées de dates et d&#x27;une crosse d&#x27;évêque, répertoriées à l&#x27;inventaire du patrimoine, entourées de légendes de saint Martin. Difficile de faire moins anodin. </p>
+<p>Et Max avait devancé l&#x27;autre objection, celle du nom : oui, la cache est forcément cernée par des coins qui portent des noms — une région, ça se nomme. Mais, je cite, « le site précis et les cent cinquante mètres autour [...] n&#x27;en porte pas ». <span class="refs"><a class="ref" id="b-20_03_97_9-1" href="#m-20_03_97_9" title="voir le madit">↓ 20 mars 1997 · Non Suite Et Fin</a></span></p>
+<p>Sauf que si. <a class="vlink doc" href="https://www.geoportail.gouv.fr" target="_blank" rel="noopener" title="Géoportail / IGN — lieu-dit « Pierre Saint-Martin »">Sur la carte IGN officielle</a>, au 1/25 000, le site porte un nom — écrit noir sur blanc : « Pierre Saint-Martin ». </p>
+<p>Et il l&#x27;avait dit autrement, en août 1996 : « il n&#x27;y a rien de remarquable — monument — sur et à cinquante mètres de la cache. » <span class="refs"><a class="ref" id="b-21_08_96_40-1" href="#m-21_08_96_40" title="voir le madit">↓ 21 août 1996 · Neant Au Milieu De Nulle Part 2</a></span></p>
+<p>Et il y a plus net encore. À quarante-quatre mètres de la cache que propose la solution Canard passe une route — celle qui dessert la maison forestière du Kempel. Une route : sans la moindre ambiguïté, une voie tracée par la main de l&#x27;homme. </p>
+<p>Or Max l&#x27;a dit clairement : « il n&#x27;y avait pas de construction humaine à moins de cinquante mètres de la chouette ; donc pas non plus de voie tracée par l&#x27;homme. » Une route qui dessert une maison forestière, c&#x27;est exactement cela. Quarante-quatre mètres : elle est dans le rayon interdit. <span class="refs"><a class="ref" id="b-08_05_98_15-1" href="#m-08_05_98_15" title="voir le madit">↓ 8 mai 1998 · Q</a></span></p>
+<p>La solution Canard enterre la chouette au pied d&#x27;un lieu nommé et au bord d&#x27;une route — exactement ce que Max excluait. </p>
+<h3 class="enigme">Problème 6 — Aucune inscription à proximité de la cache</h3>
+<p>Sixième problème, toujours sur place : aucune inscription à proximité de la cache. </p>
+<p>Madit de juillet 1995 : « Il n&#x27;y a aucune inscription à proximité de la cache. Mais ne me demandez pas à quelle distance il pourrait y en avoir car on m&#x27;a posé cette question au moins mille fois ! » <span class="refs"><a class="ref" id="b-29_07_95_50-1" href="#m-29_07_95_50" title="voir le madit">↓ 29 juillet 1995 · Graffitis</a></span></p>
+<p>Aucune inscription à proximité. Et le PDF des solutions lui-même décrit avec précision les inscriptions gravées sur les pierres : St Martinsstein 1747, 1750, 1828, croix gravées, crosse épiscopale, lettre M. À six mètres et quatre-vingt-treize centimètres. </p>
+<p>Soit Max, sur ce point précis, a menti pendant six ans. Soit la cache n&#x27;est pas là. </p>
+<h3 class="enigme">Problème 7 — On n&#x27;est pas censé creuser dans la 520</h3>
+<p>Et pour finir, le plus radical. </p>
+<p>Septième problème, et dernier : on n&#x27;était pas censé creuser ici. Pas du tout. </p>
+<p>La onzième énigme donne la zone — pas l&#x27;endroit où creuser. C&#x27;est l&#x27;une des choses que Max a le plus répétées : près de quatre-vingts madits, sur six ans, à des chercheurs différents, l&#x27;affirment. <span class="refs"><a class="ref" id="b-26_07_95_14-1" href="#m-26_07_95_14" title="voir le madit">↓ 26 juillet 1995 · Fin</a><a class="ref" id="b-16_08_95_36-1" href="#m-16_08_95_36" title="voir le madit">↓ 16 août 1995 · Imaginons</a><a class="ref" id="b-01_09_95_36-1" href="#m-01_09_95_36" title="voir le madit">↓ 1 septembre 1995 · Zone Repetita ?</a><a class="ref" id="b-10_09_95_42-1" href="#m-10_09_95_42" title="voir le madit">↓ 10 septembre 1995 · Zone</a><a class="ref" id="b-24_09_95_7-1" href="#m-24_09_95_7" title="voir le madit">↓ 24 septembre 1995 · From Jay</a><a class="ref" id="b-09_10_95_36-1" href="#m-09_10_95_36" title="voir le madit">↓ 9 octobre 1995 · Zone</a><a class="ref" id="b-14_10_95_26-1" href="#m-14_10_95_26" title="voir le madit">↓ 14 octobre 1995 · Evidence De La Zone</a><a class="ref" id="b-23_10_95_46-1" href="#m-23_10_95_46" title="voir le madit">↓ 23 octobre 1995 · A</a><a class="ref" id="b-11_11_95_8-1" href="#m-11_11_95_8" title="voir le madit">↓ 11 novembre 1995 · 71721075</a><a class="ref" id="b-25_11_95_3-1" href="#m-25_11_95_3" title="voir le madit">↓ 25 novembre 1995 · Sentinelles</a><a class="ref" id="b-28_11_95_14-1" href="#m-28_11_95_14" title="voir le madit">↓ 28 novembre 1995 · Zone</a><a class="ref" id="b-21_12_95_21-1" href="#m-21_12_95_21" title="voir le madit">↓ 21 décembre 1995 · Onzieme Et Zone</a><a class="ref" id="b-04_01_96_5-1" href="#m-04_01_96_5" title="voir le madit">↓ 4 janvier 1996 · Zone</a><a class="ref" id="b-08_01_96_30-1" href="#m-08_01_96_30" title="voir le madit">↓ 8 janvier 1996 · Zone</a><a class="ref" id="b-28_01_96_32-1" href="#m-28_01_96_32" title="voir le madit">↓ 28 janvier 1996 · Zone</a><a class="ref" id="b-28_02_96_41-1" href="#m-28_02_96_41" title="voir le madit">↓ 28 février 1996 · 650 31416</a><a class="ref" id="b-13_05_96_8-1" href="#m-13_05_96_8" title="voir le madit">↓ 13 mai 1996 · 31416 Rebis</a><a class="ref" id="b-25_07_96_23-1" href="#m-25_07_96_23" title="voir le madit">↓ 25 juillet 1996 · Le Vendeen Reliquat+Zone</a><a class="ref" id="b-09_08_96_27-1" href="#m-09_08_96_27" title="voir le madit">↓ 9 août 1996 · Zone</a><a class="ref" id="b-17_08_96_28-1" href="#m-17_08_96_28" title="voir le madit">↓ 17 août 1996 · Ss</a><a class="ref" id="b-30_08_96_42-1" href="#m-30_08_96_42" title="voir le madit">↓ 30 août 1996 · Etonnement</a><a class="ref" id="b-30_08_96_41-1" href="#m-30_08_96_41" title="voir le madit">↓ 30 août 1996 · Reperage</a><a class="ref" id="b-06_09_96_17-1" href="#m-06_09_96_17" title="voir le madit">↓ 6 septembre 1996 · Nif</a><a class="ref" id="b-23_09_96_15-1" href="#m-23_09_96_15" title="voir le madit">↓ 23 septembre 1996 · Anais</a><a class="ref" id="b-25_09_96_11-1" href="#m-25_09_96_11" title="voir le madit">↓ 25 septembre 1996 · Renseignement</a><a class="ref" id="b-23_10_96_29-1" href="#m-23_10_96_29" title="voir le madit">↓ 23 octobre 1996 · Ce Que J&#x27;Ai Fais En Onze</a><a class="ref" id="b-15_11_96_50-1" href="#m-15_11_96_50" title="voir le madit">↓ 15 novembre 1996 · Supposition</a><a class="ref" id="b-17_12_96_3-1" href="#m-17_12_96_3" title="voir le madit">↓ 17 décembre 1996 · Jps</a><a class="ref" id="b-25_12_96_8-1" href="#m-25_12_96_8" title="voir le madit">↓ 25 décembre 1996 · Bonsoir Max.,</a><a class="ref" id="b-04_02_97_33-1" href="#m-04_02_97_33" title="voir le madit">↓ 4 février 1997 · Q1</a><a class="ref" id="b-02_03_97_32-1" href="#m-02_03_97_32" title="voir le madit">↓ 2 mars 1997 · M2</a><a class="ref" id="b-17_03_97_6-1" href="#m-17_03_97_6" title="voir le madit">↓ 17 mars 1997 · 560</a><a class="ref" id="b-04_04_97_5-1" href="#m-04_04_97_5" title="voir le madit">↓ 4 avril 1997 · 520*</a><a class="ref" id="b-21_04_97_50-1" href="#m-21_04_97_50" title="voir le madit">↓ 21 avril 1997 · B 52</a><a class="ref" id="b-01_06_97_14-1" href="#m-01_06_97_14" title="voir le madit">↓ 1 juin 1997 · Patate</a><a class="ref" id="b-28_07_97_8-1" href="#m-28_07_97_8" title="voir le madit">↓ 28 juillet 1997 · Le Petit Plus</a><a class="ref" id="b-07_08_97_2-1" href="#m-07_08_97_2" title="voir le madit">↓ 7 août 1997 · Supersolution</a><a class="ref" id="b-21_08_97_24-1" href="#m-21_08_97_24" title="voir le madit">↓ 21 août 1997 · Lolo</a><a class="ref" id="b-27_08_97_36-1" href="#m-27_08_97_36" title="voir le madit">↓ 27 août 1997 · 11Eme</a><a class="ref" id="b-31_08_97_8-1" href="#m-31_08_97_8" title="voir le madit">↓ 31 août 1997 · 650 Et 520</a><a class="ref" id="b-08_09_97_21-1" href="#m-08_09_97_21" title="voir le madit">↓ 8 septembre 1997 · Ayant Trouve Les Sentinelles</a><a class="ref" id="b-13_09_97_44-1" href="#m-13_09_97_44" title="voir le madit">↓ 13 septembre 1997 · Cnfirmations 1</a><a class="ref" id="b-02_11_97_11-1" href="#m-02_11_97_11" title="voir le madit">↓ 2 novembre 1997 · Coucouroucoucou 2</a><a class="ref" id="b-10_11_97_13-1" href="#m-10_11_97_13" title="voir le madit">↓ 10 novembre 1997 · Philippe 35</a><a class="ref" id="b-07_01_98_8-1" href="#m-07_01_98_8" title="voir le madit">↓ 7 janvier 1998 · Pink Floyd Christmas</a><a class="ref" id="b-25_02_98_40-1" href="#m-25_02_98_40" title="voir le madit">↓ 25 février 1998 · Alex 22 Zone</a><a class="ref" id="b-04_03_98_47-1" href="#m-04_03_98_47" title="voir le madit">↓ 4 mars 1998 · Zone Donc</a><a class="ref" id="b-09_04_98_45-1" href="#m-09_04_98_45" title="voir le madit">↓ 9 avril 1998 · Je Dois Etre Un Peu Nunuche</a><a class="ref" id="b-27_04_98_12-1" href="#m-27_04_98_12" title="voir le madit">↓ 27 avril 1998 · La Forme (Patatoidale?)</a><a class="ref" id="b-30_04_98_12-1" href="#m-30_04_98_12" title="voir le madit">↓ 30 avril 1998 · De Retour De La Zone</a><a class="ref" id="b-25_08_98_26-1" href="#m-25_08_98_26" title="voir le madit">↓ 25 août 1998 · La Zone</a><a class="ref" id="b-23_09_98_36-1" href="#m-23_09_98_36" title="voir le madit">↓ 23 septembre 1998 · 2Eme Carte</a><a class="ref" id="b-19_10_98_6-1" href="#m-19_10_98_6" title="voir le madit">↓ 19 octobre 1998 · J&#x27;Ai Des Doutes Et Je Dis Pas Tout</a><a class="ref" id="b-20_10_98_25-1" href="#m-20_10_98_25" title="voir le madit">↓ 20 octobre 1998 · Gany</a><a class="ref" id="b-20_11_98_3-1" href="#m-20_11_98_3" title="voir le madit">↓ 20 novembre 1998 · 11E Enigme</a><a class="ref" id="b-11_02_99_11-1" href="#m-11_02_99_11" title="voir le madit">↓ 11 février 1999 · 8000 Mesures 650</a><a class="ref" id="b-16_03_99_25-1" href="#m-16_03_99_25" title="voir le madit">↓ 16 mars 1999 · 520</a><a class="ref" id="b-19_03_99_23-1" href="#m-19_03_99_23" title="voir le madit">↓ 19 mars 1999 · Mise Au Point Sur Les Cartes</a><a class="ref" id="b-25_03_99_47-1" href="#m-25_03_99_47" title="voir le madit">↓ 25 mars 1999 · Denoue Tous Les Fils (Ter)</a><a class="ref" id="b-29_03_99_1-1" href="#m-29_03_99_1" title="voir le madit">↓ 29 mars 1999 · Gaetan 520</a><a class="ref" id="b-14_04_99_33-1" href="#m-14_04_99_33" title="voir le madit">↓ 14 avril 1999 · Pile Poil</a><a class="ref" id="b-26_04_99_45-1" href="#m-26_04_99_45" title="voir le madit">↓ 26 avril 1999 · 11Eme</a><a class="ref" id="b-21_07_99_48-1" href="#m-21_07_99_48" title="voir le madit">↓ 21 juillet 1999 · Denis 210799</a><a class="ref" id="b-13_08_99_8-1" href="#m-13_08_99_8" title="voir le madit">↓ 13 août 1999 · Deuxieme Carte</a><a class="ref" id="b-19_08_99_46-1" href="#m-19_08_99_46" title="voir le madit">↓ 19 août 1999 · Laia</a><a class="ref" id="b-02_09_99_31-1" href="#m-02_09_99_31" title="voir le madit">↓ 2 septembre 1999 · Oui Ou Non</a><a class="ref" id="b-14_09_99_46-1" href="#m-14_09_99_46" title="voir le madit">↓ 14 septembre 1999 · Leia Cartes</a><a class="ref" id="b-24_09_99_20-1" href="#m-24_09_99_20" title="voir le madit">↓ 24 septembre 1999 · Dingue Ca !</a><a class="ref" id="b-05_10_99_15-1" href="#m-05_10_99_15" title="voir le madit">↓ 5 octobre 1999 · Zone</a><a class="ref" id="b-05_10_99_41-1" href="#m-05_10_99_41" title="voir le madit">↓ 5 octobre 1999 · Zone Suite</a><a class="ref" id="b-18_10_99_2-1" href="#m-18_10_99_2" title="voir le madit">↓ 18 octobre 1999 · Zone</a><a class="ref" id="b-15_11_99_39-1" href="#m-15_11_99_39" title="voir le madit">↓ 15 novembre 1999 · Je Contusionne Grave</a><a class="ref" id="b-19_11_99_38-1" href="#m-19_11_99_38" title="voir le madit">↓ 19 novembre 1999 · Le Sylvain Du Jour</a><a class="ref" id="b-27_01_00_16-1" href="#m-27_01_00_16" title="voir le madit">↓ 27 janvier 2000 · Pierrot</a><a class="ref" id="b-01_02_00_28-1" href="#m-01_02_00_28" title="voir le madit">↓ 1 février 2000 · Zone</a><a class="ref" id="b-18_02_00_13-1" href="#m-18_02_00_13" title="voir le madit">↓ 18 février 2000 · Jardinier A Max</a><a class="ref" id="b-07_06_00_3-1" href="#m-07_06_00_3" title="voir le madit">↓ 7 juin 2000 · Zone</a><a class="ref" id="b-13_06_01_4-1" href="#m-13_06_01_4" title="voir le madit">↓ 13 juin 2001 · Tot</a><a class="ref" id="b-29_11_01_9-1" href="#m-29_11_01_9" title="voir le madit">↓ 29 novembre 2001 · Marie 9</a></span></p>
+<p>Il est explicite dès juillet 1995 : « La 11ème donne la zone, pas l&#x27;endroit où creuser ! Ce dernier ne vous est donné que par la solution de la 12ème énigme. » <span class="refs"><a class="ref" id="b-26_07_95_35-2" href="#m-26_07_95_35" title="voir le madit">↓ 26 juillet 1995 · Contradiction</a></span></p>
+<p>Une douzième énigme, cachée et indispensable. On y reviendra — c&#x27;est tout l&#x27;enjeu du prochain épisode. Pour la 520, retenons ceci : la solution Canard fait creuser à un endroit où l&#x27;on n&#x27;est même pas censé creuser. </p>
+<h2 class="chunk">Trente ans de prospection · la détectabilité</h2>
+<h3 class="enigme">Mouvement 0 — La cible : grosse, peu profonde, sur un site libre</h3>
+<p>Admettons un instant que la solution Canard ait raison. La chouette serait là, enfouie au pied des Bornes Saint-Martin, dans une clairière de Moselle. </p>
+<p>L&#x27;endroit est connu de tous depuis 1993, en accès libre. Et depuis trente ans, des milliers de chercheurs l&#x27;ont ratissé, détecteur de métaux à la main. </p>
+<p>Que cherchent-ils ? Une chouette de bronze : cinquante-quatre centimètres d&#x27;envergure, plusieurs kilos de métal. </p>
+<p>Et cette taille c&#x27;est Max Valentin lui-même qui l&#x27;a donnée. <span class="refs"><a class="ref" id="b-05_10_00_19-1" href="#m-05_10_00_19" title="voir le madit">↓ 5 octobre 2000 · Horus</a></span></p>
+<p>Quant à sa profondeur, elle n&#x27;a rien d&#x27;abyssal : son sommet n&#x27;est qu&#x27;à trente ou quarante centimètres sous la surface. Là encore, c&#x27;est Max qui a donné les chiffres. <span class="refs"><a class="ref" id="b-05_05_98_8-1" href="#m-05_05_98_8" title="voir le madit">↓ 5 mai 1998 · Faire Des Trous Est Penible</a></span></p>
+<p>Une masse de bronze de plusieurs kilos, à quelques décimètres à peine sous la terre, sur un site libre fouillé pendant trente ans. Comment, alors, personne ne l&#x27;a-t-il jamais trouvée ? </p>
+<h3 class="enigme">Mouvement 1 — La théorie : plus c&#x27;est gros, plus c&#x27;est profond</h3>
+<p>Pour répondre, pas besoin d&#x27;interroger les chasseurs : il suffit de lire <a class="vlink doc" href="https://garrett.com/how-deep-do-metal-detectors-detect/" target="_blank" rel="noopener" title="Garrett — How Deep Do Metal Detectors Detect?">les fabricants de détecteurs</a>. Tous énoncent la même règle — plus une cible est grosse et massive, plus elle se détecte profond. Un constructeur va jusqu&#x27;à la chiffrer : quadruplez le diamètre d&#x27;un objet, et son signal devient <a class="vlink doc" href="https://www.fisherlab.com.ua/downloads/documents/instructions_manual/en/Gemini3.pdf" target="_blank" rel="noopener" title="Fisher — Gemini-3 Operating Manual, p. 5 (« signal 64× »)">soixante-quatre fois plus fort</a>. </p>
+<p>Conséquence directe : une simple pièce de monnaie, quelques grammes de métal, se repère déjà à vingt-cinq centimètres sous terre avec un appareil courant. Alors une chouette de cinquante-quatre centimètres et plusieurs kilos de bronze, posée à trente ou quarante ? Elle devrait crever l&#x27;écran du premier détecteur venu. </p>
+<p>Sur le papier, elle aurait dû être trouvée dès le premier jour. Si, en trente ans, personne n&#x27;a rien sorti de ce sol, c&#x27;est qu&#x27;il faut invoquer une parade. Et il en existe exactement deux. Démontons-les. </p>
+<h3 class="enigme">Mouvement 2 — Parade 1 : « c&#x27;est protégé contre les détecteurs »</h3>
+<p>Première parade : la chouette serait à l&#x27;abri des détecteurs de métaux. </p>
+<p>Et c&#x27;est vrai. Max le dit et le répète sans arrêt : la chouette est justement protégée contre les détecteurs. <span class="refs"><a class="ref" id="b-02_11_97_33-1" href="#m-02_11_97_33" title="voir le madit">↓ 2 novembre 1997 · Sur Le Terrain</a></span></p>
+<p>Seulement, presque chaque fois, dans la même phrase, il ajoute ceci : il a fait l&#x27;expérience à plusieurs reprises et, sous un certain angle, elle reste détectable. <span class="refs"><a class="ref" id="b-04_02_99_50-1" href="#m-04_02_99_50" title="voir le madit">↓ 4 février 1999 · Bip-Bip</a></span></p>
+<p>Et ce n&#x27;est pas un propos isolé : il l&#x27;a répété pendant des années. <span class="refs"><a class="ref" id="b-13_05_96_38-1" href="#m-13_05_96_38" title="voir le madit">↓ 13 mai 1996 · Detecteurs</a><a class="ref" id="b-26_11_96_36-1" href="#m-26_11_96_36" title="voir le madit">↓ 26 novembre 1996 · Detecteur</a><a class="ref" id="b-01_06_97_25-1" href="#m-01_06_97_25" title="voir le madit">↓ 1 juin 1997 · F.B 6</a><a class="ref" id="b-25_06_98_37-1" href="#m-25_06_98_37" title="voir le madit">↓ 25 juin 1998 · Broyer</a><a class="ref" id="b-02_09_98_18-1" href="#m-02_09_98_18" title="voir le madit">↓ 2 septembre 1998 · Detecteur</a><a class="ref" id="b-07_03_00_16-1" href="#m-07_03_00_16" title="voir le madit">↓ 7 mars 2000 · Chouette!</a></span></p>
+<p>Sa protection vise la détection accidentelle — quelqu&#x27;un qui ratisse au hasard une grande surface. Mais les Bornes Saint-Martin ne sont pas une surface au hasard. C&#x27;est le spot de la piste de Dabo : le même petit triangle, sondé, fouillé, balayé par des centaines de chercheurs, pendant trente ans. Exactement les conditions où une protection « détectable sous un certain angle » finit par céder. </p>
+<p>Max recommandait d&#x27;ailleurs des marques précises de détecteurs : un Garrett, un Fisher. </p>
+<p>Et il s&#x27;en est servi lui-même : par deux fois, il est retourné vérifier que la chouette était toujours dans son trou. La deuxième fois, c&#x27;était <a class="vlink doc" href="https://www.manualslib.com/manual/51769/Fisher-1266-X.html" target="_blank" rel="noopener" title="Fisher — 1266-X Operating Manual (le modèle nommé par Max)">un Fisher 1266X</a>. <span class="refs"><a class="ref" id="b-21_08_95_44-1" href="#m-21_08_95_44" title="voir le madit">↓ 21 août 1995 · Detecteur De Metaux</a></span></p>
+<p>Première parade, donc, démontée par l&#x27;auteur du jeu lui-même. Protégée, oui, mais détectable. Et sur un site ciblé, balayé trente ans, l&#x27;objet aurait parlé. </p>
+<h3 class="enigme">Mouvement 3 — Parade 2 : « c&#x27;est trop profond »</h3>
+<p>Reste une seconde parade, la dernière : quatre-vingts centimètres, ce serait trop profond pour le détecteur du dimanche. Sauf qu&#x27;il existe une arme contre laquelle la profondeur ne tient pas : <a class="vlink doc" href="https://www.frtr.gov/site/6_2_29.html" target="_blank" rel="noopener" title="FRTR — Ground Penetrating Radar (pénétration en sol sec / roche)">le radar de sol, qui voit plusieurs mètres sous la surface</a>. Et deux hommes l&#x27;ont braqué sur le point exact que désigne la solution Canard. </p>
+<p>Le premier, c&#x27;est Meteor — un chasseur de trésors chevronné, <a class="vlink doc" href="https://lachouette.net/index.php?b=28923&amp;a=zv&amp;m=129199.02#129199.02" target="_blank" rel="noopener" title="Meteor — forum lachouette.net, message n° 129199.02 (24 juillet 2025)">reconnu dans le milieu</a>. </p>
+<p>Dès 2015, et trois ou quatre fois ensuite, à plusieurs années d&#x27;écart, il est allé fouiller les Bornes Saint-Martin. </p>
+<p>Pas au hasard : à l&#x27;endroit exact que désigne la solution Canard — six mètres quatre-vingt-treize du centre des pierres, et dans toutes les directions. </p>
+<p>D&#x27;abord avec un détecteur à tête grande profondeur. </p>
+<p>Puis, à plusieurs années d&#x27;écart, avec un radar de sol — un Geovizer, qui sonde plusieurs mètres sous la surface. </p>
+<p>Ce qu&#x27;il a trouvé ? Un pieu métallique et un bout de fil de fer barbelé, à trente ou quarante centimètres. C&#x27;est tout. Pas le canard que Becker dit avoir déterré là. Et surtout pas la chouette de bronze — plus grosse, plus lourde encore. </p>
+<p>Le second homme est le plus inattendu : Becker lui-même. </p>
+<p>Dans son livre « Sous le sceau du secret », il raconte avoir voulu en avoir le cœur net. </p>
+<p>Il se procure un radar de sol — un appareil qui voit sous la terre — et il l&#x27;étalonne sur l&#x27;objet recherché : il enfouit une contremarque de bronze, et tout autour de petits objets métalliques placés à différentes profondeurs, puis il apprend à faire « ressortir » le bronze à l&#x27;écran. Quand il y parvient, écrit-il, il a « l&#x27;impression de détenir l&#x27;arme suprême ». </p>
+<p>Autrement dit : Becker établit lui-même qu&#x27;un bronze enfoui se détecte au radar. La détection, ici, est donc possible — et c&#x27;est lui qui le prouve. </p>
+<p>Puis il braque ce radar sur le point exact qu&#x27;il désigne — les Bornes Saint-Martin —, de nuit, des heures durant. </p>
+<p>Et là, son radar capte bel et bien un objet enfoui, à l&#x27;endroit même où la chouette aurait dû se trouver. Becker le note lui-même. </p>
+<p>Une précision, au passage : ce lieu, c&#x27;est Becker seul qui le donne. Le constat d&#x27;huissier, lui, ne nomme jamais l&#x27;endroit de la vérification — il ne valide pas que ce soit aux Bornes Saint-Martin. </p>
+<p>Seconde parade, donc, démontée elle aussi. La profondeur ne protège de rien : le radar voit sous la terre, et Meteor comme Becker l&#x27;ont braqué sur le point exact. </p>
+<h3 class="enigme">Le spot</h3>
+<p>Récapitulons. Ce spot n&#x27;a jamais cessé d&#x27;abriter un objet de métal à portée de détecteur : la chouette de bronze ; puis le canard que Becker dit y avoir déterré ; et depuis 2021, la nouvelle contremarque qu&#x27;il y a réenfouie. </p>
+<p>Trois objets, tous détectables. Et la détection, sur ce spot, fonctionne — Becker l&#x27;a prouvé lui-même, en captant le canard à son radar. Pourtant : des milliers de chercheurs, Meteor au géoradar, trente ans de prospection. Rien, jamais. </p>
+<p>Restent deux explications. La première : tous seraient passés à côté, trente ans durant. Un miracle. La seconde : ces objets n&#x27;ont jamais été là — et ce spot n&#x27;est pas la cache. La seconde ne demande aucun miracle. </p>
+<p>Et pourtant, ce n&#x27;est pas encore le plus troublant. Car une question reste à poser — qu&#x27;on a gardée pour la fin. Ce trou de quatre-vingts centimètres, à cet endroit précis : peut-on seulement le creuser ? </p>
+<h2 class="chunk">La cache impossible · profondeur &amp; socle</h2>
+<h3 class="enigme">La cache impossible</h3>
+<p>La cache impossible. </p>
+<p>Quatre-vingts centimètres. On vient de l&#x27;entendre, c&#x27;est Max qui a donné le chiffre : le fond du trou où repose la chouette. La version officielle place la toute première contremarque — celle de 1993 — exactement là. Et pour l&#x27;attester, en octobre 2021, Becker creuse le spot devant une huissière, <a class="vlink doc" href="https://files.michelbecker.com/1/15.pdf" target="_blank" rel="noopener" title="Procès-verbal de Me Blanche Neige-Schmitt (oct. 2021) — PDF publié par M. Becker">Maître Neige-Schmitt</a>, jusqu&#x27;au fond : quatre-vingts centimètres. </p>
+<p>Mais ce qu&#x27;il en ressort, ce n&#x27;est pas la contremarque de bronze : une statuette de fer, rongée de rouille — un canard. </p>
+<p>Il enfouit alors, à la place, une nouvelle contremarque de bronze : la 2/8, soigneusement emballée dans du plastique. </p>
+<p>Reste une réserve, et elle est de taille. Ce procès-verbal certifie un acte — pas un lieu. L&#x27;huissière se déplace avec Becker, sur l&#x27;emplacement que désignent, dit-il, ses propres solutions. À aucun moment elle n&#x27;identifie l&#x27;endroit : le constat ne nomme ni Dabo, ni les Bornes Saint-Martin. Il prouve qu&#x27;on a creusé quatre-vingts centimètres quelque part — pas que ce soit la vraie cache. </p>
+<p>On a vu Meteor passer le spot au radar, sans rien en tirer. Un autre, lui, a voulu creuser pour de bon, la pelle à la main. Ce chercheur, c&#x27;est Kaspius. Un passionné de la chasse : un livre sur l&#x27;histoire du rocher de Dabo, <a class="vlink doc" href="https://surlestracesdelachouettedor.blogspot.com" target="_blank" rel="noopener" title="Blog de Kaspius — « Sur les traces de la Chouette d&#x27;Or »">un blog</a>, <a class="vlink vid" href="https://www.youtube.com/@Kaspius" target="_blank" rel="noopener" title="Chaîne YouTube de Kaspius">une chaîne YouTube</a>. </p>
+<p>Alors, après la sortie du film des solutions, en mai 2025, <a class="vlink vid" href="https://youtu.be/qVkx73B_1so" target="_blank" rel="noopener" title="Kaspius — vérification du spot, vidéo du 8 mai 2025 (YouTube)">il est allé vérifier le spot lui-même</a>. Et voici ce qu&#x27;il a trouvé. </p>
+<p>Quarante centimètres. Et la pelle s&#x27;arrête sur le socle rocheux. La version officielle, elle, réclame le double — quatre-vingts. Mais sous ces quarante centimètres, il n&#x27;y a plus de terre : il y a la roche. La cache à quatre-vingts, ici, est impossible. </p>
+<p>Et il y a plus. Ce socle à quarante centimètres, Becker pouvait le voir : son radar de sol le lui montrait. Un géoradar lit les couches du sous-sol, et la limite entre la terre meuble et la roche est l&#x27;un des échos les plus nets qu&#x27;il produise. Cartographier la profondeur du substrat, c&#x27;est un usage de manuel, idéal sur du grès sec. Becker, qui a scanné le site des heures durant, aurait donc dû voir que la terre fouillable s&#x27;arrêtait à quarante centimètres. Et qu&#x27;une cache à quatre-vingts y était impossible. </p>
+<p>Cinq mois plus tard, en octobre, <a class="vlink vid" href="https://youtu.be/Pqk6tD3CYYA" target="_blank" rel="noopener" title="Kaspius — retour sur le spot, vidéo du 22 octobre 2025 (YouTube)">Kaspius revient sur le même spot</a>. </p>
+<p>Le socle rocheux, lui — celui du spot, au pied des Bornes Saint-Martin — a été fracturé, puis amputé d&#x27;une partie, entre mai et octobre 2025. </p>
+<p>Par qui ? Et pourquoi, juste là où la version officielle réclame ses quatre-vingts centimètres ? </p>
+<p>On l&#x27;ignore. Mais une chose est sûre : désormais, le site est compatible avec le procès-verbal de l&#x27;huissière. </p>
+<p>Et il y aurait un moyen de trancher : une étude géologique. Une cassure récente ne ressemble pas à une roche fendue depuis des millénaires — une expertise daterait la fracture. </p>
+<p>C&#x27;est fini pour ce troisième épisode. Au prochain — le dernier — l&#x27;architecture du jeu, Dabo, et le verdict. À très vite, sur Tournevis. </p>
+</section>
+
+<section class="madits">
+  <h2 class="chunk">Les madits cités — texte intégral</h2>
+<article class="madit" id="m-26_07_95_35">
+  <div class="m-head"><span class="m-date">26 juillet 1995</span>
+    <span class="m-titre">CONTRADICTION</span>
+    <span class="m-id">26_07_95_35</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, tu dis que la 11ème énigme donne la zone ; bon très bien, mais dans ma 11ème énigme j&#x27;ai l&#x27;impression que je dois creuser un trou... N&#x27;y a t&#x27;il pas une contradiction ??? La 11ème donne la zone ou l&#x27;endroit où creuser ??? Pippin le bref.</p>
+  <p class="m-r"><span class="lbl">R</span>La 11ème donne la zone, pas l&#x27;endroit où creuser ! Ce dernier ne vous est donné que par la solution de la 12ème énigme... Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-26_07_95_35-1">↩ retour 1</a> <a class="back" href="#b-26_07_95_35-2">↩ retour 2</a></div>
+</article>
+<article class="madit" id="m-03_05_97_49">
+  <div class="m-head"><span class="m-date">3 mai 1997</span>
+    <span class="m-titre">ZEBULON</span>
+    <span class="m-id">03_05_97_49</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Ma max pensée, vous qu&#x27;il est possible de prendre des mesures précises sur un rocher tout difforme ? Amitiés Alain*</p>
+  <p class="m-r"><span class="lbl">R</span>Non. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-03_05_97_49-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-07_03_00_13">
+  <div class="m-head"><span class="m-date">7 mars 2000</span>
+    <span class="m-titre">UN NOUVEAU CHERCHEUR -SUITE2-</span>
+    <span class="m-id">07_03_00_13</span></div>
+  <p class="m-q"><span class="lbl">Q</span>De même dans la 650, les sentinelles puis dans la 520 le début de la phrase. Entre eux, il n&#x27;y aurait ...... &quot;eux&quot; n&#x27;est pas une faute d&#x27;orthographe ? Ne pourrait-on pas dire &quot;entrée elles&quot; ? Merci</p>
+  <p class="m-r"><span class="lbl">R</span>C&#x27;est &quot;eux&quot;, pas &quot;elles&quot;, je vous le confirme très volontiers ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-07_03_00_13-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-08_09_97_13">
+  <div class="m-head"><span class="m-date">8 septembre 1997</span>
+    <span class="m-titre">MAX LE RETOUR</span>
+    <span class="m-id">08_09_97_13</span></div>
+  <p class="m-q"><span class="lbl">Q</span>1. Sur le Figaro, on nous dit que dans la 520 &quot;eux&quot; est tangible. Or vous nous avez dit que les sentinelles étaient tangibles. Je trouve cela un peu léger car le raccourci est évident. Si c&#x27;est un piège, merci pour les pauvres chercheurs, on n&#x27;avait pas besoin de ce genre de fausse indication.</p>
+  <p class="m-r"><span class="lbl">R</span>Ce n&#x27;est pas une fausse indication, je l&#x27;ai dit très exactement le 29/12/95 ! Les sentinelles sont tangibles, &quot;eux&quot; sont tangibles, la nef est tangible... Je n&#x27;ai jamais dit qu&#x27;il n&#x27;y avait qu&#x27;une chose tangible dans cette chasse ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-08_09_97_13-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-05_07_96_39">
+  <div class="m-head"><span class="m-date">5 juillet 1996</span>
+    <span class="m-titre">TOUJOURS BESOIN QU&#x27;ON ME POUSSE</span>
+    <span class="m-id">05_07_96_39</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Je n&#x27;attends rien qu&#x27;un mot, juste un si, ou un non ! Amitiés mirlotonesques, Loute.</p>
+  <p class="m-r"><span class="lbl">R</span>Votre question était joliment troussée, mais je ne peux vous donner la route. Sentinelles et cache ne sont pas liées, aussi vrai que vous vous appelez Loute. Amitiés -- Max. PS : J&#x27;ai déjà dit que rien n&#x27;était enterré au pied des sentinelles.</p>
+  <div class="m-back"><a class="back" href="#b-05_07_96_39-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-01_01_96_50">
+  <div class="m-head"><span class="m-date">1 janvier 1996</span>
+    <span class="m-titre">SENTINELLES</span>
+    <span class="m-id">01_01_96_50</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, vous dites dans le livre qu&#x27;il faut passer les sentinelles en revue et le personnage de l&#x27;illustration tient une pelle. Faut-il les passer en revue avec une pelle? Avez-vous enterré quelque chose au pied des sentinelles? Merci</p>
+  <p class="m-r"><span class="lbl">R</span>Non, je n&#x27;ai rien enterré au pied des sentinelles. Je n&#x27;ai laissé aucun indice sur le terrain. Donc pas la peine de les passer en revue avec votre pelle! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-01_01_96_50-1">↩ retour 1</a> <a class="back" href="#b-01_01_96_50-2">↩ retour 2</a></div>
+</article>
+<article class="madit" id="m-06_06_96_40">
+  <div class="m-head"><span class="m-date">6 juin 1996</span>
+    <span class="m-titre">SURPRISE NAPOLEON 76</span>
+    <span class="m-id">06_06_96_40</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour Max, quel que soit l&#x27;endroit où est enterrée la chouette, elle se trouve pas au pied des sentinelles suivant leur nature au moins dans un rayon de 1 m. Ai-je raison. Ces jours-ci, j&#x27;ai appelé le service documentation des monuments. La responsable s&#x27;appelle M&#x27;Valentin. Le hasard ? Un pavé herbeux prenant l&#x27;air au pied d&#x27;un hêtre. Qu&#x27;en pensez-vous ? Bonne soirée Daniel.</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;ai déjà dit que rien n&#x27;était enterré au pied des sentinelles, et j&#x27;ai précisé que les sentinelles ne pouvaient pas être des villes, car les villes n&#x27;ont pas de &quot;pieds&quot; !... Mais je m&#x27;arrêterai là ! Pour le reste, je ne peux répondre. Mais pour cette madame Valentin, c&#x27;est forcément une coïncidence, puisque ce n&#x27;est pas mon vrai nom, mais juste un pseudo. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-06_06_96_40-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-21_06_97_13">
+  <div class="m-head"><span class="m-date">21 juin 1997</span>
+    <span class="m-titre">SENTINELLES</span>
+    <span class="m-id">21_06_97_13</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Je lis sur un récapitulatif de q/r rien n&#x27;est enterré aux sentinelles. Est-ce vrai</p>
+  <p class="m-r"><span class="lbl">R</span>Effectivement, j&#x27;ai dit que rien n&#x27;était enterré au pied des sentinelles (parce qu&#x27;on m&#x27;avait posé la question !) Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-21_06_97_13-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-06_07_97_13">
+  <div class="m-head"><span class="m-date">6 juillet 1997</span>
+    <span class="m-titre">SENPI</span>
+    <span class="m-id">06_07_97_13</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Avez-vous déjà dit que la chouette ne se trouvait pas &quot;aux alentours proches&quot; des sentinelles ? (Rayon d&#x27;environ 50 m)</p>
+  <p class="m-r"><span class="lbl">R</span>Sous cette forme non. Mais j&#x27;ai dit que rien n&#x27;était enterré au pied des sentinelles, ce qui revient à peu près à la même chose... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-06_07_97_13-1">↩ retour 1</a> <a class="back" href="#b-06_07_97_13-2">↩ retour 2</a></div>
+</article>
+<article class="madit" id="m-19_01_98_50">
+  <div class="m-head"><span class="m-date">19 janvier 1998</span>
+    <span class="m-titre">650</span>
+    <span class="m-id">19_01_98_50</span></div>
+  <p class="m-q"><span class="lbl">Q</span>À la fin de la 650, une fois les sentinelles trouvées, pouvons-nous dire que les sentinelles ont un pied, pas celles qui servent à tenir debout et à garder l&#x27;équilibre, mais un autre ? Merci.</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne sais pas ! Vous pouvez dire, de n&#x27;importe quelle entité, qu&#x27;elle a un pied dès lors qu&#x27;elle a une assise au sol. Dans l&#x27;acception &quot;au pied de l&#x27;arbre&quot;, &quot;au pied du mur&quot;, etc, il ne fait pas de doute que le mot &quot;pied&quot; n&#x27;est pas un barbarisme. Mais j&#x27;ai déjà dit que rien n&#x27;était enterré &quot;au pied d&#x27;une sentinelle&quot;, en précisant même que les sentinelles ne pouvaient pas être des villes, car une ville n&#x27;a pas de &quot;pieds&quot; (sauf quand elle se trouve en altitude, sur un piton rocheux par exemple). Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-19_01_98_50-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-25_03_99_16">
+  <div class="m-head"><span class="m-date">25 mars 1999</span>
+    <span class="m-titre">MEME FORME?</span>
+    <span class="m-id">25_03_99_16</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Certains chercheurs laissent entendre que les &quot;eux&quot; ne seraient pas, en 520, sous la même forme que lors du croisement. Est-ce vrai ? Sont-ce exactement les mêmes et au(x) même(s) endroit(s) ? Peut-on creuser et enterrer quelque chose &quot;aux pieds&quot; des sentinelles ?</p>
+  <p class="m-r"><span class="lbl">R</span>Les &quot;eux&quot; ne changent pas de forme. Ce sont des entités, des choses. Vous pouvez sans doute enterrer quelque chose au pied des sentinelles. Mais je précise encore une fois qu&#x27;en ce qui concerne cette chasse, rien n&#x27;est enterré au pied des sentinelles... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-25_03_99_16-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-05_05_99_10">
+  <div class="m-head"><span class="m-date">5 mai 1999</span>
+    <span class="m-titre">SENTINELLES</span>
+    <span class="m-id">05_05_99_10</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour, Max! Il se dit dans le milieu des chercheurs que la chouette n&#x27;est pas enterrée aux pieds des sentinelles. Confirmez-vous cela? Merci. McFirst</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;ai dit, à plusieurs reprises (et depuis fort longtemps) que rien n&#x27;était enterré au pied des sentinelles. Vous me demandez si la chouette ne serait pas enterrée à cet endroit: par principe, je ne réponds pas à ce genre de questions, mais avec celle que j&#x27;ai faite ci-dessus, vous devriez être capable de parvenir aux bonnes conclusions! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-05_05_99_10-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-01_03_00_5">
+  <div class="m-head"><span class="m-date">1 mars 2000</span>
+    <span class="m-titre">MANU EN 650</span>
+    <span class="m-id">01_03_00_5</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour Max, bien reposé ? Est-il exclus que les sentinelles soient dans une ville ? Amitiés -- Manu</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;ai dit que rien n&#x27;était enterré aux pieds des sentinelles. Puis, j&#x27;ai précisé que l&#x27;expression &quot;au pied de la ville&quot; était incorrecte, dans la mesure où cette expression, lorsqu&#x27;elle était employée, signifiait plutôt &quot;au pied de la ville qui se trouve sur une colline&quot;. D&#x27;où : les sentinelles ne sont pas des villes. Mais c&#x27;est tout ce que je peux dire à ce sujet. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-01_03_00_5-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-14_04_99_29">
+  <div class="m-head"><span class="m-date">14 avril 1999</span>
+    <span class="m-titre">ARBRE</span>
+    <span class="m-id">14_04_99_29</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bjour cher max avez-vous planté un arbre au-dessus de la chouette ou à côté des objets insolites ? Existe-t-il des saules à l&#x27;entour de la tombe avant la dépose de la chouette ? Merci pat le chat.</p>
+  <p class="m-r"><span class="lbl">R</span>L&#x27;arbuste avait été planté pile-poil sur la cache, mais ça fait longtemps qu&#x27;il n&#x27;en reste rien. &quot;Insolite&quot; : c&#x27;est un adjectif un peu vague... de toutes façons, je ne peux donner aucun descriptif du site. Mais je peux vous dire que ledit site est anodin. Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-14_04_99_29-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-20_03_97_9">
+  <div class="m-head"><span class="m-date">20 mars 1997</span>
+    <span class="m-titre">NON SUITE ET FIN</span>
+    <span class="m-id">20_03_97_9</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Ni celui d&#x27;un lieu à proximité; je voulais seulement savoir si la chouette se trouvait dans un lieu dit nommé, plus large que 150 mètres alentours, et plus restreint qu&#x27;un département ou même une commune ou un canton. Maintenant je sais tout (sauf poser les questions de manière intelligible). Merci calimero apaisé</p>
+  <p class="m-r"><span class="lbl">R</span>Calimero, j&#x27;ai déjà souvent répondu à cette question, mais la façon dont vous la posiez était pour moi claire comme de l&#x27;eau de source: vous parliez de &quot;lieu&quot; sans préciser davantage. Si je vous ai répondu que le lieu où se trouve le bestiau ne porte pas de nom, c&#x27;est que c&#x27;est vrai. Mais si vous m&#x27;aviez demandé si la cache se trouve dans une région qui porte un nom, je vous aurais certainement répondu ce que j&#x27;ai toujours répondu dans ce cas: oui, bien sûr, les différents coins de la région portent des noms. La cache est forcément cernée par des coins qui portent des noms! Mais le site précis et les 150 mètres autour (et peut-être davantage!) n&#x27;en porte pas! Ravi que vous soyez apaisé, et que je n&#x27;aie pas été à l&#x27;origine d&#x27;un ulcère! Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-20_03_97_9-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-21_08_96_40">
+  <div class="m-head"><span class="m-date">21 août 1996</span>
+    <span class="m-titre">NEANT AU MILIEU DE NULLE PART 2</span>
+    <span class="m-id">21_08_96_40</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Qui ne comporte rien de remarquable, c&#x27;est-à-dire sans rien pour se repérer. Sans bien sûr faire une description du site, il paraît toutefois nécessaire de donner quelques précisions, n&#x27;est-ce pas ? Amitiés -- Fulcanelli</p>
+  <p class="m-r"><span class="lbl">R</span>D&#x27;abord, Fulcanelli, j&#x27;ai dit qu&#x27;il est fait quelques allusions (lointaines) à la &quot;zone&quot; dans le livre... Ensuite, je n&#x27;ai jamais dit qu&#x27;il n&#x27;y avait &quot;rien&quot; à proximité de la cache. J&#x27;ai dit qu&#x27;il n&#x27;y avait rien de remarquable (monument) sur et à 50 mètres de la cache. Cela ne signifie pas &quot;rien&quot;. Mais j&#x27;ai aussi dit que je ne pouvais donner aucun descriptif du site en général, et en particulier que je ne pouvais pas parler d&#x27;éventuels &quot;repères&quot;. Mon refus de répondre à ce genre de questions ne signifie pas qu&#x27;il n&#x27;y en a pas ! C&#x27;est à vous de le découvrir ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-21_08_96_40-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-08_05_98_15">
+  <div class="m-head"><span class="m-date">8 mai 1998</span>
+    <span class="m-titre">Q</span>
+    <span class="m-id">08_05_98_15</span></div>
+  <p class="m-q"><span class="lbl">Q</span>En quittant votre véhicule, avez-vous beaucoup marché pour l&#x27;enterrer ? Une heure ? Deux heures ? À combien d&#x27;un chemin, à plus de 30 m, je crois ou suis-je mal informé ? Pouvez, si possible, nous dire une fois de plus les distances de localisation négatives, habitation, etc.</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne peux pas vous dire combien de temps j&#x27;ai marché. J&#x27;ai simplement dit qu&#x27;il n&#x27;y avait pas de construction humaine à moins de 50 mètres de la chouette. Donc pas non plus de voie tracée par l&#x27;homme. C&#x27;est tout. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-08_05_98_15-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-29_07_95_50">
+  <div class="m-head"><span class="m-date">29 juillet 1995</span>
+    <span class="m-titre">GRAFFITIS</span>
+    <span class="m-id">29_07_95_50</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Salut max. Puis-je savoir si il y a des graffitis, rocher grave et autres tags près du lieu de la cache amitié à tous</p>
+  <p class="m-r"><span class="lbl">R</span>Il n&#x27;y a aucune inscription à proximité de la cache. Mais ne me demandez pas à quelle distance il pourrait y en avoir car on m&#x27;a posé cette question au moins mille fois !... amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-29_07_95_50-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-26_07_95_14">
+  <div class="m-head"><span class="m-date">26 juillet 1995</span>
+    <span class="m-titre">FIN</span>
+    <span class="m-id">26_07_95_14</span></div>
+  <p class="m-q"><span class="lbl">Q</span>La zone : faut-il la chercher quand tout est révélé ?</p>
+  <p class="m-r"><span class="lbl">R</span>Vous aurez la zone à l&#x27;issue de la 11ème énigme ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-26_07_95_14-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-16_08_95_36">
+  <div class="m-head"><span class="m-date">16 août 1995</span>
+    <span class="m-titre">IMAGINONS</span>
+    <span class="m-id">16_08_95_36</span></div>
+  <p class="m-q"><span class="lbl">Q</span>J&#x27;ai l&#x27;ordre, les 9 premières énigmes: suis-je arrivé dans la zone? Et la dernière énigme ne sert-elle qu&#x27;à classer les éléments supplémentaires? Merci. Bien amicalement.</p>
+  <p class="m-r"><span class="lbl">R</span>Vous aurez la zone à l&#x27;issue de la 11ème énigme. La dernière (12ème ou &quot;lien&quot; ou &quot;supersolution&quot;) vous indique comment localiser la cache avec précision. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-16_08_95_36-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-01_09_95_36">
+  <div class="m-head"><span class="m-date">1 septembre 1995</span>
+    <span class="m-titre">ZONE REPETITA ?</span>
+    <span class="m-id">01_09_95_36</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Cher Max, cette histoire de zone me tracasse, et je ne trouve pas les réponses à ces 3 questions ; vous êtes mon dernier espoir. 1) de quelle façon détermine-t-on la zone ? 2) la chouette est-elle enterrée dans la zone de taille moyenne ??</p>
+  <p class="m-r"><span class="lbl">R</span>La zone vous est donnée à l&#x27;issue de la 11ème énigme. Cette zone a la taille d&#x27;une ville moyenne. La chouette est enterrée dans cette zone. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-01_09_95_36-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-10_09_95_42">
+  <div class="m-head"><span class="m-date">10 septembre 1995</span>
+    <span class="m-titre">ZONE</span>
+    <span class="m-id">10_09_95_42</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, vous confirmez que la zone n&#x27;est trouvée qu&#x27;une fois les onze énigmes résolues, même si cela implique que : - soit la 420 est la dernière énigme - soit la flèche d&#x27;Apollon ne vise pas la zone. Merci d&#x27;avance. Arthur</p>
+  <p class="m-r"><span class="lbl">R</span>Je confirme que vous avez la zone à l&#x27;issue de la 11ème énigme. Pour le reste, no comment ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-10_09_95_42-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-24_09_95_7">
+  <div class="m-head"><span class="m-date">24 septembre 1995</span>
+    <span class="m-titre">FROM JAY</span>
+    <span class="m-id">24_09_95_7</span></div>
+  <p class="m-q"><span class="lbl">Q</span>71721075 a-t-il un rapport avec les sentinelles ? Peut-on trouver la zone - pas la chouette - sans avoir résolu la totalité des énigmes ?</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne peux pas vous dire si ces chiffres ont un rapport avec les sentinelles. La zone vous est donnée à l&#x27;issue de la 11ème, ce qui signifie que vous devez avoir trouvé toutes les solutions intermédiaires. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-24_09_95_7-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-09_10_95_36">
+  <div class="m-head"><span class="m-date">9 octobre 1995</span>
+    <span class="m-titre">ZONE</span>
+    <span class="m-id">09_10_95_36</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour Max. Si je pense avoir tracé la forme de la zone, mais sans avoir trouvé le lieu, est-ce que je me trompe ou est-ce que le lieu de la zone est donné par une énigme? Merci Jakpot.</p>
+  <p class="m-r"><span class="lbl">R</span>La zone vous est donnée à l&#x27;issue de la 11ème énigme. C&#x27;est tout ce que je peux dire. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-09_10_95_36-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-14_10_95_26">
+  <div class="m-head"><span class="m-date">14 octobre 1995</span>
+    <span class="m-titre">EVIDENCE DE LA ZONE</span>
+    <span class="m-id">14_10_95_26</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour. Un chercheur ayant résolu les dix premières énigmes n&#x27;a pas encore la zone... c&#x27;est bien cela ? La onzième seule la donne ? Merci. Cordialement. Arthur</p>
+  <p class="m-r"><span class="lbl">R</span>La zone vous est révélée à l&#x27;issue des 11 énigmes ! C&#x27;est l&#x27;enchaînement des énigmes qui vous amène sur cette zone. Si vous me demandez si l&#x27;une de ces 10 premières vous donne déjà un aperçu de cette zone, je ne peux vous le dire. (J&#x27;ai déjà souvent expliqué cela !) Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-14_10_95_26-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-23_10_95_46">
+  <div class="m-head"><span class="m-date">23 octobre 1995</span>
+    <span class="m-titre">A</span>
+    <span class="m-id">23_10_95_46</span></div>
+  <p class="m-q"><span class="lbl">Q</span>La plupart des énigmes donnent un lieu, est-ce qu&#x27;il faut tracer à partir de chaque énigmes une ligne car avec les 10 premières je n&#x27;ai pas réussi à distinguer la zone malgré mes lignes Vincent ?</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne peux hélas pas vous dire comment traiter vos solutions. Mais je vous confirme que la zone vous est indiquée à l&#x27;issue de la 11ème énigme (vous parlez de la 10ème). Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-23_10_95_46-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-11_11_95_8">
+  <div class="m-head"><span class="m-date">11 novembre 1995</span>
+    <span class="m-titre">71721075</span>
+    <span class="m-id">11_11_95_8</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour. Peut-on trouver la zone sans décrypter 71721075 ? Peut-on trouver la chouette sans décrypter 71721075 ? Merci. Arthur</p>
+  <p class="m-r"><span class="lbl">R</span>Pour trouver la chouette, il faut tout décrypter, Arthur ! La zone vous est donnée à l&#x27;issue de la 11ème énigme. Comme 7172..etc fait partie des 11 énigmes, je vous laisse tirer les conclusions qui s&#x27;imposent ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-11_11_95_8-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-25_11_95_3">
+  <div class="m-head"><span class="m-date">25 novembre 1995</span>
+    <span class="m-titre">Sentinelles</span>
+    <span class="m-id">25_11_95_3</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Doit-on passer les sentinelles en revue pour trouver la zone ? Amitiés, Dredd</p>
+  <p class="m-r"><span class="lbl">R</span>Oui. La zone vous étant donnée en fin de 11ème énigme, tout ce qui précède contribue à la localisation de la zone ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-25_11_95_3-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-28_11_95_14">
+  <div class="m-head"><span class="m-date">28 novembre 1995</span>
+    <span class="m-titre">ZONE</span>
+    <span class="m-id">28_11_95_14</span></div>
+  <p class="m-q"><span class="lbl">Q</span>À la fin de la onzième énigme, nous connaîtrons très précisément les limites de ce que vous appelez &quot;la zone&quot; ? Un habitant du coin est-il avantage en ce sens qu&#x27;il &quot;reconnaîtra&quot; des éléments de la zone (avec un peu d&#x27;astuce) en résolvant les énigmes ? Merci. -- alain.</p>
+  <p class="m-r"><span class="lbl">R</span>À la fin de la 11ème, vous connaîtrez la zone. Un habitant du coin n&#x27;a aucun avantage, car il faudrait pour ça qu&#x27;il possède la supersolution, ce qui sous-entend, je vous le rappelle, qu&#x27;il ait trouvé les solutions des 11 énigmes. Amitiés -- max.</p>
+  <div class="m-back"><a class="back" href="#b-28_11_95_14-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-21_12_95_21">
+  <div class="m-head"><span class="m-date">21 décembre 1995</span>
+    <span class="m-titre">ONZIEME ET ZONE</span>
+    <span class="m-id">21_12_95_21</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Est-il vraiment quasi-impossible de se retrouver dans la zone sans avoir décrypté intégralement la onzième énigme ? Merci. -- Arthur</p>
+  <p class="m-r"><span class="lbl">R</span>Arthur, c&#x27;est l&#x27;enchaînement des 11 énigmes qui vous donne la zone. Par conséquent, c&#x27;est à l&#x27;issue de la 11ème que vous la connaissez. Si vous la devinez en cours de route, vous m&#x27;excuserez, mais ce n&#x27;est pas mon problème ! (Et surtout, Arthur, s&#x27;il vous plaît !!! Ne me demandez pas maintenant si on peut la deviner en cours de route ! Pour moi, vous l&#x27;avez à la fin de la 11ème, c&#x27;est tout !) Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-21_12_95_21-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-04_01_96_5">
+  <div class="m-head"><span class="m-date">4 janvier 1996</span>
+    <span class="m-titre">ZONE</span>
+    <span class="m-id">04_01_96_5</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Dans 16 ci-avant, vous dites que la zone est donnée par la &quot;supersolution&quot; dans le mess. Vous rectifiez: pas supersolution mais la 12ème. Je croyais que la zone était connue à la 11ème (10ème sans la b). Lumière svp. Gego</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne sais pas à quel message vous faites allusion (pouvez-vous préciser à quelle date et sous quel numéro?). Vous avez la zone à la fin de la 11ème énigme. La 12ème (ou &quot;supersolution&quot;) vous indique le point précis à l&#x27;intérieur de cette zone. Si je n&#x27;ai pas été très clair dans un message précédent, ou si j&#x27;ai fait un lapsus, désolé. Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-04_01_96_5-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-08_01_96_30">
+  <div class="m-head"><span class="m-date">8 janvier 1996</span>
+    <span class="m-titre">ZONE</span>
+    <span class="m-id">08_01_96_30</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Il est clair pour tout le monde que la 520 est la 11ème énigme, ce n&#x27;est pas un scoop ! Confirmez-vous que l&#x27;on ne peut absolument pas trouver la zone finale sans avoir décrypté cette dernière énigme même si l&#x27;on a les bonnes solutions de toutes les autres ? (ceci dit, quelle soit la dernière ou pas) *</p>
+  <p class="m-r"><span class="lbl">R</span>Je dis et je répète que vous avez la zone à l&#x27;issue de la 11ème énigme ! Si vous &quot;devinez&quot; la zone en cours de route, ça vous regarde ! Mais si vous voulez parvenir à la zone tout en disposant des éléments de la supersolution, vous aurez tout ça à fin de la 11ème ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-08_01_96_30-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-28_01_96_32">
+  <div class="m-head"><span class="m-date">28 janvier 1996</span>
+    <span class="m-titre">ZONE</span>
+    <span class="m-id">28_01_96_32</span></div>
+  <p class="m-q"><span class="lbl">Q</span>La zone est-elle donnée par une seule énigme ou par l&#x27;ensemble? Est-elle donnée à l&#x27;échelle réelle ou trouve-t-on uniquement sa forme? Amitiés jakpot</p>
+  <p class="m-r"><span class="lbl">R</span>La zone est donnée à l&#x27;issue de la 11ème énigme. Mais la 11ème est le résultat logique de l&#x27;enchaînement des précédentes... Ce n&#x27;est pas une question d&#x27;échelle ou de forme, mais une question de repérage géographique simple. Par exemple, une zone située entre 3 ou 4 points précis... Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-28_01_96_32-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-28_02_96_41">
+  <div class="m-head"><span class="m-date">28 février 1996</span>
+    <span class="m-titre">650 31416</span>
+    <span class="m-id">28_02_96_41</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bjr, vous dites qu&#x27;elles sont visibles sur l&#x27;autre carte (les sentinelles). Sont-elles visibles individuellement et toutes à la fois ? Le bloc de chiffres est à prendre dans son intégralité ? La certitude de la zone viendrait-elle d&#x27;une évocation ou autre chose ? Merci pi.</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;ai dit que les sentinelles étaient visibles &quot;sur l&#x27;une des cartes&quot;, rien de plus, rien de moins... Bloc de chiffres : à vous de trouver la réponse à cette question ! Zone : elle vous est donnée à l&#x27;issue de la 11ème énigme, mais je ne peux vous dire par quel moyen... Amitiés - M.</p>
+  <div class="m-back"><a class="back" href="#b-28_02_96_41-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-13_05_96_8">
+  <div class="m-head"><span class="m-date">13 mai 1996</span>
+    <span class="m-titre">31416 REBIS</span>
+    <span class="m-id">13_05_96_8</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Je cite : le passage en revue des sentinelles nous mène indirectement sur (ou vers) la zone. &quot;Nous mèneraient-elles (direz-vous si elles étaient autrement ? À l&#x27;issue de la 11e, nous avons la localisation du secteur, mais la zone ou plutôt la délimitation, nous l&#x27;avons que sur la 2e carte, n&#x27;est-ce pas ? Merci.</p>
+  <p class="m-r"><span class="lbl">R</span>Si j&#x27;ai précisé &quot;indirectement&quot;, c&#x27;est bien parce que tous les éléments du livre, sans exception, contribuent à vous amener sur la zone. Ne me faites pas dire ce que je n&#x27;ai pas dit ! Je ne peux donc rien dire de plus. À l&#x27;issue de la 11e, vous avez la zone. Cette zone, sur la 2e carte, n&#x27;est qu&#x27;un &quot;agrandissement&quot; vous permettant de progresser. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-13_05_96_8-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-25_07_96_23">
+  <div class="m-head"><span class="m-date">25 juillet 1996</span>
+    <span class="m-titre">LE VENDEEN RELIQUAT+ZONE</span>
+    <span class="m-id">25_07_96_23</span></div>
+  <p class="m-q"><span class="lbl">Q</span>J&#x27;en suis pas là malheureusement mais j&#x27;ai tout de même des questions qui me tracasse: 1-les reliquats sont-ils de la même nature ? 2-si j&#x27;ai bien compris tes réponses... on arrive dans la zone à la fin de la 11ème ? Pas besoin de la chercher ? Amitiés</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne peux pas vous dire si les reliquats sont de même nature. Oui, vous arrivez dans la zone à la fin de la 11ème. C-à-d qu&#x27;à la fin de la 11ème vous obtenez une surface de territoire qui est la zone. Il n&#x27;est pas vraiment nécessaire de la &quot;chercher&quot;. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-25_07_96_23-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-09_08_96_27">
+  <div class="m-head"><span class="m-date">9 août 1996</span>
+    <span class="m-titre">ZONE</span>
+    <span class="m-id">09_08_96_27</span></div>
+  <p class="m-q"><span class="lbl">Q</span>La méthode pour délimiter la zone (ou pour &quot;trouver&quot; ses limites) nous est-elle donnée par la 11ème énigme, ou faut-il procéder à une sorte de recapitulatif des 10 énigmes (en excluant la b)?</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne peux évidemment pas vous dire comment vous est donnée la zone. Tout ce que je peux dire, c&#x27;est que vous l&#x27;avez à l&#x27;issue de la 11ème... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-09_08_96_27-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-17_08_96_28">
+  <div class="m-head"><span class="m-date">17 août 1996</span>
+    <span class="m-titre">SS</span>
+    <span class="m-id">17_08_96_28</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Une fois qu&#x27;on a la ss, qu&#x27;est-ce qui nous qu&#x27;elle s&#x27;applique bien à la zone si celle-ci n&#x27;est pas citée d&#x27;une manière ou d&#x27;une autre dans les énigmes ou dans la ss elle-même ? La zone est-elle &quot;nommément&quot; mentionnée d&#x27;une manière ou d&#x27;une autre dans le jeu ?</p>
+  <p class="m-r"><span class="lbl">R</span>Avant d&#x27;avoir la ss, vous aurez la zone, à l&#x27;issue de la 11ème énigme. Si toutes vos solutions sont exactes, cette zone sera obligatoirement la bonne. Elle n&#x27;est pas &quot;citée dans les énigmes&quot;, mais est le résultat de vos décryptages. Amitiés -- Max.</p>
+  <div class="m-back"><a class="back" href="#b-17_08_96_28-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-30_08_96_42">
+  <div class="m-head"><span class="m-date">30 août 1996</span>
+    <span class="m-titre">ETONNEMENT</span>
+    <span class="m-id">30_08_96_42</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour, max, en admettant que certains chercheurs aient la bonne zone depuis quelques semaines, êtes-vous étonné qu&#x27;ils butent encore sur la ss qui, selon vos dires, est si facile ? quand vous parlez de &quot;parfaite connaissance de la zone pour l&#x27;application&quot;, parlez-vous de toute la zone ou seulement du site de la cache ? -- roberto</p>
+  <p class="m-r"><span class="lbl">R</span>Si quelqu&#x27;un avait la bonne zone (chose que je n&#x27;infirme ni ne confirme), il serait assez étrange de mettre autant de temps. mais cela pourrait aussi être dû à une autre raison. par exemple une erreur dans un reliquat, un oubli, etc. difficile à dire... je ne vois pas à quel message vous faites allusion lorsque vous parlez de &quot;parfaite connaissance de la zone&quot;. j&#x27;ai sans doute dit qu&#x27;à l&#x27;issue de la 11ème, vous connaissez parfaitement la zone, c-à-d que vous savez où elle est. sinon, merci de me donner la date et le titre du message concerné. amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-30_08_96_42-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-30_08_96_41">
+  <div class="m-head"><span class="m-date">30 août 1996</span>
+    <span class="m-titre">REPERAGE</span>
+    <span class="m-id">30_08_96_41</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Faut-il une bonne connaissance de la zone pour &quot;repérer&quot; les reliquats ? sinon comment savoir si ce sont les bons ? ils ne s&#x27;expliquent qu&#x27;à la bonne zone, dites-vous. et pour l&#x27;application il faut bien connaître la zone. je vois mal comment les repérer sans connaître la zone. ils font forcément référence à la zone.</p>
+  <p class="m-r"><span class="lbl">R</span>Une fois que vous avez la zone (à l&#x27;issue de la 11ème énigme), les reliquats, décryptés, vous permettent de localiser la cache à l&#x27;intérieur de cette zone. cela ne pose pas de difficultés majeures. si je vous dis &quot;tour eiffel&quot;, vous n&#x27;avez pas besoin de bien connaître paris pour savoir ce que c&#x27;est ! là, c&#x27;est un peu pareil. (attention, cela n&#x27;est qu&#x27;un exemple. cet exemple n&#x27;implique pas qu&#x27;il y ait un quelconque monument à prendre en considération pour trouver la chouette !) amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-30_08_96_41-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-06_09_96_17">
+  <div class="m-head"><span class="m-date">6 septembre 1996</span>
+    <span class="m-titre">NIF</span>
+    <span class="m-id">06_09_96_17</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Si j&#x27;ai tout bien compris, la 10 nous donne une zone de la taille d&#x27;un département mais aussi une révélation sur eux. Eux sont 4 pareils mais ce n&#x27;est pas chez eux que je dois chercher la bête. Exact? Amitiés</p>
+  <p class="m-r"><span class="lbl">R</span>Vous avez la zone à l&#x27;issue de la 11ème énigme. &quot;Eux&quot; figurent dans la 520, mais je ne peux pas vous dire si la 520 est la 10ème énigme! La zone n&#x27;a pas la taille d&#x27;un département, mais d&#x27;une ville moyenne. La chouette se trouve grâce à la supersolution (12ème énigme &quot;cachée&quot;) Amitiés</p>
+  <div class="m-back"><a class="back" href="#b-06_09_96_17-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-23_09_96_15">
+  <div class="m-head"><span class="m-date">23 septembre 1996</span>
+    <span class="m-titre">ANAIS</span>
+    <span class="m-id">23_09_96_15</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, tu dis on trouve la zone à la fin de la 11 ? D&#x27;accord ! Mais tu dis on trouve les sentinelles dans la 650 ? Donc on trouve bien les sentinelles avant d&#x27;entrer dans la zone ?</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;ai déjà dit que je n&#x27;infirmais ni ne confirmais le fait que la zone puisse être trouvée avant la 11e. Mais je confirme qu&#x27;à l&#x27;issue de la 11e, vous l&#x27;avez avec une absolue certitude. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-23_09_96_15-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-25_09_96_11">
+  <div class="m-head"><span class="m-date">25 septembre 1996</span>
+    <span class="m-titre">renseignement</span>
+    <span class="m-id">25_09_96_11</span></div>
+  <p class="m-q"><span class="lbl">Q</span>En ayant la bonne carte finale, sans avoir résolu complètement la 11ème, peut-on trouver plus facilement la zone de la taille d&#x27;une ville moyenne? Amitiés du soir Youyou</p>
+  <p class="m-r"><span class="lbl">R</span>La zone vous est donnée à l&#x27;issue de la 11ème énigme. Trouver la zone n&#x27;a rien à voir avec la carte finale, celle-ci ne vous sert qu&#x27;à localiser le &quot;spot&quot; où se trouve l&#x27;oiseau. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-25_09_96_11-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-23_10_96_29">
+  <div class="m-head"><span class="m-date">23 octobre 1996</span>
+    <span class="m-titre">ce que j&#x27;ai fais en onze</span>
+    <span class="m-id">23_10_96_29</span></div>
+  <p class="m-q"><span class="lbl">Q</span>... Peut-il me servir à comprendre comment marche la douze ? Merci. Alan de Buri Dan, grand dissipateur de doute devant l&#x27;éternel.</p>
+  <p class="m-r"><span class="lbl">R</span>Arthur, vous me forcez à encore répéter la même chose : vous avez la zone à l&#x27;issue de la 11ème. Mais je ne peux rien dire au sujet de la supersolution. Désolé. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-23_10_96_29-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-15_11_96_50">
+  <div class="m-head"><span class="m-date">15 novembre 1996</span>
+    <span class="m-titre">SUPPOSITION</span>
+    <span class="m-id">15_11_96_50</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Supposons que la zone soit Paris. Supposons que la chouette soit enterrée non loin de l&#x27;Arc de Triomphe, est-ce qu&#x27;une information du genre &quot;à l&#x27;Arc de Triomphe&quot; s&#x27;obtient plusieurs fois après décryptage ? C&#x27;est surtout sur le &quot;plusieurs fois&quot; que je vous interroge plutôt que sur la forme de l&#x27;exemple ci-dessus. Amitiés -- Yeti</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;ai déjà souvent dit qu&#x27;il m&#x27;était impossible de répondre à cette question. Pour ce qui me concerne, vous obtenez la zone à l&#x27;issue de la 11e énigme, et la supersolution ensuite. S&#x27;il y avait des allusions à ces deux sites ailleurs dans le jeu, je ne pourrais pas vous le dire... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-15_11_96_50-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-17_12_96_3">
+  <div class="m-head"><span class="m-date">17 décembre 1996</span>
+    <span class="m-titre">JPS</span>
+    <span class="m-id">17_12_96_3</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Re-moi. Lorsqu&#x27;à un certain moment, on arrive à un point précis sur une carte des plus précises, est-il possible que la chouette soit enterrée 150 mètres plus loin, et que le point soit là pour déterminer une zone ? J&#x27;ai du mal à comprendre le trou que vous avez trouvé dernièrement. Ne peut-il pas être dû à une ss incomplète ? Si cette ligne paraît, merci. Ciao</p>
+  <p class="m-r"><span class="lbl">R</span>La zone est obtenue à l&#x27;issue de la 11ème énigme, et elle est bien plus grande, sur la carte précise, qu&#x27;un point. Pour ce qui concerne le trou que j&#x27;ai découvert, je n&#x27;ai aucune explication... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-17_12_96_3-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-25_12_96_8">
+  <div class="m-head"><span class="m-date">25 décembre 1996</span>
+    <span class="m-titre">BONSOIR MAX.,</span>
+    <span class="m-id">25_12_96_8</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Doit-on interpréter le texte au 1er degré de la 520 : si on a trouvé les sentinelles, après avoir poursuivi son chemin on trouve les lieux où repose la chouette. Cela ne vous paraît pas inconcevable que je ne trouve pas le pile-poil, je vous garantis j&#x27;ai le s-e-u-l bon guide. Bonne soirée Max... Napoléon 76.</p>
+  <p class="m-r"><span class="lbl">R</span>Napoléon, je suis navré, mais je ne comprends pas votre question. Vous trouvez la zone à la fin de la 11ème énigme, puis la supersolution vous donne la localisation pile poil à l&#x27;intérieur de cette zone. Je ne peux pas en dire plus... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-25_12_96_8-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-04_02_97_33">
+  <div class="m-head"><span class="m-date">4 février 1997</span>
+    <span class="m-titre">Q1</span>
+    <span class="m-id">04_02_97_33</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Quand vous parlez de &quot;la zone&quot;, vous parlez toujours de cette zone de taille d&#x27;une ville moyenne? À son propos je me demande: *Je dois trouver une zone, en être sûr, ses contours sont un temps ceux que la pointe de mon crayon a grisé sur ma carte oui ou non? ...Suite</p>
+  <p class="m-r"><span class="lbl">R</span>Il s&#x27;agit bien de cette zone-là. Mais je ne peux pas vous dire comment ou à l&#x27;aide de quels outils vous l&#x27;obtenez. Vous l&#x27;avez à la fin de la 11ème énigme. Je lis la suite...</p>
+  <div class="m-back"><a class="back" href="#b-04_02_97_33-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-02_03_97_32">
+  <div class="m-head"><span class="m-date">2 mars 1997</span>
+    <span class="m-titre">M2</span>
+    <span class="m-id">02_03_97_32</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Si j&#x27;ai bien compris, ce qui se loin d&#x27;être évident, on change de carte lorsque l&#x27;on a défini une zone de la taille, approximative, d&#x27;une ville moyenne. À l&#x27;aide de la seconde carte, on détermine une zone, avant que la ss nous donne la localisation exacte ; mais quelle est approximativement la superficie de cette seconde zone ? Merci</p>
+  <p class="m-r"><span class="lbl">R</span>Non, ce n&#x27;est pas tout à fait ça. Vous avez la zone à l&#x27;issue de la 11ème énigme. Vous vous procurez alors une carte précise de cette zone afin de disposer ainsi d&#x27;un &quot;agrandissement&quot;. La supersolution vous donne la localisation de la cache, laquelle se trouve à l&#x27;intérieur de cette zone, à peu près au milieu. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-02_03_97_32-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-17_03_97_6">
+  <div class="m-head"><span class="m-date">17 mars 1997</span>
+    <span class="m-titre">560</span>
+    <span class="m-id">17_03_97_6</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Est-il nécessaire d&#x27;avoir résolu la 560 pour déterminer où se trouve la zone ?</p>
+  <p class="m-r"><span class="lbl">R</span>Vous obtenez la zone à l&#x27;issue des 11 énigmes, parmi lesquelles figure la 560. Cqfd ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-17_03_97_6-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-04_04_97_5">
+  <div class="m-head"><span class="m-date">4 avril 1997</span>
+    <span class="m-titre">520*</span>
+    <span class="m-id">04_04_97_5</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonsoir max, la 520 nous donne la zone mais... nous indique-t-elle également où commencer? ça, ce serait super sympa de nous le dire! vous avez (je crois) dit qu&#x27;elle n&#x27;avait pas de forme géométrique... une forme géométrique irrégulière est-elle acceptable? flash-back</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;ai dit que vous avez la zone à la fin de la 11ème énigme. je n&#x27;ai jamais dit que c&#x27;était la 520 qui vous la donnait. c&#x27;est la supersolution qui vous dit comment évoluer dans cette zone, pas l&#x27;une des énigmes du livre. cette zone n&#x27;a pas de forme géométrique régulière. amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-04_04_97_5-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-21_04_97_50">
+  <div class="m-head"><span class="m-date">21 avril 1997</span>
+    <span class="m-titre">B 52</span>
+    <span class="m-id">21_04_97_50</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour Marx, n&#x27;a-t-on pas la zone à l&#x27;issue de la 9ème énigme ? En effet, si les 2 énigmes suivantes permettent d&#x27;affiner, elles ne le permettent pas sur la 1ère carte. Or, vous avez dit que le changement de carte doit se faire à l&#x27;issue de la 11ème. En bref, les énigmes 10 et 11 sont inexploitables sans la seconde carte. Alors...</p>
+  <p class="m-r"><span class="lbl">R</span>Une fois encore, je ne peux pas répondre à des questions aussi précises. Tout ce que je peux dire, c&#x27;est que vous avez la zone à l&#x27;issue de la 11ème énigme... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-21_04_97_50-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-01_06_97_14">
+  <div class="m-head"><span class="m-date">1 juin 1997</span>
+    <span class="m-titre">PATATE</span>
+    <span class="m-id">01_06_97_14</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, vous avez souvent dit que la zone était patatoïdale. Sans connaître cette réponse, aurait-on pu à un moment ou à un autre du jeu avoir l&#x27;intuition qu&#x27;elle était ainsi mais ne savoir où la placer qu&#x27;à la fin de la 11ème? Amitiés</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne peux pas vous répondre. Pour ce qui me concerne, la zone est trouvée à l&#x27;issue de la 11ème énigme... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-01_06_97_14-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-28_07_97_8">
+  <div class="m-head"><span class="m-date">28 juillet 1997</span>
+    <span class="m-titre">LE PETIT PLUS</span>
+    <span class="m-id">28_07_97_8</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Peut-on dire que la zone est quasiment constituée par les 10 premières énigmes et que la 11ème nous apporte juste le petit plus pour localiser la patate... la zone ? Maltese l&#x27;ancien.</p>
+  <p class="m-r"><span class="lbl">R</span>Maltese (l&#x27;ancien), je ne peux rien dire de plus que : &quot;À l&#x27;issue de la 11ème, vous avez la zone !&quot; Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-28_07_97_8-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-07_08_97_2">
+  <div class="m-head"><span class="m-date">7 août 1997</span>
+    <span class="m-titre">SUPERSOLUTION</span>
+    <span class="m-id">07_08_97_2</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Vous dites qu&#x27;il faut rassembler les reliquats, mais où se termine exactement la 11ème énigme ? À partir du moment où la zone est déterminée ou à partir du moment où la zone est déterminée et &quot;validée&quot; ? -- Andros</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;ai un peu de mal à saisir la nuance. Vous avez la zone à l&#x27;issue de la 11ème énigme. Je ne sais pas quoi vous répondre d&#x27;autre... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-07_08_97_2-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-21_08_97_24">
+  <div class="m-head"><span class="m-date">21 août 1997</span>
+    <span class="m-titre">LOLO</span>
+    <span class="m-id">21_08_97_24</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Vous dites que sa tombe est à peu près au milieu de la zone mais de quelle zone parlez-vous ?</p>
+  <p class="m-r"><span class="lbl">R</span>De celle que vous obtenez à l&#x27;issue de la 11ème énigme. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-21_08_97_24-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-27_08_97_36">
+  <div class="m-head"><span class="m-date">27 août 1997</span>
+    <span class="m-titre">11EME</span>
+    <span class="m-id">27_08_97_36</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, vous dites que la zone est donnée à l&#x27;issue de la 11ème énigme, mais est-elle identifiable comme telle à ce moment-là, ou y a-t-il des éléments que seule la supersolution peut donner ? Andros</p>
+  <p class="m-r"><span class="lbl">R</span>Non, elle est identifiable à ce moment-là. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-27_08_97_36-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-31_08_97_8">
+  <div class="m-head"><span class="m-date">31 août 1997</span>
+    <span class="m-titre">650 et 520</span>
+    <span class="m-id">31_08_97_8</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Peut-on dire que la 650 détermine une zone (disons une ville) et que la 520 devienne plus précise (un village) ? Jean</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne peux vous le dire. Vous avez la zone à l&#x27;issue de la 11ème énigme. À partir de là, il faut chercher la supersolution qui vous donnera le point précis. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-31_08_97_8-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-08_09_97_21">
+  <div class="m-head"><span class="m-date">8 septembre 1997</span>
+    <span class="m-titre">Ayant trouve les sentinelles</span>
+    <span class="m-id">08_09_97_21</span></div>
+  <p class="m-q"><span class="lbl">Q</span>...Avec une quasi-certitude, j&#x27;ai ipso facto la zone (elles ne sont pas sur la 1-ère carte, donc...) ; or vous avez dit &quot;impossible de trouver la zone avant la dernière énigme&quot; ! Vous confirmez ? Ou ma mémoire me trahit (je n&#x27;ai pas la référence de cette déclaration). Amitiés -- Soryu.</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;ai dit &quot;vous avez la zone à l&#x27;issue de la 11ème énigme&quot;. Rien de plus, rien de moins ! Amitiés -- Max.</p>
+  <div class="m-back"><a class="back" href="#b-08_09_97_21-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-13_09_97_44">
+  <div class="m-head"><span class="m-date">13 septembre 1997</span>
+    <span class="m-titre">CNFIRMATIONS 1</span>
+    <span class="m-id">13_09_97_44</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, confirmez-vous avoir dit : que la zone porte un nom..et que l&#x27;on peut la nommer que la zone est trouvée à l&#x27;issue de la 11eme merci..... groseille.</p>
+  <p class="m-r"><span class="lbl">R</span>Non, je n&#x27;ai pas dit qu&#x27;elle portait un nom. oui, elle est trouvée à l&#x27;issue de la 11eme. amitiés -- max ps : vous devriez changer de pseudo. celui-là est particulièrement mal vu des anciens chercheurs !...</p>
+  <div class="m-back"><a class="back" href="#b-13_09_97_44-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-02_11_97_11">
+  <div class="m-head"><span class="m-date">2 novembre 1997</span>
+    <span class="m-titre">COUCOUROUCOUCOU 2</span>
+    <span class="m-id">02_11_97_11</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Je reprends; à la fin de la 520, on a la zone. Comment savoir alors le point de départ qui nous amène petit à petit au Zozieau? Si ce n&#x27;est pas le 1er reliquat, alors c&#x27;est autre chose. Peut-être que la zone est trouvée en 650 et que la 520 indique le point de départ. Svp: débloquez-moi; merci</p>
+  <p class="m-r"><span class="lbl">R</span>À la fin de la 11ème énigme, vous avez la zone. Vous extrayez alors les reliquats de vos propres décryptages, vous les assemblez et vous les décryptez. Vous avez alors le mode d&#x27;emploi précis pour vous rendre sur place et déterrer l&#x27;oiseau. Dernière chose: toutes les énigmes ne possèdent pas de reliquat, mais certaines en possèdent plusieurs. Voila tout ce que je peux dire à ce sujet. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-02_11_97_11-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-10_11_97_13">
+  <div class="m-head"><span class="m-date">10 novembre 1997</span>
+    <span class="m-titre">PHILIPPE 35</span>
+    <span class="m-id">10_11_97_13</span></div>
+  <p class="m-q"><span class="lbl">Q</span>La zone peut-elle être trouvée en 650 ?</p>
+  <p class="m-r"><span class="lbl">R</span>Tout ce que je peux dire, c&#x27;est que vous avez la zone à l&#x27;issue de la 11ème énigme. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-10_11_97_13-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-07_01_98_8">
+  <div class="m-head"><span class="m-date">7 janvier 1998</span>
+    <span class="m-titre">PINK FLOYD CHRISTMAS</span>
+    <span class="m-id">07_01_98_8</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Compte tenu de la différence d&#x27;échelle très importante, le contour de la zone finale est-il parfaitement reproductible à partir d&#x27;indices déterminés sur la carte finale la plus précise ?</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne peux pas vous dire si ces contours sont à définir avec une telle précision. Exemple (qui n&#x27;a bien sûr rien à voir avec la réalité) : si je vous disais &quot;la chouette se trouve au milieu du département de l&#x27;Allier&quot;, vous n&#x27;auriez pas besoin de tracer réellement les contours de l&#x27;Allier. Dans la mesure où vous connaissez la zone à l&#x27;issue de la 11ème énigme, vous devez savoir quoi en faire. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-07_01_98_8-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-25_02_98_40">
+  <div class="m-head"><span class="m-date">25 février 1998</span>
+    <span class="m-titre">ALEX 22 ZONE</span>
+    <span class="m-id">25_02_98_40</span></div>
+  <p class="m-q"><span class="lbl">Q</span>La zone a-t-elle la taille d&#x27;1 ville moyenne (20 000 hab) ? Faut-il être bien documenté pour trouver la zone ? Ses limites ? La zone apparaît-elle avant la dernière énigme ? La 11ème énigme nous aide-t-elle pour la 12ème ? Je pense qu&#x27;une chouette te convenait encore plus (ça me convient aussi) ? Amitiés amusées -- Alexandre</p>
+  <p class="m-r"><span class="lbl">R</span>La zone a effectivement la taille d&#x27;une ville moyenne, mais cela ne veut strictement rien dire. J&#x27;ai lâché ça un jour, quand on m&#x27;a demandé un exemple pour fixer les idées. Une ville moyenne peut être ramassée ou étirée sur des km. C&#x27;est donc là une information sans aucun intérêt. La zone vous est donnée par vos décryptages, à l&#x27;issue de la 11ème énigme, pas grâce à de la doc. Pour vos autres questions, navré, mais je ne peux pas vous répondre. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-25_02_98_40-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-04_03_98_47">
+  <div class="m-head"><span class="m-date">4 mars 1998</span>
+    <span class="m-titre">ZONE DONC</span>
+    <span class="m-id">04_03_98_47</span></div>
+  <p class="m-q"><span class="lbl">Q</span>En début de 520, je ne connais pas la zone. En fin de 520, je l&#x27;ai sur la grande carte et je le transpose sur la carte précise. C&#x27;est o-k docteur ? amitiés rene de cessand*</p>
+  <p class="m-r"><span class="lbl">R</span>Rene, je ne changerai pas une virgule à ce que je dis depuis 94, et n&#x27;y ajouterai aucune précision : vous avez la zone à la fin de la 11ème énigme ! amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-04_03_98_47-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-09_04_98_45">
+  <div class="m-head"><span class="m-date">9 avril 1998</span>
+    <span class="m-titre">JE DOIS ETRE UN PEU NUNUCHE</span>
+    <span class="m-id">09_04_98_45</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Je n&#x27;ai toujours pas compris si la 12 en igme permettait de trouver la zone de 10 0 mètres ou la chouette dans cette zone. Vous n&#x27;avez pas été clair à ce sujet. Merci.</p>
+  <p class="m-r"><span class="lbl">R</span>Vous trouvez la zone à l&#x27;issue de la 11ème énigme. (Elle fait bien plus que 100 mètres ! Je ne sais pas d&#x27;où vous tenez cela...). Puis vous décryptez la 12ème énigme, laquelle est &quot;cachée&quot; dans le jeu. (Lisez les rubriques &quot;précisions des auteurs&quot; et &quot;indications supplémentaires&quot;). La supersolution (soit le décryptage de la 12ème énigme) vous donne l&#x27;endroit précis. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-09_04_98_45-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-27_04_98_12">
+  <div class="m-head"><span class="m-date">27 avril 1998</span>
+    <span class="m-titre">LA FORME (PATATOIDALE?)</span>
+    <span class="m-id">27_04_98_12</span></div>
+  <p class="m-q"><span class="lbl">Q</span>De la zone, c&#x27;est dans le livre?</p>
+  <p class="m-r"><span class="lbl">R</span>Vous trouvez la zone à l&#x27;issue de la 11e énigme. elle n&#x27;est pas dans le livre &quot;en clair&quot;. amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-27_04_98_12-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-30_04_98_12">
+  <div class="m-head"><span class="m-date">30 avril 1998</span>
+    <span class="m-titre">DE RETOUR DE LA ZONE</span>
+    <span class="m-id">30_04_98_12</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Selon vos dires la zone est découverte à la fin de la 11e énigme, cela laisse-t-il supposer qu&#x27;à la fin de la 10e cette information n&#x27;est pas connue ? Aussi c&#x27;est à la fin de la 11e énigme que le besoin d&#x27;une &quot;ss&quot; devient évidente pour localiser la chouette au cm près. La 2e carte aussi précise soit-elle.......</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne peux pas répondre à votre première question. Tout ce que je peux dire, c&#x27;est que vous connaissez la zone à l&#x27;issue de la 11ème énigme. Je lis la suite...</p>
+  <div class="m-back"><a class="back" href="#b-30_04_98_12-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-25_08_98_26">
+  <div class="m-head"><span class="m-date">25 août 1998</span>
+    <span class="m-titre">LA ZONE</span>
+    <span class="m-id">25_08_98_26</span></div>
+  <p class="m-q"><span class="lbl">Q</span>On l&#x27;a à la fin de la 520 ; mais l&#x27;a connaît-on vraiment sans la 2ème carte ? Exemple : elle est entre A et B. Me faut-il trouver A et B sur la 2ème carte pour t rouver la zone ? Ou alors on l&#x27;a vraiment précisément en fin de 520 sans la 2ème carte ? Totem</p>
+  <p class="m-r"><span class="lbl">R</span>Vous l&#x27;avez à la fin de la 11ème énigme, c&#x27;est tout ce que je peux vous dire. La 2ème carte ne sert qu&#x27;à faire un &quot;zoom&quot; de cette zone. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-25_08_98_26-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-23_09_98_36">
+  <div class="m-head"><span class="m-date">23 septembre 1998</span>
+    <span class="m-titre">2EME CARTE</span>
+    <span class="m-id">23_09_98_36</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Franchement, Max, en toute honnêteté, la 2ème carte, on se la procure vraiment qu&#x27;à l&#x27;ultime ligne de la toute dernière énigme ?</p>
+  <p class="m-r"><span class="lbl">R</span>Vous vous la procurez lorsque vous avez la zone. Et la zone, vous l&#x27;avez à l&#x27;issue de la 11ème énigme. Vous passez alors à la supersolution. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-23_09_98_36-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-19_10_98_6">
+  <div class="m-head"><span class="m-date">19 octobre 1998</span>
+    <span class="m-titre">J&#x27;AI DES DOUTES ET JE DIS PAS TOUT</span>
+    <span class="m-id">19_10_98_6</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, existe-t-il bien une méthode de décryptage finale en 520 ou bien dois-je me contenter d&#x27;une zone trouvée rt m&#x27;atteler à la 2ème carte (cela me semble plus difficile) ?</p>
+  <p class="m-r"><span class="lbl">R</span>Navré, mais je ne peux pas répondre à cette question. D&#x27;autre part, je ne peux pas vous dire si la 520 est l&#x27;énigme finale à l&#x27;issue de laquelle vous avez la zone. Vous avez la zone à l&#x27;issue de la 11ème énigme. Amitiés -- max.</p>
+  <div class="m-back"><a class="back" href="#b-19_10_98_6-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-20_10_98_25">
+  <div class="m-head"><span class="m-date">20 octobre 1998</span>
+    <span class="m-titre">GANY</span>
+    <span class="m-id">20_10_98_25</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Zone obtenue à l&#x27;issue de la 11ème apparaît-elle sur la 1re carte à l&#x27;issue de plusieurs tracets (erreur volontaire pour ne pas comprendre &#x27;trace) sur cette carte justement pour la matérialiser en qq sorte amitiés ganyme*</p>
+  <p class="m-r"><span class="lbl">R</span>À l&#x27;issue de la 11ème, en effet, vous obtenez une zone. Mais je ne peux pas vous dire comment et sous quelle forme. Si je vous disais cela, je vous mettrais sur la bonne piste ! À vous de voir, ganyme ! Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-20_10_98_25-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-20_11_98_3">
+  <div class="m-head"><span class="m-date">20 novembre 1998</span>
+    <span class="m-titre">11E ENIGME</span>
+    <span class="m-id">20_11_98_3</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Pour vous, la &quot;solution&quot; de la 11e énigme, est-ce la zone ? Merci max</p>
+  <p class="m-r"><span class="lbl">R</span>Tout ce que je peux dire, c&#x27;est que vous avez la zone à l&#x27;issue de la 11ème énigme. J&#x27;ai toujours refusé de répondre à cette question car, par principe, je ne dévoile pas ce qu&#x27;il faut trouver dans chacune des énigmes (y compris la 11ème). Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-20_11_98_3-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-11_02_99_11">
+  <div class="m-head"><span class="m-date">11 février 1999</span>
+    <span class="m-titre">8000 mesures 650</span>
+    <span class="m-id">11_02_99_11</span></div>
+  <p class="m-q"><span class="lbl">Q</span>En admettant que j&#x27;ai le la... dois-je compter 8 000 mesures à partir de là sur la première carte et aller voir où ça tombe sur une carte détaillée ? Est-ce la bonne méthode pour y parvenir ?</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne peux pas répondre à cette question, laquelle implique que &quot;la où ça tombe&quot; se trouverait dans la zone. Or, j&#x27;ai toujours dit que vous avez à zone à l&#x27;issue de la 11ème énigme. Et c&#x27;est alors que vous devez utiliser la 2ème carte... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-11_02_99_11-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-16_03_99_25">
+  <div class="m-head"><span class="m-date">16 mars 1999</span>
+    <span class="m-titre">520</span>
+    <span class="m-id">16_03_99_25</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Une fois décryptée la 520, on a la zone est le visuel de la 520 représente la papatoïde glouton</p>
+  <p class="m-r"><span class="lbl">R</span>Vous avez la zone à l&#x27;issue de la 11ème énigme (hormis la &quot;b&quot;, la 530, la 780 et la 470, je ne confirme jamais l&#x27;ordre, même partiellement.) c&#x27;est hélas tout ce que je peux dire, glouton. amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-16_03_99_25-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-19_03_99_23">
+  <div class="m-head"><span class="m-date">19 mars 1999</span>
+    <span class="m-titre">MISE AU POINT SUR LES CARTES</span>
+    <span class="m-id">19_03_99_23</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Étant nouveau, puis-je vous demander un récapitulatif sur les cartes ? Il semblerait qu&#x27;il y ait deux cartes pour le jeu. D&#x27;après certaines réponses que vous avez faites, la deuxième servirait après la 11ème énigme, donc pour la supersolution. Dans la 5 00 560606ème mesure, ça peut marcher pour la première carte, suite.</p>
+  <p class="m-r"><span class="lbl">R</span>L&#x27;échelle de la première carte (dont vous avez besoin jusqu&#x27;au la fin de la 11ème énigme) est donnée par l&#x27;une des énigmes, et sa marque par l&#x27;une des indications supplémentaires. À l&#x27;issue de la 11ème énigme, vous avez trouvé une zone. Vous devez alors vous procurer une carte, la plus précise possible, de cette zone. M.</p>
+  <div class="m-back"><a class="back" href="#b-19_03_99_23-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-25_03_99_47">
+  <div class="m-head"><span class="m-date">25 mars 1999</span>
+    <span class="m-titre">DENOUE TOUS LES FILS (TER)</span>
+    <span class="m-id">25_03_99_47</span></div>
+  <p class="m-q"><span class="lbl">Q</span>1/je voulais savoir si après avoir trouvé &quot;eux&quot; cela nous donnerait le fil conducteur qui nous amènerait à la zone? 2/&quot;eux&quot; suivant comment on les nomme, peuvent-ils être au masculin ou au féminin? ex: un chien, une bête; une chienne, un animal? amitiés germain</p>
+  <p class="m-r"><span class="lbl">R</span>1 - vous avez la zone à l&#x27;issue de la 11ème énigme. je ne peux rien dire de plus à ce sujet, désolé. 2 - la non plus, je ne peux pas répondre. c&#x27;est à vous de trouver ce que représentent les &quot;eux&quot;. je ne peux pas gauchir le jeu en donnant ce type d&#x27;infos. amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-25_03_99_47-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-29_03_99_1">
+  <div class="m-head"><span class="m-date">29 mars 1999</span>
+    <span class="m-titre">GAETAN 520</span>
+    <span class="m-id">29_03_99_1</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour max, si je vous dis les 10 premières énigmes permettent d&#x27;arriver en zone et que la dernière énigme permet de délimiter la zone et la supersolution permet de trouver la cache, pouvez-vous me confirmer mon hypothèse ? À bientôt</p>
+  <p class="m-r"><span class="lbl">R</span>Je me borne à ceci : à l&#x27;issue de la 11ème énigme, vous avez la zone... je ne peux vraiment rien ajouter à cela. La supersolution permet en effet de trou ver la cache. Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-29_03_99_1-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-14_04_99_33">
+  <div class="m-head"><span class="m-date">14 avril 1999</span>
+    <span class="m-titre">PILE POIL</span>
+    <span class="m-id">14_04_99_33</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Vous avez dit : on trouve les sentinelles, puis on détermine la zone, puis on extrait les reliquats, on les assemble. Cela nous mène à la cache pile poil. D&#x27;abord sur la carte et ensuite il ne nous reste qu&#x27;à nous déplacer. Donc quelque chose sur la carte nous dit que c&#x27;est là, ok, glouton ?</p>
+  <p class="m-r"><span class="lbl">R</span>Non, glouton, je n&#x27;ai jamais dit cela ! J&#x27;ai dit que vous avez la zone à l&#x27;issue de la 11ème énigme, puis qu&#x27;il faut extraire les reliquats, les assembler, les décrypter, et enfin se rendre sur place pour creuser. Je n&#x27;ai jamais parlé des sentinelles dans le cadre de la cache, et j&#x27;ai toujours dit qu&#x27;il était impossible de pointer la cache sur la carte. Même sur la carte la plus précise du monde, on ne peut pas localiser un trou mesurant 80 cm de côté... amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-14_04_99_33-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-26_04_99_45">
+  <div class="m-head"><span class="m-date">26 avril 1999</span>
+    <span class="m-titre">11EME</span>
+    <span class="m-id">26_04_99_45</span></div>
+  <p class="m-q"><span class="lbl">Q</span>La 11ème étant la dernière étape d&#x27;une série, est-ce cette ultime étape seule qui donne la zone ou faut-il prendre en considération l&#x27;ensemble ou une partie de la série? peut-on résoudre la 520 sans avoir passé en revue les sentinelles?</p>
+  <p class="m-r"><span class="lbl">R</span>1 - tout ce que je peux dire (et rien de plus), c&#x27;est que vous avez la zone à l&#x27;issue de la 11ème énigme. 2 - je ne peux pas répondre aux questions qui établissent des &quot;passerelles&quot; entre les énigmes, désolé. amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-26_04_99_45-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-21_07_99_48">
+  <div class="m-head"><span class="m-date">21 juillet 1999</span>
+    <span class="m-titre">DENIS 210799</span>
+    <span class="m-id">21_07_99_48</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Je suis un peu perdu dans les madits... soit ces 2 propositions : a) on a la zone à l&#x27;issue de la 11ème b) on n&#x27;a la zone qu&#x27;à l&#x27;issue de la 11e. Ma question : la proposition b est-elle vraie ? Tout commentaire à ce sujet bienvenu. Merci max. Denis.</p>
+  <p class="m-r"><span class="lbl">R</span>Option &quot;a&quot;. Je n&#x27;ai donné aucune autre précision, ce qui, a priori, n&#x27;élimine pas l&#x27;option &quot;b&quot;. Mais je n&#x27;infirme ni ne confirme... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-21_07_99_48-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-13_08_99_8">
+  <div class="m-head"><span class="m-date">13 août 1999</span>
+    <span class="m-titre">DEUXIEME CARTE</span>
+    <span class="m-id">13_08_99_8</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour Max. Pouvez-vous confirmer le fait que l&#x27;on a pas besoin de deuxième carte avant la fin de la onzième énigme ? En effet, un doute m&#x27;assaille à partir de la 650. Amitiés. Scrappy</p>
+  <p class="m-r"><span class="lbl">R</span>Vous avez besoin de la seconde carte pour disposer d&#x27;un &quot;zoom&quot; de votre zone. Donc après avoir localisé celle-ci. Pour ce qui est de cette zone, j&#x27;ai toujours dit que vous en disposez à l&#x27;issue de la 11ème énigme. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-13_08_99_8-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-19_08_99_46">
+  <div class="m-head"><span class="m-date">19 août 1999</span>
+    <span class="m-titre">LAIA</span>
+    <span class="m-id">19_08_99_46</span></div>
+  <p class="m-q"><span class="lbl">Q</span>La 11ème donne la zone. Confirmez-vous qu&#x27;on a la zone à la fin de la 11ème et non pas au milieu, la suite de la 11ème étant déjà l&#x27;esquisse du début du commencement de la 12ème. En gros, la 11ème ne donne que la zone, et du coup, on en déduit qu&#x27;on n&#x27;est pas encore au bout de la chasse. C&#x27;est cela ? Leia</p>
+  <p class="m-r"><span class="lbl">R</span>La seule chose que j&#x27;ai dite (et tout le reste est pure interprétation), c&#x27;est : &quot;vous avez la zone à l&#x27;issue de la 11ème énigme&quot;. Je n&#x27;ai pas dit &quot;avant la 11ème&quot;, ni &quot;au début de la 11ème&quot;, ni &quot;au milieu de la 11ème&quot; et pas davantage &quot;en fin de décryptage de la 11ème&quot;. Je ne peux rien dire de plus, Leia. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-19_08_99_46-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-02_09_99_31">
+  <div class="m-head"><span class="m-date">2 septembre 1999</span>
+    <span class="m-titre">OUI OU NON</span>
+    <span class="m-id">02_09_99_31</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour Max. Lorsque j&#x27;arrive à l&#x27;énigme 10, je trouve la 2ème carte. Je trouve alors les sentinelles, ce qui me confirme que c&#x27;est la bonne carte, et me précise l&#x27;endroit où je dois me rendre sur cette carte. J&#x27;ai aussi la localisation très précise de l&#x27;endroit où creuser, mais je ne la</p>
+  <p class="m-r"><span class="lbl">R</span>Le seul commentaire que je puisse faire, c&#x27;est que vous avez la zone à l&#x27;issue de la 11ème énigme, et que vous passez alors à la seconde carte. Je lis la suite...</p>
+  <div class="m-back"><a class="back" href="#b-02_09_99_31-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-14_09_99_46">
+  <div class="m-head"><span class="m-date">14 septembre 1999</span>
+    <span class="m-titre">LEIA CARTES</span>
+    <span class="m-id">14_09_99_46</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Confirmez-vous ce processus : on utilise la 1ère carte jusqu&#x27;à la 10e, on n&#x27;en a pas besoin dans la 11e, la 11e donne une zone (pardon, &quot;la&quot; zone !!!), à partir de là, on peut jeter la 1ère carte et chercher la supersolution &quot;sans&quot; la 2e carte, enfin, on applique la ss sur la 2e carte ?</p>
+  <p class="m-r"><span class="lbl">R</span>1ère carte : oui. Si tous vos décryptages sont corrects et faits dans les règles de l&#x27;art, vous n&#x27;avez plus besoin de la 1ère carte. En revanche, je ne peux pas vous dire si, à partir de la 10ème énigme, vous n&#x27;en avez plus besoin. Zone : vous avez la zone à l&#x27;issue de la 11ème énigme. Je ne peux pas vous dire si la 11ème elle-même donne la zone, ou si cette zone est le fruit de plusieurs énigmes. La 2ème carte sert à appliquer la supersolution. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-14_09_99_46-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-24_09_99_20">
+  <div class="m-head"><span class="m-date">24 septembre 1999</span>
+    <span class="m-titre">DINGUE CA !</span>
+    <span class="m-id">24_09_99_20</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, on a dû vous poser la question bien souvent, mais confirmez-vous que l&#x27;obtention de la zone ne nécessite aucunement d&#x27;avoir recours à la seconde carte ? Et que la façon de parvenir à cette obtention ne fait appel à aucun outil de dessin ? Le poinçonneur des lilas</p>
+  <p class="m-r"><span class="lbl">R</span>Je dis et répète depuis 1994 que la 2ème carte ne sert qu&#x27;à appliquer la supersolution ! Pas à la trouver ! Idem pour la zone : vous l&#x27;avez à l&#x27;issue de la 11ème énigme, et à ce moment, peut-être n&#x27;avez-vous même pas encore acheté la 2ème carte ! Outil : pour &quot;confirmer&quot; quelque chose, il faut l&#x27;avoir dit une première fois au préalable. Pouvez-vous me donner le titre et la date du message auquel vous vous référez ? Merci. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-24_09_99_20-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-05_10_99_15">
+  <div class="m-head"><span class="m-date">5 octobre 1999</span>
+    <span class="m-titre">ZONE</span>
+    <span class="m-id">05_10_99_15</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour Max ! Connaît-on précisément les limites de la zone avant de se déplacer ou a-t-on des précisions en se déplaçant qui nous permettent de la situer juste sur la seconde carte ? Merci a+ McFirst</p>
+  <p class="m-r"><span class="lbl">R</span>Vous connaissez la zone à l&#x27;issue de la 11ème énigme, donc bien avant d&#x27;appliquer la supersolution (et avant de vous déplacer). Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-05_10_99_15-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-05_10_99_41">
+  <div class="m-head"><span class="m-date">5 octobre 1999</span>
+    <span class="m-titre">ZONE SUITE</span>
+    <span class="m-id">05_10_99_41</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour max! Aujourd&#x27;hui vous m&#x27;avez repondu que la ss m&#x27;apprendra si je dois tracer la zone sur la seconde carte ou si elle y est deja definie, or vous dites que l&#x27;on a la zone apres avoir resolu les 11 premieres enigmes!! N&#x27;y a-t-il pas la une contradiction? Merci a+ mcfirst</p>
+  <p class="m-r"><span class="lbl">R</span>Mais non! Vous avez la zone a l&#x27;issue de la 11eme enigme. Vous vous procurez alors une carte precise de cette region afin de disposer d&#x27;un &quot;zoom&quot; de cette zone. Mais a vous de faire ce qu&#x27;il faut pour definir cette zone sur cette 2eme carte (traces, points, identification de reperes etc). Cela, vous le deduirez en fonction de la zone trouvee a l&#x27;issue des 11 enigmes. Je n&#x27;ai pas ete tres clair, desole, mais mon refus de repondre venait du fait que je ne peux pas dire par quel artifice graphique on cernait cette zone. Oubliez donc ma reference a la supersolution. amities -- max</p>
+  <div class="m-back"><a class="back" href="#b-05_10_99_41-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-18_10_99_2">
+  <div class="m-head"><span class="m-date">18 octobre 1999</span>
+    <span class="m-titre">ZONE</span>
+    <span class="m-id">18_10_99_2</span></div>
+  <p class="m-q"><span class="lbl">Q</span>À l&#x27;issue de la 11e on a la zone, est-ce qu&#x27;il y a une énigme avant la 11e qui concrétise la zone glouton ?</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne vois pas très bien ce que vous entendez par &quot;concrétise&quot;. De toutes façons, je suis obligé de me borner à la réponse habituelle : &quot;Vous avez la zone à l&#x27;issue de la 11e énigme&quot;. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-18_10_99_2-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-15_11_99_39">
+  <div class="m-head"><span class="m-date">15 novembre 1999</span>
+    <span class="m-titre">JE CONTUSIONNE GRAVE</span>
+    <span class="m-id">15_11_99_39</span></div>
+  <p class="m-q"><span class="lbl">Q</span>On a la zone à l&#x27;issue de la 11e ? On n&#x27;utilise la carte précise qu&#x27;à l&#x27;issue de la 11e ? Bonsoir ps. Mais oui, mais c&#x27;est bien sûr ; tu dois avoir un faible, plutôt, pour le riesling. René de cessand</p>
+  <p class="m-r"><span class="lbl">R</span>Oui aux deux premières questions. Non à la 3e. Je préfère le bordeaux ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-15_11_99_39-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-19_11_99_38">
+  <div class="m-head"><span class="m-date">19 novembre 1999</span>
+    <span class="m-titre">LE SYLVAIN DU JOUR</span>
+    <span class="m-id">19_11_99_38</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Faites-vous un distingo entre la zone finale et le site de la chouette. Si oui l&#x27;a quelle? Relatif à la question sylvain du 17/11. Amitiés sylvain</p>
+  <p class="m-r"><span class="lbl">R</span>La zone est ce que vous avez trouvé à l&#x27;issue de la 11ème énigme, c-à-d une région. Le site est plutôt l&#x27;endroit de la cache. Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-19_11_99_38-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-27_01_00_16">
+  <div class="m-head"><span class="m-date">27 janvier 2000</span>
+    <span class="m-titre">PIERROT</span>
+    <span class="m-id">27_01_00_16</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Cher Max, à la fin de la 11ème énigme, a-t-on besoin d&#x27;une documentation générale, ou faut-il se documenter sur l&#x27;histoire locale du lieu que l&#x27;on croit être le bon, pour y découvrir ce que l&#x27;on cherche ? Au printemps, j&#x27;envisage même d&#x27;y déménager. Amitié. L&#x27;ami Pierrot qui t&#x27;écris un mot.</p>
+  <p class="m-r"><span class="lbl">R</span>Tous les moyens sont bons pour découvrir ce que vous devez découvrir, et il ne m&#x27;est pas possible de vous donner le moindre conseil dans ce domaine de toutes façons, à la fin de la 11ème, vous possédez la zone. Donc vous savez ce que vous devez faire : trouver la supers olution. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-27_01_00_16-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-01_02_00_28">
+  <div class="m-head"><span class="m-date">1 février 2000</span>
+    <span class="m-titre">ZONE</span>
+    <span class="m-id">01_02_00_28</span></div>
+  <p class="m-q"><span class="lbl">Q</span>BJR Max! Les limites de la zone sont-elles définies dès la première carte ou seulement quand on passe à la seconde? Merci A+</p>
+  <p class="m-r"><span class="lbl">R</span>Tout ce que je peux dire, c&#x27;est que vous avez la zone à l&#x27;issue de la 11ème énigme. Ce qui signifie que vous connaissez ses limites, même si lesdites limites seront vraiment précisées sur la deuxième carte. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-01_02_00_28-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-18_02_00_13">
+  <div class="m-head"><span class="m-date">18 février 2000</span>
+    <span class="m-titre">JARDINIER A MAX</span>
+    <span class="m-id">18_02_00_13</span></div>
+  <p class="m-q"><span class="lbl">Q</span>A-t-on déjà une idée de la zone à l&#x27;avant-dernière énigme ? Les sentinelles ont-elles les pieds mouillés ?</p>
+  <p class="m-r"><span class="lbl">R</span>Zone : tout ce que je peux dire, c&#x27;est que vous avez la zone à l&#x27;issue de la 11ème énigme. Sentinelles : non, je l&#x27;ai déjà dit. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-18_02_00_13-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-07_06_00_3">
+  <div class="m-head"><span class="m-date">7 juin 2000</span>
+    <span class="m-titre">ZONE</span>
+    <span class="m-id">07_06_00_3</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bjr max ! Connaît-on les limites exactes de la zone avec de passer à la seconde carte ? Ce passage se fait-il après la 520 ? En passant à la seconde carte a-t-on une concrétisation des limites de la zone ? Merci a+ mcfirst</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne peux que répéter ceci : à l&#x27;issue de la 11ème énigme, vous avez la zone. Il suffit alors de vous procurer une carte précise sur laquelle figure cette zone. Je ne peux donner aucune info sur la nature de cette zone, sa forme ou ses limites, mcfirst... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-07_06_00_3-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-13_06_01_4">
+  <div class="m-head"><span class="m-date">13 juin 2001</span>
+    <span class="m-titre">TOT</span>
+    <span class="m-id">13_06_01_4</span></div>
+  <p class="m-q"><span class="lbl">Q</span>La zone, avec sa forme, son contour, nous l&#x27;avons assez tôt dans les décryptages. Mais sans savoir encore où la &quot;poser&quot;, je ne trouve pas d&#x27;autre terme. C&#x27;est exact ? Ulysse</p>
+  <p class="m-r"><span class="lbl">R</span>Ulysse, je ne peux que me borner à répondre ce que j&#x27;ai toujours répondu à cette question, sans rien ajouter de plus : à l&#x27;issue de la 11ème énigme, vous avez la zone ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-13_06_01_4-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-29_11_01_9">
+  <div class="m-head"><span class="m-date">29 novembre 2001</span>
+    <span class="m-titre">MARIE 9</span>
+    <span class="m-id">29_11_01_9</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Pour pouvoir délimiter la zone, nous avons quand même besoin de points précis, non ?</p>
+  <p class="m-r"><span class="lbl">R</span>Marie, je ne peux rien vous dire d&#x27;autre que : vous avez la zone à l&#x27;issue de la 11ème énigme ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-29_11_01_9-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-05_10_00_19">
+  <div class="m-head"><span class="m-date">5 octobre 2000</span>
+    <span class="m-titre">HORUS</span>
+    <span class="m-id">05_10_00_19</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Quelle est la taille exacte de la chouette qui est enterrée et en quelle matière est-elle faite? Amitiés</p>
+  <p class="m-r"><span class="lbl">R</span>Elle a la même taille que l&#x27;original (54 cm d&#x27;envergure et 32 de haut (de mémoire)), et elle est en bronze. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-05_10_00_19-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-05_05_98_8">
+  <div class="m-head"><span class="m-date">5 mai 1998</span>
+    <span class="m-titre">FAIRE DES TROUS EST PENIBLE</span>
+    <span class="m-id">05_05_98_8</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Pourriez-vous nous dire si les 80 cm cor correspondent au fond du trou, ou, mieux, quelle est la distance entre le sol et le sommet de la chouette? merci pour mon dos</p>
+  <p class="m-r"><span class="lbl">R</span>Les 80 cm correspondent au fond du trou. le sommet de la chouette doit être à 30-40 cm (je n&#x27;ai pas mesuré, mais ça doit être ça à peu près). amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-05_05_98_8-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-02_11_97_33">
+  <div class="m-head"><span class="m-date">2 novembre 1997</span>
+    <span class="m-titre">Sur le terrain</span>
+    <span class="m-id">02_11_97_33</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Par rigueur intellectuelle, il doit être possible de trouver la cache sans le détecteur. Mais comme rien n&#x27;est parfait en ce bas monde, n&#x27;avez-vous quand même pas suggéré la présence de cet engin? Salut et amitiés. Hermione</p>
+  <p class="m-r"><span class="lbl">R</span>Non, cette chasse n&#x27;est pas faite pour les possesseurs de détecteurs! Je dis et répète sans arrêt que la chouette est justement protégée contre les détecteurs! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-02_11_97_33-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-04_02_99_50">
+  <div class="m-head"><span class="m-date">4 février 1999</span>
+    <span class="m-titre">BIP-BIP</span>
+    <span class="m-id">04_02_99_50</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, je n&#x27;ai pas bien compris si la chouette est ou n&#x27;est pas détectable par un détecteur de métaux. En faut-il un ou non? Merci de me répondre.</p>
+  <p class="m-r"><span class="lbl">R</span>La chouette est protégée contre les détecteurs, mais cette protection - pour une raison que je ne m&#x27;explique pas - n&#x27;est pas à 100 pour 100 efficace. J&#x27;ai fait l&#x27;expérience à plusieurs reprises et, sous un certain angle, elle reste détectable. Mais un détecteur ne sert à rien. Si je vous dis &quot;la chouette est à 2 mètres de ceci ou cela, en direction du sud&quot;, vous n&#x27;avez besoin que de mesurer ces 2 mètres et de creuser. Pas besoin d&#x27;un détecteur. (Ceci est juste un exemple). Donc non, pas besoin d&#x27;un détecteur. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-04_02_99_50-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-13_05_96_38">
+  <div class="m-head"><span class="m-date">13 mai 1996</span>
+    <span class="m-titre">DETECTEURS</span>
+    <span class="m-id">13_05_96_38</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, puis-je connaître les marques et modèles de discrimination des détecteurs ayant détectés la chouette ? Macbeth</p>
+  <p class="m-r"><span class="lbl">R</span>Un Garrett (mais je ne me souviens plus du modèle) et un Fisher 1266 X. Je rappelle toutefois que le but du jeu n&#x27;est pas de détecter la chouette à l&#x27;aide d&#x27;un détecteur de métaux. De plus, elle est protégée contre la détection électronique, même si cette protection s&#x27;est révélée perfectible. Amitiés Max</p>
+  <div class="m-back"><a class="back" href="#b-13_05_96_38-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-26_11_96_36">
+  <div class="m-head"><span class="m-date">26 novembre 1996</span>
+    <span class="m-titre">DETECTEUR</span>
+    <span class="m-id">26_11_96_36</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Qu&#x27;est-ce que vous entendez par &quot;la chouette bénéficie d&#x27;une protection contre les détecteurs de métaux&quot; ? Est-ce une protection naturelle ou bien due à l&#x27;environnement du site ? Seb et Gège.</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;ai placé un dispositif anti-détecteurs dans la cache, mais ce dispositif est perfectible puisque la chouette reste détectable lorsqu&#x27;on balaie la tombe sous un certain angle. Du moins ce fut le cas lorsque j&#x27;ai testé le dit dispositif. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-26_11_96_36-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-01_06_97_25">
+  <div class="m-head"><span class="m-date">1 juin 1997</span>
+    <span class="m-titre">F.B 6</span>
+    <span class="m-id">01_06_97_25</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Mon estimé collègue René de Cessand. Est un virtuose des détecteurs de métaux. Pensez-vous, que malgré votre protection, on pourrait ainsi vérifier un endroit très délimité (juste pour éviter de creuser pour rien car, je vous l&#x27;accorde, ce ne serait qu&#x27;en pensant avoir la ss.. mais, l&#x27;erreur est humaine...) flash-b</p>
+  <p class="m-r"><span class="lbl">R</span>Que voulez-vous que je vous réponde ? La chouette est protégée contre les détecteurs, mais j&#x27;ai constaté moi-même que cette protection n&#x27;était pas absolument efficace. Maintenant, pour m&#x27;être baladé longtemps avec des détecteurs, je sais combien il est aléatoire de prospecter une assez grande surface dans l&#x27;espoir de tomber juste. Votre estimé collègue vous le confirmera sûrement. La plupart des découvertes à l&#x27;aide de détecteurs sont fortuites, ou alors leurs propriétaires savaient à deux ou trois mètres près où chercher. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-01_06_97_25-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-25_06_98_37">
+  <div class="m-head"><span class="m-date">25 juin 1998</span>
+    <span class="m-titre">BROYER</span>
+    <span class="m-id">25_06_98_37</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Écraser signifie-t-il broyer ? L&#x27;abeille souffre-t-elle d&#x27;un lobe antérieur ? Avez-vous testé vous-même un détecteur de métaux au-dessus de la chouette sans être gêné par d&#x27;éventuelles parties métalliques ? Bravo pour les courbes du coq Pquatre</p>
+  <p class="m-r"><span class="lbl">R</span>Quel &quot;écraser&quot;, Pquatre ? J&#x27;ai testé un détecteur à deux reprises, et ça ne fonctionnait pas vraiment comme je l&#x27;espérais. Sous un certain angle, et malgré la protection anti-détecteurs, l&#x27;appareil couinait. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-25_06_98_37-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-02_09_98_18">
+  <div class="m-head"><span class="m-date">2 septembre 1998</span>
+    <span class="m-titre">DETECTEUR</span>
+    <span class="m-id">02_09_98_18</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Cher max, vous avez dit avoir réussi à détecter la chouette sous un certain angle. n&#x27;avez-vous agi que sur un plan horizontal, en inclinant la tête de détection, ou bien peut-on inclure la détection par une autre approche ? amitiés frodon qui devient fiévreux</p>
+  <p class="m-r"><span class="lbl">R</span>Le but n&#x27;est pas de détecter la chouette à l&#x27;aide d&#x27;un détecteur. de toutes façons, cela ne servirait à rien : la supersolution donnant l&#x27;endroit pile poil, pourquoi sortir son détecteur alors que l&#x27;on est sur de son fait ? et si on n&#x27;est pas sur de son fait, un détecteur ne sera pas d&#x27;un grand secours. pour répondre à votre question, je rappelle que la chouette est protégée contre les détecteurs, mais que cette protection est perfectible puisque j&#x27;ai réussi à la détecter. j&#x27;ai passé la tête en l&#x27;inclinant légèrement si je me souviens bien. je pense qu&#x27;il n&#x27;y a aucune conclusion à en tirer, sinon que la protection n&#x27;est pas totalement efficace. amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-02_09_98_18-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-07_03_00_16">
+  <div class="m-head"><span class="m-date">7 mars 2000</span>
+    <span class="m-titre">CHOUETTE!</span>
+    <span class="m-id">07_03_00_16</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Quelle dimension pour la cache peut-on obtenir grâce à la seconde carte ? Doit-on aboutir à une surface ou à un point précis ? Recommandez-vous fortement le détecteur de métal ? Merci d&#x27;avance, Colin Garriga et Joan Chaumont.</p>
+  <p class="m-r"><span class="lbl">R</span>Aucune carte au monde ne peut vous permettre de localiser une surface de 80 cm sur 80. La supersolution vous apprendra comment localiser ce point sur le terrain, et à quoi sert la 2ème carte. Détecteur de métaux : non. La chouette est protégée contre la détection &quot;accidentelle&quot; (c-à-d sans la supersolution) au détecteur, même si cette protection n&#x27;est pas totalement efficace. La chouette n&#x27;est pas supposée être localisée au détecteur, mais grâce aux solutions des énigmes. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-07_03_00_16-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-21_08_95_44">
+  <div class="m-head"><span class="m-date">21 août 1995</span>
+    <span class="m-titre">DETECTEUR DE METAUX</span>
+    <span class="m-id">21_08_95_44</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Vous avez dit avoir utilisé 2 fois un détecteur de métaux pour contrôler si la chouette était toujours dans son trou. Pouvez-vous me dire quelle marque, modèle, etc. ? Où peut-on se procurer un détecteur ? Peut-on le louer ? Fabien ======</p>
+  <p class="m-r"><span class="lbl">R</span>La première fois, je ne me souviens plus si c&#x27;était un Garrett ou un Fisher. La deuxième fois, c&#x27;était un Fisher 1266X. Pour vous renseigner : &quot;Prospektions&quot; 110 bis rue Marcadet Paris 18e. Tél 42 52 25 02. Mais je ne sais pas s&#x27;ils louent. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-21_08_95_44-1">↩ retour </a></div>
+</article>
+</section>
+
+<section class="sources" id="sources">
+  <h2 class="chunk">Sources externes</h2>
+<h3 class="src-cat">Détecteurs de métaux — documentations constructeurs</h3>
+<ul class="src-list">
+  <li><a href="https://garrett.com/sport/support/searchcoil-basics/" target="_blank" rel="noopener">Garrett — Searchcoil Basics</a> — <span class="det">« la profondeur de détection ≈ le diamètre de la bobine, pour une cible de la taille d&#x27;une pièce » · consulté 06/2026</span></li>
+  <li><a href="https://garrett.com/how-deep-do-metal-detectors-detect/" target="_blank" rel="noopener">Garrett — How Deep Do Metal Detectors Detect?</a> — <span class="det">consulté 06/2026</span></li>
+  <li><a href="https://j.b5z.net/i/u/2089773/f/Ace250Manual.pdf" target="_blank" rel="noopener">Garrett — ACE 250 Owner&#x27;s Manual (§ Coin Depth)</a> — <span class="det">jauge de profondeur sur pièce 2″/4″/6+″ · consulté 06/2026</span></li>
+  <li><a href="https://www.manualslib.com/manual/51769/Fisher-1266-X.html" target="_blank" rel="noopener">Fisher — 1266-X Operating Manual (« Deep Search Metal Detector »)</a> — <span class="det">le modèle nommé par Max Valentin (madits 21_08_95_44, 13_05_96_38) · consulté 06/2026</span></li>
+  <li><a href="https://www.fisherlab.com.ua/downloads/documents/instructions_manual/en/Gemini3.pdf" target="_blank" rel="noopener">Fisher — Gemini-3 Operating Manual, p. 5</a> — <span class="det">« a 4-inch diameter target will produce signal 64 times stronger than a 1-inch target » (signal ∝ taille³) · consulté 06/2026</span></li>
+</ul>
+<h3 class="src-cat">Radar de sol (géoradar / GPR)</h3>
+<ul class="src-list">
+  <li><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1365-2478.1989.tb02221.x" target="_blank" rel="noopener">Davis, J.L. &amp; Annan, A.P. (1989) — Ground-penetrating radar for high-resolution mapping of soil and rock stratigraphy, Geophysical Prospecting 37(5), 531-551</a> — <span class="det">cartographie de l&#x27;interface sol/roche au géoradar · consulté 06/2026</span></li>
+  <li><a href="https://www.frtr.gov/site/6_2_29.html" target="_blank" rel="noopener">FRTR — Ground Penetration Radar</a> — <span class="det">« meilleure pénétration en sol sableux sec ou matériaux massifs secs (granite, grès) » · consulté 06/2026</span></li>
+</ul>
+<h3 class="src-cat">Témoignages de terrain</h3>
+<ul class="src-list">
+  <li><a href="https://lachouette.net/index.php?b=28923&amp;a=zv&amp;m=129199.02#129199.02" target="_blank" rel="noopener">Meteor — forum lachouette.net, fil « Des histoires de canard », message n° 129199.02 (24 juillet 2025)</a> — <span class="det">prospection du spot au détecteur grande profondeur puis au radar de sol Geovizer, à 6,93 m du centre des Bornes Saint-Martin, dans toutes les directions : rien</span></li>
+  <li><a href="https://youtu.be/qVkx73B_1so" target="_blank" rel="noopener">Kaspius — vérification du spot, vidéo du 8 mai 2025</a> — <span class="det">creusement jusqu&#x27;au socle rocheux à ~40 cm</span></li>
+  <li><a href="https://youtu.be/Pqk6tD3CYYA" target="_blank" rel="noopener">Kaspius — retour sur le spot, vidéo du 22 octobre 2025</a> — <span class="det">le socle fracturé, profondeur portée à ~75 cm entre mai et octobre 2025</span></li>
+  <li><a href="https://surlestracesdelachouettedor.blogspot.com" target="_blank" rel="noopener">Kaspius — blog « Sur les traces de la Chouette d&#x27;Or »</a></li>
+  <li><a href="https://www.youtube.com/@Kaspius" target="_blank" rel="noopener">Kaspius — chaîne YouTube</a></li>
+</ul>
+<h3 class="src-cat">Documents Michel Becker</h3>
+<ul class="src-list">
+  <li>Sur la Trace de la Chouette d&#x27;Or — Sous le sceau du secret (Michel Becker), p. 40-42 — <span class="det">récit du radar de sol : étalonnage sur du bronze, « l&#x27;objet détecté à la place où elle aurait dû se trouver », « image peu probante »</span></li>
+  <li><a href="https://files.michelbecker.com/1/15.pdf" target="_blank" rel="noopener">Procès-verbal de Maître Blanche Neige-Schmitt, huissier de justice (22 &amp; 25 octobre 2021)</a> — <span class="det">constat du creusement : « une excavation jusqu&#x27;à une profondeur de 80 cm environ » ; canard ferreux extrait ; contremarque 2/8 réenfouie (PDF publié par M. Becker)</span></li>
+</ul>
+<h3 class="src-cat">Références patrimoniales &amp; cartographiques</h3>
+<ul class="src-list">
+  <li><a href="https://www.pop.culture.gouv.fr/notice/merimee/IA57000669" target="_blank" rel="noopener">Bornes Saint-Martin — base Mérimée, notice IA57000669 (POP / Ministère de la Culture)</a> — <span class="det">la borne porte les dates 1750 et 1828 (abornement « de Lamarck ») et un numéro « 223 » (abornement de la forêt domaniale d&#x27;Haselbourg, 1857) — chiffres gravés que la solution Canard ne relève pas</span></li>
+  <li><a href="https://www.geoportail.gouv.fr" target="_blank" rel="noopener">Carte IGN TOP25 — lieu-dit « Pierre Saint-Martin » (Géoportail / IGN)</a> — <span class="det">le site porte un nom sur la carte officielle au 1/25 000</span></li>
+</ul>
+</section>
+
+<footer>
+  Madits : serveur Maxval (1995-2001), archive « madits » (« Max a dit »), sur
+  <a href="https://lachouette.net/">lachouette.net</a> — la <b>date et le titre</b> font foi.
+  Données techniques (détecteurs, géoradar) sourcées chez les constructeurs et la littérature ;
+  observations de terrain attribuées à leurs auteurs. Liens consultés en juin 2026.
+</footer>
+</div>
+<script>
+(function(){
+  var saved = null;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if (!a) return;
+    if (a.classList.contains('ref')) {
+      saved = window.scrollY;
+    } else if (a.classList.contains('back')) {
+      if (saved !== null) {
+        e.preventDefault();
+        window.scrollTo({ top: saved, behavior: 'smooth' });
+      }
+    }
+  });
+})();
+</script>
+</body>
+</html>
