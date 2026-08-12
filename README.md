@@ -3,7 +3,7 @@
 ▶️ **La chaîne YouTube : [Tournevis](https://www.youtube.com/@TourneChouette)**
 
 Documents de référence de la série vidéo **Tournevis**, qui confronte la
-« solution officielle » de la Chouette d'Or (avril 2025) à ce que Max Valentin,
+« solution officielle » de la Chouette d'Or (mai 2025) à ce que Max Valentin,
 l'auteur des énigmes, a dit pendant six ans sur le serveur Maxval (1995-2001).
 
 Chaque épisode est accompagné d'**un fichier HTML autonome** contenant :
@@ -22,13 +22,18 @@ Le but : que chaque citation de la vidéo soit **vérifiable et traçable** d'un
 |---|---|---|---|
 | 1 — L'affaire & les premières énigmes | 530 · 780 · 470 · 580 · 600 · 500 | [▶️ YouTube](https://www.youtube.com/watch?v=KVdlIKB-7IA) | [`dossier_ep01.html`](https://tournevischouette.github.io/debunkage_v2/dossier_ep01.html) |
 | 2 — Lumière, passage & l'avant-dernière | 420 · 560 · 650 | [▶️ YouTube](https://www.youtube.com/watch?v=xIth4rMxkxI) | [`dossier_ep02.html`](https://tournevischouette.github.io/debunkage_v2/dossier_ep02.html) |
-| 3 — La 520 & la cache impossible | 520 · les 30 ans | [▶️ YouTube](https://www.youtube.com/watch?v=odEdlkoaMSY) | [`dossier_ep03.html`](https://tournevischouette.github.io/debunkage_v2/dossier_ep03.html) |
-| 4 — *(à venir)* | architecture du jeu · Dabo · conclusion | — | — |
+| 3 — La 520 & la cache impossible | 520 · les 30 ans de prospection | [▶️ YouTube](https://www.youtube.com/watch?v=odEdlkoaMSY) | [`dossier_ep03.html`](https://tournevischouette.github.io/debunkage_v2/dossier_ep03.html) |
+| 4 — L'architecture & la disquette | les règles du jeu · d'où vient la disquette | [▶️ YouTube](https://www.youtube.com/watch?v=XKdFksKcP1s) | [`dossier_ep04.html`](https://tournevischouette.github.io/debunkage_v2/dossier_ep04.html) |
+
+**Série terminée — quatre épisodes.**
 
 ## Consulter
 
-Ouvrir le fichier `.html` dans un navigateur. *(Si GitHub Pages est activé sur ce
-dépôt, les dossiers sont consultables directement en ligne.)*
+Les dossiers se lisent en ligne, sans rien installer :
+<https://tournevischouette.github.io/debunkage_v2/>
+
+Chaque fichier `.html` est autonome — il s'ouvre aussi hors connexion, une fois
+téléchargé, dans n'importe quel navigateur.
 
 ## Sources
 
