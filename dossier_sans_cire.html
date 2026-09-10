@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tournevis — « Sans cire » · dossier</title>
+<style>
+  :root { --gold:#b8860b; --gold2:#d4af37; --ink:#1c2230; --paper:#fbf8f1; --soft:#6a6256; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+    font-family:Georgia,'Times New Roman',serif; line-height:1.62; }
+  .wrap { max-width:820px; margin:0 auto; padding:48px 22px 120px; }
+  header h1 { font-size:20px; letter-spacing:.16em; text-transform:uppercase; color:var(--soft);
+    font-weight:normal; margin:0 0 6px; }
+  .tagline { font-size:14.5px; font-style:italic; color:var(--gold); margin:0 0 16px; }
+  header h2.ep { font-size:34px; margin:0 0 14px; line-height:1.2; }
+  .watch { margin:0 0 20px; }
+  .topnav { margin:0 0 22px; font-family:system-ui,sans-serif; font-size:13.5px; }
+  .topnav a { text-decoration:none; color:var(--gold); border:1px solid #e0d090;
+    background:#f3e9c8; border-radius:999px; padding:4px 14px; margin-right:8px; white-space:nowrap; }
+  .topnav a:hover { background:var(--gold2); color:#221c05; }
+  .watch a { display:inline-block; text-decoration:none; font-family:system-ui,sans-serif;
+    font-size:15px; font-weight:600; color:#fff; background:#c0392b; padding:9px 18px;
+    border-radius:8px; }
+  .watch a:hover { background:#a23226; }
+  .watch .soon { display:inline-block; font-family:system-ui,sans-serif; font-size:15px;
+    font-weight:600; color:var(--soft); background:#efe7d3; padding:9px 18px; border-radius:8px; }
+  .intro { background:#fff; border:1px solid #e7ddc4; border-left:4px solid var(--gold2);
+    padding:16px 20px; border-radius:8px; font-size:15.5px; color:#3a3a3a; }
+  .intro b { color:var(--gold); }
+  .intro a, footer a { color:var(--gold); }
+  .credit { background:#fff; border:1px solid #e7ddc4; border-left:4px solid #c0392b;
+    padding:14px 20px; border-radius:8px; font-size:15px; color:#3a3a3a; margin-top:16px; }
+  .credit b { color:var(--ink); }
+  .credit a { color:var(--gold); }
+  .credit .lbl-c { display:block; font-family:system-ui,sans-serif; font-size:11.5px;
+    letter-spacing:.14em; text-transform:uppercase; color:#c0392b; margin-bottom:6px; }
+  h2.chunk { font-size:15px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold);
+    border-bottom:2px solid #e7ddc4; padding-bottom:6px; margin:54px 0 14px; }
+  h3.enigme { font-size:22px; margin:34px 0 10px; color:var(--ink); }
+  #script p { margin:0 0 16px; }
+  .refs { display:inline; }
+  a.ref { display:inline-block; font-family:system-ui,sans-serif; font-size:11.5px;
+    text-decoration:none; color:#5a4a10; background:#f3e9c8; border:1px solid #e0d090;
+    border-radius:11px; padding:1px 9px; margin:1px 3px; white-space:nowrap; vertical-align:1px; }
+  a.ref:hover { background:var(--gold2); color:#221c05; }
+  a.vlink { color:#b8860b; text-decoration:underline; text-decoration-color:#d4af37;
+    text-underline-offset:2px; font-weight:600; }
+  a.vlink:hover { color:#a23226; }
+  a.vlink::after { content:" ↗"; font-size:.78em; color:var(--gold); vertical-align:1px; }
+  a.vlink.vid::after { content:" ▶"; font-size:.82em; color:#c0392b; }
+  section.madits { margin-top:70px; }
+  article.madit { background:#fff; border:1px solid #e7ddc4; border-radius:10px;
+    padding:16px 20px 12px; margin:0 0 16px; scroll-margin-top:14px; }
+  article.madit:target { border-color:var(--gold2); box-shadow:0 0 0 3px rgba(212,175,55,.25); }
+  .m-head { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:10px; }
+  .m-date { font-family:system-ui,sans-serif; font-size:13px; font-weight:700; color:#fff;
+    background:var(--gold); padding:2px 11px; border-radius:7px; }
+  .m-titre { font-family:system-ui,sans-serif; font-size:13px; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--soft); }
+  .m-id { margin-left:auto; font-family:ui-monospace,monospace; font-size:11px; color:#b8b09c; }
+  .m-q, .m-r { margin:0 0 8px; font-size:16px; }
+  .m-q { color:#4a4a4a; }
+  .lbl { display:inline-block; width:20px; height:20px; line-height:20px; text-align:center;
+    font-family:system-ui,sans-serif; font-size:12px; font-weight:700; border-radius:50%;
+    margin-right:8px; vertical-align:1px; }
+  .m-q .lbl { border:1.5px solid #c9c0a6; color:#9a9078; }
+  .m-r .lbl { border:1.5px solid var(--gold2); color:var(--gold); }
+  .m-back { margin-top:6px; }
+  a.back { font-family:system-ui,sans-serif; font-size:12px; text-decoration:none;
+    color:var(--gold); border:1px solid #e0d090; border-radius:11px; padding:1px 10px; margin-right:6px; }
+  a.back:hover { background:#f3e9c8; }
+  section.sources { margin-top:70px; }
+  .sources h3.src-cat { font-size:14px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--soft); margin:26px 0 8px; }
+  .sources ul.src-list { margin:0 0 4px; padding-left:22px; }
+  .sources li { font-size:15px; margin:0 0 9px; }
+  .sources a { color:var(--gold); }
+  .sources .det { color:var(--soft); font-size:13.5px; font-style:italic; }
+  a.ref.grp { background:#efe3f3; border-color:#d9c2e2; color:#5a3a66; }
+  a.ref.grp:hover { background:#c9a3d8; color:#2a1030; }
+  section.blocs { margin-top:70px; }
+  .blocs-intro { font-size:15px; color:var(--soft); font-style:italic;
+    border-left:3px solid #e7ddc4; padding-left:14px; margin:0 0 26px; }
+  h3.grp-h { font-size:18px; margin:30px 0 10px; color:var(--ink); }
+  .grp-n { font-family:system-ui,sans-serif; font-size:12px; font-weight:700; color:#fff;
+    background:var(--gold); padding:2px 10px; border-radius:7px; margin-left:8px;
+    vertical-align:2px; white-space:nowrap; }
+  ol.grp-list { list-style:none; margin:0; padding:0;
+    column-count:2; column-gap:26px; }
+  ol.grp-list li { font-size:13.5px; line-height:1.5; break-inside:avoid;
+    border-bottom:1px dotted #e7ddc4; padding:2px 0; }
+  .gd { display:inline-block; min-width:105px; color:var(--gold); }
+  .gt { color:#3a3a3a; }
+  .gi { float:right; font-family:ui-monospace,monospace; font-size:10.5px; color:#b8b09c; }
+  footer { margin-top:60px; font-size:13px; color:var(--soft); border-top:1px solid #e7ddc4; padding-top:14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="topnav"><a href="./">← Accueil</a><a href="#script">Script</a><a href="#sources">Sources externes</a></nav>
+<header>
+  <h1>Tournevis — La Chouette d’Or</h1>
+  <p class="tagline">Tournevis · la chaîne YouTube qui enquête sur l’affaire de la Chouette d’Or — l’enquête, madit par madit.</p>
+  <h2 class="ep">Sans cire — Max Valentin n’a pas truqué son jeu</h2>
+  <p class="watch"><span class="soon">▶ Vidéo à venir</span></p>
+  <div class="intro">
+    Ce document réunit le <b>script intégral</b> de l’épisode, les <b>58 madits cités</b>
+    (questions-réponses de Max Valentin, serveur Maxval 1995-2001) et les <b>sources externes</b>
+    (le livre de 1993, la presse, les vocaux publics de l’organisateur, le forum lachouette.net). Le texte des madits est présenté en <b>version normalisée</b> —
+    ce sont la <b>date et le titre</b> de chaque madit qui font foi pour l’identifier ; les madits
+    d’origine sont sur <a href="https://lachouette.net/">lachouette.net</a>. Dans le script, la puce
+    <b>↓ date · titre</b> ouvre le madit ; le bouton <b>↩ retour</b> ramène au passage.
+    Tout est vérifiable, traçable.
+  </div>
+  <div class="credit"><span class="lbl-c">Crédit</span>Cette vidéo s'appuie principalement sur <b>madits.db</b>, la base des
+38 146 questions-réponses de Max Valentin sur le serveur Minitel 3615 (1995-2001). Chaque
+citation affichée à l'écran porte sa date et son intitulé et peut être vérifiée ci-dessous.
+Les propos tenus à l'oral par l'organisateur actuel du jeu sont cités d'après la transcription
+des vocaux Discord publics, réécoutée avant citation.</div>
+</header>
+
+<section id="script">
+<h2 class="chunk">Sans cire — la trouille de 1993, et la question</h2>
+<h3 class="enigme">Prologue — Sans cire</h3>
+<p>On raconte qu&#x27;à Rome, quand un sculpteur ratait son coup — un éclat de marbre parti de travers, une veine qui cède — il comblait le défaut à la cire. Poncée, polie, la cire ne se voyait pas. Jusqu&#x27;au premier soleil. </p>
+<p>Alors, dit la légende, les bons artisans vendaient leurs statues avec deux mots : *sine cera*. Sans cire. </p>
+<p>Les linguistes n&#x27;y croient pas. *Sincerus*, en latin, voulait simplement dire pur, entier, sans mélange. L&#x27;histoire du sculpteur est trop belle pour être vraie. Mais elle dit exactement ce que le mot veut dire aujourd&#x27;hui : être sincère, ce n&#x27;est pas être parfait. C&#x27;est ne rien cacher sous la surface. </p>
+<p>Pendant six ans, un homme a répondu par écrit à trente-huit mille questions, en sachant que chaque ligne serait un jour relue à la lumière des solutions. Aujourd&#x27;hui, on dit qu&#x27;il a menti. Qu&#x27;il a mis de la cire. </p>
+<p>Cette vidéo va chercher la cire. Et regarder ce qu&#x27;il y a dessous. </p>
+<h3 class="enigme">Mouvement 0 — La trouille</h3>
+<p>Août 1993. Des chercheurs arrivent aux Bornes Saint-Martin, près de Dabo, en Moselle. Ils ont acheté le livre trois mois plus tôt. </p>
+<p>Trente-trois ans plus tard, certains en tirent une conclusion. On l&#x27;entend, par exemple, dans un vocal de l&#x27;organisateur actuel du jeu, en août 2026. </p>
+<p>Max Valentin aurait eu la trouille. La trouille que son jeu soit trouvé trop vite. </p>
+<p>De cette trouille découlerait tout le reste. D&#x27;abord, les madits : Max aurait « brodé » pour désorienter les chercheurs et faire durer le jeu. </p>
+<p>Ensuite, la contremarque elle-même. </p>
+<p>Selon ces mêmes voix, Max aurait pu la retirer de terre dès la fin 1993, parce que les premiers chouetteurs étaient déjà sur la zone. </p>
+<h3 class="enigme">Mouvement 1 — Ce qu&#x27;on va vérifier</h3>
+<p>Trois affirmations. La première — des chercheurs à Dabo dès 1993 — est vraie ; on la datera tout à l&#x27;heure. Les deux autres, on va les confronter à la seule source qui compte : ce que Max a dit lui-même. </p>
+<p>La réponse courte, la voici : ceux qui l&#x27;affirment n&#x27;ont pas une preuve — et tout ce qu&#x27;on peut relire dit le contraire. Vous verrez même qu&#x27;en février 1998, un chercheur lui pose déjà la question qu&#x27;on pose aujourd&#x27;hui : déboussoler les chercheurs, fausses pistes. Et que Max répond. </p>
+<p>Ce que Max a mis en terre, c&#x27;est une contremarque : une chouette en bronze, à échanger contre l&#x27;original en or chez l&#x27;huissier. Ce que Max a dit, ce sont les madits — « Max a dit » : ses questions-réponses sur le serveur Minitel, entre 1995 et 2001, conservées et publiques. </p>
+<p>Une limite, avant de commencer : ce corpus s&#x27;ouvre à l&#x27;été 1995 — tout ce qui nous reste est donc postérieur à l&#x27;été de la trouille. Sur les deux années d&#x27;avant, il reste un témoin. On y reviendra. </p>
+<p>Tout ce que nous allons citer — madits, documents, forums — est réuni dans un dossier, en description. Chaque référence y est. Vous pourrez tout vérifier. </p>
+<p>Alors. Max savait-il qu&#x27;on creusait à Dabo ? Oui — on le lui écrivait, noir sur blanc, et il répondait. En a-t-il eu peur ? </p>
+<h2 class="chunk">Acte I — Dabo dans le livre de 1993 : une légende parmi d&#x27;autres</h2>
+<h3 class="enigme">Mouvement 1 — Une histoire de trésor parmi d&#x27;autres</h3>
+<p>Reprenons au début. Mai 1993 : la première édition du livre est en librairie. Et Dabo est dedans. </p>
+<p>Page 42. Une annexe : « Trésors, Faits &amp; Légendes ». Une vingtaine de trésors légendaires, de Rennes-le-Château à Trégunc. Entre Château-Gontier et Bourgneuf, une ligne : à Dabo, Moselle, des coffres pleins d&#x27;or seraient entreposés dans les souterrains éboulés de la montagne. Et la liste se termine par : bonne chasse ! </p>
+<p>Cette annexe disparaît dès la deuxième édition. En avril 1997, un chercheur demande donc à Max : la première édition fait allusion à Dabo, pas la deuxième — en dit-elle plus ? </p>
+<p>La réponse tient en deux phrases. Dabo ? C&#x27;était une histoire de trésor parmi d&#x27;autres. Il n&#x27;est pas question de chercher des énigmes là où il n&#x27;y en a pas. <span class="refs"><a class="ref" id="b-01_04_97_15-1" href="#m-01_04_97_15" title="voir le madit">↓ 1 avril 1997 · Les Deux Editions</a></span></p>
+<p>Une histoire connue, pourtant. </p>
+<p>Dès novembre 1995, un chercheur se présente à Max en fidèle de Dabo : vous savez qu&#x27;un trésor, celui du Prince Noir, est à Dabo. Réponse : des trésors cachés, il y en a et il y a eu dans à peu près toutes les régions de France — c&#x27;est le bouche à oreille local qui en perpétue les détails. <span class="refs"><a class="ref" id="b-16_11_95_1-1" href="#m-16_11_95_1" title="voir le madit">↓ 16 novembre 1995 · Tresor</a></span></p>
+<h3 class="enigme">Mouvement 2 — Le Guide du chercheur de trésors</h3>
+<p>Deuxième fait. En 1998, Max Valentin publie un autre livre. Pas une chasse : un manuel. </p>
+<p>Le Guide du chercheur de trésors. Trois cent quarante et une pages sur les trésors enfouis, les sites et les méthodes de prospection. </p>
+<p>Des indices pour la chouette, dans ce livre ? </p>
+<p>La réponse est nette : le guide du chercheur de trésors parle uniquement de trésors historiques et de méthodes de détection. Il ne contient aucune information sur la chouette d&#x27;or. <span class="refs"><a class="ref" id="b-06_07_99_30-1" href="#m-06_07_99_30" title="voir le madit">↓ 6 juillet 1999 · De Dominique</a></span></p>
+<p>L&#x27;homme qui a enterré une chouette en bronze a donc aussi écrit, pour le grand public, le manuel des sites à prospecter et des détecteurs de métaux. </p>
+<p>Ici, ce n&#x27;est plus Max qui parle, c&#x27;est nous. Celui qui écrit un tel manuel sait qu&#x27;un bronze massif est une cible idéale, et que les prospecteurs vont d&#x27;abord là où une légende situe un trésor. Dabo, où tant de chercheurs reconnaissaient les énigmes, allait être fouillée mètre par mètre — et elle l&#x27;a été. </p>
+<p>L&#x27;auteur d&#x27;une chasse dont un collectionneur évaluait le lot à trois millions de francs, qui nommerait dans son propre livre le lieu où dort le bronze ? Pour nous, ce n&#x27;est pas une imprudence. C&#x27;est difficile à croire. <span class="refs"><a class="ref" id="b-05_03_97_29-1" href="#m-05_03_97_29" title="voir le madit">↓ 5 mars 1997 · Valeur</a></span></p>
+<p>Dabo, dans le livre de 1993, sous la plume d&#x27;un auteur qui connaissait mieux que personne les gens qui creusent. Ces gens sont venus. Et Max l&#x27;a su. </p>
+<h2 class="chunk">Été 93 : ils y sont déjà — et Max le sait</h2>
+<h3 class="enigme">Mouvement 1 — Été 93 : ils y sont déjà</h3>
+<p>Première affirmation du récit : des chercheurs à Dabo dès 1993. C&#x27;est vrai. Et ça se date. </p>
+<p>La presse, d&#x27;abord. Été 2026 : Le Monde consacre une série à la Chouette. L&#x27;épisode 2 suit un chercheur, Mickey. « Mickey est devenu chasseur en 1993 à la Fnac. » Quelques semaines plus tard, « il part creuser à Dabo, en Moselle ». </p>
+<p>Mickey, on le garde un instant. Il cherche depuis 1993 — trente-trois ans. </p>
+<p>On l&#x27;a déjà croisé : le « fidèle de dabo » qui interrogeait Max sur le trésor du Prince Noir, en novembre 1995, c&#x27;est lui. Max, qui ne voit que des pseudonymes, le reconnaît à sa question. </p>
+<p>Et il ne fait pas que chercher : il garde. Depuis 1999, il tient un site — ilotresor point com — où il archive le jeu : les articles de presse, les madits, les cartes postales, les photos du village — jusqu&#x27;au bulletin météo de la nuit de l&#x27;enfouissement — et ses propres photos du trésor d&#x27;Orval, une autre chasse de Max, déterré en 1998. </p>
+<p>La base, ensuite. </p>
+<p>Mars 1996, Max, sur le Minitel : « Je parle des pistes évoquées sur le forum... depuis presque 3 ans ». Presque trois ans avant mars 1996 : 1993. <span class="refs"><a class="ref" id="b-16_03_96_39-1" href="#m-16_03_96_39" title="voir le madit">↓ 16 mars 1996 · Pistes En Forum</a></span></p>
+<p>Août 1997. Un chercheur agacé écrit qu&#x27;on lui « rebat les oreilles » de Dabo « depuis 4 ans ». 1997 moins quatre : 1993, encore. <span class="refs"><a class="ref" id="b-06_08_97_1-1" href="#m-06_08_97_1" title="voir le madit">↓ 6 août 1997 · ################</a></span></p>
+<p>Autour de lui, tous les autres : les « tenants de la thèse dabo », les « daboïstes », « un des premiers à aller à Dabo »... et, dès 1998, Mickey, Gandalf et Chimiste — les irréductibles de la Moselle. <span class="refs"><a class="ref" id="b-23_08_96_27-1" href="#m-23_08_96_27" title="voir le madit">↓ 23 août 1996 · Ancien Chercheur Repenti</a><a class="ref" id="b-06_08_97_13-1" href="#m-06_08_97_13" title="voir le madit">↓ 6 août 1997 · #############(Suite)</a><a class="ref" id="b-30_08_97_19-1" href="#m-30_08_97_19" title="voir le madit">↓ 30 août 1997 · Gandalf 3</a><a class="ref" id="b-13_10_97_37-1" href="#m-13_10_97_37" title="voir le madit">↓ 13 octobre 1997 · Agressivite</a><a class="ref" id="b-25_06_98_6-1" href="#m-25_06_98_6" title="voir le madit">↓ 25 juin 1998 · 520</a><a class="ref" id="b-12_10_98_29-1" href="#m-12_10_98_29" title="voir le madit">↓ 12 octobre 1998 · Je Sais Que Par Principe Vous Ne...</a></span></p>
+<p>Le témoin, enfin. Août 2026 : un membre de la première équipe — celle que le récit invoque — vient le raconter lui-même, au micro de l&#x27;organisateur. </p>
+<p>Sur le Minitel, le groupe signait « Zoé ». </p>
+<p>Le livre, acheté le samedi 15 mai 93, dans une librairie d&#x27;Aix-en-Provence. Et : « fin août 93, nous étions sur place, avant la reprise de nos études ». À quatre. Les premiers ? Il ne le jure pas — « à quelques semaines près, peut-être ». La date du récit est donc la sienne. Il la donne sans en rajouter. </p>
+<h3 class="enigme">Mouvement 2 — Deux ans sans rubrique</h3>
+<p>Deuxième mouvement. Deux ans sans rubrique. </p>
+<p>C&#x27;est la limite annoncée en ouverture. Pendant ces deux premières années, rien de ce que Max écrit n&#x27;est public. La rubrique où il répond à tous — celle que nous lisons — n&#x27;ouvre que le 20 juillet 1995 — le 27, dira-t-il de mémoire. Avant ? Il le raconte lui-même, en 1999, à un chercheur qui réclame les questions « du début » : de juin 93 à janvier 97, il répondait par boîte aux lettres. Des réponses individuelles. <span class="refs"><a class="ref" id="b-02_12_99_13-1" href="#m-02_12_99_13" title="voir le madit">↓ 2 décembre 1999 · C&#x27;Est Faux!</a></span></p>
+<p>Ces réponses-là, personne ne les a jamais relues. C&#x27;est la limite de ce qu&#x27;on peut démontrer, et elle vaut dans les deux sens : sur ces deux années, nous ne prouvons rien. Ce qui est vérifiable commence le jour où il choisit d&#x27;écrire en public. </p>
+<p>Une seule lueur traverse ces deux années : un témoin. </p>
+<p>Zoé, le chercheur de 1993 — et il faut l&#x27;entendre, parce que c&#x27;est son récit qu&#x27;on invoque aujourd&#x27;hui pour rendre cette thèse crédible. </p>
+<p>À l&#x27;époque, dit-il, les équipes comparaient entre elles les réponses privées de Max. Ce qui les étonnait ? « La grande clarté, la grande honnêteté des réponses qu&#x27;il nous apportait. » Un témoignage n&#x27;est pas une archive : il ne prouve rien. Mais le seul témoin direct de ces deux années dit l&#x27;inverse de la thèse. </p>
+<p>Max, lui, n&#x27;avait prévu que la première de ces deux années. Il le dira en 1997 : il pensait que la chasse allait durer un an. <span class="refs"><a class="ref" id="b-09_01_97_14-1" href="#m-09_01_97_14" title="voir le madit">↓ 9 janvier 1997 · La Est La Question</a></span></p>
+<p>Quand la rubrique ouvre enfin, le jeu dure déjà deux fois plus longtemps que son auteur ne l&#x27;avait imaginé — et Dabo a déjà deux ans de trous. </p>
+<h3 class="enigme">Mouvement 3 — Le compteur</h3>
+<p>Combien de fois, en tout ? Soixante-seize madits, de 1995 à 2001 — compte prudent, la méthode est à l&#x27;écran. Un pic : 1997, trente-deux échanges. Dabo n&#x27;est pas une rumeur marginale. C&#x27;est un feuilleton. </p>
+<h3 class="enigme">Mouvement 4 — « Je l&#x27;ai appris »</h3>
+<p>Reste la vraie question : Max savait-il ? La réponse est de lui. Deux fois. </p>
+<p>Février 1998. Un chercheur lui demande des nouvelles d&#x27;une équipe qui se serait rapprochée de la cache. Réponse de Max : « C&#x27;était il y a bien longtemps, en 93 ou 94, mais je n&#x27;en sais pas plus. Cette équipe de chercheurs s&#x27;est promenée dans la zone, et je l&#x27;ai appris. » <span class="refs"><a class="ref" id="b-27_02_98_25-1" href="#m-27_02_98_25" title="voir le madit">↓ 27 février 1998 · Cache</a></span></p>
+<p>En 93 ou 94. Une équipe dans la zone. Et Max l&#x27;a appris. </p>
+<p>Juillet 2001. On lui repose la question : des chercheurs sont-ils entrés dans la zone ? « Oui, c&#x27;est vrai. » Était-il sur place ? </p>
+<p>Non : « Ils m&#x27;en ont informé comme vous venez de le faire : via ce Minitel ! » <span class="refs"><a class="ref" id="b-24_07_01_49-1" href="#m-24_07_01_49" title="voir le madit">↓ 24 juillet 2001 · Zone Finale</a></span></p>
+<p>Et Zoé raconte le sien, de message : « nous l&#x27;avions communiqué par Minitel, notre présence sur les lieux, le lendemain de notre arrivée ». « C&#x27;est ainsi qu&#x27;il l&#x27;a appris. » Que Max parle d&#x27;eux ou d&#x27;une autre équipe, le canal est le même : les chercheurs se signalaient d&#x27;eux-mêmes — et Max l&#x27;écrivait. </p>
+<p>Max dit « la zone ». La sienne, la vraie — sans la nommer. </p>
+<p>Ces deux madits ne disent ni Dabo, ni un nom. Alors de deux choses l&#x27;une. Ou bien cette zone est Dabo : l&#x27;équipe de 93 est celle dont parle la thèse, et Max le dit lui-même, tranquillement, cinq ans plus tard. Ou bien elle ne l&#x27;est pas : des chercheurs ont approché la vraie cache dès 93 ou 94, il ne s&#x27;en est pas caché non plus — et la thèse raconte la peur d&#x27;un homme à propos d&#x27;un lieu qui n&#x27;était pas le bon. Dans les deux cas, il savait. La question n&#x27;est plus : savait-il ? Elle est : a-t-il eu peur ? </p>
+<h2 class="chunk">Ce qu&#x27;on lui écrit, ce qu&#x27;il répond — la doctrine, les cartes postales</h2>
+<h3 class="enigme">Mouvement 1 — Ce qu&#x27;on lui écrit, ce qu&#x27;il répond</h3>
+<p>Premier mouvement. Ce qu&#x27;on lui écrit, et ce qu&#x27;il répond. </p>
+<p>Six fois, de 1995 à 2001, un chercheur écrit à Max qu&#x27;on creuse à Dabo. Un véritable gruyère. Faire mon trou. Envahi et jonché de trous. J&#x27;irai creuser un jour. Des trous nouveaux et récents aux Bornes Saint-Martin, pas toujours rebouchés. Avant que j&#x27;aille creuser à Dabo. <span class="refs"><a class="ref" id="b-02_11_95_29-1" href="#m-02_11_95_29" title="voir le madit">↓ 2 novembre 1995 · A Propos De Mickey</a><a class="ref" id="b-18_11_96_26-1" href="#m-18_11_96_26" title="voir le madit">↓ 18 novembre 1996 · Livre D&#x27;Or</a><a class="ref" id="b-15_04_97_33-1" href="#m-15_04_97_33" title="voir le madit">↓ 15 avril 1997 · Tourisme</a><a class="ref" id="b-09_03_98_24-1" href="#m-09_03_98_24" title="voir le madit">↓ 9 mars 1998 · Fl</a><a class="ref" id="b-31_08_98_8-1" href="#m-31_08_98_8" title="voir le madit">↓ 31 août 1998 · Roldan</a><a class="ref" id="b-13_12_01_25-1" href="#m-13_12_01_25" title="voir le madit">↓ 13 décembre 2001 · L&#x27;Aval</a></span></p>
+<p>Et six fois, la réponse est à côté. Le reportage de France 2. Demandez cela aux tenants de la piste Dabo. No comment. Je ne demande pas mieux. Le vin de la remise des prix. Pas une inquiétude, pas un démenti, pas un encouragement. </p>
+<p>Une chose à noter, parce qu&#x27;elle compte : dans tout le corpus, Max n&#x27;écrit jamais qu&#x27;il y a des trous à Dabo. Ce sont les chercheurs qui le lui écrivent. Lui, il applique une règle — on y vient. Une seule fois, il ajoute quelque chose. Avril 1997, et un mot qui ne va pas passer. </p>
+<p>Un chercheur demande si Dabo, avant d&#x27;être envahie et jonchée de trous, était une jolie bourgade. </p>
+<p>Max refuse de commenter la localisation, comme toutes les autres. Mais il ajoute une phrase : il constate avec amusement qu&#x27;à l&#x27;arrivée des beaux jours, chaque année, Dabo reprend du poil de la bête. <span class="refs"><a class="ref" id="b-15_04_97_33-2" href="#m-15_04_97_33" title="voir le madit">↓ 15 avril 1997 · Tourisme</a></span></p>
+<p>Le mot ne passe pas. </p>
+<p>Dès le lendemain, un chercheur outré l&#x27;accuse de se réjouir de voir les chercheurs affluer à Dabo. Max rectifie : il a dit que, chaque été, la solution Dabo reprenait du poil de la bête. Ce n&#x27;est pas la même chose, moooossieur. <span class="refs"><a class="ref" id="b-16_04_97_7-1" href="#m-16_04_97_7" title="voir le madit">↓ 16 avril 1997 · Insulte</a></span></p>
+<p>Max ne retire rien. Voilà pour le ton. Reste la méthode. </p>
+<h3 class="enigme">Mouvement 2 — La doctrine</h3>
+<p>Deuxième mouvement. La doctrine. </p>
+<p>La même semaine, un chercheur pose la question qui nous occupe, frontalement. Les réponses sur Dabo deviennent de plus en plus évasives : craignez-vous que quelqu&#x27;un soit à deux doigts du nirvana ? </p>
+<p>La réponse tient en deux phrases. Ses réponses deviennent évasives dès lors qu&#x27;on cite des lieux, que ces lieux aient ou non un rôle à jouer. Et Dabo ne fait pas exception à la règle. <span class="refs"><a class="ref" id="b-18_04_97_10-1" href="#m-18_04_97_10" title="voir le madit">↓ 18 avril 1997 · Remarque</a></span></p>
+<p>Que ces lieux aient ou non un rôle à jouer. La règle rend les réponses de Max sur Dabo inexploitables — dans un sens comme dans l&#x27;autre. On n&#x27;en conclura ni que la zone est bonne, ni qu&#x27;elle est fausse. </p>
+<p>Cette règle n&#x27;est pas une invention de 1997. Décembre 1995 : un chercheur titre son message « sauvez Dabo ». Max glisse une remarque : ce n&#x27;est pas parce qu&#x27;on titre son message « sauvez Dabo » qu&#x27;il faut penser qu&#x27;il valide cette solution en répondant à la question qui lui fait suite. <span class="refs"><a class="ref" id="b-21_12_95_2-1" href="#m-21_12_95_2" title="voir le madit">↓ 21 décembre 1995 · Sauvez Dabo</a></span></p>
+<p>Août 1997 : un chercheur le traite de menteur parce qu&#x27;il refuse de dire s&#x27;il a un jour mis les pieds à Dabo. Il a visité tous les sites concernés par une solution, mais il n&#x27;y a aucune raison que l&#x27;on se serve de cette précision pour lui faire dire s&#x27;il est allé ou non à Dabo. On l&#x27;insulte pour le faire parler : il ne dit ni oui, ni non. Ni pour attirer, ni pour détourner. <span class="refs"><a class="ref" id="b-06_08_97_21-1" href="#m-06_08_97_21" title="voir le madit">↓ 6 août 1997 · ################ Re-Suite</a></span></p>
+<p>Octobre 1998, sur les trois chercheurs qu&#x27;il faudrait convaincre de regarder ailleurs qu&#x27;en Moselle : si rien ne dit qu&#x27;ils ont raison, rien ne dit non plus qu&#x27;ils ont tort. À vous de vous faire une opinion. <span class="refs"><a class="ref" id="b-12_10_98_29-2" href="#m-12_10_98_29" title="voir le madit">↓ 12 octobre 1998 · Je Sais Que Par Principe Vous Ne...</a></span></p>
+<p>De 1995 à 1998, même réponse évasive, aucune exception, aucune fébrilité. Et une stratégie de désorientation détournerait les chercheurs ; Max, lui, leur écrit que rien ne dit qu&#x27;ils ont tort. </p>
+<h3 class="enigme">Mouvement 3 — Les cartes postales</h3>
+<p>Troisième mouvement. Les cartes postales. </p>
+<p>Sur son site officiel — maxvalentin.com — une rubrique « bonus » proposait seize cartes électroniques que les chercheurs pouvaient s&#x27;envoyer entre eux. Des cartes de vœux, en somme. Sauf qu&#x27;elles se moquent des chercheurs. </p>
+<p>Une autruche, la tête enfouie dans le sable. Légende : à trente centimètres de profondeur ? Mais, y a rien ! C&#x27;est quoi, ce délire ? </p>
+<p>Une mêlée de rugby, et cette question que tout le monde s&#x27;est posée : et où elle est, cette contremarque, hein ? </p>
+<p>Et deux cartes qui nomment Dabo. Une mine à ciel ouvert, un cratère béant. Légende : le trou de Kimberley, Afrique du Sud — le plus gros du monde après celui de Dabo. </p>
+<p>Puis une surface grise, criblée de cratères, un paysage lunaire. Légende : Dabo, vue aérienne. </p>
+<p>Ces cartes sont attestées sur le site de Max dès l&#x27;été 2002. Cinq ans après le mot qui avait fait scandale, l&#x27;amusement d&#x27;avril 1997 n&#x27;était donc pas une formule malheureuse : il en avait fait une collection, en libre distribution, sous son propre nom de domaine. </p>
+<p>C&#x27;est là que cette thèse se heurte à un mur. On peut soutenir qu&#x27;un auteur inquiet répond de façon évasive. On peut soutenir qu&#x27;il brouille les pistes. Mais un auteur qui redoute depuis 1993 qu&#x27;on trouve son trésor à Dabo ne fabrique pas, pour ses joueurs, une carte postale intitulée « Dabo, vue aérienne ». </p>
+<p>Et cette peur, le récit lui-même ne la tient pas. </p>
+<p>Elle change de sens trois fois dans la même soirée du 5 août. D&#x27;abord, Max aurait craint que sa chasse ne soit pas trouvée : c&#x27;est pour ça, dit-il, qu&#x27;il insistait lourdement sur Dabo, pour être sûr que la solution serait trouvée. Ensuite, Max aurait eu la trouille qu&#x27;elle soit trouvée trop vite, à cause des chercheurs d&#x27;août 1993. Enfin, cette même crainte serait née avant le lancement, quand il calibrait les énigmes avec le sponsor. Trois peurs. Les deux premières s&#x27;excluent. Et si la troisième est vraie, l&#x27;arrivée des chercheurs n&#x27;explique plus rien : la peur était là avant eux. </p>
+<h2 class="chunk">Acte II — « Broder pour faire durer » : il n&#x27;a pas menti</h2>
+<h3 class="enigme">Mouvement 1 — « Broder pour faire durer »</h3>
+<p>Broder pour faire durer. </p>
+<p>Deuxième affirmation du récit : Max aurait « brodé » dans les madits pour désorienter les chercheurs et faire durer le jeu. Des réponses fabriquées, donc. Des mensonges. </p>
+<p>Cette thèse n&#x27;est pas neuve. Le 5 juin 1998, sur EdelWeb — le premier forum internet des chercheurs —, un nouveau venu l&#x27;écrit déjà, presque mot pour mot : tout le problème serait donc pour Max de faire durer le jeu le plus longtemps possible, car le minitel et la vente de son livre lui rapportent constamment. Vingt-huit ans avant le vocal. La différence, c&#x27;est qu&#x27;à l&#x27;époque, Max a répondu. En public. Vérifions. </p>
+<p>Mars 1996. Un chercheur demande à Max : dites-vous toujours la vérité dans vos réponses ? Réponse : il ne ment jamais sciemment, sachant qu&#x27;après la découverte de la chouette on pourrait le lui reprocher. <span class="refs"><a class="ref" id="b-13_03_96_40-1" href="#m-13_03_96_40" title="voir le madit">↓ 13 mars 1996 · Verite</a></span></p>
+<p>Cette phrase n&#x27;est pas un serment en l&#x27;air : elle décrit un mécanisme, et il le tient depuis le début. </p>
+<p>Janvier 1996, un chercheur l&#x27;accuse de sophisme. Me croyez-vous assez stupide pour faire des réponses dolosives, sachant qu&#x27;on ne manquera pas de me les renvoyer dans les gencives le jour où les solutions seront publiées ? Je ne suis pas masochiste ! <span class="refs"><a class="ref" id="b-04_01_96_29-1" href="#m-04_01_96_29" title="voir le madit">↓ 4 janvier 1996 · Precision - Bis</a></span></p>
+<p>Il le répète, chaque année, jusqu&#x27;au bout : ses réponses ici sont publiques, il n&#x27;est pas fou au point de mentir dans des réponses que n&#x27;importe qui pourrait lui opposer un jour. 1995, 1997, 1999, 2000 — cinq ans, les mêmes mots. </p>
+<p>Février 1998. Un chercheur lui oppose, déjà, la thèse de 2026 : ne serait-il pas préférable de refuser de répondre, plutôt que donner une réponse ambiguë à souhait, pour déboussoler les chercheurs, voire les mettre sur de fausses pistes ? Max : je réfute catégoriquement votre accusation d&#x27;induire les chercheurs en erreur. Les q-r restent là pour démontrer ma bonne foi lorsque la chouette aura été trouvée. <span class="refs"><a class="ref" id="b-11_02_98_36-1" href="#m-11_02_98_36" title="voir le madit">↓ 11 février 1998 · Suite Complexite</a></span></p>
+<p>Max ne prétend pas tout dire. Oui, il lui arrive d&#x27;éluder. Mais en éludant, il lâche quand même quelque chose. Sinon, il répondrait « Désolé, je ne peux pas vous répondre ». Éluder, refuser : deux façons de ne pas aider. Aucune des deux ne s&#x27;appelle mentir. <span class="refs"><a class="ref" id="b-17_09_96_17-1" href="#m-17_09_96_17" title="voir le madit">↓ 17 septembre 1996 · Rene De Cessand</a></span></p>
+<p>« Freiner » ? </p>
+<p>Août 1999, à un chercheur qui le presse, il pose la limite : son rôle ici n&#x27;est pas d&#x27;induire les chercheurs en erreur, ni de les « freiner » — ce qui reviendrait à leur mentir. Freiner, c&#x27;est mentir. C&#x27;est sa définition, pas la nôtre. Et c&#x27;est exactement ce que le récit de 2026 lui reproche. <span class="refs"><a class="ref" id="b-27_08_99_47-1" href="#m-27_08_99_47" title="voir le madit">↓ 27 août 1999 · Suite</a></span></p>
+<p>L&#x27;envie de faire durer ? On l&#x27;a vu : il pensait que ça durerait un an. <span class="refs"><a class="ref" id="b-01_01_96_30-1" href="#m-01_01_96_30" title="voir le madit">↓ 1 janvier 1996 · A Priori</a></span></p>
+<p>La durée, dit-il en avril 1998, n&#x27;a aucun intérêt pour lui. Ce qui en aurait, ce serait que la chouette soit trouvée, car il y aurait alors un formidable battage médiatique. Voilà ce qui l&#x27;intéresse. <span class="refs"><a class="ref" id="b-14_04_98_35-1" href="#m-14_04_98_35" title="voir le madit">↓ 14 avril 1998 · Suite</a></span></p>
+<p>Février 1999, l&#x27;autre moitié de la thèse : l&#x27;argent. Un chercheur lui écrit, en substance, ce qu&#x27;on dit aujourd&#x27;hui : pour vous il est toujours facile de nier, de ne pas répondre ou d&#x27;égarer les chercheurs — on fait marcher le commerce, pas vrai. Réponse : égarer les chercheurs, ce serait complètement stupide. En cas de découverte, il bénéficierait immédiatement d&#x27;un énorme battage presse. C&#x27;est tout ce qu&#x27;il demande, car il a d&#x27;autres chasses dans ses cartons. Son intérêt n&#x27;était pas que ça dure. C&#x27;était que ça finisse. <span class="refs"><a class="ref" id="b-17_02_99_3-1" href="#m-17_02_99_3" title="voir le madit">↓ 17 février 1999 · Rereponses Bidons?</a></span></p>
+<h3 class="enigme">Mouvement 2 — Il ferme lui-même</h3>
+<p>Fin 2001, la chouette toujours pas trouvée, c&#x27;est lui qui coupe : après avoir répondu à près de 100 000 questions en 8 ans — trente-huit mille en public —, il a décidé de clore Maxval. </p>
+<p>Un animateur qui broderait pour faire durer ferme là son seul canal de broderie. <span class="refs"><a class="ref" id="b-23_11_01_12-1" href="#m-23_11_01_12" title="voir le madit">↓ 23 novembre 2001 · Qr Sur Le Web 2</a></span></p>
+<p>Et il ne ferme pas pour enterrer. Avant même d&#x27;annoncer la date, il s&#x27;est entendu avec un chercheur, Velo, pour que les Q-R soient transférées sur le web par ses soins — carte blanche. </p>
+<p>Le 14 décembre 2001, dernier message : l&#x27;intégralité des questions-réponses sera consultable sur le site de &quot;Velo&quot;, parce qu&#x27;il avait promis que tous les messages seront tenus à la disposition des chercheurs jusqu&#x27;à la découverte de la chouette. <span class="refs"><a class="ref" id="b-14_12_01_34-1" href="#m-14_12_01_34" title="voir le madit">↓ 14 décembre 2001 · De Max A Tous : Rubrique Close</a></span></p>
+<p>Ce site deviendra lachouette point net, le forum officiel de l&#x27;association des chercheurs. Trente-huit mille réponses, publiques, permanentes, consultables par n&#x27;importe qui — y compris par ceux qui voudraient un jour les confronter aux solutions. On ne fait pas ça d&#x27;un corpus qu&#x27;on a truqué. </p>
+<p>Pourquoi ce legs ? Il l&#x27;explique en août 2003, sur le forum de Velo. Le Minitel est fermé depuis vingt mois ; le jeu ne lui rapporte plus rien. Il n&#x27;a JAMAIS sciemment envoyé quiconque dans le mur. S&#x27;il l&#x27;avait fait — et sachant que lorsque la chouette sera trouvée les « victimes » lui tomberaient sur le râble comme un seul homme —, il aurait fallu qu&#x27;il soit un véritable masochiste, doublé d&#x27;un irresponsable pathologique. C&#x27;est d&#x27;ailleurs pour cette raison qu&#x27;il a autorisé Velo à reproduire les Q-R et à les conserver sous vos yeux, car il n&#x27;a rien à cacher. </p>
+<p>Pour qui aurait-il brodé ? Pour une minorité. </p>
+<p>Max le chiffre en 1996 : environ deux mille chercheurs sur Minitel, et cinq fois plus qui s&#x27;en passent. Un chercheur sur six. <span class="refs"><a class="ref" id="b-11_11_96_24-1" href="#m-11_11_96_24" title="voir le madit">↓ 11 novembre 1996 · Concurrents</a></span></p>
+<p>Les cinq autres ne lisent pas ses réponses — et peuvent trouver sans elles, il l&#x27;a toujours dit. <span class="refs"><a class="ref" id="b-13_12_01_22-1" href="#m-13_12_01_22" title="voir le madit">↓ 13 décembre 2001 · Un Peu D&#x27;Ordre... - Eole</a></span></p>
+<p>Un mensonge sur le Minitel n&#x27;aurait donc dévié qu&#x27;un joueur sur six. Et le jour où l&#x27;un des cinq autres trouve, chaque réponse écrite devient une pièce à charge. C&#x27;est exactement ce que Max avait compris. </p>
+<p>Restait l&#x27;argent. Le serveur était payant. </p>
+<p>Mais la rubrique publique — le seul endroit où broder aurait eu un effet — ne pesait rien : si il s&#x27;abstenait de répondre, le c.a. du minitel ne baisserait que de 10 %, mais il gagnerait 10h par jour. Une absolue hérésie économique. Il le fait, dit-il, parce qu&#x27;il s&#x27;y est engagé. <span class="refs"><a class="ref" id="b-19_04_97_31-1" href="#m-19_04_97_31" title="voir le madit">↓ 19 avril 1997 · 12</a></span></p>
+<p>Le livre ? </p>
+<p>Septembre 1999, un chercheur ne trouve plus l&#x27;ouvrage et hésite à photocopier celui d&#x27;un collègue — pas cool pour toi, financièrement. Max : oui, photocopiez le bouquin à l&#x27;échelle 1/1. Tant pis pour ses droits d&#x27;auteur, ça ne le tuera pas. <span class="refs"><a class="ref" id="b-14_09_99_28-1" href="#m-14_09_99_28" title="voir le madit">↓ 14 septembre 1999 · J&#x27;En Veux Un!!!!</a></span></p>
+<p>Deux ans plus tard, le livre est épuisé : son éditeur a vendu le stock restant derrière son dos, sans lui verser ses droits d&#x27;auteur. Voilà pour la rente. <span class="refs"><a class="ref" id="b-13_09_01_13-1" href="#m-13_09_01_13" title="voir le madit">↓ 13 septembre 2001 · Livre</a></span></p>
+<h3 class="enigme">Mouvement 3 — Le contrat</h3>
+<p>Qui touchait, d&#x27;ailleurs, l&#x27;argent de ce serveur ? </p>
+<p>Lisons le contrat de 1993, que l&#x27;organisateur actuel a lui-même publié. Page un : « Régis Hauser et Michel Becker, ci-après dénommés l&#x27;auteur ». Un seul mot, pour deux hommes. Article treize : les redevances liées au Minitel sont dues à cet « auteur » — donc aux deux — selon un avenant. Combien, pendant combien de temps ? C&#x27;est dans l&#x27;avenant. Et l&#x27;avenant n&#x27;a jamais été publié. Si le Minitel était une machine à faire durer, elle avait deux bénéficiaires. </p>
+<p>Combien, chacun ? L&#x27;avenant Minitel n&#x27;a jamais été publié : nous ignorons ce qu&#x27;il dit. Mais un autre contrat existe. Le 17 avril 1997, Hauser et Becker signent avec Michel Lafon la troisième édition du livre. </p>
+<p>La cour d&#x27;appel de Versailles le connaît : en 2009, c&#x27;est sur lui qu&#x27;elle fonde la propriété de la Chouette d&#x27;Or reconnue à Becker, en se soumettant aux restrictions qu&#x27;il fixe. </p>
+<p>Et ce contrat dit ce que rapportait le livre : douze pour cent du prix hors taxes. Huit pour Michel Becker, quatre pour Régis Hauser. L&#x27;illustrateur touchait deux fois plus que l&#x27;auteur des énigmes. </p>
+<p>Soixante-dix mille exemplaires en huit ans, dit Max en juin 2001. Quatre-vingt-neuf francs le livre en 1993, cent francs en 1997. <span class="refs"><a class="ref" id="b-12_06_01_21-1" href="#m-12_06_01_21" title="voir le madit">↓ 12 juin 2001 · Est-Il ?</a><a class="ref" id="b-29_01_99_1-1" href="#m-29_01_99_1" title="voir le madit">↓ 29 janvier 1999 · J.R. L&#x27;Avocat Et ...Les Voleurs.</a></span></p>
+<p>Si ce partage vaut pour les trois éditions — c&#x27;est une hypothèse, les contrats de 1993 ne le disent pas —, la part de Max tient dans un tableau : environ deux cent quarante mille francs sur huit ans. Trente-six mille euros. Deux mille cinq cents francs par mois, pour l&#x27;auteur des énigmes de la chasse au trésor la plus célèbre de France. Et c&#x27;est un plafond : l&#x27;éditeur de 1997, liquidé en 1999, a bradé le stock sans lui verser ses droits. </p>
+<p>Le livre avait deux bénéficiaires. Pas à parts égales. Et pour l&#x27;auteur des énigmes, la chasse au trésor la plus célèbre de France n&#x27;a jamais été une affaire : quelques centaines de francs par mois, huit ans durant. Reste la charge de la preuve. Le jour que Max annonçait — celui où on lui renverrait ses réponses dans les gencives — est arrivé : les solutions sont publiées depuis mai 2025. Ceux qui parlent de broderies ne désignent pourtant aucune réponse datée qu&#x27;on pourrait confronter à ces solutions. </p>
+<p>Un seul exemple, en près de trois heures : trois mois après l&#x27;arrivée de ces chercheurs, en 1993, on a commencé à parler de fausses pistes autoroutières — comme par hasard. </p>
+<p>Vérifions. </p>
+<p>La rubrique publique a vingt-sept jours quand un chercheur demande si les fausses pistes se repèrent à un mot. </p>
+<p>Max, le 16 août 1995 : Je me suis déjà expliqué là-dessus. C&#x27;est comme si vous étiez sur une autoroute, à pleine vitesse. Quelque part, vous dépassez une petite bretelle de sortie sans vraiment y faire attention. <span class="refs"><a class="ref" id="b-16_08_95_15-1" href="#m-16_08_95_15" title="voir le madit">↓ 16 août 1995 · Gag</a></span></p>
+<p>« Déjà expliqué. » L&#x27;image est là dès le premier mois où l&#x27;on peut lire Max — et il s&#x27;en resservira six ans, pour dire toujours la même chose : une énigme peut vous lancer tout droit, il faut savoir faire demi-tour. Jamais un lieu. </p>
+<p>Novembre 1999 : cette histoire d&#x27;autoroute était juste un exemple. <span class="refs"><a class="ref" id="b-19_11_99_14-1" href="#m-19_11_99_14" title="voir le madit">↓ 19 novembre 1999 · Question D&#x27;Autoroute</a></span></p>
+<p>Le lendemain de ce vocal, l&#x27;organisateur ressert l&#x27;exemple — face, cette fois, à Zoé en personne : c&#x27;est toi qui lui as « foutu la trouille », tu es arrivé trop vite. Réponse de Zoé : « C&#x27;est un peu plus tard. C&#x27;est à partir de 1995, quand les premiers madits sortent. » Celui dont on invoque le témoignage déplace lui-même la broderie de deux ans — au moment exact où tout devient public. Et la peur de Max, il ne l&#x27;affirme pas : il la laisse au conditionnel. </p>
+<p>Trois minutes plus tard, dans la même conversation, Zoé décrit les réponses privées de Max, leur clarté, leur honnêteté. </p>
+<p>Réponse de Michel Becker : je suis complètement d&#x27;accord avec toi. C&#x27;est un processus qui s&#x27;est développé. Le choc de l&#x27;été 1993 a disparu. À la place, une dérive lente, et un autre mobile : Max serait passé à la télévision, sa photo dans les journaux, et il s&#x27;est pris le melon. </p>
+<p>Sauf que ce rôle-là, Becker explique dans la même phrase qu&#x27;il devait être le sien. C&#x27;est lui qui devait répondre aux médias, dit-il, pour faire connaître ma peinture. </p>
+<p>Et la notoriété de Max ? Elle allait à un nom qui n&#x27;existe pas. Régis Hauser publiait sous son vrai nom : deux manuels de marketing, des recueils d&#x27;humour, un roman chez Ramsay en 1998, en pleine chasse. La signature Max Valentin, elle, n&#x27;a jamais servi qu&#x27;à des chasses au trésor. </p>
+<p>Septembre 1998. Un chercheur lui propose une émission de télévision. Sa réponse : anonymat oblige, je ne peux pas participer à des émissions à visage découvert. <span class="refs"><a class="ref" id="b-02_09_98_7-1" href="#m-02_09_98_7" title="voir le madit">↓ 2 septembre 1998 · Coup De Pub</a></span></p>
+<p>Et la veille de son dernier message, en décembre 2001, à un chercheur qui lui demande son âge : j&#x27;ai tout fait pour préserver mon anonymat, et pour extraire ce que je suis du contexte des chasses que je conçois. <span class="refs"><a class="ref" id="b-13_12_01_49-1" href="#m-13_12_01_49" title="voir le madit">↓ 13 décembre 2001 · Age Du Capitaine</a></span></p>
+<p>Un homme qui court après la gloire ne passe pas huit ans à s&#x27;en extraire. </p>
+<p>Le partage des rôles de 1993, c&#x27;est Max qui l&#x27;a tenu. Anonyme jusqu&#x27;au bout, il a laissé au peintre le visage de la chouette. La célébrité, c&#x27;est Becker qui la cherchait : il le dit lui-même, la chouette devait faire connaître sa peinture. Et c&#x27;est bien la chouette qui a fait connaître Michel Becker. Il le disait déjà à la télévision, en 1996, la chouette de bronze posée devant lui. </p>
+<p>« Vous vous rendez compte de ce que je gagne en notoriété ? » Vous vendez mieux, depuis ? « Incomparablement. » Le contrat de départ a été respecté — par celui qu&#x27;on accuse. </p>
+<p>Reste la broderie elle-même. Sur les deux années d&#x27;avant, personne ne peut rien relire — on l&#x27;a dit. Mais dès qu&#x27;on peut lire, la broderie apparue « comme par hasard » est la leçon de méthode la plus répétée du jeu. Une intention prêtée — pas un fait. </p>
+<h2 class="chunk">Acte III — « Toujours dans son trou »</h2>
+<h3 class="enigme">Mouvement 1 — « Retirée dès la fin 1993 »</h3>
+<p>Mouvement un. Retirée dès la fin 1993. </p>
+<p>Troisième affirmation du récit : Max aurait pu retirer la contremarque dès la fin 1993, parce que des chercheurs étaient sur la zone. Ces chercheurs, on l&#x27;a vu : Max en parle lui-même, et l&#x27;un d&#x27;eux est venu le raconter. </p>
+<p>Pendant ce temps, que dit-il du bronze ? La même chose, pendant six ans. Nous avons compté plus de quarante madits où Max affirme que la chouette est en place. En voici neuf, de novembre 1995 à juillet 2001. </p>
+<p>Tant que la chouette est dans son trou, il n&#x27;est pas trop tard. Elle n&#x27;a pas bougé. Au moment où il écrit ces lignes, la chouette est toujours en place. La contremarque en bronze est toujours dans la terre. </p>
+<p>Octobre 2000, sept ans après l&#x27;enfouissement, Max va plus loin : rien n&#x27;empêche aujourd&#x27;hui de localiser la contremarque. Si c&#x27;était le cas, il aurait arrêté le jeu. <span class="refs"><a class="ref" id="b-06_10_00_21-1" href="#m-06_10_00_21" title="voir le madit">↓ 6 octobre 2000 · Ca</a></span></p>
+<p>Novembre 2001, un mois avant la fermeture du serveur : la contre-marque est toujours là. <span class="refs"><a class="ref" id="b-08_11_01_22-1" href="#m-08_11_01_22" title="voir le madit">↓ 8 novembre 2001 · Carusburcien Encore</a></span></p>
+<p>Jusqu&#x27;au bout, il date. </p>
+<p>28 novembre, à quinze jours du dernier message : l&#x27;endroit est toujours le même depuis le 24 avril 93. <span class="refs"><a class="ref" id="b-28_11_01_48-1" href="#m-28_11_01_48" title="voir le madit">↓ 28 novembre 2001 · Copie Original</a></span></p>
+<p>Si le bronze est sorti de terre fin 1993, chacune de ces réponses est un mensonge délibéré. Plus de quarante mensonges, sur six ans — sous le contrôle de cette trace écrite que Max avait voulue. </p>
+<p>Ces quarante réponses ne tombent pas dans le vide. Posons-les sur une même ligne avec les vingt fois où, sur ce même Minitel, on lui parle de Dabo. </p>
+<p>Les deux séries ne se suivent pas : elles s&#x27;imbriquent. Chacune des vingt fois où on lui parle de Dabo est encadrée, avant et après, par une réponse où le bronze est dans son trou. Sans exception. </p>
+<p>Et deux fois, c&#x27;est le même envoi. Le 2 novembre 1995, message numéro 3 : « Tant que la chouette est dans son trou, il n&#x27;est pas trop tard ! » Message numéro 29, un chercheur : Mickey « va transformer dabo en un véritable gruyère ». <span class="refs"><a class="ref" id="b-02_11_95_3-1" href="#m-02_11_95_3" title="voir le madit">↓ 2 novembre 1995 · Trop Tard ?</a><a class="ref" id="b-02_11_95_29-2" href="#m-02_11_95_29" title="voir le madit">↓ 2 novembre 1995 · A Propos De Mickey</a></span></p>
+<p>Le même jour. Le même envoi. Si le bronze était sorti de terre, c&#x27;est là qu&#x27;un homme inquiet aurait eu quelque chose à dire. Il répond sur le reportage de France 2. </p>
+<h3 class="enigme">Mouvement 2 — Après le Minitel</h3>
+<p>Mouvement deux. Après le Minitel. </p>
+<p>Le serveur ferme en décembre 2001. Mais Max n&#x27;a pas disparu : jusqu&#x27;en 2009, il répond encore, de loin en loin, sur le forum lachouette.net. Juillet 2003 : les solutions ayant été déposées chez l&#x27;huissier en 1993, il ne peut donc PLUS Y TOUCHER, même si il le voulait. </p>
+<p>Octobre 2006. Sale période : la chouette d&#x27;or originale — le lot — est sous main de justice depuis fin 2004. Si le bronze était déterré maintenant, Max ne pourrait pas remettre le lot. Et voilà ce qu&#x27;il écrit : quant à la contremarque, la chouette en bronze, elle est évidemment toujours à sa place et ne peut pas être saisie. </p>
+<p>Juin 2008 — dix mois avant sa mort, en plein appel. Un chercheur prétend avoir déterré la chouette huit ans plus tôt. Réponse de Max, sur le forum : impossible qu&#x27;il l&#x27;ait déterrée il y a huit ans, vu qu&#x27;elle est toujours en place aujourd&#x27;hui. </p>
+<p>Dans quel état est-il, pendant ce procès ? Pauvre. L&#x27;arrêt de la cour d&#x27;appel de Versailles le dit dès l&#x27;en-tête : Régis Hauser bénéficie d&#x27;une aide juridictionnelle, accordée le 16 mai 2007 — l&#x27;État prend en charge son avocat, en tout ou partie, sous des plafonds de ressources qui tiennent compte du patrimoine. </p>
+<p>L&#x27;auteur de la chasse au trésor la plus célèbre de France n&#x27;a, quatorze ans après, que des ressources sous ces plafonds, et aucun patrimoine mobilisable. </p>
+<p>Arrêtons-nous. Ici, ce n&#x27;est plus Max qui parle, c&#x27;est nous. Un organisateur malhonnête avait une sortie facile — faire annoncer le bronze trouvé par un chercheur anonyme. Invérifiable, définitif. Le lot n&#x27;était pas à lui, mais il avait autre chose à vendre : le livre des solutions. </p>
+<p>Il le dit lui-même, en 2001 — la clause d&#x27;une année tient toujours pour qu&#x27;il puisse faire éditer le livre des solutions, et le vendre. <span class="refs"><a class="ref" id="b-02_10_01_20-1" href="#m-02_10_01_20" title="voir le madit">↓ 2 octobre 2001 · Ombre</a></span></p>
+<p>Un livre qu&#x27;il travaille depuis 1993, prêt à partir chez l&#x27;éditeur le surlendemain de la découverte. Pour un homme sans revenus ni patrimoine, c&#x27;était la seule rentrée d&#x27;argent possible — et elle n&#x27;existait que si le jeu finissait. <span class="refs"><a class="ref" id="b-12_05_98_26-1" href="#m-12_05_98_26" title="voir le madit">↓ 12 mai 1998 · Le Livre...</a></span></p>
+<p>Il avait plus à perdre qu&#x27;un livre. Les chasses au trésor, c&#x27;était son métier. Trente-cinq autres depuis la chouette, dit-il en 2000. <span class="refs"><a class="ref" id="b-05_05_00_27-1" href="#m-05_05_00_27" title="voir le madit">↓ 5 mai 2000 · O</a></span></p>
+<p>Près de quatre millions de francs de trésors enterrés, dont plus de deux millions déjà trouvés, quatorze découvreurs. Qui aurait confié trente-cinq chasses à un homme dont les réponses, sur la plus célèbre d&#x27;entre elles, auraient été des mensonges ? <span class="refs"><a class="ref" id="b-09_12_98_35-1" href="#m-09_12_98_35" title="voir le madit">↓ 9 décembre 1998 · Y En A Marre..Et Sans Frustation</a></span></p>
+<p>Des erreurs, Max en a faites. Une dizaine de fois, il ouvre, de son propre chef, un message « De Max à tous : erratum » pour corriger une de ses réponses — un mot oublié, un oui qui devait être un non, une « boulette ». </p>
+<p>Dès 1996, il pose le principe. Trois contradictions dans ses réponses, immédiatement rectifiées. Il n&#x27;est pas infaillible, cela peut arriver — et il n&#x27;a aucune inquiétude : les chercheurs le lui feront immédiatement remarquer. <span class="refs"><a class="ref" id="b-02_08_96_35-1" href="#m-02_08_96_35" title="voir le madit">↓ 2 août 1996 · Transfo2</a></span></p>
+<p>C&#x27;est exactement ce que Mickey a fait, en janvier 1997 : Max avait oublié un mot dans une réponse, et la phrase disait le contraire de ce qu&#x27;il voulait. </p>
+<p>Il publie un erratum — « et un grand merci à Mickey pour me l&#x27;avoir fait remarquer ! ». Le chercheur qui corrige l&#x27;auteur. <span class="refs"><a class="ref" id="b-30_01_97_19-1" href="#m-30_01_97_19" title="voir le madit">↓ 30 janvier 1997 · De Max A Tous : Erratum</a></span></p>
+<p>En 2003, sur le forum, il explique pourquoi un mensonge n&#x27;aurait pas tenu : toutes les questions lui ont été posées à plusieurs reprises, sous une forme ou sous une autre — à chaque erreur, les chercheurs lui en ont fait part très vite, preuve qu&#x27;ils étaient vigilants. Une douzaine de fois, dit-il. Nous en avons compté une dizaine. </p>
+<p>Un homme qui ment dans ses réponses ne publie pas d&#x27;erratum : il laisse l&#x27;erreur, elle l&#x27;arrange. Max les a toutes signées. </p>
+<p>Depuis la fermeture du serveur, fin 2001, le jeu ne lui rapporte plus rien. Sept ans sans un franc du jeu, dont quatre de procès, plaidés à l&#x27;aide juridictionnelle. Il lui suffisait de hâter la fin. Il a fait l&#x27;inverse : il a maintenu le bronze en place, publiquement, année après année — y compris pendant les années de la saisie, quand une découverte était pour lui le pire des scénarios juridiques, et la seule issue financière. </p>
+<p>Un juriste qui a lu ces arrêts en tire d&#x27;ailleurs une tout autre leçon : laisser le jeu continuer pendant que le lot était saisi, sans prévenir les joueurs, est à ses yeux le fait le plus lourd de toute l&#x27;affaire. On peut lui donner raison. Mais c&#x27;est la faute d&#x27;un homme qui ne s&#x27;est pas arrêté — pas celle d&#x27;un homme qui a truqué. </p>
+<h2 class="chunk">Le récit se contredit — et le mot de la fin</h2>
+<h3 class="enigme">Mouvement 3 — Le récit se contredit</h3>
+<p>Mouvement trois. Le récit se contredit. </p>
+<p>Un dernier témoin refuse la thèse du retrait de 1993 : son propre auteur, Michel Becker. Dans le même vocal, il juge le scénario : ça lui paraît un peu énorme qu&#x27;il ait pu enlever la contre-marque dès 1993 ou 1994. Il aurait vraiment fallu qu&#x27;il soit gonflé, mais peut-être qu&#x27;il l&#x27;a fait, il n&#x27;en sait rien. </p>
+<p>« Peut-être. » « Je n&#x27;en sais rien. » Voilà l&#x27;état de la preuve : aucun élément matériel, une date qui flotte entre 93 et 94, et un auteur qui n&#x27;y croit pas lui-même. </p>
+<p>L&#x27;autre motif qu&#x27;il avance ne tient pas mieux. Becker ajoute : fin 1993, l&#x27;éditeur de Max était en faillite, il était « sous très haute tension », et cela aussi aurait pu le pousser à retirer le bronze. </p>
+<p>Sauf que l&#x27;extrait Kbis de cet éditeur — publié par le nouvel organisateur lui-même — donne les dates : cessation des paiements le 11 avril 1994, redressement judiciaire le 20 avril. Fin 1993, Manya n&#x27;est pas en faillite. </p>
+<p>Et quand elle le sera, rien ne s&#x27;arrête : le 3615 Maxval ouvre le 16 mars 1994, le livre est repris en mai, réédité encore en 1997. C&#x27;est Becker qui le raconte : il a eu Max au téléphone, fin 93 ou début 94, pour qu&#x27;il récupère les contrats, les droits, auprès de Manya — pour continuer le jeu, pas pour l&#x27;enterrer. Un motif daté de travers, pour une décision jamais prise. </p>
+<p>Reste à savoir ce qu&#x27;on exige d&#x27;une accusation. </p>
+<p>Sur ce point, Michel Becker a été très clair, le même soir. Une accusation, dit-il, c&#x27;est du pipi de chat. Ça ne vaut rien. Ce qui vaut, c&#x27;est des preuves. Et plus loin : on n&#x27;accuse pas sans preuves. Il parlait de ceux qui l&#x27;attaquent. La règle est bonne. Appliquons-la à ce qu&#x27;il dit de Max. </p>
+<p>Le 19 août, il dit ceci : la seule certitude, c&#x27;est que la contremarque numéro 1 a disparu, qu&#x27;elle a disparu du vivant de Max Valentin. La seule certitude. Le lendemain, Garp, le président de l&#x27;association des chercheurs, soutient l&#x27;inverse — la contremarque est toujours en terre. Réponse : mais il n&#x27;en a aucune preuve. C&#x27;est vrai. Personne n&#x27;a de preuve, ni dans un sens ni dans l&#x27;autre. Mais chez l&#x27;un, l&#x27;absence de preuve disqualifie ; chez l&#x27;autre, elle devient une certitude. </p>
+<h3 class="enigme">Mouvement 3b — La figure</h3>
+<p>Le mécanisme a un nom : accuser, puis trouver ça énorme. L&#x27;accusation est posée ; le doute qui la suit protège celui qui l&#x27;a portée ; et elle reste, pour ceux qui veulent y croire. Elle a surtout un avantage : quoi qu&#x27;il arrive, le fautif est Max. Si les solutions contredisent les madi — c&#x27;est que Max a brodé. Si le trou était vide — c&#x27;est que Max l&#x27;a vidé. Jamais celui qui publie. Jamais cette solution avec laquelle personne n&#x27;a jamais sorti de terre la chouette de bronze de Max, et qui, nous l&#x27;avons montré ailleurs, ne colle pas à ce qu&#x27;il a écrit pendant quinze ans. </p>
+<p>Le plus curieux, c&#x27;est que Michel Becker connaît cette figure. Près de deux heures plus tard, dans le même vocal, il rapporte — c&#x27;est son mot : phénoménal — que Garp se méfie de ce que Max a déposé chez l&#x27;huissier en 1993 : assez malin, dit-il, pour y avoir mis une fausse disquette. </p>
+<p>Garp l&#x27;a dit lui-même, au Monde : cette enveloppe, il se méfie de son contenu — Max aurait très bien pu donner à l&#x27;huissier quelque chose de bidon. </p>
+<p>« Même quelqu&#x27;un comme Garp », dit-il. Le mec a déjà anticipé que la disquette ne serait pas non plus la bonne. Un participant résume : pile je gagne, face tu perds. Et Becker approuve : c&#x27;est fou, c&#x27;est phénoménal. </p>
+<p>Le mécène de la Chouette d&#x27;Or y lit un aveu : même ses adversaires ne seraient pas sûrs d&#x27;avoir de quoi l&#x27;accuser. </p>
+<p>Sauf que Garp n&#x27;a jamais misé sur cette enveloppe. Son association s&#x27;est toujours opposée à ce qu&#x27;on l&#x27;ouvre — c&#x27;est écrit sur son site. </p>
+<p>Sa plainte contre le nouvel organisateur date d&#x27;avril 2025 : un mois avant que celui-ci ne publie ses solutions. Elle n&#x27;attendait pas l&#x27;enveloppe. </p>
+<p>La règle qu&#x27;il oppose à Garp est celle qu&#x27;il s&#x27;épargne avec Max. </p>
+<p>Puisqu&#x27;on prête à Max d&#x27;avoir fait durer son jeu pour l&#x27;argent — une dernière date. </p>
+<p>Le 28 janvier 2009, treize jours après l&#x27;arrêt qui rend la Chouette d&#x27;Or à son propriétaire, quelqu&#x27;un dépose à l&#x27;INPI la marque « Max Valentin » — et, le même jour, la marque « Chouette d&#x27;Or ». Classes : jeux, logiciels de jeux, télécommunications, concours, publication de livres. Le métier de Max, au nom de Max. Max est vivant : il est à l&#x27;hôpital. Il meurt trois mois plus tard. Le déposant n&#x27;est pas Max. C&#x27;est Michel Becker, son co-auteur. La marque a été renouvelée en 2018. Elle court jusqu&#x27;en 2029. </p>
+<h3 class="enigme">Mouvement 4 — Le mot de la fin</h3>
+<p>Mouvement quatre. Le mot de la fin. </p>
+<p>Ce qu&#x27;on reproche à Max, ce n&#x27;est pas de s&#x27;être trompé. C&#x27;est d&#x27;avoir truqué son propre jeu : d&#x27;avoir brodé dans ses réponses pour désorienter, d&#x27;avoir fait durer, d&#x27;avoir peut-être retiré la contremarque en laissant les autres chercher pour rien. Il faudrait, pour cela, un homme qui dissimule. </p>
+<p>Les archives en montrent un autre. Il savait, dès 93 ou 94, que des chercheurs étaient dans la zone — et c&#x27;est lui qui le raconte. Il s&#x27;amusait, dans ses réponses, du retour saisonnier de la piste Dabo — puis en cartes postales sur son propre site. Il a légué ses questions-réponses à la communauté, pour qu&#x27;elles restent publiques. Il répondait par écrit, pour un chercheur sur six et dix pour cent du chiffre d&#x27;affaires — parce qu&#x27;il l&#x27;avait promis. Il a maintenu le bronze en place jusqu&#x27;à sa mort, sans argent, pendant la saisie, alors qu&#x27;un livre prêt depuis 1993 n&#x27;attendait que la fin du jeu — et que trente-cinq autres chasses dépendaient de sa réputation. Ce ne sont pas les gestes de quelqu&#x27;un qui protège un secret : ce sont ceux de quelqu&#x27;un qui tient un jeu. </p>
+<p>Une précision, pour finir, parce qu&#x27;elle nous engage. Nous n&#x27;avons pas dit où est la chouette : nous ne le savons pas. Nous avons dit une chose plus modeste, et nous la maintenons : un auteur qui nomme un lieu dans son propre livre, qui en rit, des années durant, et qui rend toutes ses réponses publiques et permanentes, ne se comporte pas comme un homme qui protège ce lieu. Le reste, nous l&#x27;avons seulement lu : ce qu&#x27;il a écrit et publié pendant quinze ans. Tout est en description, pour qui veut relire. </p>
+<p>Soyons exacts sur ce que cette vidéo prouve. Nous ne prouvons pas qu&#x27;il n&#x27;a jamais menti — personne ne le peut : trente-huit mille réponses, et deux années que nul ne peut relire. Nous montrons que ceux qui l&#x27;affirment n&#x27;ont pas une preuve, et que tout ce qu&#x27;on peut relire dit le contraire. Et sans preuve, on ne salit pas la mémoire d&#x27;un homme. </p>
+<p>Reste le test que Max réclamait : confronter ses réponses aux solutions. Il est possible depuis mai 2025 — et nous l&#x27;avons déjà fait. C&#x27;est notre série Débunkage, en quatre épisodes : les madits contre la solution officielle, énigme par énigme. </p>
+<p>Une dernière image. </p>
+<p>Octobre 2001. Un chercheur s&#x27;inquiète : et si quelqu&#x27;un l&#x27;avait trouvée par hasard ? Lors de sa dernière visite, la chouette était toujours dans son trou, tout comme elle l&#x27;est aujourd&#x27;hui. <span class="refs"><a class="ref" id="b-18_10_01_16-1" href="#m-18_10_01_16" title="voir le madit">↓ 18 octobre 2001 · -Lors De L&#x27;Enfouissement</a></span></p>
+<p>Nulle part, dans ces années d&#x27;archives, un homme qui tremble. La peur de 1993 est un récit de 2026 — et le trucage qu&#x27;on en déduit n&#x27;a, lui, pas une seule preuve. </p>
+<p>La cire n&#x27;a pas fondu. </p>
+</section>
+
+<section class="blocs">
+  <h2 class="chunk">Les madits cités en bloc</h2>
+  <p class="blocs-intro">Quand la narration annonce un nombre — « cent vingt-huit madits parlent
+  pourtant de lui » —, les voici tous, par ordre chronologique. Le comptage se rejoue sur la base :
+  madits rattachés à l'énigme dont la question ou la réponse mentionne le visuel (l'illustration,
+  le dessin) ; pour le personnage de la 650, ceux qui mentionnent à la fois « personnage » et
+  « pelle ». Un sondage manuel montre qu'environ neuf sur dix portent bien sur l'image — c'est
+  pourquoi la narration dit « en parlent », jamais « portent sur ».</p>
+<p><em>Aucun groupe cité en bloc dans cet épisode.</em></p>
+
+  <h3 class="grp-h">Note de méthode — les comptages de mots</h3>
+  
+<p>Deux comptages sont annoncés dans la vidéo.</p>
+<ul>
+  <li><b>76 madits</b> évoquent Dabo entre 1995 et 2001 (pic de 32 en 1997). Méthode : 96 occurrences
+      brutes de la chaîne « dabo » (intitulé, question ou réponse), moins 11 faux positifs lexicaux
+      (<i>antidabo</i>, <i>dabord</i>, <i>Daboliquement</i>, <i>badaboum</i>), moins 9 messages de
+      juin-juillet 2000 dont l'intitulé « DABO » est le <b>pseudonyme</b> d'un chercheur et non le sujet.</li>
+  <li><b>Au moins 44 madits</b> affirment explicitement que la contremarque est toujours en place,
+      de novembre 1995 à novembre 2001 — comptage par lecture, les formulations variant
+      (« toujours dans son trou », « toujours sur place », « elle n'a pas bougé », « la contre-marque est toujours là »).</li>
+</ul>
+<p>Le corpus commence le 20 juillet 1995, ouverture de la rubrique publique : avant, Max répondait en privé, et ces réponses ne sont pas conservées — le corpus n'est pas amputé, il commence avec la rubrique.</p>
+
+</section>
+
+<section class="madits">
+  <h2 class="chunk">Les madits cités — texte intégral</h2>
+<article class="madit" id="m-01_04_97_15">
+  <div class="m-head"><span class="m-date">1 avril 1997</span>
+    <span class="m-titre">LES DEUX EDITIONS</span>
+    <span class="m-id">01_04_97_15</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Cher max, tu dis que les deux éditions n&#x27;apporte pas plus l&#x27;une que l&#x27;autre (hormis les is de la deuxième) mais dans la première il est fait allusion à dabo et pas dans la deuxième... confirmes-tu donc que la première ne contient rien de plus que la deuxième pour aider le chercheur? the fox</p>
+  <p class="m-r"><span class="lbl">R</span>Dabo? c&#x27;était une histoire de trésor parmi d&#x27;autres! il n&#x27;est pas question de chercher des énigmes là où il n&#x27;y en a pas. la première édition disait clairement qu&#x27;il fallait décrypter les 11 énigmes, rien d&#x27;autre! amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-01_04_97_15-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-16_11_95_1">
+  <div class="m-head"><span class="m-date">16 novembre 1995</span>
+    <span class="m-titre">tresor</span>
+    <span class="m-id">16_11_95_1</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max.... le bruit court que vous auriez répondu qu&#x27;aucun trésor n&#x27;avait été caché à votre connaissance à l&#x27;endroit où a été enterrée la chouette... étant un fidèle de dabo, et sachant que vous savez qu&#x27;un trésor (su prince noir) est à dabo... pourriez-vous éclaircir cette histoire ?</p>
+  <p class="m-r"><span class="lbl">R</span>Volontiers, mickey ! (car je suppose que c&#x27;est de vous qu&#x27;il s&#x27;agit ?). Un chercheur m&#x27;avait demandé si, à l&#x27;endroit où est enterrée la chouette, avait été caché auparavant un autre trésor. J&#x27;ai bien évidemment répondu que non : aucun autre trésor n&#x27;a jamais été caché à cet endroit. Je réponds toujours au premier degré, et strictement aux questions qu&#x27;on me pose. Cela dit, si ce chercheur m&#x27;avait demandé &quot;un trésor a-t-il déjà été caché dans la région où se trouve la chouette ?&quot;, j&#x27;aurais évidemment refusé de répondre ! Vous pouvez bien sûr interpréter ce refus comme vous l&#x27;entendez, mickey. Mais imaginez que ce qui aurait pu motiver ce refus soit mon ignorance à ce sujet !... il y a et il y a eu des trésors cachés dans à peu près toutes les régions de france, et pour la plupart d&#x27;entre eux, c&#x27;est le bouche à oreille local qui en perpétue les détails... voilà. Je confirme donc qu&#x27;aucun trésor n&#x27;a jamais été caché (enterré, dissimulé etc) à l&#x27;endroit où j&#x27;ai enterré la chouette, mais que je ne peux pas vous dire si un trésor a déjà été caché par le passé dans la région (quelle que soit la taille de cette région). Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-16_11_95_1-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-06_07_99_30">
+  <div class="m-head"><span class="m-date">6 juillet 1999</span>
+    <span class="m-titre">DE DOMINIQUE</span>
+    <span class="m-id">06_07_99_30</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Sciences et vie junior de ce mois donne une piste pour l&#x27;énigme numéro 600. Cette piste est-elle fiable, est-ce vous qui l&#x27;avez transmise au magazine? À la fin de l&#x27;article on cite un autre de vos livres, le guide du chercheur de trésor. Ce livre contient-il des indices pour la chouette? Merci.</p>
+  <p class="m-r"><span class="lbl">R</span>&quot;Sciences et vie junior&quot; prévient ses lecteurs que cette piste pour la 600 n&#x27;est pas &quot;officielle&quot;. Ce n&#x27;est pas moi qui l&#x27;ai transmise. Le &quot;guide du chercheur de trésors&quot; parle uniquement de trésors historiques et de méthodes de détection. Il ne contient aucune information sur la chouette d&#x27;or. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-06_07_99_30-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-05_03_97_29">
+  <div class="m-head"><span class="m-date">5 mars 1997</span>
+    <span class="m-titre">VALEUR</span>
+    <span class="m-id">05_03_97_29</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Quelle est la valeur actuelle de la chouette ? Merci.</p>
+  <p class="m-r"><span class="lbl">R</span>Elle suit l&#x27;offre et la demande. Un collectionneur avait proposé au futur découvreur la somme de 3 millions de francs. Je les mettrai en rapport lorsque la chouette aura été trouvée. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-05_03_97_29-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-16_03_96_39">
+  <div class="m-head"><span class="m-date">16 mars 1996</span>
+    <span class="m-titre">PISTES EN FORUM</span>
+    <span class="m-id">16_03_96_39</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Vous évoquez depuis quelques jours les pistes injustement décriées en forum. Ce faisant, vous donnez du crédit à Dabo, la seule piste évoquée souvent sur le forum. Un pied de 33 cm au sud de Bourges, un pas de 0,624 m... on y est (direction : exactement // à Bourges-Carignan) ! À vous lire (livre des solutions). Arthur</p>
+  <p class="m-r"><span class="lbl">R</span>Je parle des pistes évoquées sur le forum - et abandonnées quasi immédiatement - depuis presque 3 ans, Arthur ! Je ne parle pas de solutions, vraies ou fausses ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-16_03_96_39-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-06_08_97_1">
+  <div class="m-head"><span class="m-date">6 août 1997</span>
+    <span class="m-titre">################</span>
+    <span class="m-id">06_08_97_1</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Il y a de cela quelque temps, vous avez répondu à un chercheur que &quot;selon les gens qui l&#x27;ont vue, la ressemblance de Dabo avec un bateau est frappante&quot;. Vous avez sûrement des qualités, mais vous êtes un piètre acteur : vous mentez mal ; car comment peut-on imaginer que, nef ou pas nef, vous ne vous soyez jamais rendu à Dabo par simple curiosité, alors que l&#x27;on vous en rebat les oreilles depuis 4 ans ? Amitiés --CAL</p>
+  <p class="m-r"><span class="lbl">R</span>Ma réponse est simple : les lieux où je décide ou non de me rendre ne regardent que moi. Ce n&#x27;est pas en étant agressif que vous obtiendrez une réponse que, manifestement, vous attendez ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-06_08_97_1-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-23_08_96_27">
+  <div class="m-head"><span class="m-date">23 août 1996</span>
+    <span class="m-titre">Ancien chercheur repenti</span>
+    <span class="m-id">23_08_96_27</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Du nouveau nez à max (le précédent question était également de moi mais j&#x27;ai oublié de la signer désolé !) je me remets petit à petit dans le bain après une période de cure. que s&#x27;est-il dit finalement sur dabo ? est-ce finalement un point bête de la carte ou du vent soufflé par éole, le pot à appolo n</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne peux pas répondre à cette question. vous devriez plutôt la poser sur le forum. je suis sûr que les tenants de la thèse &quot;dabo&quot; vous répondront. ravi de vous voir de retour ! amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-23_08_96_27-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-06_08_97_13">
+  <div class="m-head"><span class="m-date">6 août 1997</span>
+    <span class="m-titre">#############(SUITE)</span>
+    <span class="m-id">06_08_97_13</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Sur une réponse dans laquelle il n&#x27;est pas exclus que vous vous soyez trahi; ceci dit vous êtes libre de voyager où bon vous semble sans rendre de comptes. Permettez-moi de penser que votre réponse frôlait la limite de la discourtoisie, que je mets sur le compte du malentendu; amitiés quand même*********##########</p>
+  <p class="m-r"><span class="lbl">R</span>Alors permettez-moi de réagir. Vous m&#x27;avez traité de menteur, ce qui n&#x27;est en effet pas une insulte: c&#x27;est une injure, ce qui est bien plus grave. Sur le fond: le fait de dire que certaines personnes auraient pu me dire que dabo ressemble à un bateau ne présente en soi aucun élément dolosif. C&#x27;est l&#x27;absolue vérité, et, pour vous en convaincre, demandez donc aux &quot;daboïstes&quot; ce qu&#x27;ils en pensent, et combien d&#x27;entre eux m&#x27;ont confirmé la chose. Toujours à propos de votre message: que je sois ou non allé jeter un coup d&#x27;œil sur place ne regarde que moi. Et comme j&#x27;ai précisé que je m&#x27;étais rendu sur tous les sites concernés par les solutions de ce jeu, vous pensez bien que je n&#x27;allais pas indirectement valider dabo comme une solution. Je veux bien que ça vous agace, mais je ne suis tout de même pas tombé de la dernière pluie (soit dit sans intention de vous offenser). Vous avez le droit d&#x27;essayer; j&#x27;ai le droit de ne pas me laisser faire. Sur ce point au moins, je pense que vous serez d&#x27;accord, non? Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-06_08_97_13-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-30_08_97_19">
+  <div class="m-head"><span class="m-date">30 août 1997</span>
+    <span class="m-titre">GANDALF 3</span>
+    <span class="m-id">30_08_97_19</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Il ne reste plus grand-chose à dabo ! Ce que je voulais dire hier, c&#x27;était que votre information revenait à donner pratiquement l&#x27;endroit où se cache la chouette à pas grand-chose près, enfin, si mes théories sont justes. En ce qui concerne les qr, j&#x27;en ai lu pas mal : toutes depuis janvier 96, mais c&#x27;est vrai que</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne peux évidemment pas commenter... Je lis la suite.</p>
+  <div class="m-back"><a class="back" href="#b-30_08_97_19-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-13_10_97_37">
+  <div class="m-head"><span class="m-date">13 octobre 1997</span>
+    <span class="m-titre">AGRESSIVITE</span>
+    <span class="m-id">13_10_97_37</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Chercheur de la première heure, un des premiers à aller à Dabo&gt;, et bien que n&#x27;ayant toujours rien trouvé (ça se saurait!), je considère toujours cela comme un jeu. Je ne me plains pas de ma note Minitel, d&#x27;ailleurs je préfère le web, et je n&#x27;accuse pas l&#x27;organisateur du jeu d&#x27;escroquer ie parce que je suis trop con ou trop</p>
+  <p class="m-r"><span class="lbl">R</span>Je lis la suite...</p>
+  <div class="m-back"><a class="back" href="#b-13_10_97_37-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-25_06_98_6">
+  <div class="m-head"><span class="m-date">25 juin 1998</span>
+    <span class="m-titre">520</span>
+    <span class="m-id">25_06_98_6</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Il y a une sorte de consensus des daboistes sur la résolution des énigmes jusqu&#x27;à la découverte des bsm. ensuite, pour la 520, chacun a sa théorie et personne n&#x27;arrive à conclure. pensez-vous que nous cherchons trop compliqué, ou alors la 520 est-elle vraiment plus difficile que les autres énigmes ?</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne peux pas étalonner la difficulté des énigmes les unes par rapport aux autres, car je ne suis pas le meilleur juge de cela. ainsi que je l&#x27;ai souvent dit, certains cherchent trop compliqué, d&#x27;autres trop simple. la vérité est quelque part au milieu, comme toujours. amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-25_06_98_6-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-12_10_98_29">
+  <div class="m-head"><span class="m-date">12 octobre 1998</span>
+    <span class="m-titre">JE SAIS QUE PAR PRINCIPE VOUS NE...</span>
+    <span class="m-id">12_10_98_29</span></div>
+  <p class="m-q"><span class="lbl">Q</span>... répondez pas à ça. J&#x27;essaye quand même : qu&#x27;est-ce qui est le plus facile : trouver la chouette, ou convaincre mickey, gandalf et chimiste de regarder ailleurs qu&#x27;en moselle ? Merci beaucoup beaucoup -- miam -</p>
+  <p class="m-r"><span class="lbl">R</span>Effectivement, c&#x27;est une question de dimension cosmique ! Je me garderai bien d&#x27;émettre un jugement car je sais, par expérience, qu&#x27;il est quasi impossible de persuader un être humain, convaincu d&#x27;avoir raison, de changer d&#x27;avis ! Et puis, si rien ne dit qu&#x27;ils ont raison, rien ne dit non plus qu&#x27;ils ont tort ! À vous de vous faire une opinion ! Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-12_10_98_29-1">↩ retour 1</a> <a class="back" href="#b-12_10_98_29-2">↩ retour 2</a></div>
+</article>
+<article class="madit" id="m-02_12_99_13">
+  <div class="m-head"><span class="m-date">2 décembre 1999</span>
+    <span class="m-titre">C&#x27;EST FAUX!</span>
+    <span class="m-id">02_12_99_13</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Concernant la mémoire des q/r depuis le début du jeu en 93, vous dites que la rubrique n&#x27;a existé qu&#x27;en septembre 95 : c&#x27;est faux, j&#x27;ai pris un minitel en janvier 94 pour participer au jeu. Où sont donc passées toutes les questions intéressantes du début ??</p>
+  <p class="m-r"><span class="lbl">R</span>Navré de vous contredire, mais vous avez tort. De juin 93 à janvier 97, je répondais via ma bal &quot;les auteurs&quot;. Il s&#x27;agissait de réponses individuelles. À partir du 27 juillet 95, je répondais, en plus, qux questions posées dans la présente rubrique. J&#x27;ai fermé ma bal début 97 parce que je n&#x27;arrivais plus à faire les deux. Si donc vous avez pris un minitel en janvier 94, ce ne pouvait être que pour poser des questions en bal &quot;les auteurs&quot; (d&#x27;ailleurs, vous vous trompez sûrement sur la date, car entre décembre 93 et le 16 mars 94, l&#x27;ancien serveur &quot;many&quot; n&#x27;existait plus, et le nouveau &quot;maxval&quot; n&#x27;était pas encore opérationnel). Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-02_12_99_13-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-09_01_97_14">
+  <div class="m-head"><span class="m-date">9 janvier 1997</span>
+    <span class="m-titre">LA EST LA QUESTION</span>
+    <span class="m-id">09_01_97_14</span></div>
+  <p class="m-q"><span class="lbl">Q</span>La question n&#x27;est pas là, Max. Vous dites vous-même être très étonné que la chouette tienne soit pas encore trouvée. Vous lui donniez à peine un an. Ca en fait quatre! C&#x27;est que manifestement il y a un problème quelque part. Vamp</p>
+  <p class="m-r"><span class="lbl">R</span>Ça fera 4 en juin prochain. Mais où est le problème? Je pensais que la chasse allait durer un an, certes. Mais je n&#x27;avais aucun élément pour dire ça, et pas de recul. C&#x27;était un vague sentiment a priori. Je n&#x27;ai pas l&#x27;intention d&#x27;y mettre artificiellement fin! Lorsque je n&#x27;aurai plus rien de nouveau à dire, j&#x27;arrêterai de répondre aux questions dans la présente rubrique, sachant qu&#x27;elle contient 99,9% des éléments qui permettent de découvrir la chouette. Ce que vous nommez &quot;un problème&quot; n&#x27;en est pas un: tôt ou tard, un chercheur plus astucieux que les autres trouvera l&#x27;oiseau. C&#x27;est le fondement même du jeu! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-09_01_97_14-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-27_02_98_25">
+  <div class="m-head"><span class="m-date">27 février 1998</span>
+    <span class="m-titre">CACHE</span>
+    <span class="m-id">27_02_98_25</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Il y a q-q temps, tu as parlé d&#x27;une équipe pe qui s&#x27;était rapprochée à ?? km de la cache. Est-ce possible de me renseigner sur ce fait ? Merci amitiés René de Cessand*</p>
+  <p class="m-r"><span class="lbl">R</span>C&#x27;était il y a bien longtemps (en 93 ou 94), mais je n&#x27;en sais pas plus. Cette équipe de chercheurs s&#x27;est promenée dans la zone, et je l&#x27;ai appris. Mais c&#x27;est tout ce que je sais. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-27_02_98_25-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-24_07_01_49">
+  <div class="m-head"><span class="m-date">24 juillet 2001</span>
+    <span class="m-titre">ZONE FINALE</span>
+    <span class="m-id">24_07_01_49</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Est-ce vrai que vous avez dit un jour que des chercheurs étaient entrés dans la zone ? Cela voudrait dire que vous étiez sur place ! Amitiés -- Orion*</p>
+  <p class="m-r"><span class="lbl">R</span>Oui, c&#x27;est vrai. Mais je pense que c&#x27;était plus par hasard qu&#x27;autre chose ! Non, je n&#x27;étais pas sur place. Ils m&#x27;en ont informé comme vous venez de le faire : via ce Minitel ! A*</p>
+  <div class="m-back"><a class="back" href="#b-24_07_01_49-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-02_11_95_29">
+  <div class="m-head"><span class="m-date">2 novembre 1995</span>
+    <span class="m-titre">A PROPOS DE MICKEY</span>
+    <span class="m-id">02_11_95_29</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Ne pourrais-tu pas aider un peu mickey car il va transformer dabo en un véritable gruyère... normal pour une souris..... non sérieusement : as-tu pris des précautions avec fr2 car on te voit à visage découvert, et on se rend facilement compte de l&#x27;endroit où tu bosses. j&#x27;espère que oui. car je veux pas de problèmes moi. slash</p>
+  <p class="m-r"><span class="lbl">R</span>Rassurez-vous, on ne me reconnaît pas. quant à l&#x27;endroit où le reportage a été tourné, ce sont les éditions max valentin, et j&#x27;y vais très rarement ! Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-02_11_95_29-1">↩ retour 1</a> <a class="back" href="#b-02_11_95_29-2">↩ retour 2</a></div>
+</article>
+<article class="madit" id="m-18_11_96_26">
+  <div class="m-head"><span class="m-date">18 novembre 1996</span>
+    <span class="m-titre">Livre d&#x27;or</span>
+    <span class="m-id">18_11_96_26</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Il faudra quand même que je me décide à aller à Dabo, faire mon trou et signer le livre d&#x27;or. Il est bien à Dabo ? Je n&#x27;ai pas vu l&#x27;émission et ma sœur croit que c&#x27;était Dabo. Au fait, j&#x27;avais oublié de vous dire que je crois que la faute est due à une flèche. Ceci n&#x27;est pas une question car je sais que vous pouvez rien dire. Titi.</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;ai découvert dans l&#x27;émission &quot;envoyé spécial&quot; qu&#x27;il y avait un livre d&#x27;or à Dabo, en effet. Vous devriez demander cela aux tenants de la piste &quot;Dabo&quot;. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-18_11_96_26-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-15_04_97_33">
+  <div class="m-head"><span class="m-date">15 avril 1997</span>
+    <span class="m-titre">TOURISME</span>
+    <span class="m-id">15_04_97_33</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, avant d&#x27;être envahi et jonché de trous, dabo était-elle une jolie bourgade ? J&#x27;espère que vous avez fait des photos Ramos</p>
+  <p class="m-r"><span class="lbl">R</span>Pas plus que pour toutes les autres localisations dont on me parle, je ne peux commenter celle-là. Mais je constate avec amusement qu&#x27;à l&#x27;arrivée des beaux jours, chaque année, dabo reprend du poil de la bête ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-15_04_97_33-1">↩ retour 1</a> <a class="back" href="#b-15_04_97_33-2">↩ retour 2</a></div>
+</article>
+<article class="madit" id="m-09_03_98_24">
+  <div class="m-head"><span class="m-date">9 mars 1998</span>
+    <span class="m-titre">FL</span>
+    <span class="m-id">09_03_98_24</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Fersen est là, pas loin, mais bien là. Bourges, Roncevaux, G. Juan, Dabo, Cherbourg, on pointe.... en voiture... on passe le tout en revue... mais on revient à la 530 : à 6 rochers.... j&#x27;irai creuser un jour, lorsque j&#x27;aurai fait le tour... de tout. Mais Fersen n&#x27;est pas loin et c&#x27;est là</p>
+  <p class="m-r"><span class="lbl">R</span>No comment ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-09_03_98_24-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-31_08_98_8">
+  <div class="m-head"><span class="m-date">31 août 1998</span>
+    <span class="m-titre">ROLDAN</span>
+    <span class="m-id">31_08_98_8</span></div>
+  <p class="m-q"><span class="lbl">Q</span>69 4ème séjour à dabo 4 journées intens es des piste s éliminent des trou nouveau ax et récent à bsm ps touj ours rebouchés très très vilain de moins en moins d idées il est grand temps d&#x27;y aller d&#x27;un is bien concctée la grogne va s&#x27;intller il n faut ps que l&#x27;bstiol psse l&#x27;hiver dans son trou roldan 69</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne demande pas mieux, croyez-moi. Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-31_08_98_8-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-13_12_01_25">
+  <div class="m-head"><span class="m-date">13 décembre 2001</span>
+    <span class="m-titre">L&#x27;AVAL</span>
+    <span class="m-id">13_12_01_25</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Laval - la flèche - clefs - et quelques alignements : golfe-juan - serres - sable ... dabo-sens-la flèche .... mais chut ! c&#x27;est juste pour balancer une fausse piste avant que j&#x27;aille creuser à dabo. quel vin pour la remise des prix ? hips. asteria de buridan</p>
+  <p class="m-r"><span class="lbl">R</span>Sans commenter vos hypothèses, je peux au moins commenter votre question œnologique : comment ça, quel vin ? si vous trouvez le bestiau, vous recevrez aussi 1000 bouteilles de grands crus. ce sera donc à vous d&#x27;offrir la tournée. (évitez le champagne, ça me donne des aigreurs) de toutes façons, je vous fais confiance et je sais que votre choix sera judicieux, arthur ! amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-13_12_01_25-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-16_04_97_7">
+  <div class="m-head"><span class="m-date">16 avril 1997</span>
+    <span class="m-titre">INSULTE</span>
+    <span class="m-id">16_04_97_7</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Pourquoi dites-vous que les beaux jours arrivant, vous êtes &quot;amusé&quot; de voir que les chercheurs affluent à Dabo? Ca ne vous suffit plus de nous balader de fausse piste en fausse piste; il faut en plus que vous vous foutiez de notre gueule? Permettez-moi de vous dire, monsieur, que je suis outré par votre comportement</p>
+  <p class="m-r"><span class="lbl">R</span>Où avez-vous lu que je me réjouissais de voir des chercheurs &quot;affluer&quot; à Dabo? J&#x27;ai dit que, chaque été, la solution &quot;Dabo&quot; reprenait du poil de la bête. Ce n&#x27;est pas la même chose, moooossieur! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-16_04_97_7-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-18_04_97_10">
+  <div class="m-head"><span class="m-date">18 avril 1997</span>
+    <span class="m-titre">REMARQUE</span>
+    <span class="m-id">18_04_97_10</span></div>
+  <p class="m-q"><span class="lbl">Q</span>J&#x27;ai pu constater ces derniers temps que les questions sur dabo bénéficiaient d&#x27;un traitement spécial, c.a.d que les réponses sont de plus en plus évasives, lorsqu&#x27;elles s&#x27;existent. À quoi est-ce dû ? Craignez-vous que quelqu&#x27;un soit à 2 doigts du nirvana ? Étant acquis que la chouette a 99,9999 99999/100 de chances de s&#x27;y trouver ? Tsvp</p>
+  <p class="m-r"><span class="lbl">R</span>Mes réponses deviennent évasives dès lors qu&#x27;on cite des lieux, que ces lieux aient ou non un rôle à jouer. Dabo ne fait pas exception à la règle. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-18_04_97_10-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-21_12_95_2">
+  <div class="m-head"><span class="m-date">21 décembre 1995</span>
+    <span class="m-titre">SAUVEZ DABO</span>
+    <span class="m-id">21_12_95_2</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max, êtes-vous sûr que le terrain est &quot;praticable&quot; aujourd&#x27;hui ou faut-il s&#x27;armer de piolet, tronçonneuses et autres engins adéquats avant de partir en chasse ? pafe</p>
+  <p class="m-r"><span class="lbl">R</span>Le site est praticable toute l&#x27;année sauf conditions météo exceptionnelles, bien sûr ! (une petite remarque en passant, pafe : ce n&#x27;est pas parce que vous titrez votre message &quot;sauvez dabo&quot; qu&#x27;il faut penser que je valide cette solution en répondant à la question qui lui fait suite !) amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-21_12_95_2-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-06_08_97_21">
+  <div class="m-head"><span class="m-date">6 août 1997</span>
+    <span class="m-titre">################ RE-SUITE</span>
+    <span class="m-id">06_08_97_21</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Maladresse dans cette réponse. Peut-être la chaleur ambiante joue-t-elle sur vos nerfs, mais j&#x27;ai été blessé par le ton que vous avez donné à vos réponses, et je trouve stupide cette polémique Callimero</p>
+  <p class="m-r"><span class="lbl">R</span>Callimero, si je vous avais par exemple traité &quot;d&#x27;abruti&quot; parce que vous n&#x27;avez pas signé vos précédents messages, vous auriez à juste titre pu me faire remarquer l&#x27;absence de rapport entre l&#x27;injure et ce qui la motive. Vous, vous m&#x27;avez traité de menteur parce que je refuse de dire si j&#x27;ai un jour mis les pieds à Dabo. Eh bien, là non plus, il n&#x27;y a aucun rapport entre l&#x27;injure et ce qui la motive. J&#x27;ai précisé de nombreuses fois que j&#x27;avais visité tous les sites directement concernés par une solution, mais il n&#x27;y a aucune raison que l&#x27;on se serve de cette précision pour me faire dire si je suis allé ou non à Dabo. Me traiter de menteur pour cette raison, c&#x27;est assez difficile à supporter. La chaleur ambiante n&#x27;a rien à voir dans cette histoire ; simplement, je n&#x27;ai pas pour habitude de me laisser marcher sur les pieds. Quant à cette polémique, je suis d&#x27;accord avec vous, elle est stérile. Aussi je vous suggère d&#x27;y mettre fin. (Si vous la relancez ici, il faut bien que je vous réponde !) Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-06_08_97_21-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-13_03_96_40">
+  <div class="m-head"><span class="m-date">13 mars 1996</span>
+    <span class="m-titre">VERITE</span>
+    <span class="m-id">13_03_96_40</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour, max, dites-vous toujours la vérité dans vos réponses ? Si oui, votre réponse est-elle vraie ?</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;ai répondu à cette question hier. Je ne mens jamais sciemment, sachant qu&#x27;après la découverte de la chouette on pourrait me le reprocher. Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-13_03_96_40-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-04_01_96_29">
+  <div class="m-head"><span class="m-date">4 janvier 1996</span>
+    <span class="m-titre">PRECISION - BIS</span>
+    <span class="m-id">04_01_96_29</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Si toute carte routière est une représentation d&#x27;une portion de la surface du globe, l&#x27;inverse n&#x27;est pas vrai, mais bravo ! Vous êtes doué pour la sophistique !</p>
+  <p class="m-r"><span class="lbl">R</span>Quel &quot;inverse&quot; ?... En m&#x27;accusant de sophisme, vous faites fausse route. Me croyez-vous assez stupide pour faire des réponses dolosives, sachant qu&#x27;on ne manquera pas de me les renvoyer dans les gencives le jour où les solutions seront publiées ? Je ne suis pas masochiste ! Si je dis qu&#x27;il faut une carte pour les 11 premières énigmes et une autre, plus précise, pour la supersolution, je sais de quoi je parle ! Et lorsque le livre prétend, sur sa 4e de couverture, que vous avez besoin de &quot;quelques instruments simples, ouvrages et documents d&#x27;usage courant&quot;, je pense que cela est assez clair pour que vous puissiez au moins vous douter - sinon savoir - de quoi il s&#x27;agit !... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-04_01_96_29-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-11_02_98_36">
+  <div class="m-head"><span class="m-date">11 février 1998</span>
+    <span class="m-titre">SUITE COMPLEXITE</span>
+    <span class="m-id">11_02_98_36</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Vous pensez qu&#x27;il est anormal que la chouette ne soit pas trouvée après bientôt 5 ans. Ne pensez-vous pas qu&#x27;une part de responsabilité vous incombe. Parfois, ne serait-il pas préférable de refuser de répondre, plutôt que donner une réponse ambiguë à souhait, pour déboussoler les chercheurs, voire les mettre sur de fausses pistes. Amitiés.</p>
+  <p class="m-r"><span class="lbl">R</span>&quot;La responsabilité m&#x27;en incombe&quot; !?! Vous avez l&#x27;air de croire que j&#x27;ai commis un crime ! Ceci est un jeu, et non pas une enquête de police ! D&#x27;autre part, je réfute catégoriquement votre accusation d&#x27;induire les chercheurs en erreur. Les q-r restent là pour démontrer ma bonne foi lorsque la chouette aura été trouvée. Je ne vois vraiment pas ce qu&#x27;il vous faut de plus !... Quant à mes réponses &quot;ambiguës&quot; comme vous dites, vous me pardonnerez de ne pas vous donner la localisation de la chouette, mais de me borner à lâcher ce que je peux sans gauchir le jeu ! Je crois que vous n&#x27;avez pas vraiment compris quel était mon rôle ici. En tout cas, ce n&#x27;est pas de valider des solutions. C&#x27;est une chasse au trésor avec 1 mf à la clé, pas un jeu de devinettes style schmilblic. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-11_02_98_36-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-17_09_96_17">
+  <div class="m-head"><span class="m-date">17 septembre 1996</span>
+    <span class="m-titre">RENE DE CESSAND</span>
+    <span class="m-id">17_09_96_17</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Si j&#x27;ai très bien compris ton is du 15.1 2.94-nee clef en...- et si je te crois -tu éludes tu biais tu fais semblant de ne pas comprendre parfois, mais tu ne mens jamais...-ce que je chercherai en 5 60 je le trouverai en 600. Le trait important allant de l&#x27;ouverture à la nef, à quoi me sert alors le périple de la 560 ?</p>
+  <p class="m-r"><span class="lbl">R</span>Comment voulez-vous que je réponde à cette question sans vous dévoiler la réponse que vous devez trouver ? C&#x27;est impossible. Oui, il m&#x27;arrive d&#x27;éluder. Mais en éludant, je lâche quand même quelque chose. Sinon, je répondrais &quot;Désolé, je ne peux pas vous répondre...&quot;. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-17_09_96_17-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-27_08_99_47">
+  <div class="m-head"><span class="m-date">27 août 1999</span>
+    <span class="m-titre">SUITE</span>
+    <span class="m-id">27_08_99_47</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Cette référence par rapport à la multitude de possibilités ? Lionel</p>
+  <p class="m-r"><span class="lbl">R</span>Lionel, les &quot;eux&quot; vous permettent de continuer. C&#x27;est tout ! Je ne peux pas vous dire comment, ni pourquoi, ni grâce à quoi, ni grâce à qui, ni à l&#x27;aide de quoi, ni à l&#x27;aide de qui, ni à cause de quoi, pas davantage à cause de qui, ni même avec quoi ou avec qui. C&#x27;est à vous de trouver la réponse. Vous vous accrochez à des mots somme toute anodins (tels que &quot;aide&quot;) comme si vous supputiez que ce mot, sur mon clavier, revêtait une signification quasi ésotérique ! Ce n&#x27;est pas le cas. Je réponds au premier degré, et quand je dis &quot;les eux vous aident à continuer&quot;, c&#x27;est à comprendre et à prendre au pied de la lettre. Je ne peux pas me lancer dans des digressions sémio-sémantiques sur un simple mot comme &quot;aide&quot;, comprenez-moi ! Vous aviez commencé par me demander si ces &quot;eux&quot; avaient une importance, puis vous m&#x27;avez demandé s&#x27;ils servaient à quelque chose. Je vous ai dit qu&#x27;ils aidaient à poursuivre. Vous m&#x27;avez alors demandé &quot;poursuivre l&#x27;énigme ou poursuivre le jeu ?&quot;, puis si l&#x27;information qu&#x27;on tirait du décryptage de &quot;eux&quot; était une aide, puis vous m&#x27;avez demandé de qualifier cette aide en me proposant des hypothèses sous la forme de pétitions de principe... Je ne peux vraiment pas aller plus loin sans prendre au préalable trois mois de vacances et de suivre une cure de fortifiants ! Enfin, je vous rappelle que mon rôle ici n&#x27;est pas d&#x27;induire les chercheurs en erreur, ni de les &quot;freiner&quot; (ce qui reviendrait à leur mentir). Dernière précision : tout ce que je viens d&#x27;écrire l&#x27;a été avec le sourire ! No hard feelings ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-27_08_99_47-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-01_01_96_30">
+  <div class="m-head"><span class="m-date">1 janvier 1996</span>
+    <span class="m-titre">A PRIORI</span>
+    <span class="m-id">01_01_96_30</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Pensiez-vous que la recherche aurait duré aussi longtemps lorsque vous avez lancé le jeu ?</p>
+  <p class="m-r"><span class="lbl">R</span>Non. Je pensais qu&#x27;elle allait durer entre 8 et 14 mois. Mais il faut dire que je n&#x27;avais aucun élément objectif pour juger de cela... Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-01_01_96_30-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-14_04_98_35">
+  <div class="m-head"><span class="m-date">14 avril 1998</span>
+    <span class="m-titre">SUITE</span>
+    <span class="m-id">14_04_98_35</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Est devenu ton rival, tu veux faire mieux que 13 ans ? Je suis sûr que tu feras mieux. Si tu ne nous aides pas, alors que cela fait 5 ans que les chercheurs font la chouette et ils ne sont toujours pas las. Mais méfies-toi, si tu ne lâches pas d&#x27;indices, ils vont finir par se lasser. Alors un conseil, chelaoit. Amitiés.</p>
+  <p class="m-r"><span class="lbl">R</span>&quot;Masquerade&quot; n&#x27;a pas duré 13 ans, mais un peu plus de 3 ans. C&#x27;est une chasse américaine qui a duré 13 ans. Mais il ne s&#x27;agit pas de battre des records de durée, car il n&#x27;y a rien de plus facile que de concevoir une chasse qui peut durer 1 siècle ! La durée n&#x27;a aucun intérêt pour moi. Ce qui en aurait, ce serait que la chouette soit trouvée, car il y aurait alors un formidable battage médiatique. Voilà ce qui m&#x27;intéresse !.. . Amitiés -- Max.</p>
+  <div class="m-back"><a class="back" href="#b-14_04_98_35-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-17_02_99_3">
+  <div class="m-head"><span class="m-date">17 février 1999</span>
+    <span class="m-titre">REREPONSES BIDONS?</span>
+    <span class="m-id">17_02_99_3</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Est-ce le max valentin qui a enfoui la chouette qui répond aux questions? excusez-moi mais là j&#x27;ai un énorme doute quand je lis certaines réponses. pour vous il est toujours facile de nier de ne pas répondre ou d&#x27;égarer les chercheurs voir de ne pas diffuser certains commentaires. je crois que c&#x27;est une perte de temps mais on fait marcher le commerce pas vrai. roger sur la brèche.*</p>
+  <p class="m-r"><span class="lbl">R</span>Navré de vous décevoir! j&#x27;ai enterré la chouette et je réponds depuis le 1er jour aux questions des chercheurs. je ne censure pas les questions, tout est diffusé ici. et quand je ne peux pas répondre, je le dis! quant à &quot;égarer les chercheurs&quot;, ce serait complètement stupide: en cas de découverte, je bénéficierais immédiatement d&#x27;un énorme battage presse! moi, c&#x27;est tout ce que je demande, car j&#x27;ai d&#x27;autres chasses dans mes cartons! amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-17_02_99_3-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-23_11_01_12">
+  <div class="m-head"><span class="m-date">23 novembre 2001</span>
+    <span class="m-titre">QR SUR LE WEB 2</span>
+    <span class="m-id">23_11_01_12</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Mon but n&#x27;est pas de piller Maxval. J&#x27;escompte juste à chacun la possibilité d&#x27;avoir des informations. Bien entendu, si tu désire émettre des conditions, je les respecterais. Amitié Syg</p>
+  <p class="m-r"><span class="lbl">R</span>Si je vous ai demandé de patienter, c&#x27;est parce qu&#x27;après avoir répondu à près de 100 000 questions en 8 ans, j&#x27;ai décidé de clore Maxval. Je ne pouvais donc pas vous répondre, car je ne connaissais pas la date de fermeture (cela dépend de France Télécom) et ne la connais toujours pas. Par ailleurs, j&#x27;étais en pourparlers avec Velo, pour que les Q-R soient transférées sur le web par ses soins. Il a une assez large antériorité, et je ne peux pas revenir sur nos échanges au sujet de ce transfert. Je vous suggère donc de vous mettre en rapport avec lui, car il a carte blanche de ma part pour faire ce qu&#x27;il jugera bon et correct. Je suis désolé de ne pouvoir vous faire d&#x27;autre réponse, mais une fois que j&#x27;ai donné mon accord (et ma parole), je la tiens. Je suis sûr que vous comprenez mon point de vue. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-23_11_01_12-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-14_12_01_34">
+  <div class="m-head"><span class="m-date">14 décembre 2001</span>
+    <span class="m-titre">DE MAX A TOUS : RUBRIQUE CLOSE</span>
+    <span class="m-id">14_12_01_34</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Chers amis, ainsi que je l&#x27;ai annoncé, ce serveur va fermer ses portes définitivement dans quelques jours. Le présent message marque donc la fin de la rubrique &quot;question-réponse&quot;. Tous les messages qui figurent ici seront très bientôt consultables sur internet. Dès que la rubrique sera</p>
+  <p class="m-r"><span class="lbl">R</span>En ligne, vous en serez informé en consultant le site de &quot;Velo&quot;: http://chouette.antidabo.com/ qui vous indiquera le lien vers l&#x27;intégralité des questions-réponses de la chouette. Sur ce site, je ne pourrai malheureusement pas répondre à de nouvelles questions. Il sera purement consultatif. Mais j&#x27;avais promis que tous les messages seront tenus à la disposition des chercheurs jusqu&#x27;à la découverte de la chouette. J&#x27;ai commencé à répondre aux questions des chercheurs le 3 juin 1993, sur l&#x27;ancien serveur manya, et j&#x27;ai continué sur le présent serveur maxval. Je ne m&#x27;attendais évidemment pas à un tel déferlement de questions! Pendant les premières années, je répondais individuellement à tous les chercheurs, puis j&#x27;ai répondu, en plus, aux messages de la présente rubrique. Au total, j&#x27;ai répondu à 97 549 questions, et j&#x27;en ai lu 20 452 de plus, que leurs auteurs me demandaient d&#x27;effacer. Cela fait un total de 118 001. Si on m&#x27;avait dit, en 1993, que les chercheurs m&#x27;enverraient 118 000 messages, je ne l&#x27;aurais pas cru! Mais sachez que chacun de ces 118 000 messages représente une parcelle chère à mon cœur, car c&#x27;est un lien, jamais rompu, qui m&#x27;a fait apprécier votre compagnie au-delà de ce que les mots peuvent traduire. J&#x27;aime à citer le mot d&#x27;un journaliste qui a écrit que c&#x27;est sur maxval que l&#x27;on trouvait &quot;le plus haut pourcentage d&#x27;intelligence au centimètre carré&quot;. Je crois qu&#x27;en souscrivant à cette appréciation, c&#x27;est le plus bel hommage que je puisse vous rendre, à tous et à toutes. Merci. Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-14_12_01_34-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-11_11_96_24">
+  <div class="m-head"><span class="m-date">11 novembre 1996</span>
+    <span class="m-titre">CONCURRENTS</span>
+    <span class="m-id">11_11_96_24</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Avez-vous une estimation du nombre de chercheurs encore sur le jeu ?</p>
+  <p class="m-r"><span class="lbl">R</span>Environ 2000 sur minitel et à peu près 5 fois plus de non-utilisateurs de minitel. Soit une douzaine de milliers. (Ce calcul découle du rapport constant sur une année entre le nombre d&#x27;acheteurs du livre, le nombre de lettres reçues et le nombre de nouvelles bals créées sur minitel). Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-11_11_96_24-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-13_12_01_22">
+  <div class="m-head"><span class="m-date">13 décembre 2001</span>
+    <span class="m-titre">UN PEU D&#x27;ORDRE... - EOLE</span>
+    <span class="m-id">13_12_01_22</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Cher max, y-a-t-il un ordre autre que celui donné par l&#x27;énigme b ? peut-on trouver la chouette sans l&#x27;aide du minitel ? merci et amitiés - éole</p>
+  <p class="m-r"><span class="lbl">R</span>Non, l&#x27;ordre - le seul ordre - est donné par la &quot;b&quot;. oui, on peut parfaitement trouver sans le minitel. je l&#x27;ai toujours dit. amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-13_12_01_22-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-19_04_97_31">
+  <div class="m-head"><span class="m-date">19 avril 1997</span>
+    <span class="m-titre">12</span>
+    <span class="m-id">19_04_97_31</span></div>
+  <p class="m-q"><span class="lbl">Q</span>C&#x27;est vraiment la plus facile ? Un aigle y a-t-il sa place ? Le déplacement final pour délivrer la be te, se fait-il en 2 étapes ? Pourquoi après 4 ans être aussi intransigeant ? Vous risquez de perdre la manne du minitel, s&#x27;il se dit qu&#x27;il ne sert pas. Pour ma part, j&#x27;abandonne. Salut</p>
+  <p class="m-r"><span class="lbl">R</span>C&#x27;est l&#x27;une des plus faciles, oui. Aigle, étapes : je ne peux pas répondre. Je ne suis pas &quot;intransigeant&quot;, mais le but du jeu n&#x27;est pas de m&#x27;arracher les réponses ! C&#x27;est de les trouver soi-même. La &quot;manne du minitel&quot; : si je m&#x27;abstenais de répondre, le c.a. du minitel ne baisserait que de 10 %, mais je gagnerai 10h par jour pour faire autre chose. Ce que je fais ici est donc une absolue hérésie économique. Mais je le fais par respect pour mes lecteurs, et parce que je m&#x27;y suis engagé. Navré que vous abandonniez. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-19_04_97_31-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-14_09_99_28">
+  <div class="m-head"><span class="m-date">14 septembre 1999</span>
+    <span class="m-titre">J&#x27;EN VEUX UN!!!!</span>
+    <span class="m-id">14_09_99_28</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Où en sont tes investigations auprès de l&#x27;éditeur ? J&#x27;espère pouvoir rapidement me plonger dans ce livre. Pour l&#x27;instant je me contente des question/réponse ce qui me paraît très obscur mais terriblement excitant... Je vais finir par photocopier le bouquin d&#x27;un collègue ce qui financièrement n&#x27;est pas cool pour toi &gt;&gt;&gt;</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;attends toujours une réponse à ma lettre recommandée. En attendant, oui, photocopiez le bouquin à l&#x27;échelle 1/1. Tant pis pour mes droits d&#x27;auteur, ça ne me tuera pas. Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-14_09_99_28-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-13_09_01_13">
+  <div class="m-head"><span class="m-date">13 septembre 2001</span>
+    <span class="m-titre">LIVRE</span>
+    <span class="m-id">13_09_01_13</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Salut, je suis un nouveau à la recherche de la chouette. Je voudrais savoir où je peux trouver le livre &quot;Sur les traces de la chouette d&#x27;or&quot;. Sachant que j&#x27;habite en Vendée. Je te remercie d&#x27;avance pour ta réponse, car de mon côté je n&#x27;ai pu l&#x27; trouver. Salut, Max.</p>
+  <p class="m-r"><span class="lbl">R</span>Le livre est épuisé. Peut-être en reste-t-il encore chez quelques libraires, mais je n&#x27;en suis pas sûr. Mon éditeur n&#x27;a pas jugé nécessaire de m&#x27;informer et a préféré vendre le stock restant derrière mon dos, sans me verser mes droits d&#x27;auteur. Voila tout ce que je sais. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-13_09_01_13-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-12_06_01_21">
+  <div class="m-head"><span class="m-date">12 juin 2001</span>
+    <span class="m-titre">EST-IL ?</span>
+    <span class="m-id">12_06_01_21</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Est-il indiscret de te demander combien d&#x27;exemplaires du livre de la chouette et de celui d&#x27;Orval ont été vendus ? Ceci pour me faire une idée du nombre de personnes intéressées par ce type de chasse. Merci par avance. Un fidèle depuis 1993 ...</p>
+  <p class="m-r"><span class="lbl">R</span>70 000 exemplaires de la chouette (2,4 lecteurs par livre, soit 170 000 chercheurs environ). Orval : 20 000 bouquins. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-12_06_01_21-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-29_01_99_1">
+  <div class="m-head"><span class="m-date">29 janvier 1999</span>
+    <span class="m-titre">J.R. L&#x27;AVOCAT ET ...LES VOLEURS.</span>
+    <span class="m-id">29_01_99_1</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Votre livre était vendu sous cellophane. ..&#x27;&#x27;nous&#x27;&#x27; avons payé 95 f.p. pour déterrer une chouette en &#x27;&#x27;or&#x27;&#x27;, c&#x27;ese &#x27;&#x27;tout&#x27;&#x27; ce que nous savions... la fin de l&#x27;article 9 et le début du 10 ne nous concerne donc pas. il y a eu contrefaçon sur la marché andise...</p>
+  <p class="m-r"><span class="lbl">R</span>La seule version vendue sous cellophane est la 3ème édition, et elle vaut 100 f et non 95 f. sur la couverture sont clairement imprimés les mots suivants : &quot;une copie en bronze de cette fabuleuse chouette en or, etc.&quot; vous ne pouvez donc pas sérieusement prétendre que vous ignoriez qu&#x27;une copie avait été enterrée. de plus, la chose est de notoriété publique depuis 1994 ! et enfin, je ne vois pas en quoi vous pourriez être lésé ! trouvez la copie, et on vous l&#x27;échangera sans discuter contre l&#x27;original ! dernière précision : lorsqu&#x27;on participe à un jeu, quel qu&#x27;il soit, on accepte ipso facto son règlement. les articles 9 et 10 vous sont donc opposables, comme à n&#x27;importe quel joueur. (d&#x27;ailleurs, je ne vois pas en quoi ces deux articles peuvent vous poser problème ! si vous divorcez et que l&#x27;avocat de votre conjoint vous demande d&#x27;inscrire la chouette à l&#x27;actif de la communauté, vous serez bien obligé de vous exécuter ! (ce n&#x27;est qu&#x27;un exemple). et si vous allez creuser sur un terrain privé - alors que vous savez que la chouette est sur un terrain public - et que le propriétaire du terrain se plaint, il est logique qu&#x27;il ne se retourne ni contre l&#x27;éditeur, ni contre moi ! en quoi ces deux articles vous gênent-ils ? amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-29_01_99_1-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-16_08_95_15">
+  <div class="m-head"><span class="m-date">16 août 1995</span>
+    <span class="m-titre">GAG</span>
+    <span class="m-id">16_08_95_15</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Les fausses pistes qu&#x27;il faut quand même étudier pour savoir s&#x27;il s&#x27;agit de fausses pistes se révèlent-elles par des mots style gag, erreur... Merci pour une vraie piste.</p>
+  <p class="m-r"><span class="lbl">R</span>Non, les fausses pistes sont classiques. C&#x27;est-à-dire qu&#x27;un élément juste vous entraîne vers un cul-de-sac. Je me suis déjà expliqué là-dessus. C&#x27;est comme si vous étiez sur une autoroute, à pleine vitesse. Quelque part, vous dépassez une petite bretelle de sortie sans vraiment y faire attention. Puis vous arrivez au bout de l&#x27;autoroute, et il n&#x27;y a plus rien. Il y a alors deux solutions : vous continuez tout de même sur une voie défoncée, pleine d&#x27;ornières (c&#x27;est une fausse piste). Ou alors, vous vous souvenez de la petite bretelle d&#x27;autoroute et vous faites demi-tour afin de la retrouver (c&#x27;est la bonne piste)... voilà, c&#x27;est à peu près tout ce que je puis en dire. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-16_08_95_15-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-19_11_99_14">
+  <div class="m-head"><span class="m-date">19 novembre 1999</span>
+    <span class="m-titre">QUESTION D&#x27;AUTOROUTE</span>
+    <span class="m-id">19_11_99_14</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Diriez-vous que le propre d&#x27;une autoroute est d&#x27;être rectiligne ? (Par opposition au chemin de traverse.) J&#x27;aimerais ne plus avoir à défoncer de mur, cela fait mal à la tête ! Amitiés -- Manu</p>
+  <p class="m-r"><span class="lbl">R</span>Cette histoire d&#x27;autoroute était juste un exemple, Manu. Donc ne perdez pas de temps à extrapoler sur sa rectitude. Je n&#x27;ai jamais caché qu&#x27;il y avait des fausses pistes, et j&#x27;ai toujours dit qu&#x27;elles étaient tentantes, voire tentatrices. Je sais que, de mon côté, il est facile de dire &quot;faut que&quot; et &quot;y a qu&#x27;à&quot;, mais le seul conseil que je puisse donner est bien celui-là : si, malgré des solutions qui vous semblent parfaitement logiques et au-delà de la coïncidence, vous restez bloqué, il faut avoir le courage de faire marche arrière, parfois. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-19_11_99_14-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-02_09_98_7">
+  <div class="m-head"><span class="m-date">2 septembre 1998</span>
+    <span class="m-titre">COUP DE PUB</span>
+    <span class="m-id">02_09_98_7</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bonjour max. mon cousin allemand, peter, est producteur sur 3 chaînes locales, et dispose d&#x27;un émetteur appréciable pour diffuser des documentaires. cela vous dirait de venir participer à une de ses émissions, histoire de lui faire un coup de pub ? amitiés -- james</p>
+  <p class="m-r"><span class="lbl">R</span>Anonymat obligatoire, je ne peux pas participer à des émissions à visage découvert. mais si un jour je passe en allemagne et à condition que cet anonymat soit respecté, pourquoi pas ?... amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-02_09_98_7-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-13_12_01_49">
+  <div class="m-head"><span class="m-date">13 décembre 2001</span>
+    <span class="m-titre">AGE DU CAPITAINE</span>
+    <span class="m-id">13_12_01_49</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Peut-on avoir une idée de ton âge ? Et ne me réponds pas entre 7 et 77 ans, s&#x27;il te plaît !</p>
+  <p class="m-r"><span class="lbl">R</span>Bon. Alors entre 6 et 66 ! Franchement, je préfère pas. J&#x27;ai tout fait pour préserver mon anonymat et pour extraire ce que je suis du contexte des chasses que je connais. Je crois que c&#x27;est mieux ainsi, et que le fait de donner mon âge ou tout autre renseignement n&#x27;apporterait rien. Sans rancune j&#x27;espère... Amitiés. ;;;;;;;;;;</p>
+  <div class="m-back"><a class="back" href="#b-13_12_01_49-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-06_10_00_21">
+  <div class="m-head"><span class="m-date">6 octobre 2000</span>
+    <span class="m-titre">CA</span>
+    <span class="m-id">06_10_00_21</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Espoir. Seulement voilà, même en ayant tous les éléments permettant cette localisation, une fois sur place, c&#x27;est autre chose que sur le papier ! Et j&#x27;ai malheureusement constaté qu&#x27;il n&#x27;était pas ou plus possible de localiser la contremarque sans la moindre hésitation. C&#x27;est pour cela que je me trouve maintenant =&gt;</p>
+  <p class="m-r"><span class="lbl">R</span>Je lis la suite. Mais j&#x27;apporte de suite un correctif : rien n&#x27;empêche aujourd&#x27;hui de localiser la contremarque. Si c&#x27;était le cas, j&#x27;aurais arrêté le jeu.</p>
+  <div class="m-back"><a class="back" href="#b-06_10_00_21-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-08_11_01_22">
+  <div class="m-head"><span class="m-date">8 novembre 2001</span>
+    <span class="m-titre">CARUSBURCIEN ENCORE</span>
+    <span class="m-id">08_11_01_22</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Max as-tu la certitude que la contre-marque est encore là ? es-tu retourné sur place depuis toutes ces années écoulées ? carusmitiés</p>
+  <p class="m-r"><span class="lbl">R</span>La contre-marque est toujours là. pour mes éventuelles visites, j&#x27;en reste officiellement à ma position de fin 1996 : plus de visite, ni de rapport de visites ! amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-08_11_01_22-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-28_11_01_48">
+  <div class="m-head"><span class="m-date">28 novembre 2001</span>
+    <span class="m-titre">COPIE ORIGINAL</span>
+    <span class="m-id">28_11_01_48</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Bj cher max, les énigmes semblent sur la première nous amener à l&#x27;originale. La recherche sur le terrain doit-elle nous conduire fictivement au même endroit ? Bravo pour votre jeu ! Amicalement rochevill.</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne sais pas si je comprends bien votre question, rechevill. Dans la première édition du livre, il n&#x27;était pas dit que c&#x27;était une copie en bronze qui avait été enterrée, mais cela a été précisé dans les éditions ultérieures. Sur le fond, cela ne change rien, si ce n&#x27;est que vous savez que personne ne peut déterrer la vraie et partir avec sans rien dire à personne. L&#x27;endroit est toujours le même depuis le 24 avril 93. Amitiés -- max.</p>
+  <div class="m-back"><a class="back" href="#b-28_11_01_48-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-02_11_95_3">
+  <div class="m-head"><span class="m-date">2 novembre 1995</span>
+    <span class="m-titre">TROP TARD ?</span>
+    <span class="m-id">02_11_95_3</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Si je me lance dans la course maintenant, est-il trop tard ? Merci pour votre réponse.</p>
+  <p class="m-r"><span class="lbl">R</span>Tant que la chouette est dans son trou, il n&#x27;est pas trop tard ! Si vous êtes nouveau et que vous entrez dans le jeu maintenant, il vous suffit de faire des échanges avec d&#x27;autres chercheurs et vous serez à niveau au bout de 15 jours. Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-02_11_95_3-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-02_10_01_20">
+  <div class="m-head"><span class="m-date">2 octobre 2001</span>
+    <span class="m-titre">OMBRE</span>
+    <span class="m-id">02_10_01_20</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Après 8 ans de chasse, la clause d&#x27;une année a rien dévoilé. Tient-elle toujours ? Si une personne a en sa possession la chouette et ne la déclare pas, comment pouvez-vous savoir qu&#x27;elle est encore dans son trou ? Merci d&#x27;avance. Amitiés</p>
+  <p class="m-r"><span class="lbl">R</span>Qui ferait une chose pareille ? Mais rassurez-vous, je sais qu&#x27;elle est toujours dans son trou (et là aussi, merci de ne pas me demander comment je le sais, car je ne pourrai pas répondre à cette question). La clause d&#x27;une année tient toujours pour que je puisse faire éditer le livre des solutions, et le vendre. Amitiés</p>
+  <div class="m-back"><a class="back" href="#b-02_10_01_20-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-12_05_98_26">
+  <div class="m-head"><span class="m-date">12 mai 1998</span>
+    <span class="m-titre">LE LIVRE...</span>
+    <span class="m-id">12_05_98_26</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Il faut du temps pour écrire un livre qui dit que la chouette n&#x27;est pas déjà trouvée ?</p>
+  <p class="m-r"><span class="lbl">R</span>Si vous parlez du livre des solutions et des anecdotes, je le travaille depuis 1993, rajoutant telle petite histoire ou en retranchant une autre. Aussi, si la chouette était trouvée demain matin, le tapuscrit de ce livre serait chez l&#x27;éditeur après-demain ! La chouette n&#x27;est pas trouvée car je le saurais ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-12_05_98_26-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-05_05_00_27">
+  <div class="m-head"><span class="m-date">5 mai 2000</span>
+    <span class="m-titre">O</span>
+    <span class="m-id">05_05_00_27</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Avez-vous dit, Max, qu&#x27;il n&#x27;y a pas de plan d&#x27;eau dans les 100 mètres autour de la chouette ? Pourquoi une chasse mondiale quand celle-ci même vous prend tout votre temps ?</p>
+  <p class="m-r"><span class="lbl">R</span>J&#x27;ai dit que la chouette ne se trouvait pas sur les berges d&#x27;un plan d&#x27;eau ou d&#x27;un cours d&#x27;eau, et j&#x27;ai précisé la largeur de ces berges : 25 m. C&#x27;est tout. Chasse mondiale : pourquoi pas ? J&#x27;en ai fait 35 autres depuis le lancement de la chouette. C&#x27;est mon métier ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-05_05_00_27-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-09_12_98_35">
+  <div class="m-head"><span class="m-date">9 décembre 1998</span>
+    <span class="m-titre">Y EN A MARRE..ET SANS FRUSTATION</span>
+    <span class="m-id">09_12_98_35</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Salut le max.. tu proposes des prix à gagner.. qui sont dérisoires par rapport à ce que tu gagnes sur le dos des gogos qui jouent au minitel ou achètent tes livres.... d&#x27;une certaine manière tu jouis de voir ces cons s&#x27;acharner sur tes énigmes subjectives.. comme l&#x27;état qui propose de jouer au loto.. et qui empoche un max</p>
+  <p class="m-r"><span class="lbl">R</span>Dérisoires ? j&#x27;ai enterré à ce jour des trésors pour une valeur totale de 3 833 000 f, dont 2 333 000 ont été trouvés. si vous trouvez cela &quot;dérisoire&quot;, votre banquier doit être content. mes félicitations ! quant au fait de publier des livres que les gens achètent, je vous demande pardon. j&#x27;ignorais que ce fut un délit. je vous promets de publier prochainement un recueil de poésies surréalistes et absconses, pour être sûr de prendre le bouillon. mes énigmes seraient &quot;subjectives&quot; ? ce n&#x27;est pas ce que disaient les 14 découvreurs précédents. mais peut-être êtes-vous mieux placé qu&#x27;eux pour émettre un jugement. enfin, pour ce qui est de l&#x27;état et des gens qui jouent au loto, je vous ferai remarquer que nous sommes en démocratie, et que chacun est libre de faire ce que bon lui semble. merci d&#x27;avoir signé. amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-09_12_98_35-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-02_08_96_35">
+  <div class="m-head"><span class="m-date">2 août 1996</span>
+    <span class="m-titre">TRANSFO2</span>
+    <span class="m-id">02_08_96_35</span></div>
+  <p class="m-q"><span class="lbl">Q</span>En complément de ma question précédente, ces affirmations de chercheurs ont paru dans le forum, et non en qr ulysse.</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne réponds jamais sur le forum, et si des chercheurs prétendent à tort ou à raison que j&#x27;ai dit ceci ou cela, je ne rectifie jamais. On m&#x27;a tellement souvent attribué des réponses que je n&#x27;ai pas faites que je passerais mon temps à remettre les pendules à l&#x27;heure. À ce jour, et hormis 3 contradictions dans mes réponses (immédiatement rectifiées), personne ne m&#x27;a jamais apporté des éléments me permettant d&#x27;apprécier une prétendue contradiction réelle. J&#x27;ai commis 3 fautes d&#x27;attention dans des réponses, auxquelles j&#x27;ajoute une dizaine de réponses formulées de manière ambiguës (et rectifiées dès que les chercheurs m&#x27;ont questionné à leur sujet). Bal &quot;les auteurs&quot; et q-r confondues, j&#x27;ai répondu à plus de 60 000 questions sans que personne ne m&#x27;ait jamais apporté une preuve de contradiction flagrante. Mais comme je l&#x27;ai déjà dit, je ne suis pas infaillible, et cela peut arriver. Dans ce cas - je n&#x27;ai aucune inquiétude à ce sujet - je sais que les chercheurs me le feront immédiatement remarquer ! Amitiés -- max.</p>
+  <div class="m-back"><a class="back" href="#b-02_08_96_35-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-30_01_97_19">
+  <div class="m-head"><span class="m-date">30 janvier 1997</span>
+    <span class="m-titre">DE MAX A TOUS : ERRATUM</span>
+    <span class="m-id">30_01_97_19</span></div>
+  <p class="m-q"><span class="lbl">Q</span>J&#x27;ai oublié un mot dans ma réponse à la question &quot;flou artistique&quot; du 28 janvier : il fallait lire &quot;c&#x27;est surtout pour éviter que certains éléments, trop ****** nets, vous envoient sur une fausse piste.&quot; Sans ce mot, la phrase signifie exactement le contraire de ce que je</p>
+  <p class="m-r"><span class="lbl">R</span>voulais dire ! Mes excuses pour cette faute d&#x27;attention, et un grand merci à Mickey pour me l&#x27;avoir fait remarquer ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-30_01_97_19-1">↩ retour </a></div>
+</article>
+<article class="madit" id="m-18_10_01_16">
+  <div class="m-head"><span class="m-date">18 octobre 2001</span>
+    <span class="m-titre">-LORS DE L&#x27;ENFOUISSEMENT</span>
+    <span class="m-id">18_10_01_16</span></div>
+  <p class="m-q"><span class="lbl">Q</span>De l&#x27;oiseau... vous dites avoir vérifié que nulle personne ne vous ait aperçu... sur le lieu... comment en être si sûr ? Alors que les jours passent et la chouette n&#x27;est à ce jour toujours pas trouvée... il n&#x27;est donc pas inutile d&#x27;imaginer qu&#x27;elle ait été trouvée par une personne ignorant le jeu... ? Amitiés. Issy</p>
+  <p class="m-r"><span class="lbl">R</span>Je ne pouvais pas en être sûr, et c&#x27;est bien pour cette raison que j&#x27;ai rôdé dans les environs jusqu&#x27;à ce que j&#x27;en sois certain ! Lors de ma dernière visite, la chouette était toujours dans son trou, tout comme elle l&#x27;est aujourd&#x27;hui ! Et si par extraordinaire elle était un jour découverte par hasard (ce qui représente une chance sur 1 milliard), croyez bien que je le saurais ! Amitiés -- Max</p>
+  <div class="m-back"><a class="back" href="#b-18_10_01_16-1">↩ retour </a></div>
+</article>
+</section>
+
+<section class="sources" id="sources">
+  <h2 class="chunk">Sources externes</h2>
+<h3 class="src-cat">Le livre et les publications de Max Valentin</h3>
+<ul class="src-list">
+  <li>&lt;i&gt;Sur la trace de la Chouette d&#x27;Or&lt;/i&gt;, Michel Becker &amp;amp; Max Valentin, 1ʳᵉ édition, Éditions Manya, mai 1993 — <span class="det">annexe « Trésors, Faits &amp;amp; Légendes », p. 42 : « A Dabo, &lt;i&gt;Moselle&lt;/i&gt;, des coffres pleins d&#x27;or seraient entreposés dans les souterrains éboulés de la montagne » — une entrée dans une liste d&#x27;une vingtaine de trésors légendaires ; prix de vente 89 F (contrat d&#x27;édition, art. 8)</span></li>
+  <li>&lt;i&gt;Sur la trace de la Chouette d&#x27;Or&lt;/i&gt;, 3ᵉ édition, Michel Lafon &amp;amp; Éditions du Trésor, 1997 — <span class="det">ISBN 2-84098-304-4 ; vendue 100 F (madit du 29 janvier 1999) ; 70 000 exemplaires pour les trois éditions (madit du 12 juin 2001 ; chiffre repris par l&#x27;A2CO devant la cour d&#x27;appel de Paris, arrêt du 19 janvier 2017)</span></li>
+  <li><a href="https://www.decitre.fr/livres/guide-du-chercheur-de-tresors-9782501030557.html" target="_blank" rel="noopener">Max Valentin, &lt;i&gt;Guide du chercheur de trésors&lt;/i&gt;, Éditions Marabout, 10 juin 1998, 341 p.</a> — <span class="det">ISBN 2-501-03055-9 — méthodes de prospection et de détection ; « ne contient aucune information sur la chouette d&#x27;or » (madit du 6 juillet 1999) · consulté 08/2026</span></li>
+  <li>Régis Hauser, sous son nom : &lt;i&gt;Concevoir et rédiger des mailings efficaces&lt;/i&gt; (Éditions d&#x27;Organisation, 1988), &lt;i&gt;Elles sont terribles !&lt;/i&gt; (Hermé, 1989), &lt;i&gt;L&#x27;Efficacité en marketing direct&lt;/i&gt; (Éditions d&#x27;Organisation, 1991), &lt;i&gt;Les murs se marrent&lt;/i&gt; (Hermé, 1991 ; intégrale 1997), &lt;i&gt;Le piège de la botaniste&lt;/i&gt; (Ramsay, 1998) — <span class="det">et, sous le pseudonyme Max Valentin : &lt;i&gt;Sur la trace de la Chouette d&#x27;Or&lt;/i&gt; (1993), &lt;i&gt;Le Trésor d&#x27;Orval&lt;/i&gt; (Michel Lafon, 1997), &lt;i&gt;Guide du chercheur de trésors&lt;/i&gt; (1998) — le pseudonyme n&#x27;a servi qu&#x27;aux chasses au trésor</span></li>
+  <li>Joseph Dillenschneider, &lt;i&gt;Contes et légendes de notre pays, entre Dabo, Phalsbourg et Sarrebourg&lt;/i&gt; — <span class="det">chapitre « Le trésor du château de Dabo », p. 32-33 : la légende du trésor et les Daboisiens qui creusaient</span></li>
+</ul>
+<h3 class="src-cat">Contrats, décisions de justice, registres</h3>
+<ul class="src-list">
+  <li><a href="https://files.michelbecker.com/1/2.pdf" target="_blank" rel="noopener">Contrat d&#x27;édition Hauser / Becker – Éditions Manya, 16 mars 1993 (6 p.)</a> — <span class="det">publié par l&#x27;organisateur actuel — p. 1 « ci-après dénommés L&#x27;AUTEUR » ; art. 6 (pas d&#x27;à-valoir), art. 8 (10 / 12 / 14 % du prix HT pour l&#x27;auteur, « selon les aménagements prévus dans l&#x27;avenant »), art. 13 (« redevances liées au minitel […] régies par l&#x27;avenant ») · consulté 08/2026</span></li>
+  <li>Contrat d&#x27;auteur, Éditions Michel Lafon, 17 avril 1997 — Régis Hauser &amp;amp; Michel Becker, « l&#x27;Auteur » — <span class="det">§ 3.1 : « 12% pour les exemplaires de l&#x27;édition première, (soit 8% pour Michel Becker et 4% pour Régis Hauser) » ; contrat visé par l&#x27;arrêt de la cour d&#x27;appel de Versailles du 15 janvier 2009</span></li>
+  <li><a href="https://files.michelbecker.com/1/5.pdf" target="_blank" rel="noopener">Extrait Kbis, SA Éditions Manya</a> — <span class="det">publié par l&#x27;organisateur actuel — cessation des paiements le 11 avril 1994, redressement judiciaire le 20 avril 1994 · consulté 08/2026</span></li>
+  <li><a href="https://files.michelbecker.com/1/8.pdf" target="_blank" rel="noopener">Extrait Kbis, SAS Éditions Michel Lafon</a> — <span class="det">publié par l&#x27;organisateur actuel — liquidation judiciaire le 4 février 1999 · consulté 09/2026</span></li>
+  <li><a href="https://files.michelbecker.com/1/11.pdf" target="_blank" rel="noopener">Cour d&#x27;appel de Versailles, arrêt du 15 janvier 2009</a> — <span class="det">publié par l&#x27;organisateur actuel — p. 1 : Régis Hauser « bénéficie d&#x27;une aide juridictionnelle n° 2007/006347 du 16/05/2007 » ; p. 9 : la propriété de la Chouette d&#x27;Or reconnue à M. Becker « en se soumettant aux restrictions » qui « résultent du contrat d&#x27;édition du 17 avril 1997 » · consulté 08/2026</span></li>
+  <li><a href="https://files.michelbecker.com/1/12.pdf" target="_blank" rel="noopener">Cour d&#x27;appel de Paris, arrêt du 19 janvier 2017 (RG 15/09973)</a> — <span class="det">publié par l&#x27;organisateur actuel — « trois éditions du livre, en 1993, 1994 et 1997, qui a été tiré à 70.000 exemplaires » (position de l&#x27;association A2CO) ; M. Becker « soutient […] qu&#x27;il est fondé […] à révoquer l&#x27;engagement unilatéral » ; « la nature et l&#x27;étendue des restrictions […], qu&#x27;il conteste, demeurent ignorées » · consulté 09/2026</span></li>
+  <li><a href="https://data.inpi.fr/marques/FR97707303" target="_blank" rel="noopener">INPI, base Marques — FR 97707303 « MAX VALENTIN » (déposée le 4 décembre 1997, Les Éditions du Trésor, expirée le 4 décembre 2007)</a> — <span class="det">consulté le 29/08/2026</span></li>
+  <li><a href="https://data.inpi.fr/marques/FR3625574" target="_blank" rel="noopener">INPI, base Marques — FR 3625574 « Max Valentin » (déposée le 28 janvier 2009, déposant Becker Michel ; renouvelée 2018)</a> — <span class="det">classes : jeux, logiciels de jeux, télécommunications, concours, publication de livres · consulté le 29/08/2026</span></li>
+  <li><a href="https://www.simonnetavocat.fr/la-chouette-dor-expliquee-par-un-avocat/" target="_blank" rel="noopener">Me Valentin Simonnet, avocat au Barreau de Paris, « La Chouette d&#x27;or expliquée par un avocat », 4 août 2026</a> — <span class="det">plafonds de l&#x27;aide juridictionnelle (874 € / 1 311 € par mois) ; § « Ma lecture des faits : de l&#x27;amateurisme, pas un complot » · consulté 08/2026</span></li>
+  <li><a href="https://files.michelbecker.com/1/0.pdf" target="_blank" rel="noopener">Historique officiel de la chasse publié par l&#x27;organisateur actuel, 8 octobre 2024</a> — <span class="det">3ᵉ édition « en juin 1997 » chez Michel Lafon ; « personne ne s&#x27;est manifesté avec la contremarque numérotée 1/8 » · consulté 08/2026</span></li>
+</ul>
+<h3 class="src-cat">Presse</h3>
+<ul class="src-list">
+  <li><a href="https://www.lemonde.fr/" target="_blank" rel="noopener">Morgane Tual, « Les derniers mystères de la Chouette d&#x27;or », &lt;i&gt;Le Monde&lt;/i&gt;, série d&#x27;été en six épisodes, 12-17 juillet 2026</a> — <span class="det">ép. 1 « L&#x27;oiseau qui rend fou » (12/07 : « Dès 1993, des joueurs y creusaient déjà » ; plainte de l&#x27;A2CO, avril 2025) ; ép. 2 « L&#x27;énigme Max Valentin, créateur de la Chouette d&#x27;or » (13/07 : Mickey, achat du livre en 1993, premiers creusages à Dabo) ; ép. 6 « L&#x27;inconnu du Minitel et le frère oublié » (17/07 : saisie de l&#x27;enveloppe des solutions en février 2026 ; Garp : « Cette enveloppe, je me méfie de son contenu […] il aurait très bien pu donner à l&#x27;huissier quelque chose de bidon ») · consulté 08/2026</span></li>
+</ul>
+<h3 class="src-cat">Propos de l&#x27;organisateur actuel et témoignages (vocaux Discord publics, août 2026)</h3>
+<ul class="src-list">
+  <li>Vocal du 5 août 2026 — Michel Becker ; Zoé, chercheur de 1993 — <span class="det">arrivée du groupe Zoé aux Bornes Saint-Martin « fin août 1993 » (livre acheté le 15 mai 1993), présence « communiqué[e] par Minitel » ; les trois peurs prêtées à Max — transcription horodatée, passages réécoutés avant citation</span></li>
+  <li>Vocal du 19 août 2026 (4 h 28) — Michel Becker — <span class="det">« il a eu la trouille que le jeu soit trouvé trop vite », « il a fabriqué tout un contexte via les madits », « fausse piste autoroutière », « un peu énorme », la faillite de Manya, « une accusation, c&#x27;est du pipi de chat », « la seule certitude » ; Garp et « pile je gagne, face tu perds » — passages réécoutés avant citation</span></li>
+  <li>Vocal du 20 août 2026 — Michel Becker ; Zoé — <span class="det">« c&#x27;est à partir de 1995, quand les premiers madits sortent » ; « la grande clarté, la grande honnêteté des réponses » ; « c&#x27;est un processus qui s&#x27;est développé » ; « pour faire connaître ma peinture » ; Garp « n&#x27;en a aucune preuve » — réécoutés avant citation</span></li>
+  <li><a href="https://www.youtube.com/@Control-F" target="_blank" rel="noopener">Enregistrements réunis et publiés par le chouetteur Control-F</a> — <span class="det">dossier de partage : mega.nz/folder/dZgRWK5T#TBDamFtKwHDyDYf9Iydylg · consulté 09/2026</span></li>
+  <li><a href="https://www.youtube.com/watch?v=-yKqh27awH0" target="_blank" rel="noopener">Reportage télévisé, 1996 — interview de Michel Becker sur un plateau, la chouette de bronze devant lui</a> — <span class="det">mis en ligne par les Éditions du Trésor le 3 février 2014 (7 min 34) — « vous vous rendez compte de ce que je gagne en notoriété ? » · consulté le 10/09/2026</span></li>
+</ul>
+<h3 class="src-cat">Forum lachouette.net (messages publics de Max Valentin, 2003-2008) et sites des chercheurs</h3>
+<ul class="src-list">
+  <li><a href="https://lachouette.net/" target="_blank" rel="noopener">Page d&#x27;accueil de lachouette.net</a> — <span class="det">« Forum Officiel de l&#x27;A2CO » ; administrateur système du serveur : Velo · capture du 20/08/2026</span></li>
+  <li>Message 53974.03, 1ᵉʳ juillet 2003 (« A Zygmuin ») — <span class="det">« une douzaine de fois » ; questions « posées à plusieurs reprises, sous une forme ou sous une autre »</span></li>
+  <li>Message 54208, 10 juillet 2003 (« Pour PRINCE ROSAN ») — <span class="det">« il est impossible de changer quoi que ce soit aux solutions d&#x27;un jeu une fois que ses solutions sont sous la protection d&#x27;un huissier [...] je ne peux donc PLUS Y TOUCHER »</span></li>
+  <li>Message 54589, 11 août 2003 (« Quelques remarques en pleine canicule ») — <span class="det">« JAMAIS sciemment envoyé quiconque dans le mur […] autorisé Velo […] rien à cacher »</span></li>
+  <li>Message 73819, 19 octobre 2006 (« A propos de l&#x27;Huissier ») — <span class="det">pendant la saisie de la chouette d&#x27;or : « Quant à la contremarque (la Chouette en bronze), elle est évidemment toujours à sa place et ne peut pas être saisie. »</span></li>
+  <li>Message 83529, 20 juin 2008 (« Pour information, article sur &quot;Le Post&quot; ») — <span class="det">« impossible qu&#x27;il l&#x27;ait déterrée […] toujours en place aujourd&#x27;hui » — dix mois avant sa mort</span></li>
+  <li><a href="https://a2co.org/Edelweb/" target="_blank" rel="noopener">Forum EdelWeb, fil 2799 « je pense donc j&#x27;ennuie », 5 juin 1998</a> — <span class="det">la thèse « faire durer le jeu le plus longtemps possible, car le minitel et la vente de son livre lui rapportent constamment » — écrite en 1998 · consulté 09/2026</span></li>
+  <li><a href="https://actua2co.lachouette.net/" target="_blank" rel="noopener">Actu A2CO, page « Présentation » (Garp)</a> — <span class="det">« tout en nous opposant à l&#x27;ouverture de l&#x27;enveloppe des soluces » · capture du 29/08/2026</span></li>
+  <li><a href="https://surlestracesdelachouettedor.blogspot.com/2020/07/les-e-cards-max-valentin.html" target="_blank" rel="noopener">Les e-cards du site maxvalentin.com (rubrique « bonus », attestée dès l&#x27;été 2002)</a> — <span class="det">seize cartes, dont « Le trou de Kimberley […] le plus gros du monde après celui de Dabo » et « Dabo, vue aérienne » — republiées par Kaspius · consulté 08/2026</span></li>
+  <li><a href="http://ilotresor.com/" target="_blank" rel="noopener">ilotresor.com (Mickey)</a> — <span class="det">archives du jeu (madits, cartes postales, photos, bulletin météo des 23-24 avril 1993) ; nom de domaine créé le 30 août 1999 (registre Verisign) · consulté le 29/08/2026</span></li>
+</ul>
+<h3 class="src-cat">Base de données</h3>
+<ul class="src-list">
+  <li>&lt;b&gt;madits.db&lt;/b&gt; — 38 146 questions-réponses, 20 juillet 1995 → 14 décembre 2001 — <span class="det">serveur Minitel 3615 Maxval puis archives des chercheurs ; identifiants au format JJ_MM_AA_NN ; texte normalisé, vérifié contre les fichiers bruts pour les cartes affichées. Il n&#x27;y a pas de rubrique publique avant le 20 juillet 1995 : de juin 1993 à janvier 1997, Max répondait en privé par boîte aux lettres, et ces réponses ne sont pas conservées.</span></li>
+</ul>
+<h3 class="src-cat">Images</h3>
+<ul class="src-list">
+  <li>Photos des Bornes Saint-Martin : Tournevis, 25 octobre 2025 et 9 septembre 2026 — <span class="det">prises de vue de la chaîne ; le plan d&#x27;ouverture est traité en « vieille photo » (désaturation, grain)</span></li>
+  <li>Photos de Mickey (2018, 2023) — <span class="det">transmises par Mickey — crédit et textes soumis à sa validation</span></li>
+  <li>Illustrations générées par IA — <span class="det">prologue, statue, enveloppes, brouillard, buste, enveloppe scellée — signalées comme telles à l&#x27;écran</span></li>
+</ul>
+</section>
+
+<footer>
+  Madits : serveur Maxval (1995-2001), archive « madits » (« Max a dit »), sur
+  <a href="https://lachouette.net/">lachouette.net</a> — la <b>date et le titre</b> font foi.
+  Contrats, arrêts et registres sont cités pour leurs <b>mentions matérielles</b> ; les
+  déductions qui en sont tirées sont les nôtres et signalées comme telles dans le script.
+  L’estimation des droits d’auteur est donnée <b>comme hypothèse</b> (partage de 1997 étendu aux
+  trois éditions), avec ses bases. Cette vidéo ne dit pas où est la chouette. Liens consultés en août et septembre 2026.
+</footer>
+</div>
+<script>
+(function(){
+  var saved = null;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if (!a) return;
+    if (a.classList.contains('ref')) {
+      saved = window.scrollY;
+    } else if (a.classList.contains('back')) {
+      if (saved !== null) {
+        e.preventDefault();
+        window.scrollTo({ top: saved, behavior: 'smooth' });
+      }
+    }
+  });
+})();
+</script>
+</body>
+</html>

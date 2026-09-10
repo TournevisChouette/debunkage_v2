@@ -25,7 +25,9 @@ Le but : que chaque citation de la vidéo soit **vérifiable et traçable** d'un
 | 3 — La 520 & la cache impossible | 520 · les 30 ans de prospection | [▶️ YouTube](https://www.youtube.com/watch?v=odEdlkoaMSY) | [`dossier_ep03.html`](https://tournevischouette.github.io/debunkage_v2/dossier_ep03.html) |
 | 4 — L'architecture & la disquette | les règles du jeu · d'où vient la disquette | [▶️ YouTube](https://www.youtube.com/watch?v=XKdFksKcP1s) | [`dossier_ep04.html`](https://tournevischouette.github.io/debunkage_v2/dossier_ep04.html) |
 
-**Série terminée — quatre épisodes.**
+| Hors série — Sans cire : Max Valentin n'a pas truqué son jeu | Dabo 1993 · les madits contre le récit de 2026 · ce que rapportait le livre | (à venir) | [`dossier_sans_cire.html`](https://tournevischouette.github.io/debunkage_v2/dossier_sans_cire.html) |
+
+**Série Débunkage terminée — quatre épisodes. Un hors-série.**
 
 ## Consulter
 
