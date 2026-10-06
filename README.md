@@ -1,22 +1,27 @@
-# Tournevis — La Chouette d'Or, débunkage V2 · Dossiers d'accompagnement
+# Tournevis — La Chouette d'Or · Dossiers d'accompagnement
 
 ▶️ **La chaîne YouTube : [Tournevis](https://www.youtube.com/@TourneChouette)**
 
-Documents de référence de la série vidéo **Tournevis**, qui confronte la
-« solution officielle » de la Chouette d'Or (mai 2025) à ce que Max Valentin,
-l'auteur des énigmes, a dit pendant six ans sur le serveur Maxval (1995-2001).
+Documents de référence des vidéos **Tournevis** sur la chasse au trésor de la Chouette d'Or
+(Max Valentin, 1993 ; « solution officielle » publiée en mai 2025).
 
-Chaque épisode est accompagné d'**un fichier HTML autonome** contenant :
+Chaque vidéo est accompagnée d'**un fichier HTML autonome** contenant :
 
-- le **script intégral** de l'épisode ;
-- **tous les madits cités**, reproduits depuis la base de données des
-  questions-réponses de Max (« madits » = « Max a dit ») ;
+- le **script intégral** de la vidéo ;
+- **tous les madits cités**, reproduits depuis la base de données des questions-réponses
+  de Max Valentin sur le serveur Maxval, 1995-2001 (« madits » = « Max a dit ») ;
+- les **documents montrés à l'écran** et les **sources**, avec leur adresse et leur date de
+  consultation ;
 - une **navigation bidirectionnelle** : depuis le script, une puce ouvre le madit
   correspondant ; sur chaque madit, un bouton ramène à l'endroit exact du script.
 
-Le but : que chaque citation de la vidéo soit **vérifiable et traçable** d'un clic.
+Le but : que chaque affirmation d'une vidéo soit **vérifiable et traçable** d'un clic — et,
+quand c'est possible, **refaisable** chez soi.
 
-## Épisodes
+## Série « Débunkage » — la solution publiée face aux madits
+
+Quatre épisodes qui confrontent la « solution officielle » à ce que Max Valentin, l'auteur
+des énigmes, a dit pendant six ans aux chercheurs. Série terminée.
 
 | Épisode | Contenu | Vidéo | Dossier |
 |---|---|---|---|
@@ -25,11 +30,31 @@ Le but : que chaque citation de la vidéo soit **vérifiable et traçable** d'un
 | 3 — La 520 & la cache impossible | 520 · les 30 ans de prospection | [▶️ YouTube](https://www.youtube.com/watch?v=odEdlkoaMSY) | [`dossier_ep03.html`](https://tournevischouette.github.io/debunkage_v2/dossier_ep03.html) |
 | 4 — L'architecture & la disquette | les règles du jeu · d'où vient la disquette | [▶️ YouTube](https://www.youtube.com/watch?v=XKdFksKcP1s) | [`dossier_ep04.html`](https://tournevischouette.github.io/debunkage_v2/dossier_ep04.html) |
 
-| Hors série — Sans cire : Max Valentin n'a pas truqué son jeu | Dabo 1993 · les madits contre le récit de 2026 · ce que rapportait le livre | [▶️ YouTube](https://www.youtube.com/watch?v=fW1WbRNqG3w) | [`dossier_sans_cire.html`](https://tournevischouette.github.io/debunkage_v2/dossier_sans_cire.html) |
+## Hors série
 
-| Le fichier — Face A | SOLUTION.SAM · ce que ce fichier est, et d'où il vient | [▶️ YouTube](https://youtu.be/EsxaPfM6Hao) | [`dossier_ep07a.html`](https://tournevischouette.github.io/debunkage_v2/dossier_ep07a.html) |
+| Titre | Contenu | Vidéo | Dossier |
+|---|---|---|---|
+| Sans cire — Max Valentin n'a pas truqué son jeu | Dabo 1993 · les madits contre le récit de 2026 · ce que rapportait le livre | [▶️ YouTube](https://www.youtube.com/watch?v=fW1WbRNqG3w) | [`dossier_sans_cire.html`](https://tournevischouette.github.io/debunkage_v2/dossier_sans_cire.html) |
 
-**Série Débunkage terminée — quatre épisodes. Un hors-série. « Le fichier » : Face B à paraître.**
+## La disquette des solutions — « Le fichier »
+
+Le fichier SOLUTION.SAM, d'où sort la solution publiée en 2025 : ce qu'il est, quand il a été
+enregistré, d'où vient son texte. En deux faces.
+
+| Titre | Contenu | Vidéo | Dossier |
+|---|---|---|---|
+| Le fichier — Face A | un document Ami Pro · ses dates · sa description · d'où vient son texte | [▶️ YouTube](https://youtu.be/EsxaPfM6Hao) | [`dossier_ep07a.html`](https://tournevischouette.github.io/debunkage_v2/dossier_ep07a.html) |
+| Le fichier — Face B | où le fichier a été retouché, et avec quel logiciel | à paraître | à paraître |
+
+Le dossier de la Face A est livré avec ses pièces, pour que les essais puissent être refaits :
+
+- [`essais/`](essais/) — les fichiers `.SAM` produits par nos essais dans le logiciel d'époque
+  (Lotus Ami Pro 1.2B). Ils sont livrés à l'octet près et se lisent avec n'importe quel
+  éditeur de texte.
+- [`outils/`](outils/) — de quoi installer le logiciel sous Linux, régler l'horloge qu'il
+  voit et refaire l'essai des dates ; commencer par [`LISEZMOI.txt`](outils/LISEZMOI.txt).
+  Le tout en une archive : [`outils_ami_pro.zip`](outils_ami_pro.zip). Le logiciel lui-même
+  n'est pas redistribué : le premier script le télécharge depuis Internet Archive.
 
 ## Consulter
 
@@ -47,5 +72,9 @@ téléchargé, dans n'importe quel navigateur.
   Chouette d'Or » (PDF, Éditions de la Chouette d'Or, 2025) :
   <https://chouettedor.com/sol/SOLUTION-FR.pdf>
   (la même solution est reprise dans le livre d'octobre 2025).
+- Les sources propres à chaque vidéo — constats, publications, forums, logiciels — sont
+  listées dans son dossier.
 
 Citations littérales : orthographe et ponctuation d'origine conservées.
+
+Licence : CC0 1.0 — voir [`LICENSE`](LICENSE).
