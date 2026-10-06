@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Chouette d’Or — Le fichier · Face A — dossier</title>
+<style>
+  :root { --gold:#b8860b; --gold2:#d4af37; --ink:#1c2230; --paper:#fbf8f1; --soft:#6a6256; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+    font-family:Georgia,'Times New Roman',serif; line-height:1.62; }
+  .wrap { max-width:860px; margin:0 auto; padding:48px 22px 120px; }
+  header h1 { font-size:20px; letter-spacing:.16em; text-transform:uppercase; color:var(--soft);
+    font-weight:normal; margin:0 0 6px; }
+  .tagline { font-size:14.5px; font-style:italic; color:var(--gold); margin:0 0 16px; }
+  header h2.ep { font-size:34px; margin:0 0 14px; line-height:1.2; }
+  .watch { margin:0 0 20px; }
+  .topnav { margin:0 0 22px; font-family:system-ui,sans-serif; font-size:13.5px; }
+  .topnav a, .topnav span { text-decoration:none; color:var(--gold); border:1px solid #e0d090;
+    background:#f3e9c8; border-radius:999px; padding:4px 14px; margin-right:8px; white-space:nowrap;
+    display:inline-block; margin-bottom:6px; }
+  .topnav a:hover { background:var(--gold2); color:#221c05; }
+  .topnav span.soon-b { color:var(--soft); background:#efe7d3; border-color:#e7ddc4; }
+  .watch a { display:inline-block; text-decoration:none; font-family:system-ui,sans-serif;
+    font-size:15px; font-weight:600; color:#fff; background:#c0392b; padding:9px 18px; border-radius:8px; }
+  .watch a:hover { background:#a23226; }
+  .watch .soon { display:inline-block; font-family:system-ui,sans-serif; font-size:15px;
+    font-weight:600; color:var(--soft); background:#efe7d3; padding:9px 18px; border-radius:8px; }
+  .intro { background:#fff; border:1px solid #e7ddc4; border-left:4px solid var(--gold2);
+    padding:16px 20px; border-radius:8px; font-size:15.5px; color:#3a3a3a; }
+  .intro b { color:var(--gold); }
+  .intro a, footer a, .prose a { color:var(--gold); }
+  h2.chunk { font-size:15px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold);
+    border-bottom:2px solid #e7ddc4; padding-bottom:6px; margin:54px 0 14px; }
+  h3.enigme { font-size:22px; margin:34px 0 10px; color:var(--ink); }
+  h3.enigme.sous { font-size:17px; color:var(--soft); margin-top:26px; }
+  #script p, .prose p { margin:0 0 16px; }
+  .prose h3 { font-size:19px; margin:30px 0 10px; color:var(--ink); }
+  .prose h4, h4 { font-size:17px; margin:28px 0 8px; color:var(--ink); }
+  .prose pre { background:#f3eedd; border:1px solid #e7ddc4; border-radius:6px; padding:10px 14px; font-size:14px; line-height:1.5; overflow-x:auto; margin:0 0 16px; }
+  .prose { font-size:15.5px; }
+  .prose code { font-family:ui-monospace,monospace; font-size:.9em; background:#f3ede0; padding:1px 5px; border-radius:4px; }
+  table.tab { border-collapse:collapse; width:100%; font-size:14px; margin:8px 0 20px; background:#fff; }
+  table.tab th, table.tab td { border:1px solid #e7ddc4; padding:6px 9px; vertical-align:top; text-align:left; }
+  table.tab th { background:#f3e9c8; font-family:system-ui,sans-serif; font-size:12.5px; letter-spacing:.04em; }
+  table.tab td.mono { font-family:ui-monospace,monospace; font-size:12.5px; white-space:nowrap; }
+  .refs { display:inline; }
+  a.ref { display:inline-block; font-family:system-ui,sans-serif; font-size:11.5px;
+    text-decoration:none; color:#5a4a10; background:#f3e9c8; border:1px solid #e0d090;
+    border-radius:11px; padding:1px 9px; margin:1px 3px; white-space:nowrap; vertical-align:1px; }
+  a.ref:hover { background:var(--gold2); color:#221c05; }
+  a.vlink { color:#b8860b; text-decoration:underline; text-decoration-color:#d4af37;
+    text-underline-offset:2px; font-weight:600; }
+  a.vlink:hover { color:#a23226; }
+  a.vlink::after { content:" ↗"; font-size:.78em; color:var(--gold); vertical-align:1px; }
+  section.madits { margin-top:70px; }
+  article.madit { background:#fff; border:1px solid #e7ddc4; border-radius:10px;
+    padding:16px 20px 12px; margin:0 0 16px; scroll-margin-top:14px; }
+  article.madit:target { border-color:var(--gold2); box-shadow:0 0 0 3px rgba(212,175,55,.25); }
+  .m-head { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:10px; }
+  .m-date { font-family:system-ui,sans-serif; font-size:13px; font-weight:700; color:#fff;
+    background:var(--gold); padding:2px 11px; border-radius:7px; }
+  .m-titre { font-family:system-ui,sans-serif; font-size:13px; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--soft); }
+  .m-q, .m-r { margin:0 0 8px; font-size:16px; }
+  .m-q { color:#4a4a4a; }
+  .lbl { display:inline-block; width:20px; height:20px; line-height:20px; text-align:center;
+    font-family:system-ui,sans-serif; font-size:12px; font-weight:700; border-radius:50%;
+    margin-right:8px; vertical-align:1px; }
+  .m-q .lbl { border:1.5px solid #c9c0a6; color:#9a9078; }
+  .m-r .lbl { border:1.5px solid var(--gold2); color:var(--gold); }
+  .m-back { margin-top:6px; }
+  a.back { font-family:system-ui,sans-serif; font-size:12px; text-decoration:none;
+    color:var(--gold); border:1px solid #e0d090; border-radius:11px; padding:1px 10px; margin-right:6px; }
+  a.back:hover { background:#f3e9c8; }
+  section.sources { margin-top:70px; }
+  .sources h3.src-cat { font-size:14px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--soft); margin:26px 0 8px; }
+  .sources ul.src-list { margin:0 0 4px; padding-left:22px; }
+  .sources li { font-size:15px; margin:0 0 9px; }
+  .sources a { color:var(--gold); }
+  .sources .det { color:var(--soft); font-size:13.5px; font-style:italic; }
+  footer { margin-top:60px; font-size:13px; color:var(--soft); border-top:1px solid #e7ddc4; padding-top:14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="topnav"><a href="./">← Accueil</a><a href="#script">Le script</a><a href="#regle">La règle du jeu</a><a href="#dates">La règle des dates</a><a href="#essais">Les fichiers d’essai</a><a href="#refaire">Refaire l’essai</a><a href="#relecture">La relecture</a><a href="#sources">Sources</a><span class="soon-b">Face B — à paraître</span></nav>
+<header>
+  <h1>La Chouette d’Or — la disquette des solutions</h1>
+  <p class="tagline">Le fichier · Face A — ce que ce fichier est, et d’où il vient.</p>
+  <h2 class="ep">Le fichier — Face A</h2>
+  <p class="watch"><a href="https://youtu.be/EsxaPfM6Hao" target="_blank" rel="noopener">▶ Voir la Face A sur YouTube</a></p>
+  <div class="intro">
+    Ce document réunit le <b>script intégral</b> de la Face A, le <b>madit cité</b> (question-réponse de Max Valentin,
+    serveur Minitel 1995-2001, en version normalisée — la <b>date et le titre</b> font foi), les <b>documents montrés à
+    l’écran</b> avec leur source, et ce que la vidéo promet en lien : <b>la règle du jeu</b>, <b>les fichiers
+    d’essai</b>, <b>la règle des dates et sa preuve</b>, <b>la relecture page par page</b>, et <b>comment refaire l’essai</b>
+    (le logiciel, son installation, l’horloge réglée, les outils). Tout ce qui est affirmé sur le
+    fichier se lit sur l’impression publiée par l’organisateur ; tout ce qui est déduit est signalé comme notre
+    déduction. La Face B, qui répond aux deux dernières questions, paraîtra plus tard : ce dossier n’en dit rien.
+  </div>
+</header>
+
+<section id="script">
+<h2 class="chunk">Le script</h2>
+<h3 class="enigme">Ouverture — une majuscule, page 18</h3>
+<p>Si vous avez le livre de 1993, ouvrez-le page 18. L&#x27;énigme 530. Le sixième vers. </p>
+<p>« Aux limites de l&#x27;ETERNITE. » Tout en capitales, sans accent. </p>
+<p>Le même vers, dans un document de travail publié en 2019, et attribué à l&#x27;auteur par celui qui le publie : « l&#x27;Eternité ». En minuscules, avec son accent. </p>
+<p>Et dans un fichier informatique, sorti d&#x27;une disquette en 2021 : « l&#x27;Eternité ». En minuscules, avec son accent. </p>
+<p>Trois documents qui racontent la même énigme. Sur ce mot, le fichier ne suit pas le livre que tout le monde a lu. Il suit le document de travail. Ce n&#x27;est pas le seul endroit — et pour voir les autres, il faut d&#x27;abord ouvrir le fichier. </p>
+<h3 class="enigme">Si vous ne connaissez pas cette histoire</h3>
+<p>Si vous ne connaissez pas cette histoire, voici l&#x27;essentiel. En 1993, un auteur, Max Valentin, enterre quelque part en France une contremarque en bronze : une chouette. Onze énigmes dans un livre mènent à elle, et une statue en or attend celui qui la trouvera. Le peintre du livre, Michel Becker, en a fait les tableaux. </p>
+<p>Max meurt en 2009 sans que personne ait trouvé la chouette. </p>
+<p>En 2021, une disquette réputée contenir ses solutions est remise à un huissier. </p>
+<p>En 2025, une association de chercheurs porte plainte. </p>
+<p>Quelques jours plus tard, Michel Becker, devenu l&#x27;organisateur du jeu, publie ces solutions. </p>
+<p>En 2026, la justice saisit les solutions que l&#x27;auteur avait fait sceller en 1993. </p>
+<p>Nous avons consacré une série à ce qu&#x27;elles valent. Cette vidéo-ci porte sur un seul objet : le fichier qui était sur la disquette. </p>
+<h3 class="enigme">Trois lettres</h3>
+<p>Avril 2021. <a class="vlink doc" href="https://files.michelbecker.com/1/14.pdf" target="_blank" rel="noopener" title="PV de constat de Me Neige-Schmitt, 1er et 13 avril 2021 — PDF publié par l&#x27;organisateur">Une huissière glisse une disquette dans un lecteur</a>. Dessus, un fichier : SOLUTION.SAM. Elle note le nom, elle note le format — « .sam » —, elle l&#x27;ouvre, et elle écrit ce qu&#x27;elle voit : un texte crypté. </p>
+<p>Un an plus tard, <a class="vlink doc" href="https://files.michelbecker.com/1/18.pdf" target="_blank" rel="noopener" title="Attestation de Me Neige-Schmitt, 11 avril 2022 — PDF publié par l&#x27;organisateur">une attestation parle de quarante-trois pages de caractères aléatoires</a>. </p>
+<p>En 2025, ces quarante-trois pages sont imprimées dans un livre, et l&#x27;organisateur, qui le signe, avance une hypothèse : le contenu aurait été compressé lors de sa création. </p>
+<p>Crypté. Aléatoire. Compressé. Trois mots pour dire : illisible. Et c&#x27;est de ce fichier que sort la solution publiée en 2025. Pourtant, la réponse est dans le nom du fichier — trois lettres : S, A, M. </p>
+<p>Sur un PC de 1993, les trois lettres après le point disent quel logiciel a fait le fichier. « .DOC », c&#x27;est Word. « .SAM », c&#x27;est Ami Pro, le traitement de texte de Lotus, très répandu au début des années quatre-vingt-dix — SAM comme Samna, la société qui l&#x27;a créé. </p>
+<p>Et un fichier .SAM, ce n&#x27;est pas un coffre-fort. C&#x27;est du texte ordinaire, où le logiciel glisse ses consignes de mise en forme entre chevrons : ici du gras, là du Times New Roman, là un interligne. </p>
+<p>Ouvrez-le avec Ami Pro : vous voyez une page propre. </p>
+<p>Imprimez-le tel quel : vous voyez tout à la fois, le texte et les consignes. Les « caractères aléatoires », ce sont elles. </p>
+<p>Il faut dire que le fichier n&#x27;est pas seul sur la disquette. <a class="vlink doc" href="https://files.michelbecker.com/1/0.pdf" target="_blank" rel="noopener" title="Historique juridique de la chasse, version au 8 octobre 2024 — PDF publié par l&#x27;organisateur">L&#x27;historique officiel de l&#x27;organisateur en compte quatre</a> : SOLUTION.SAM, et trois autres, qui s&#x27;appellent COMPRESS. </p>
+<p>COMPRESS, malgré son nom, c&#x27;est un défragmenteur, un outil de PC Tools : il range les fichiers sur le disque, il n&#x27;en change pas le contenu. Voilà pour les trois autres. </p>
+<h3 class="enigme sous">Les quarante-trois pages</h3>
+<p>Une honnêteté avant de commencer. Nous n&#x27;avons jamais eu la disquette en main. Ce qu&#x27;on lit, c&#x27;est l&#x27;impression du livre, et <a class="vlink doc" href="https://lachouette.net/index.php?a=contrib&amp;cref=Mblond" target="_blank" rel="noopener" title="Les contributions de Mblond sur le forum de l&#x27;A2CO (inscription gratuite au forum)">un fichier reconstitué à partir d&#x27;elle par un chercheur, Mblond</a> : lecture optique, puis correction à la main. Nous avons tout relu, page par page, contre l&#x27;impression : c&#x27;est elle qui fait foi. </p>
+<p>Une question, avant d&#x27;aller plus loin : ces quarante-trois pages sont-elles bien ce que l&#x27;huissière a lu le 13 avril 2021 ? </p>
+<p>Regardez-les de près. Chacune porte le tampon de l&#x27;étude, et un numéro écrit à la main. La première et la dernière portent en plus un paraphe, et une date : 13 avril 2021. Le jour du constat. </p>
+<p>Première étrangeté : le constat de ce jour-là n&#x27;en dit pas un mot. Quarante-trois pages imprimées en deux exemplaires, tamponnées, paraphées, dont un jeu remis à l&#x27;organisateur — c&#x27;est exactement le genre de chose qu&#x27;un constat consigne. Celui-ci dit seulement : un fichier SOLUTION, un texte crypté. Puis la disquette repart avec l&#x27;organisateur. </p>
+<p>C&#x27;est une attestation, un an plus tard, qui raconte l&#x27;impression : deux exemplaires, tirés le 13 avril 2021 ; l&#x27;un gardé à l&#x27;étude, l&#x27;autre remis à l&#x27;organisateur, revêtu du sceau de l&#x27;étude. Les pages du livre, c&#x27;est celui-là. </p>
+<p>La disquette, elle, a passé six mois hors de l&#x27;étude, et n&#x27;y revient qu&#x27;en octobre, avec dix pages en clair. </p>
+<p>Les quarante-trois pages, elles, ne sont rattachées à ce 13 avril que par un tampon, une date manuscrite, et une attestation écrite un an plus tard. </p>
+<p>Et dans le livre, rien de l&#x27;huissière ne les précède : pas de page d&#x27;acte, pas d&#x27;en-tête de l&#x27;étude, pas de formule qui les rattache à un procès-verbal — seulement une phrase de l&#x27;organisateur, qui les dit imprimées et certifiées par l&#x27;huissier. </p>
+<p>Nous n&#x27;avons rien de mieux. Nous lirons donc ces pages pour ce qu&#x27;elles sont : l&#x27;impression publiée par l&#x27;organisateur — sans pouvoir certifier qu&#x27;elle est ce que la disquette contenait ce jour-là. </p>
+<p>Seconde étrangeté : le vocabulaire. Regardez la toute première de ces pages. On y lit, sans effort : « HP LaserJet IIP ». « Reco HYUNDAI ». « Texte ». Et plus loin, des phrases entières, entre des balises elles-mêmes lisibles. Rien d&#x27;aléatoire là-dedans : un fichier chiffré ne montre pas un mot. </p>
+<p>En octobre, l&#x27;huissière le décrit d&#x27;ailleurs très bien : des bribes de texte en clair, mêlées à des éléments de codage. Mais en avril : « un texte crypté ». Et en 2022 : des « caractères aléatoires ». Ces mots-là décrivent mal nos quarante-trois pages. </p>
+<p>Deux étrangetés. Nous les notons. Nous n&#x27;en tirons rien contre personne. </p>
+<p>Et quand on le lit vraiment, ce fichier pose six questions. Gardons les réponses pour plus tard. </p>
+<p>Un. Quand a-t-il été enregistré pour la dernière fois — avant, ou après que les solutions ont été déposées et constatées chez l&#x27;huissier ? </p>
+<p>Deux. Pourquoi un fichier de solutions de jeu s&#x27;appelle-t-il « Reco HYUNDAI » ? </p>
+<p>Trois. Ces dates, cette description : peut-on les croire sur parole ? </p>
+<p>Quatre. Son texte, d&#x27;où vient-il : du livre publié, ou d&#x27;un document de travail qui n&#x27;était pas destiné au public ? </p>
+<p>Cinq. Où, exactement, quelqu&#x27;un y a-t-il mis la main — et sur quoi ? </p>
+<p>Six. Avec quel logiciel a-t-il été écrit — et est-ce celui dont Max se servait ? </p>
+<p>Pour la quatrième, on ne vous demandera pas de nous croire. On vous donnera la méthode, et vous chercherez avec nous. </p>
+<p>Six questions, six réponses, pièces en main — sur deux faces. Celle-ci répond aux quatre premières : ce que ce fichier est, et d&#x27;où il vient. La Face B répondra aux deux dernières : ce qu&#x27;on lui a fait, et avec quoi. Rien d&#x27;autre : ce que ce fichier ne dit pas, nous ne le dirons pas à sa place. </p>
+<h3 class="enigme">Première question — quand ?</h3>
+<p>Première question. Quand ? </p>
+<p>Un fichier .SAM écrit trois choses dans son en-tête, dans cet ordre : quand il a été enregistré pour la dernière fois, combien de fois on l&#x27;a ouvert et modifié, et quand il est né. </p>
+<p>Deux grands nombres. Des secondes, comptées depuis le premier janvier 1970 — mais pas à l&#x27;heure de Paris : le logiciel note l&#x27;heure de la côte ouest des États-Unis. On l&#x27;a vérifié sur les fichiers de Lotus eux-mêmes : six fichiers livrés avec le logiciel, six fois le même écart. </p>
+<p>Traduits : dernier enregistrement le samedi 22 mai 1993, dix-sept heures six. Naissance le samedi 20 mars 1993, dix heures six. Entre les deux, dix-huit sessions de travail. </p>
+<p>Et le logiciel dit la même chose. Mblond a ouvert sa reconstitution dans Ami Pro : la boîte d&#x27;information affiche ces deux dates, ces deux heures. </p>
+<p>Dans un coin de cette boîte, une dernière ligne : durée totale d&#x27;édition, zéro. Retenez ce zéro. </p>
+<p>Posez maintenant ces dates sur le calendrier du jeu. Le 26 janvier 1993, l&#x27;huissier du jeu accuse réception de l&#x27;enveloppe scellée des solutions. </p>
+<p>Le 15 mai, le livre est en librairie. <a class="vlink doc" href="https://files.michelbecker.com/1/3.pdf" target="_blank" rel="noopener" title="Constat de Me Llouquet, 19 mai 1993 — PDF publié par l&#x27;organisateur">Le 19 mai, l&#x27;huissier dresse son constat</a> : une enveloppe scellée contenant les solutions, et une disquette en reproduisant le texte. </p>
+<p>Le fichier de 2021, lui, naît le 20 mars : deux mois après le premier dépôt. Et il est enregistré pour la dernière fois le 22 mai. </p>
+<p>Arrêtons-nous sur cette date. Le 15 mai, les énigmes sont imprimées : plus une virgule n&#x27;en bougera. Le 19, les solutions sont sous scellés, avec leur disquette. Et le 22, quelqu&#x27;un ouvre encore SOLUTION.SAM, et l&#x27;enregistre. C&#x27;est la dix-huitième session : dix-huit fois, ce document a été ouvert, puis enregistré. Ce qu&#x27;on y a changé ce jour-là, l&#x27;en-tête ne le dit pas — peut-être rien. </p>
+<p>Une disquette que l&#x27;huissier constate sous scellés le 19 ne peut pas contenir un fichier enregistré le 22. Ce n&#x27;est pas une interprétation, c&#x27;est de la logique : le fichier de 2021 n&#x27;est pas une copie figée du dépôt. C&#x27;est un exemplaire qui a continué à vivre après lui — alors que le jeu avait commencé. Ce qu&#x27;il dit, rien ne garantit que l&#x27;enveloppe le dise aussi. </p>
+<p>Première réponse : après. Sept jours après la sortie du livre, trois jours après le constat de l&#x27;huissier. </p>
+<p>Une précision : le fichier n&#x27;a pas été « rédigé le 22 mai ». Il a été travaillé du 20 mars au 22 mai, puis il n&#x27;a plus bougé. </p>
+<p>Et une prudence. La date de naissance d&#x27;un document n&#x27;est pas celle de son texte. </p>
+<p>Nous avons fait l&#x27;essai avec le logiciel de l&#x27;époque : on prend un vieux document, on le vide, on y colle un autre texte, on enregistre. </p>
+<p>Il garde sa date de naissance. Et il garde sa description. </p>
+<p>Retenez ça. Parce que ce document-ci a une description — et ce n&#x27;est pas celle qu&#x27;on attend. </p>
+<h3 class="enigme">Deuxième question — « Reco HYUNDAI »</h3>
+<p>Deuxième question. La description. </p>
+<p>Quand on enregistre un document pour la première fois dans Ami Pro, le logiciel demande une description : une ligne pour dire ce qu&#x27;est le document. </p>
+<p>Celui-ci s&#x27;appelle « Reco HYUNDAI ». </p>
+<p>C&#x27;est Mblond qui l&#x27;a remarqué le premier. </p>
+<p>Hyundai, c&#x27;est une marque. Et une « reco », dans une agence de publicité, c&#x27;est une recommandation : le document qu&#x27;on présente à un client pour lui proposer une campagne. </p>
+<p>Max — Régis Hauser — était publicitaire. </p>
+<p>Arrêtons-nous là-dessus, parce que ce n&#x27;est pas logique. Cette description, c&#x27;est la première chose que le logiciel réclame à la naissance du fichier, et c&#x27;est celui qui crée le document qui le tape. Quelqu&#x27;un qui s&#x27;assoit pour écrire les solutions de sa chasse au trésor tape « Solutions de la chasse ». Pas « Reco HYUNDAI ». Le jour où ce document est né, il n&#x27;était pas fait pour ça. </p>
+<p>Une reco pour Hyundai, ce n&#x27;est pas une solution de jeu. </p>
+<p>Et souvenez-vous : un document modifié garde sa description et sa date de naissance. Le 20 mars 1993, quelqu&#x27;un crée un document et l&#x27;appelle « Reco HYUNDAI ». Un jour, ce document reçoit le texte des solutions. </p>
+<p>Deuxième réponse : ce document n&#x27;est pas né pour recevoir les solutions — sa description le dit. L&#x27;explication la plus simple : un vieux document, modifié. Pas prouvé. C&#x27;est ce que le logiciel permet, et rien dans le fichier ne l&#x27;exclut. </p>
+<p>Voilà ce que dit l&#x27;en-tête : des dates, une description. Mais un en-tête, est-ce que ça se croit sur parole ? </p>
+<h3 class="enigme">Troisième question — vingt minutes</h3>
+<p>Troisième question. Peut-on croire cet en-tête sur parole ? </p>
+<p>Toutes les dates que vous avez vues — celles de l&#x27;en-tête, comme celle que l&#x27;huissière a relevée sur la disquette — sont l&#x27;heure de l&#x27;horloge de l&#x27;ordinateur au moment où l&#x27;on appuie sur Enregistrer. Rien ne les relie à quoi que ce soit d&#x27;extérieur. </p>
+<p>Il suffit d&#x27;un ordinateur de l&#x27;époque, ou d&#x27;un émulateur ; de régler l&#x27;horloge ; et des logiciels, qui se téléchargent librement. </p>
+<p>Nous l&#x27;avons fait. Une vieille version d&#x27;Ami Pro — on verra plus loin pourquoi celle-là —, sans aucun matériel d&#x27;époque. </p>
+<p>L&#x27;horloge réglée au 20 mars 1993, dix heures six : un document vierge, une description — « Reco HYUNDAI ». Dix-huit sessions de travail. La dernière, horloge réglée au 22 mai 1993, dix-sept heures six. </p>
+<p>Voici l&#x27;en-tête de notre fichier. Et voici celui de la disquette. Les mêmes nombres, à la seconde près. </p>
+<p>Vingt minutes, installation comprise. Le dossier de l&#x27;épisode dit comment, pas à pas, avec les fichiers produits. </p>
+<p>Mblond le dit à sa façon : si j&#x27;ai pu le faire, d&#x27;autres ont pu le faire. </p>
+<p>Troisième réponse : non. Un en-tête ne se croit pas sur parole. </p>
+<p>Alors soyons logiques. Ou bien l&#x27;horloge disait vrai : le fichier a été enregistré trois jours après le constat, et ce n&#x27;est pas l&#x27;exemplaire sous scellés. Ou bien elle ne disait pas vrai : et alors aucune de ces dates ne vaut — pas même celle que l&#x27;huissière a relevée. Dans les deux cas, ce fichier ne prouve pas son âge tout seul. </p>
+<p>Il faut donc chercher ce qui ne dépend d&#x27;aucune horloge. Ce qui ne se fabrique pas en vingt minutes. Le texte. </p>
+<h3 class="enigme">Quatrième question — d&#x27;où vient le texte ?</h3>
+<h3 class="enigme sous">La règle du jeu</h3>
+<p>Quatrième question. D&#x27;où vient le texte ? </p>
+<p>Deux candidats. Le premier, tout le monde le connaît : le livre de 1993. </p>
+<p>Le second est un document de travail, le cahier des charges : des feuillets qui donnent au peintre le texte de chaque énigme, et ce qu&#x27;il faut peindre. L&#x27;organisateur en a publié plusieurs états en 2019, dans *Les Cahiers secrets*, et c&#x27;est lui qui les attribue à Max. Nous n&#x27;en avons aucune autre source. Gardez-le en tête. </p>
+<p>Comment savoir duquel des deux le fichier descend ? Avec une méthode qui a plusieurs siècles. Pour savoir si un manuscrit a été copié sur un autre, on ne regarde pas ce qui est juste : deux copistes fidèles écrivent la même chose. On regarde ce qui cloche. Une faute, une manie, un accident. Parce qu&#x27;une faute ne s&#x27;invente pas deux fois au même endroit. </p>
+<p>D&#x27;où notre règle du jeu. Une bizarrerie compte si elle est dans le cahier des charges, dans le fichier — et pas dans le livre. Le livre de 1993 est notre témoin : s&#x27;il la porte aussi, elle ne prouve rien. </p>
+<p>Et le témoin doit être le vrai. Pas une copie numérique : certaines ont été recomposées, avec d&#x27;autres coupures de lignes. Nous avons posé un exemplaire de 1993 sur un scanner, page par page. Si vous vérifiez chez vous, faites-le sur le papier. </p>
+<p>Nous avons comparé le texte des onze énigmes, dans le fichier et dans le livre, caractère par caractère. Les mots : identiques. </p>
+<p>Les majuscules : identiques, jusqu&#x27;aux plus bizarres — cette charade de la 470 où « second » et « troisième » sont en minuscules, et « Quatrième » en majuscule. La ponctuation, les coupures de lignes : identiques. </p>
+<p>Tout cela est aussi dans le cahier des charges. Trois témoins d&#x27;accord : zéro point. Cela dit une chose, tout de même : ces trois documents sont de la même famille. Les mêmes manies, jusque chez l&#x27;imprimeur. </p>
+<p>Restent cinq écarts entre le fichier et le livre. Cinq, sur onze énigmes — dont deux sur la même ligne, celle de la page 22. Regardons de quel côté tombe le fichier. </p>
+<p>Un. Le titre de la 780. Dans le livre : « PREMIER PAS ». Dans le cahier des charges : « PREMIER PAS », trois points de suspension. Dans le fichier : trois points. </p>
+<p>Deux. La 530 — c&#x27;est notre page 18 du début. Le livre écrit « l&#x27;ETERNITE », tout en capitales. Le cahier des charges : « l&#x27;Eternité ». Le fichier : « l&#x27;Eternité ». </p>
+<p>Trois — et celui-là, cherchez-le vous-même. Voici le premier vers de la 500, dans le livre, et dans le fichier. Mettez pause. </p>
+<p>Le point. Le fichier termine le vers par un point. Le livre, non. </p>
+<p>Maintenant, le cahier des charges. Le vers n&#x27;y est pas le même : « prends la tangente ». Les mots ont changé avant l&#x27;impression. Mais regardez la fin : un point. </p>
+<p>Le fichier a les mots du livre, et la ponctuation du cahier des charges. </p>
+<p>Quelqu&#x27;un a pris la phrase du cahier des charges, a remplacé trois mots — et le point est resté. Ce vers n&#x27;a pas été recopié du livre. Il a été corrigé sur place. </p>
+<h3 class="enigme sous">Les espaces</h3>
+<p>Quatre. La page 22 : la 600, des lettres, des points, des virgules. Deux de ces virgules sont suivies d&#x27;un blanc dans votre livre, et collées dans le cahier des charges. Dans le fichier aussi : collées. </p>
+<p>Cinq. Même ligne : les espaces. Le cahier des charges. Entre deux groupes de lettres : deux espaces. Partout. Sauf ici, avant « BCG » : trois. </p>
+<p>Le fichier. Deux espaces, lui aussi. Sauf avant « BCG » : trois. </p>
+<p>Le livre. Un seul espace, partout. </p>
+<p>Cinq écarts. Cinq fois du côté du cahier des charges. </p>
+<p>Et le livre, pourquoi s&#x27;écarte-t-il ? C&#x27;est Max qui le raconte, sur le Minitel du jeu, où il répondait aux chercheurs : pour la première édition, l&#x27;éditeur, plutôt que de se servir de sa disquette, a préféré confier la saisie du texte à un typographe. <span class="refs"><a class="ref" id="b-04_11_98_38-1" href="#m-04_11_98_38" title="voir le madit">↓ 4 novembre 1998 · Editions</a></span></p>
+<p>Le livre a donc été retapé. Le fichier, lui, suit le cahier des charges. </p>
+<p>Et puis il y a ce que le livre n&#x27;imprime pas. Ouvrez le cahier des charges à la 780. Au-dessus du titre, une ligne entre parenthèses : « Feuillet rouge-violet 780 nanom. ». Une couleur, et sa longueur d&#x27;onde en nanomètres : une consigne de fabrication. Dans le livre, il en reste une tête de chouette colorée, et un nombre. </p>
+<p>Sous les vers, une autre parenthèse : « Illustration : une boussole ». Une consigne pour le peintre. Ce n&#x27;était pas pour vous. </p>
+<p>SOLUTION.SAM a les deux, sur chaque feuillet. </p>
+<h3 class="enigme sous">Les états</h3>
+<p>Ce cahier des charges, l&#x27;organisateur n&#x27;en a pas publié un état, mais trois. Et d&#x27;un état à l&#x27;autre, on voit le texte se faire. </p>
+<p>Prenez la 560. Premier état : « Par l&#x27;ouverture, tu verras la lumière céleste. Quand, à Carasburc… ». Deuxième état : une majuscule apparaît à « Ouverture ». Troisième : les deux vers changent de place, « Carasburc » devient « Carusburc », « sois prêt » devient « apprête-toi ». </p>
+<p>C&#x27;est le texte du livre. C&#x27;est aussi celui du fichier. </p>
+<p>Même chose pour la 420. Au premier état : « 1959,687 mesures ». </p>
+<p>Ensuite, et partout : « 1969,697 ». </p>
+<p>D&#x27;un état à l&#x27;autre, les mesures changent, des noms changent, des chiffres s&#x27;inversent. Des feuillets qu&#x27;on fait circuler doivent permettre de travailler, pas de trouver la chouette : c&#x27;est notre lecture. </p>
+<p>Le fichier est donc au bout de la chaîne : il porte le texte final. Presque partout. </p>
+<p>Dernière empreinte : un fossile. Dans le tout premier état, la 580 classait ses villes avec des ordinaux : une suite de nombres, puis « est dixième ». Dans la version définitive, puis dans le livre : la même suite « vaudra 0 ». Le feuillet du fichier dit « vaudra 0 ». Mais juste en dessous, son explication cite l&#x27;énigme dans la forme du premier état : « est dixième, soit &quot;Angers est dixième&quot; ». </p>
+<p>Soyons précis, parce qu&#x27;on pourrait en tirer trop. </p>
+<p>Les explications du fichier citent les énigmes trente-deux fois. </p>
+<p>Vingt citations disent quel état du texte elles suivent : seize, le texte final ; quatre, le premier état — et une seule est une vraie phrase, « est dixième ». Un fossile. Pas un gisement. </p>
+<p>Reste une question : avait-il les pages du cahier des charges, ou ses fichiers ? Les blancs de la 600 se voient sur la page : quelqu&#x27;un de soigneux pourrait les recopier. </p>
+<p>Mais la 420 garde un espace que la page ne montre pas. Dans le fichier, trois lignes de cette énigme commencent par un espace. Trois, sur plus de cent. </p>
+<p>Sur le papier, cet espace devrait être invisible. Il ne l&#x27;est pas tout à fait — et voici pourquoi. </p>
+<p>Ces lignes sont centrées. Pour centrer une ligne, le logiciel la mesure d&#x27;un bout à l&#x27;autre, espaces compris, et pose son milieu au milieu de la page. </p>
+<p>Ajoutez un espace en tête. La ligne s&#x27;allonge d&#x27;un espace, d&#x27;un seul côté. </p>
+<p>Son milieu ne bouge pas : c&#x27;est le texte qui glisse. D&#x27;un demi-espace, vers la droite. </p>
+<p>Un demi-espace : moins d&#x27;un demi-millimètre. À l&#x27;œil, rien. </p>
+<p>Mais cela se mesure. Prenez la page du cahier des charges, et marquez le milieu de chaque ligne. </p>
+<p>Dix milieux s&#x27;alignent sur une même verticale. </p>
+<p>Trois s&#x27;en écartent, vers la droite — d&#x27;un demi-espace. </p>
+<p>Ce sont les trois lignes qui commencent par un espace dans le fichier. </p>
+<p>On ne recopie pas ce qu&#x27;on ne voit pas. </p>
+<p>Et ce résultat dit quelque chose qu&#x27;il ne faut pas taire. Celui qui a fait ce fichier n&#x27;avait pas seulement les pages du cahier des charges : il avait les fichiers de ce cahier. Celui qui l&#x27;a écrit, au premier chef. Ou quelqu&#x27;un qui disposait de ses disquettes. Lequel : le fichier ne le dit pas. </p>
+<p>Et ce cahier, souvenez-vous, on ne le connaît que par l&#x27;organisateur : on vient de relier deux documents publiés par la même partie. </p>
+<p>Quatrième réponse : pas du livre. Ce fichier, c&#x27;est le cahier des charges, mis à jour sur place jusqu&#x27;au texte final — avec ses consignes, sa ponctuation, ses espaces, et un fossile. </p>
+<p>Quatre réponses, quatre pièces. Ce fichier a été enregistré trois jours après le constat de l&#x27;huissier. Il porte le nom d&#x27;un travail de publicité. Ses dates ne se croient pas sur parole. Et il ne descend pas du livre : il descend du cahier des charges attribué à Max par le nouvel organisateur, mis à jour jusqu&#x27;au texte final. </p>
+<p>Mais ce fichier n&#x27;est pas une copie. Six consignes au peintre ne disent plus ce que disait le cahier des charges. Quelqu&#x27;un les a changées. </p>
+<p>Où, exactement ? Et avec quel logiciel ? Le fichier le dit lui-même. Le logiciel de 1993 a laissé, à chaque retouche, une trace que personne n&#x27;a effacée — et son en-tête porte le nom de sa propre version. Ce que cette version dit de Max, ce sera la Face B. </p>
+<p>Le dossier de cette face — la méthode, les fichiers d&#x27;essai, la relecture page par page — est en lien sous la vidéo. </p>
+</section>
+
+<section class="madits">
+  <h2 class="chunk">Le madit cité — texte intégral</h2>
+<article class="madit" id="m-04_11_98_38">
+  <div class="m-head"><span class="m-date">4 novembre 1998</span>
+    <span class="m-titre">EDITIONS</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Quelles sont les différences entre la 1e re et la deuxième édition du livre ? Merci, au plaisir. Pegase</p>
+  <p class="m-r"><span class="lbl">R</span>Dans la première édition, il y avait quelques &quot;fantaisies&quot; typographiques qui n&#x27;étaient pas de mon fait, mais de celui du premier éditeur lequel, plutôt que de se servir de ma disquette, a préféré confier la saisie du texte à un typographe qui parlait à peine le français. Les rectifications - minimes quand même - sont signalées dans la rubrique &quot;précisions des auteurs&quot; sur le présent minitel. Dans la 2ème édition, tout était ok, car copié directement de ma disquette. Idem pour la 3ème édition, qui contient toutes les i.s. publiées à ce jour, ainsi que quelques chapitres annexes à la chasse proprement dite. Mais la chouette peut parfaitement être trouvée avec la 1ère édition. Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-04_11_98_38-1">↩ retour </a></div>
+</article>
+</section>
+
+<section class="prose" id="regle">
+  <h2 class="chunk">La règle du jeu — et l’inventaire complet des écarts</h2>
+
+<p>Trois témoins : <b>le cahier des charges</b> (les feuillets publiés dans <i>Les Cahiers secrets</i>, 2019), <b>le fichier</b>
+(l'impression de SOLUTION.SAM dans le livre d'octobre 2025, p. 102-149) et <b>le livre de 1993</b> (un exemplaire papier
+de la première édition, numérisé page par page). La question : le fichier descend-il du livre publié, ou du document
+de travail ?</p>
+<p>La méthode est celle de la critique des textes. Pour savoir si un manuscrit a été copié sur un autre, on ne regarde
+pas ce qui est juste — deux copistes fidèles écrivent la même chose —, on regarde ce qui cloche : une faute, une manie,
+un accident, parce qu'une faute ne s'invente pas deux fois au même endroit. D'où la règle : <b>une bizarrerie compte si
+elle est dans le cahier des charges et dans le fichier, et pas dans le livre</b>. Ce que les trois témoins partagent ne
+départage rien.</p>
+<p>Le relevé est complet, pas un choix d'exemples : le texte des onze énigmes a été comparé caractère par caractère
+entre le fichier et le livre (lecture optique du livre, comparaison ligne à ligne, puis <b>chaque écart contrôlé à
+l'image sur les trois témoins</b>, y compris sur l'impression du fichier, parce que la reconstitution peut se tromper).
+Les mots, la casse (charade de la 470 comprise), la ponctuation et les coupures de lignes sont identiques sur les onze
+énigmes. Restent cinq écarts de forme :</p>
+<table class="tab">
+<tr><th></th><th>Passage</th><th>Cahier des charges</th><th>Fichier (impression)</th><th>Livre de 1993</th></tr>
+<tr><td>1</td><td>780, titre</td><td>« PREMIER PAS... » (p. 74)</td><td>« PREMIER PAS... » (p. 123)</td><td>« PREMIER PAS », sans points (p. 20)</td></tr>
+<tr><td>2</td><td>530, sixième vers</td><td>« l'Eternité » (p. 73)</td><td>« l'Eternité » (p. 122)</td><td>« l'ETERNITE » (p. 18)</td></tr>
+<tr><td>3</td><td>500, premier vers</td><td>« prends la tangente<b>.</b> » (p. 72)</td><td>« emprunte l'orthogonale<b>.</b> » (p. 131)</td><td>« emprunte l'orthogonale », sans point (p. 16)</td></tr>
+<tr><td>4</td><td>600, chiffrage — les virgules</td><td>« BDI,J. » et « BCG,J. » collés (p. 55)</td><td>collés (p. 128)</td><td>« BDI, J. » et « BCG, J. » espacés (p. 22)</td></tr>
+<tr><td>5</td><td>600, chiffrage — les espaces</td><td>deux espaces entre les groupes, trois avant « BCG,J. » (p. 55)</td><td>identique : deux, et trois avant « BCG,J. » (p. 128)</td><td>un seul espace partout (p. 22)</td></tr>
+</table>
+<p>Le troisième écart est le plus simple à montrer : le fichier a les <b>mots du livre</b> et la <b>ponctuation du
+cahier des charges</b> — la phrase du cahier des charges retouchée sur place, trois mots remplacés, le point resté.
+Le cinquième oppose le fichier au livre, et le livre en est la contre-épreuve : recomposé par un typographe (madit du
+4 novembre 1998), il n'a qu'un espace partout. Mais ces blancs se voient sur la page du cahier des charges : quelqu'un
+de soigneux pourrait les recopier. Ils disent « pas d'après le livre » ; ils ne disent pas, à eux seuls, « d'après un
+fichier ». Cette seconde question est traitée plus bas, avec la 420.</p>
+<p><b>Comment mesurer les espaces chez vous.</b> Dans l'impression du fichier, tous les caractères ont la même largeur :
+on compte les cases. Dans le cahier des charges, on compare à l'espace normal de la même ligne (l'espace simple sert
+d'étalon) : après une virgule, un espace ; entre deux groupes, deux ; avant « BCG », près de trois. Une mesure en
+pixels dépendrait de votre scanner ; celle-ci non.</p>
+<p><b>Autres rapprochements, non montrés dans la vidéo.</b> Le titre de la 500, « UT QUEANT LAXIS » : deux espaces
+entre les mots dans le fichier (on compte les cases, p. 131), et des mots écartés bien plus que partout ailleurs dans le
+cahier des charges (p. 72) ; un seul espace dans le livre. Les manies des consignes : de tous les en-têtes de feuillet,
+un seul porte un tiret isolé, celui de la 530 (« vert moyen - 530 nanom. »), dans le cahier des charges comme dans le
+fichier ; une seule consigne se termine par un point après la parenthèse, celle de la 520, des deux côtés.</p>
+
+<h4>La trace que la page ne montre pas : les espaces de tête de la 420</h4>
+<p>Dans l'impression du fichier, trois lignes de la 420 commencent par un espace (p. 132-133) : « ␣687-ARQ-30667-E… »,
+« ␣DA-60140-10752… », « ␣En une 46.241.860ème… ». Nous avons regardé à l'image les 123 paragraphes centrés qui portent
+du texte : quatre commencent par un espace — ces trois-là, et une ligne de la 600.</p>
+<p><b>Pourquoi un espace de tête déplace une ligne centrée.</b> Pour centrer une ligne, un traitement de texte la mesure
+d'un bout à l'autre, espaces compris, et pose son milieu au milieu de la page. Avec un espace en tête, la ligne
+s'allonge d'un espace d'un seul côté : le texte se retrouve décalé d'un demi-espace vers la droite. Sur ces pages, un
+demi-espace fait moins d'un demi-millimètre : à l'œil, rien.</p>
+<p><b>La mesure.</b> Sur le scan de la page du cahier des charges (<i>Les Cahiers secrets</i>, p. 76), redressé, on
+repère pour chaque ligne le bord gauche de sa première lettre et le bord droit de sa dernière ; le milieu de la ligne
+est à mi-chemin. La verticale de référence n'est pas le milieu de la feuille ni celui du scan : c'est la médiane des
+milieux des lignes de la page, c'est-à-dire la verticale sur laquelle les lignes s'alignent d'elles-mêmes. La mesure
+est donc relative ; le cadrage du scan n'y entre pas. Écarts en fraction de l'espace de la ligne (une mesure en pixels
+dépendrait du scanner) :</p>
+<table class="tab">
+<tr><th>Ligne (p. 76)</th><th>Écart à la verticale, en espace</th><th></th></tr>
+<tr><td>(Feuillet violet moyen 420 nanom.)</td><td>+0,05</td><td></td></tr>
+<tr><td>DU CIEL VIENT LA LUMIERE</td><td>+0,10</td><td></td></tr>
+<tr><td>C'E-10752-365 LA Q-30667-E L'AIGLE…</td><td>−0,02</td><td></td></tr>
+<tr><td><b>687-ARQ-30667-E DE 10752-E-10752…</b></td><td><b>+0,41</b></td><td>espace de tête dans le fichier</td></tr>
+<tr><td><b>DA-60140-10752 LE 10752-ABLE,</b></td><td><b>+0,49</b></td><td>espace de tête dans le fichier</td></tr>
+<tr><td>CENT 4330-O-30667-R-10752 AVA-60140-365…</td><td>−0,05</td><td></td></tr>
+<tr><td>CA-10752-10752-ER LE BEC</td><td>+0,05</td><td></td></tr>
+<tr><td>E-365 Y LAI-10752-10752-ER 10752-E-10752</td><td>0,00</td><td></td></tr>
+<tr><td>90677-L-30667-687-E-10752.</td><td>−0,10</td><td></td></tr>
+<tr><td>Alors prête un arc à Apollon :</td><td>−0,10</td><td></td></tr>
+<tr><td>de là, il comptera 1969,697 mesures vers le zénith.</td><td>−0,14</td><td></td></tr>
+<tr><td><b>En une 46.241.860ème fraction de jour sidéral…</b></td><td><b>+0,37</b></td><td>espace de tête dans le fichier</td></tr>
+<tr><td>Hâte-toi de trouver la flèche.</td><td>−0,08</td><td></td></tr>
+</table>
+<p>Dix lignes sur la verticale, trois décalées vers la droite d'environ un demi-espace : les trois qui commencent par
+un espace dans le fichier. Trois méthodes de repérage des bords donnent le même résultat, dont une sur l'image native,
+sans rotation ; l'effet de la forme des lettres de bout de ligne a été examiné ligne par ligne.</p>
+<p><b>Sur les autres pages.</b> La mesure a porté sur les douze pages centrées du cahier des charges (p. 68-69 et
+72-81), soit 127 lignes : 119 sur la verticale, cinq décalées à droite, trois à gauche. Les cinq à droite sont les
+trois de la 420 et deux lignes de la 780 (p. 74) : le titre « PREMIER PAS... », que le fichier a refait (« 780 - PREMIER
+PAS... ») et qui n'y porte pas d'espace de tête, et une ligne de consigne. Les trois à gauche correspondraient à un
+espace en fin de ligne, que l'impression du fichier ne peut pas montrer. La ligne de la 600 qui commence par un espace
+dans le fichier n'a pas de page centrée en regard : ce feuillet n'existe, dans le cahier des charges publié, qu'en
+premier état, aligné à gauche.</p>
+<p><b>Limites.</b> L'écart mesuré est de l'ordre de deux à trois points d'image sur un scan à 200 points par pouce,
+et la pièce est la reproduction imprimée d'un feuillet, pas le feuillet. Trois lignes sur treize qui s'écartent du même
+côté et de la même quantité ne sont pas du bruit ; un scan plus fin de la p. 76 rendrait la mesure plus facile à
+refaire.</p>
+
+<p><b>Ce que cela établit, et ce que cela n'établit pas.</b> Les trois documents sont de la même famille : mêmes mots,
+même casse, mêmes coupures. Les feuillets du fichier sont le cahier des charges mis à jour sur place jusqu'au texte
+final, pas une copie du livre. Et un espace que la page ne montre pas ne se recopie pas : celui qui a fait le fichier
+disposait des fichiers de ce cahier, pas seulement de ses pages — celui qui l'a écrit au premier chef, ou quelqu'un qui
+avait ses disquettes. Cela ne dit ni qui, ni quand. Et le cahier des charges n'est connu que par l'organisateur, qui
+l'attribue à Max : nous n'en avons aucune autre source.</p>
+
+</section>
+
+<section class="prose" id="dates">
+  <h2 class="chunk">La règle des dates et sa preuve</h2>
+
+<p>Un fichier Ami Pro porte, dans son bloc <code>[desc]</code>, trois nombres dans cet ordre : <b>le dernier
+enregistrement</b>, <b>le nombre de sessions</b> (une ouverture suivie d'un enregistrement, que l'on ait modifié le document ou non), <b>la création</b>. Les deux dates sont
+des secondes comptées depuis le 1<sup>er</sup> janvier 1970 — mais pas à l'heure de Paris. Ami Pro passe par la
+bibliothèque C de Microsoft, qui, faute de fuseau réglé, compte à l'heure du Pacifique : <b>l'horodatage vaut l'heure
+de l'horloge du PC plus 7 heures pendant l'heure d'été américaine</b> (du premier dimanche d'avril au dernier dimanche
+d'octobre, à l'époque), plus 8 heures en hiver.</p>
+<p>La preuve tient dans les fichiers livrés avec le logiciel lui-même : leur date DOS (l'horloge du PC de Lotus) et leur
+<code>[desc]</code> lu comme une heure universelle diffèrent toujours du même écart.</p>
+<table class="tab">
+<tr><th>Fichier livré avec Ami Pro 3.0</th><th>Date DOS (horloge du PC)</th><th><code>[desc]</code> lu en heure universelle</th><th>Écart</th></tr>
+<tr><td>AMISKWP5.SAM</td><td>28/10/1993 19:25:18</td><td>29/10/1993 02:25:07</td><td>+ 6 h 59 min 49 s</td></tr>
+<tr><td>AMISKDW4.SAM</td><td>28/10/1993 19:22:42</td><td>29/10/1993 02:20:55</td><td>+ 6 h 58 min 13 s</td></tr>
+<tr><td>_DEFAULT.STY</td><td>26/10/1993 15:29:26</td><td>26/10/1993 22:29:25</td><td>+ 6 h 59 min 59 s</td></tr>
+<tr><td>_MERCLET.STY</td><td>25/04/1994 17:11:00</td><td>26/04/1994 00:11:00</td><td>+ 7 h</td></tr>
+<tr><td>GOODIES.SAM</td><td>09/06/1994 15:22:26</td><td>09/06/1994 22:22:26</td><td>+ 7 h</td></tr>
+<tr><td>TUTORIAL.SAM (hiver)</td><td>27/01/1994 12:28:18</td><td>27/01/1994 20:28:24</td><td>+ 8 h</td></tr>
+</table>
+<p>Les quelques secondes d'écart tiennent à ce que la date DOS est celle de la copie sur le disque, quelques instants
+après l'enregistrement. Nous l'avons vérifié en direct sur nos propres fichiers : un document enregistré à 14 h 46 min 20 s
+à l'horloge de la machine porte 21 h 46 min 20 s — sept heures exactement.</p>
+<p>Appliqué au fichier de la disquette : <b>738 115 576</b> secondes → 23 mai 1993, 0 h 06 en heure universelle → moins
+7 h → <b>22 mai 1993, 17 h 06</b> (dernier enregistrement) ; <b>732 650 811</b> → <b>20 mars 1993, 10 h 06</b>
+(création) ; <b>18</b> sessions entre les deux. Le 22 mai 1993 est un samedi ; le 20 mars aussi. La boîte d'information
+d'Ami Pro, ouverte par Mblond sur sa reconstitution, affiche les mêmes dates et les mêmes heures.</p>
+<p>Le calendrier du jeu, pour mémoire : 26 janvier 1993, l'huissier accuse réception de l'enveloppe scellée des
+solutions ; 15 mai, le livre est en librairie ; 19 mai, constat de dépôt de l'enveloppe et d'une disquette ;
+22 mai, 17 h 06, dernier enregistrement du fichier de 2021 — sept jours après la sortie du livre, trois jours après
+le constat. Une réserve, dite dans la vidéo : ces dates sont celles de l'horloge de l'ordinateur au moment
+d'enregistrer, et rien ne les relie à quoi que ce soit d'extérieur.</p>
+
+</section>
+
+<section class="prose" id="essais">
+  <h2 class="chunk">Les fichiers d’essai</h2>
+
+<p>Tous les essais ont été faits sous émulation, sur les logiciels d'époque, l'horloge de la machine étant réglée quand il
+le fallait. Chaque ligne donne le geste et ce que le fichier enregistré en garde ; les fichiers <code>.SAM</code> produits
+sont joints dans le dossier <code>essais/</code> quand ils le sont, et se lisent avec n'importe quel éditeur de texte.</p>
+
+<table class="tab"><tr><th>Essai</th><th>Le geste</th><th>Ce que le fichier en garde</th><th>Fichier</th></tr><tr><td>01</td><td>Nouveau document ouvert à 14 h 41 min 42 s (horloge de la machine), un texte tapé, « Enregistrer sous » A1.SAM avec la description « TEST A » à 14 h 46 min 20 s.</td><td>La création enregistrée est l&#x27;ouverture du document vierge (14 h 41), pas le premier enregistrement. Horodatage = heure de la machine + 7 h. Une session.</td><td class="mono"><a href="essais/01_A1_premier_enregistrement.SAM">01_A1_premier_enregistrement.SAM</a></td></tr><tr><td>02</td><td>Un ajout, puis « Enregistrer » dans la même session.</td><td>Toujours une session : enregistrer plusieurs fois sans fermer le document ne l&#x27;augmente pas.</td><td class="mono"><a href="essais/02_A1_enregistrer.SAM">02_A1_enregistrer.SAM</a></td></tr><tr><td>03</td><td>« Enregistrer sous » B1.SAM sans toucher à la description.</td><td>La description est pré-remplie dans la boîte et conservée ; la création aussi.</td><td class="mono"><a href="essais/03_B1_enregistrer_sous.SAM">03_B1_enregistrer_sous.SAM</a></td></tr><tr><td>09</td><td>« Ouvrir » un fichier texte brut (le chiffrage de la 600, avec ses doubles et son triple espace) comme nouveau document, puis « Enregistrer sous » T600.SAM.</td><td>Un document neuf : la création est l&#x27;instant de l&#x27;import, la description est vide. Les espaces multiples sont conservés.</td><td class="mono"><a href="essais/09_I1_import_ascii.SAM">09_I1_import_ascii.SAM</a></td></tr><tr><td>10</td><td>Ouvrir A1.SAM (créé à 14 h 41, description « TEST A »), tout sélectionner, effacer ; copier le texte de T600.SAM, le coller ; « Enregistrer sous » COLLE.SAM sans toucher à la description (16 h 56 min 32 s).</td><td>Création 14 h 41 conservée, description « TEST A » conservée, deux sessions. Le texte est entièrement celui qui a été collé, espaces compris : rien dans l&#x27;en-tête ne trahit qu&#x27;il vient d&#x27;ailleurs. C&#x27;est l&#x27;essai montré dans la vidéo (« on prend un vieux document, on le vide, on y colle un autre texte, on enregistre »).</td><td class="mono"><a href="essais/10_P1_contenant_colle.SAM">10_P1_contenant_colle.SAM</a></td></tr><tr><td>11</td><td>Même document vidé ; « Ouvrir » un fichier texte brut avec le bouton « Insérer » ; « Enregistrer sous » INSERE.SAM.</td><td>Même résultat par un autre chemin : création et description du vieux document, texte du fichier externe.</td><td class="mono"><a href="essais/11_N1_contenant_insere.SAM">11_N1_contenant_insere.SAM</a></td></tr><tr><td>22</td><td>Horloge de la machine réglée au 20 mars 1993, 10 h 06 ; un document vierge, une description « Reco HYUNDAI » ; dix-huit sessions de travail, la dernière l&#x27;horloge réglée au 22 mai 1993, 17 h 06 ; vingt minutes en tout.</td><td>Le bloc [desc] du fichier porte 738115576 · 18 · 732650811 — les trois nombres de la disquette, à la seconde près. C&#x27;est l&#x27;essai de la troisième question. Pour le refaire : la section « Refaire l&#x27;essai » ci-dessous.</td><td class="mono">—</td></tr></table>
+</section>
+
+<section class="prose" id="refaire">
+  <h2 class="chunk">Refaire l’essai chez soi — Ami Pro sous émulation, l’horloge réglée</h2>
+
+<p>La vidéo le dit : « vingt minutes, installation comprise. Le dossier de l'épisode dit comment, pas à pas, avec les
+fichiers produits. » Voici comment. Tout ce qui suit a été fait sur un ordinateur ordinaire sous Linux, le logiciel
+d'époque tournant sous <b>wine</b> (une couche de compatibilité qui exécute les programmes Windows) : nous n'avons
+aucun matériel de 1993. Les outils sont joints dans le dossier <a href="outils/"><code>outils/</code></a>
+(<a href="outils_ami_pro.zip">archive zip</a>) ; chacun tient en quelques dizaines de lignes et se lit avant de se lancer.</p>
+
+<h3>1. Ce qu'il faut</h3>
+<p>Un Linux de la famille Debian/Ubuntu (nos essais : Ubuntu 26.04, wine 10.0). Les paquets :</p>
+<pre>sudo dpkg --add-architecture i386 &amp;&amp; sudo apt update
+sudo apt install wine32:i386 xvfb bubblewrap 7zip gcc-multilib imagemagick python3-venv
+python3 -m venv venv &amp;&amp; venv/bin/pip install python-xlib</pre>
+<p><i>wine32</i> exécute les programmes 16 et 32 bits ; <i>Xvfb</i> fournit un écran virtuel où le logiciel s'affiche
+sans toucher au bureau ; <i>bubblewrap</i> sert à masquer les polices (voir l'étape 4) ; <i>gcc</i> compile le réglage
+d'horloge ; <i>python-xlib</i> envoie les clics et les frappes au logiciel. Pour travailler à la main plutôt que par
+script, python-xlib et imagemagick sont inutiles.</p>
+
+<h3>2. Télécharger le logiciel</h3>
+<p>Lotus Ami Pro 1.2B (anglais, 1990-1991) est conservé par Internet Archive :
+<a href="https://archive.org/details/lotus-ami-pro-1.2b" target="_blank" rel="noopener">archive.org/details/lotus-ami-pro-1.2b</a>
+(deux images de disquettes dans une archive 7z de 2,3 Mo). Le script vérifie l'empreinte du téléchargement
+(md5 <code>1198dca56ab564d6db1d2a28698ab919</code>), puis extrait les images de disquettes et les archives
+<code>.ZIP</code> qu'elles contiennent :</p>
+<pre>sh outils/1_telecharger.sh amipro</pre>
+<p>C'est un logiciel abandonné, sous droits de son éditeur : on le télécharge pour l'étude, on ne le redistribue pas.</p>
+
+<h3>3. Installer sans l'installateur</h3>
+<p>L'installateur d'origine est un programme DOS, inutile ici. Le script fait ce qu'il aurait fait : il crée un
+« préfixe » wine (un disque C: à part), y copie le contenu des archives dans <code>C:\AMIPRO</code> et ses
+sous-dossiers (<code>DOCS</code>, <code>STYLES</code>, <code>MACROS</code>, <code>DRAW</code>), écrit dans
+<code>WIN.INI</code> la section <code>[AmiPro]</code> telle que le fichier d'installation <code>STRINGS.INS</code>
+la dicte (chemins et filtres d'importation), retire les imprimantes et règle un bureau virtuel de 1024 × 768.
+Il n'écrit rien en dehors du préfixe.</p>
+<pre>python3 outils/2_installer.py amipro/paquet prefixe</pre>
+
+<h3>4. Lancer</h3>
+<pre>sh outils/lancer.sh prefixe :77
+DISPLAY=:77 import -window root capture.png     # pour voir l'écran virtuel</pre>
+<p>Deux précautions, sans lesquelles le logiciel plante ou imprime : les <b>polices du système sont masquées</b>
+pendant l'exécution (Ami Pro range les polices dans une table de 64 Ko, limite d'un segment 16 bits ; un système
+moderne en a plusieurs centaines et la table déborde — bubblewrap lui montre un dossier vide), et le
+<b>serveur d'impression est rendu injoignable</b>. Au démarrage, Ami Pro signale qu'il ne trouve pas son pilote
+d'imprimante : on ferme le message. Les boîtes de dialogue restent parfois sous la fenêtre principale ;
+<code>remonter.py :77</code> les ramène devant.</p>
+<p>Pour travailler à la souris, on peut donner son propre écran à la place de l'écran virtuel
+(<code>sh outils/lancer.sh prefixe :0</code>) : Ami Pro s'ouvre alors dans une fenêtre de 1024 × 768. Nos
+sessions ont toutes été pilotées par script sur l'écran virtuel ; cette variante n'a pas été testée par nous.</p>
+
+<h3>5. Régler l'horloge</h3>
+<p>Ami Pro lit l'heure du PC au moment d'ouvrir un document vierge (c'est la date de création) et à chaque
+enregistrement. Pour lui faire croire que nous sommes en 1993, nous ne touchons pas à l'horloge de la machine :
+une petite bibliothèque de 22 lignes (<code>horloge.c</code>, compilée en 32 bits) est préchargée dans wine et
+retranche un décalage fixe à chaque lecture de l'heure. Seul le logiciel voit cette fausse horloge ; la date du
+fichier sur le disque reste celle du jour.</p>
+<pre>sh outils/3_lancer_a_la_date.sh prefixe "1993-03-20 10:06:49"</pre>
+<p>La date se donne comme on la lirait sur l'horloge du PC, dans l'heure locale de la machine. Le document vierge
+s'ouvre une à deux secondes après le lancement : on vise donc une ou deux secondes plus tôt, et on mesure.</p>
+
+<h3>6. Lire les nombres</h3>
+<p>Un fichier <code>.SAM</code> est du texte : son bloc <code>[desc]</code> porte la description, puis, aux lignes
+6, 7 et 8, le dernier enregistrement, le nombre de sessions et la création, en secondes depuis le 1er janvier 1970.
+Ami Pro les calcule en prenant l'horloge du PC pour l'heure du Pacifique, réglage par défaut de la bibliothèque C
+de Microsoft de l'époque : le nombre vaut l'heure du PC <b>+ 8 h en hiver, + 7 h en été</b> (c'est la règle des
+dates, établie plus haut sur les fichiers livrés avec le logiciel). Deux petits outils font la conversion :</p>
+<pre>python3 outils/lire_desc.py prefixe/drive_c/AMIPRO/DOCS/E22.SAM
+python3 outils/pc_vers_date.py 732650811      # → 1993-03-20 10:06:51
+python3 outils/pc_vers_date.py 738115576      # → 1993-05-22 17:06:16</pre>
+
+<h3>7. Refaire l'essai d'un trait</h3>
+<p>Le script <code>4_essai22.sh</code> enchaîne tout : un lancement de calibrage (il mesure le délai d'ouverture du
+document vierge sur votre machine), puis la <b>session 1</b> (document vierge ouvert quand l'horloge dit
+20 mars 1993, 10 h 06 min 51 s ; un caractère tapé ; « Save As » <code>E22.SAM</code> avec la description
+« Reco HYUNDAI »), les <b>sessions 2 à 17</b> (le document rouvert à des dates échelonnées d'avril à mai 1993, un
+caractère, « Save »), et la <b>session 18</b>, où le clic sur « Save » part à l'instant où l'horloge dit
+22 mai 1993, 17 h 06 min 16 s.</p>
+<pre>sh outils/4_essai22.sh prefixe venv/bin/python</pre>
+<p>Notre dernière exécution de ce script, le 1er octobre 2026, pour vérifier que le kit joint se suffit : téléchargement et installation en moins d'une minute, puis dix minutes et vingt secondes pour le calibrage et les dix-huit sessions (le script attend que chaque lancement soit prêt). Le bloc <code>[desc]</code> du fichier obtenu : « Reco HYUNDAI », <b>738115576</b>, <b>18</b>, <b>732650811</b> — les trois nombres de la disquette, à la seconde ; les quatorze premières lignes du fichier sont identiques à celles de notre essai du 20 septembre. La première fois, le 20 septembre 2026, sans script, à la main sur l'écran virtuel : dix-huit minutes du premier fichier de travail au fichier final, téléchargement, installation et cinq lancements de calage compris.</p>
+<p>À la main, les gestes sont les mêmes : <i>File / Save As</i>, le nom, la description dans la case
+<i>Document Description</i> ; puis, à chaque session, rouvrir le fichier, taper un caractère, <i>File / Save</i>,
+fermer. Ce qui compte comme une session, c'est l'ouverture du document suivie d'un enregistrement : enregistrer
+dix fois sans fermer n'en fait qu'une (essai 02).</p>
+<p>Une précaution de bon sens : le fichier obtenu porte le même bloc <code>[desc]</code> qu'une pièce du dossier.
+Gardez-lui un nom qui dit ce qu'il est, et ne le faites pas circuler sans cette notice.</p>
+
+</section>
+
+<section class="prose" id="relecture">
+  <h2 class="chunk">La relecture page par page</h2>
+
+<p>Ce que nous lisons du fichier, c'est <b>l'impression</b> publiée dans le livre d'octobre 2025 (p. 102-149), et, pour
+chercher vite, la <b>reconstitution</b> qu'en a faite Mblond (lecture optique, puis correction à la main — sa notice le
+dit elle-même : blancs et tabulations « invisibles sur le papier », « il reste sans doute de petites erreurs »).
+Nous avons relu cette reconstitution page par page contre l'impression, à 400 ou 600 points par pouce, en zoomant sur
+chaque point douteux.</p>
+<p>Les écarts relevés sont de trois sortes : des <b>points d'exclamation</b> là où l'impression a un point (une quinzaine,
+toujours en fin de phrase explicative) ; des <b>deux-points et des guillemets perdus</b>, surtout dans la liste de la
+charade de la 470 ; des <b>confusions de lecture optique</b> (« l » pour « 1 », une balise mal orthographiée, un
+espace double ramené à un simple). Ils ont tous été corrigés dans notre copie de travail. Aucun ne touche un passage
+cité dans la vidéo : tout ce qui est montré à l'écran a été lu sur l'impression, jamais sur la reconstitution, et les
+espaces ne se comptent que sur l'impression, dont la police à chasse fixe les rend visibles.</p>
+<p>Le tampon de l'étude, apposé sur chaque page, masque la fin d'une ligne à cinq endroits (p. 119, 123, 132, une page
+des explications finales, et la dernière ligne p. 144) : ces fragments ne sont pas vérifiables, et aucun passage cité dans
+la vidéo n'en dépend.</p>
+
+</section>
+
+<section class="sources" id="sources">
+  <h2 class="chunk">Sources</h2>
+<h3 class="src-cat">Documents d&#x27;huissier (1993 → 2022)</h3>
+<ul class="src-list">
+  <li>Courrier de Me Frédéric Llouquet aux Éditions Manya, 26 janvier 1993 — <span class="det">« J&#x27;ai bien reçu ce jour l&#x27;enveloppe scellée par Monsieur HAUSER, contenant les solutions de votre jeu » — première page affichée à l&#x27;écran, sans autre mention</span></li>
+  <li><a href="https://files.michelbecker.com/1/3.pdf" target="_blank" rel="noopener">Constat de Me Frédéric Llouquet, 19 mai 1993</a> — <span class="det">dépôt « d&#x27;une enveloppe scellée contenant les solutions de l&#x27;énigme et une disquette en reproduisant le texte » — PDF publié par l&#x27;organisateur · consulté le 30 septembre 2026</span></li>
+  <li><a href="https://files.michelbecker.com/1/14.pdf" target="_blank" rel="noopener">Procès-verbal de constat de Me Blanche Neige-Schmitt, 1er et 13 avril 2021</a> — <span class="det">lecture de la disquette : « un fichier sous format &quot;.sam&quot; intitulé &quot;SOLUTION&quot; daté du 22-05-1993. Je l&#x27;ouvre, il s&#x27;agit d&#x27;un texte crypté » ; « Je restitue l&#x27;enveloppe ainsi que la disquette à Monsieur Michel BECKER » — PDF publié par l&#x27;organisateur · consulté le 30 septembre 2026</span></li>
+  <li><a href="https://files.michelbecker.com/1/15.pdf" target="_blank" rel="noopener">Procès-verbal de Me Neige-Schmitt, 22 et 25 octobre 2021</a> — <span class="det">la disquette revient à l&#x27;étude : « je vous remets, après décryptage par mes soins […] une impression du texte qu&#x27;elle contient, soit 43 pages » — PDF publié par l&#x27;organisateur · consulté le 30 septembre 2026</span></li>
+  <li><a href="https://files.michelbecker.com/1/18.pdf" target="_blank" rel="noopener">Attestation de Me Neige-Schmitt, 11 avril 2022</a> — <span class="det">« imprimé par mes soins en deux exemplaires lors de mes constatations du 13 avril 2021 » ; quarante-trois pages de « caractères aléatoires » — PDF publié par l&#x27;organisateur · consulté le 30 septembre 2026</span></li>
+</ul>
+<h3 class="src-cat">Publications de l&#x27;organisateur</h3>
+<ul class="src-list">
+  <li><a href="https://files.michelbecker.com/1/0.pdf" target="_blank" rel="noopener">Historique juridique de la chasse au trésor « Sur la trace de la Chouette d&#x27;Or », version au 8 octobre 2024</a> — <span class="det">p. 1 : « Régis HAUSER, publicitaire, chargé de concevoir le texte des énigmes » ; p. 5 : « la disquette contenait 4 fichiers : COMPRESS.CFG, COMPRESS.EXE, COMPRESS.HLP et un fichier SOLUTION.SAM créé le 22/05/1993 » · consulté le 30 septembre 2026</span></li>
+  <li>Solutions de la course au trésor sur la trace de la Chouette d&#x27;Or (PDF, 9 pages), Michel Becker — <span class="det">mis en ligne le 4 mai 2025 sur le site des Éditions de la Chouette d&#x27;Or ; première page affichée dans la frise d&#x27;ouverture. C&#x27;est le document désigné dans la vidéo sous le nom de « solutions publiées »</span></li>
+  <li>Sur la trace de la Chouette d&#x27;Or — le livre d&#x27;octobre 2025 (Les Éditions de la Chouette d&#x27;Or) — <span class="det">p. 100 : « il paraît possible que le contenu en ait été compressé lors de sa création » ; p. 102 à 149 : l&#x27;impression du fichier SOLUTION.SAM, balisage compris — c&#x27;est cette impression, en police à chasse fixe, qui fait foi pour tout ce que la vidéo lit dans le fichier (p. 102, 121, 122, 123, 126, 128, 131, 135 citées à l&#x27;écran)</span></li>
+  <li>Sur la trace de la Chouette d&#x27;Or — Les Cahiers secrets (Michel Becker, 2019) — <span class="det">le « cahier des charges » : premier état p. 52-62, version intermédiaire p. 68-69, version définitive p. 72-81 ; p. 55 (600), 57 (420), 61 et 69 et 80 (560), 72 (500), 73 (530), 74 (780) citées à l&#x27;écran. Ces feuillets ne sont connus que par ce livre, qui les attribue à Max Valentin : aucune confirmation indépendante</span></li>
+</ul>
+<h3 class="src-cat">Le livre de 1993</h3>
+<ul class="src-list">
+  <li>Sur la trace de la Chouette d&#x27;Or, Max Valentin et Michel Becker, Éditions Manya, 1993 — <span class="det">exemplaire papier de la première édition, numérisé page par page à 300 dpi : p. 16 (500), 18 (530), 20 (780), 22 (600), 26 (420), 34 (560), 36 (580). Une copie numérique recomposée (autre police, autres coupures de lignes) ne vaut pas pour la forme : si vous vérifiez, faites-le sur le papier</span></li>
+</ul>
+<h3 class="src-cat">Presse</h3>
+<ul class="src-list">
+  <li>TF1 Info, « Chouette d&#x27;or : une association de chercheurs du trésor porte plainte pour &quot;escroquerie&quot; contre l&#x27;organisateur », 10 mai 2025 — <span class="det">titre reproduit dans la frise d&#x27;ouverture</span></li>
+  <li>Le Monde, série d&#x27;été « Les derniers mystères de la Chouette d&#x27;or », Morgane Tual — épisode 1/6, « Sur la piste de la Chouette d&#x27;or, l&#x27;oiseau qui rend fou », 12 juillet 2026 — <span class="det">« En avril 2025, l&#x27;association a d&#x27;ailleurs porté plainte avec constitution de partie civile contre Michel Becker et Blanche Neige-Schmitt, l&#x27;huissière du jeu » — source de la date de la plainte</span></li>
+  <li>Le Monde, même série — épisode 6/6, « L&#x27;épilogue de La Chouette d&#x27;or », 17 juillet 2026 — <span class="det">saisie judiciaire, en février 2026, de l&#x27;enveloppe scellée de 1993 ; en-tête de l&#x27;article dans la frise d&#x27;ouverture</span></li>
+</ul>
+<h3 class="src-cat">Reconstitution du fichier et notice de Mblond</h3>
+<ul class="src-list">
+  <li><a href="https://lachouette.net/index.php?a=contrib&amp;cref=Mblond" target="_blank" rel="noopener">Mblond — reconstitution du fichier SOLUTION.SAM, forum de l&#x27;A2CO (lachouette.net), 20 octobre 2025</a> — <span class="det">lecture optique de l&#x27;impression publiée dans le livre d&#x27;octobre 2025, puis correction à la main ; accessible après inscription gratuite au forum. C&#x27;est une RECONSTITUTION, pas le fichier d&#x27;origine : nous l&#x27;avons relue page par page contre l&#x27;impression, qui seule fait foi (voir plus bas) · consulté le 30 septembre 2026</span></li>
+  <li>Mblond — « Le fichier .SAM », notice de 8 pages, forum de l&#x27;A2CO, 20 octobre 2025 — <span class="det">p. 2 : « Les fichiers .SAM, si l&#x27;on connaît leur format, peuvent être générés à l&#x27;aide d&#x27;un simple éditeur de texte » ; p. 8 : la boîte d&#x27;information d&#x27;Ami Pro sur sa reconstitution — création 20/3/93 10:06, dernière révision 22/5/93 17:06, durée totale d&#x27;édition 0 ; accessible après inscription gratuite au forum</span></li>
+</ul>
+<h3 class="src-cat">Le format Ami Pro et les logiciels</h3>
+<ul class="src-list">
+  <li>Lotus Ami Pro 1.2B (1990), 2.0 (1991) et 3.0 (1992-1993), exécutés sous émulation — <span class="det">tous nos essais ont été faits sous émulation (wine), sur les logiciels d&#x27;époque, sans matériel d&#x27;époque ; les captures et les films de la vidéo en viennent</span></li>
+  <li>Ariya Hidayat, « Lotus AmiPro File Format », 16 mars 2002 (documentation du filtre d&#x27;import de KWord) — <span class="det">description publique du format .SAM, confrontée aux 419 documents et feuilles de style livrés avec les versions 1.2B, 2.0 et 3.0 du logiciel</span></li>
+  <li>Fichiers livrés avec Ami Pro 3.0 (AMISKWP5.SAM, AMISKDW4.SAM, _DEFAULT.STY, _MERCLET.STY, GOODIES.SAM, TUTORIAL.SAM) — <span class="det">les six fichiers qui prouvent la règle des dates (voir plus bas)</span></li>
+</ul>
+<h3 class="src-cat">Madits</h3>
+<ul class="src-list">
+  <li><a href="https://lachouette.net/" target="_blank" rel="noopener">Serveur Minitel Maxval (1995-2001), archive « madits » sur lachouette.net</a> — <span class="det">le madit cité est reproduit ci-dessus en version normalisée ; la date et le titre font foi · consulté le 30 septembre 2026</span></li>
+</ul>
+</section>
+
+<footer>
+  Madits : serveur Minitel Maxval (1995-2001), archive « madits » (« Max a dit ») sur
+  <a href="https://lachouette.net/">lachouette.net</a> — la <b>date et le titre</b> font foi. Les procès-verbaux
+  d’huissier sont cités pour leurs <b>constatations matérielles</b> ; les déductions qui en sont tirées sont les nôtres
+  et signalées comme telles. La vidéo ne rend aucun verdict sur la main qui a tenu le clavier : elle dit ce que le
+  fichier est, d’où vient son texte, et ce que ses dates valent. Liens consultés le 30 septembre 2026.
+</footer>
+</div>
+<script>
+(function(){
+  var saved = null;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if (!a) return;
+    if (a.classList.contains('ref')) {
+      saved = window.scrollY;
+    } else if (a.classList.contains('back')) {
+      if (saved !== null) {
+        e.preventDefault();
+        window.scrollTo({ top: saved, behavior: 'smooth' });
+      }
+    }
+  });
+})();
+</script>
+</body>
+</html>

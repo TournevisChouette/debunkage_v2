@@ -27,7 +27,9 @@ Le but : que chaque citation de la vidéo soit **vérifiable et traçable** d'un
 
 | Hors série — Sans cire : Max Valentin n'a pas truqué son jeu | Dabo 1993 · les madits contre le récit de 2026 · ce que rapportait le livre | [▶️ YouTube](https://www.youtube.com/watch?v=fW1WbRNqG3w) | [`dossier_sans_cire.html`](https://tournevischouette.github.io/debunkage_v2/dossier_sans_cire.html) |
 
-**Série Débunkage terminée — quatre épisodes. Un hors-série.**
+| Le fichier — Face A | SOLUTION.SAM · ce que ce fichier est, et d'où il vient | [▶️ YouTube](https://youtu.be/EsxaPfM6Hao) | [`dossier_ep07a.html`](https://tournevischouette.github.io/debunkage_v2/dossier_ep07a.html) |
+
+**Série Débunkage terminée — quatre épisodes. Un hors-série. « Le fichier » : Face B à paraître.**
 
 ## Consulter
 

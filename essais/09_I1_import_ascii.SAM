@@ -1,0 +1,64 @@
+[ver]
+	4
+[sty]
+	_DEFAUT.STY
+[files]
+[charset]
+	82
+	ANSI (Windows, IBM CP 1252)
+[revisions]
+	0
+[prn]
+	EPSON_ET_2860_Series
+[port]
+	CUPS:EPSON_ET_2860_Series
+[lang]
+	3
+[desc]
+	
+	
+	
+	
+	
+	1789602793
+	1
+	1789602725
+	1
+	1
+	0
+	0
+	0
+	0
+	
+	
+	
+	
+	
+	
+	1
+[fopts]
+	0
+	1
+	0
+	0
+[lnopts]
+	2
+	Body Text
+	1
+[docopts]
+	5
+	2
+[GramStyle]
+	
+[l1]
+	0
+[pg]
+	1
+	1 86 55 1029 0 0 0 65535 65535 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+[edoc]
+<:#560,9025>BDI,J.  DF,F.  CFD.  BJ.  HJ.  EA,B.  BC.  E.  DC,B.  CDI, B.  BAB,H.  BE. CD.  FB.   BCG,J.  BIG,D.  BE.  BG.  BJD,B.  DB.  BGH, C.  BC.  E.
+
+>
+
+[Embedded]
+00000653

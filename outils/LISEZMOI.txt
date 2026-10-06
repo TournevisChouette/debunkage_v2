@@ -1,0 +1,18 @@
+Refaire l'essai 22 — Lotus Ami Pro 1.2B sous wine, l'horloge réglée
+=====================================================================
+Mode d'emploi complet : section « Refaire l'essai chez soi » du dossier HTML de la Face A.
+
+1_telecharger.sh <dossier>      télécharge le logiciel (Internet Archive), vérifie l'empreinte md5, extrait les disquettes
+2_installer.py <paquet> <prefixe>   installe Ami Pro 1.2B dans un préfixe wine 32 bits, sans l'installateur DOS
+lancer.sh <prefixe> [:écran] [document]   lance le logiciel sur un écran virtuel (polices masquées, impression coupée)
+3_lancer_a_la_date.sh <prefixe> "AAAA-MM-JJ HH:MM:SS" [:écran] [document]   même chose, l'horloge vue par le logiciel réglée
+4_essai22.sh <prefixe> [python] [:écran]   l'essai complet : calibrage, session 1, sessions 2 à 17, session 18 à la seconde
+lire_desc.py <fichier.SAM>      lit le bloc [desc] : description, dernier enregistrement, sessions, création
+pc_vers_date.py <nombre>        convertit un nombre du bloc [desc] en date lue sur l'horloge du PC
+horloge.c                       le décalage d'horloge (bibliothèque 32 bits préchargée, 22 lignes)
+fonctions.sh, xkey.py, remonter.py, fenetres.py   pilotage de l'écran virtuel (clics, frappes, boîtes de dialogue)
+
+Dépendances (Debian/Ubuntu) : wine32:i386 xvfb bubblewrap 7zip gcc-multilib imagemagick python3-venv, et python-xlib
+dans un venv. Le logiciel est abandonné mais reste sous droits de son éditeur : on le télécharge pour l'étude,
+on ne le redistribue pas. Le fichier obtenu porte le même bloc [desc] qu'une pièce du dossier : gardez-lui un nom
+qui dit ce qu'il est.
