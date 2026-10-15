@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Chouette d’Or — Le fichier · Face B — dossier</title>
+<style>
+  :root { --gold:#b8860b; --gold2:#d4af37; --ink:#1c2230; --paper:#fbf8f1; --soft:#6a6256; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+    font-family:Georgia,'Times New Roman',serif; line-height:1.62; }
+  .wrap { max-width:860px; margin:0 auto; padding:48px 22px 120px; }
+  header h1 { font-size:20px; letter-spacing:.16em; text-transform:uppercase; color:var(--soft);
+    font-weight:normal; margin:0 0 6px; }
+  .tagline { font-size:14.5px; font-style:italic; color:var(--gold); margin:0 0 16px; }
+  header h2.ep { font-size:34px; margin:0 0 14px; line-height:1.2; }
+  .watch { margin:0 0 20px; }
+  .topnav { margin:0 0 22px; font-family:system-ui,sans-serif; font-size:13.5px; }
+  .topnav a, .topnav span { text-decoration:none; color:var(--gold); border:1px solid #e0d090;
+    background:#f3e9c8; border-radius:999px; padding:4px 14px; margin-right:8px; white-space:nowrap;
+    display:inline-block; margin-bottom:6px; }
+  .topnav a:hover { background:var(--gold2); color:#221c05; }
+  .topnav span.soon-b { color:var(--soft); background:#efe7d3; border-color:#e7ddc4; }
+  .watch a { display:inline-block; text-decoration:none; font-family:system-ui,sans-serif;
+    font-size:15px; font-weight:600; color:#fff; background:#c0392b; padding:9px 18px; border-radius:8px; }
+  .watch a:hover { background:#a23226; }
+  .watch .soon { display:inline-block; font-family:system-ui,sans-serif; font-size:15px;
+    font-weight:600; color:var(--soft); background:#efe7d3; padding:9px 18px; border-radius:8px; }
+  .intro { background:#fff; border:1px solid #e7ddc4; border-left:4px solid var(--gold2);
+    padding:16px 20px; border-radius:8px; font-size:15.5px; color:#3a3a3a; }
+  .intro b { color:var(--gold); }
+  .intro a, footer a, .prose a { color:var(--gold); }
+  h2.chunk { font-size:15px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold);
+    border-bottom:2px solid #e7ddc4; padding-bottom:6px; margin:54px 0 14px; }
+  h3.enigme { font-size:22px; margin:34px 0 10px; color:var(--ink); }
+  h3.enigme.sous { font-size:17px; color:var(--soft); margin-top:26px; }
+  #script p, .prose p { margin:0 0 16px; }
+  .prose h3 { font-size:19px; margin:30px 0 10px; color:var(--ink); }
+  .prose h4, h4 { font-size:17px; margin:28px 0 8px; color:var(--ink); }
+  .prose pre { background:#f3eedd; border:1px solid #e7ddc4; border-radius:6px; padding:10px 14px; font-size:14px; line-height:1.5; overflow-x:auto; margin:0 0 16px; }
+  .prose { font-size:15.5px; }
+  .prose code { font-family:ui-monospace,monospace; font-size:.9em; background:#f3ede0; padding:1px 5px; border-radius:4px; }
+  table.tab { border-collapse:collapse; width:100%; font-size:14px; margin:8px 0 20px; background:#fff; }
+  table.tab th, table.tab td { border:1px solid #e7ddc4; padding:6px 9px; vertical-align:top; text-align:left; }
+  table.tab th { background:#f3e9c8; font-family:system-ui,sans-serif; font-size:12.5px; letter-spacing:.04em; }
+  table.tab td.mono { font-family:ui-monospace,monospace; font-size:12.5px; white-space:nowrap; }
+  .refs { display:inline; }
+  a.ref { display:inline-block; font-family:system-ui,sans-serif; font-size:11.5px;
+    text-decoration:none; color:#5a4a10; background:#f3e9c8; border:1px solid #e0d090;
+    border-radius:11px; padding:1px 9px; margin:1px 3px; white-space:nowrap; vertical-align:1px; }
+  a.ref:hover { background:var(--gold2); color:#221c05; }
+  a.vlink { color:#b8860b; text-decoration:underline; text-decoration-color:#d4af37;
+    text-underline-offset:2px; font-weight:600; }
+  a.vlink:hover { color:#a23226; }
+  a.vlink::after { content:" ↗"; font-size:.78em; color:var(--gold); vertical-align:1px; }
+  section.madits { margin-top:70px; }
+  article.madit { background:#fff; border:1px solid #e7ddc4; border-radius:10px;
+    padding:16px 20px 12px; margin:0 0 16px; scroll-margin-top:14px; }
+  article.madit:target { border-color:var(--gold2); box-shadow:0 0 0 3px rgba(212,175,55,.25); }
+  .m-head { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:10px; }
+  .m-date { font-family:system-ui,sans-serif; font-size:13px; font-weight:700; color:#fff;
+    background:var(--gold); padding:2px 11px; border-radius:7px; }
+  .m-titre { font-family:system-ui,sans-serif; font-size:13px; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--soft); }
+  .m-q, .m-r { margin:0 0 8px; font-size:16px; }
+  .m-q { color:#4a4a4a; }
+  .lbl { display:inline-block; width:20px; height:20px; line-height:20px; text-align:center;
+    font-family:system-ui,sans-serif; font-size:12px; font-weight:700; border-radius:50%;
+    margin-right:8px; vertical-align:1px; }
+  .m-q .lbl { border:1.5px solid #c9c0a6; color:#9a9078; }
+  .m-r .lbl { border:1.5px solid var(--gold2); color:var(--gold); }
+  .m-back { margin-top:6px; }
+  a.back { font-family:system-ui,sans-serif; font-size:12px; text-decoration:none;
+    color:var(--gold); border:1px solid #e0d090; border-radius:11px; padding:1px 10px; margin-right:6px; }
+  a.back:hover { background:#f3e9c8; }
+  section.sources { margin-top:70px; }
+  .sources h3.src-cat { font-size:14px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--soft); margin:26px 0 8px; }
+  .sources ul.src-list { margin:0 0 4px; padding-left:22px; }
+  .sources li { font-size:15px; margin:0 0 9px; }
+  .sources a { color:var(--gold); }
+  .sources .det { color:var(--soft); font-size:13.5px; font-style:italic; }
+  footer { margin-top:60px; font-size:13px; color:var(--soft); border-top:1px solid #e7ddc4; padding-top:14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="topnav"><a href="./">← Accueil</a><a href="#script">Le script</a><a href="#releve">Le relevé des cicatrices</a><a href="#gestes">Les gestes</a><a href="#version">Le logiciel</a><a href="#objection">L’objection</a><a href="#enveloppe">L’enveloppe</a><a href="#refaire">Refaire les essais</a><a href="#relecture">La relecture</a><a href="#sources">Sources</a><a href="dossier_ep07a.html">Face A</a></nav>
+<header>
+  <h1>La Chouette d’Or — la disquette des solutions</h1>
+  <p class="tagline">Le fichier · Face B — où le fichier a été retouché, et avec quel logiciel.</p>
+  <h2 class="ep">Le fichier — Face B</h2>
+  <p class="watch"><a href="https://youtu.be/B7AASdakV2M" target="_blank" rel="noopener">▶ Voir la Face B sur YouTube</a></p>
+  <div class="intro">
+    Ce document réunit le <b>script intégral</b> de la Face B, les <b>madits cités</b> (questions-réponses de Max
+    Valentin, serveur Minitel 1995-2001, en version normalisée — la <b>date et le titre</b> font foi), les
+    <b>documents montrés à l’écran</b> avec leur source, et ce que la vidéo promet : <b>le relevé des cicatrices</b>,
+    <b>nos essais et les 28 fichiers qu’ils ont produits</b>, <b>le logiciel</b> et ses versions, <b>la relecture
+    page par page</b>. La Face B suppose la <a href="https://youtu.be/EsxaPfM6Hao">Face A</a> vue, et son
+    <a href="dossier_ep07a.html">dossier</a> lu : c’est là que sont la règle du jeu, la règle des dates et l’installation du
+    logiciel. Tout ce qui est affirmé sur le fichier se lit sur l’impression publiée par l’organisateur ; tout ce qui
+    est déduit est signalé comme notre déduction.
+  </div>
+</header>
+
+<section id="script">
+<h2 class="chunk">Le script</h2>
+<h3 class="enigme">Où la Face A vous avait laissés</h3>
+<p>Le fichier. Face B. </p>
+<p>Bienvenue dans la Face B. Voici où la Face A vous avait laissés. </p>
+<p>Si vous ne l&#x27;avez pas vue, arrêtez-vous ici et commencez par elle : le lien est en haut à droite de l&#x27;image, et juste en dessous. On vous attend. </p>
+<p>Voici, en une minute, ce qu&#x27;elle a établi — c&#x27;est tout ce qu&#x27;il faut pour comprendre la suite. </p>
+<p>Un fichier, SOLUTION.SAM, sur une disquette <a class="vlink doc" href="https://files.michelbecker.com/1/14.pdf" target="_blank" rel="noopener" title="PV de constat de Me Neige-Schmitt, 1er et 13 avril 2021 — PDF publié par l&#x27;organisateur">arrivée par la poste chez une huissière en 2021</a>. En 2025, le nouvel organisateur du jeu en tire la solution officielle de la Chouette d&#x27;Or, et l&#x27;imprime tel quel : quarante-trois pages. </p>
+<p>La Face A lui a posé six questions, et a répondu aux quatre premières. </p>
+<p>Un : le fichier a été enregistré pour la dernière fois après le dépôt des solutions. Sept jours après la sortie du livre, trois jours après le constat de l&#x27;huissier. </p>
+<p>Deux : il n&#x27;est pas né pour ça. « Reco HYUNDAI » : un vieux document de publicité, modifié. </p>
+<p>Trois : ses dates ne se croient pas sur parole. Un en-tête s&#x27;écrit à volonté ; nous l&#x27;avons refait en vingt minutes. </p>
+<p>Quatre : son texte ne vient pas du livre. Il vient du cahier des charges — des feuillets que le nouvel organisateur attribue à Max —, mis à jour sur place jusqu&#x27;au texte final. Celui qui a fait ce fichier avait les fichiers de ce cahier. </p>
+<p>Mais ce fichier n&#x27;est pas une copie. Six consignes au peintre ne disent plus ce que disait le cahier des charges. Quelqu&#x27;un les a changées. </p>
+<p>Restent deux questions. Où, exactement, le fichier a-t-il été retouché ? Et avec quel logiciel — est-ce celui dont Max se servait ? </p>
+<p>Pour y répondre, il faut savoir une chose sur ce fichier. « .SAM », c&#x27;est Ami Pro, un traitement de texte du début des années quatre-vingt-dix. </p>
+<p>Et un fichier Ami Pro n&#x27;est pas un coffre-fort : c&#x27;est du texte ordinaire, où le logiciel glisse ses instructions de mise en forme entre chevrons — ici du gras, là une police, là un interligne. </p>
+<p>Ouvrez-le avec Ami Pro : une page propre. Imprimez-le tel quel : le texte et les instructions, mêlés. Ce sont ces quarante-trois pages. </p>
+<p>Ces chevrons, personne ne les regarde. C&#x27;est pour ça qu&#x27;ils gardent tout. Cette face lit ce qu&#x27;ils ont gardé — puis ce qu&#x27;ils disent du logiciel. </p>
+<h3 class="enigme">Cinquième question — où le fichier a-t-il été retouché ?</h3>
+<p>Cinquième question. Où le fichier a-t-il été retouché ? </p>
+<p>Ami Pro entoure chaque passage mis en forme de deux balises, une qui ouvre, une qui ferme. Mettez un mot en italique, le fichier stocke ceci. </p>
+<p>Maintenant, effaçons. Nous avons pris la phrase du cahier des charges, en italique, dans le logiciel de l&#x27;époque, et nous avons effacé la fin : « dont la circonférence fait exactement 33 centimètres ». À l&#x27;écran, plus rien. </p>
+<p>Dans le fichier, à l&#x27;endroit exact de la coupe, il reste ceci : une balise qui ferme, une balise qui rouvre, et rien entre les deux. Une cicatrice. </p>
+<p>D&#x27;où vient-elle ? Tout se passe comme si le logiciel tenait son texte en tronçons, un par mise en forme. Au moment d&#x27;enregistrer, il pose une balise là où un tronçon commence, une là où il finit. Et deux tronçons voisins, même identiques, il ne les recolle jamais : il ferme l&#x27;un, il rouvre l&#x27;autre. Entre les deux, rien. C&#x27;est la cicatrice. </p>
+<p>Premier geste : une sélection effacée. Pour la traiter, le logiciel coupe le tronçon à ses deux bouts. On efface : les deux bouts se retrouvent côte à côte. Deux tronçons, une frontière. Une cicatrice. </p>
+<p>Deuxième geste : taper par-dessus une sélection. Même coupe aux deux bouts. Les lettres tapées entrent dans le tronçon de gauche, la frontière reste. La cicatrice est là, juste après le mot tapé. </p>
+<p>Troisième geste : effacer lettre par lettre, touche après touche, dans un passage d&#x27;une seule mise en forme. Cette fois, on reste à l&#x27;intérieur du tronçon. Il rétrécit, c&#x27;est tout. Pas de frontière, pas de cicatrice. Même si toute la phrase y passe. Une seule chose en laisse une sur ce chemin : quand une touche de plus avale la fin du paragraphe, et fait remonter la ligne suivante. Nous y reviendrons. </p>
+<p>Quatrième geste : une commande, sans rien sélectionner. Posez le curseur dans une phrase, passez italique, ou police, et repartez sans rien taper. Un tronçon vide est né sous le curseur. Dans le fichier : la même cicatrice. </p>
+<p>Quatre gestes, tous rejoués dans le logiciel de l&#x27;époque. Trois laissent une cicatrice. Un seul n&#x27;en laisse pas. </p>
+<p>Une cicatrice ne dit donc pas ce qu&#x27;on a fait. Elle dit où quelqu&#x27;un s&#x27;est arrêté. </p>
+<p>Alors faisons une prédiction. </p>
+<p>Cette phrase, c&#x27;est celle du cahier des charges pour la 780. Le fichier de la disquette, lui, dit seulement : « une boussole. » Si quelqu&#x27;un a coupé là la fin de la phrase, c&#x27;est là qu&#x27;il s&#x27;est arrêté : la cicatrice doit être juste après « boussole ». Pas avant. Pas à la ligne suivante. </p>
+<p>Regardons. </p>
+<p>Juste après « boussole ». Après le point, pour être exact : là où la phrase suivante, « Le nord est en bas de la page », est remontée sur la même ligne. </p>
+<p>La cicatrice est là. Plus longue que dans notre essai : une grappe de balises, où le logiciel referme et rouvre tout ce qui était actif — l&#x27;italique, l&#x27;interligne, la police. Appelons ça une grappe. </p>
+<p>Alors nous avons refait l&#x27;essai sur la phrase entière, mise en forme comme dans le fichier. On sélectionne la fin de la phrase, avec son point et le saut de ligne. On efface. On retape un point. </p>
+<p>Dans le fichier de l&#x27;essai : la même grappe, balise pour balise, au même endroit — après le point. </p>
+<p>Ce n&#x27;est pas le seul geste qui la donne. Mais tous ceux que nous avons trouvés ont le même effet : deux lignes n&#x27;en font plus qu&#x27;une. </p>
+<p>Une prédiction, une cicatrice. Voyons les autres consignes au peintre. </p>
+<p>La 470. Le cahier des charges hésitait : « quelque chose qui évoque Roncevaux, ou Roland — Durandal fichée dans un rocher ? », avec un point d&#x27;interrogation. </p>
+<p>Le fichier a tranché : « Durandal fichée dans un rocher brisé. » Plus d&#x27;hésitation, plus de point d&#x27;interrogation. </p>
+<p>Et juste avant « Durandal », là où commençait ce qui a été retiré : la grappe. </p>
+<p>Vous voyez d&#x27;autres balises en bout de ligne. Nous les laissons de côté : en fin de paragraphe, il n&#x27;y a rien à quoi les comparer. Nous ne retenons que les grappes au milieu d&#x27;une phrase. </p>
+<p>La 580. Le cahier des charges : « et quelque chose qui évoque un instrument de musique — archer sur les cordes d&#x27;un violon ? » </p>
+<p>Le fichier : « et un instrument de musique. » Quatre mots retirés avant, une parenthèse retirée après. </p>
+<p>Juste après « et », la grappe. </p>
+<p>La 560. Le cahier des charges finissait sa consigne par une phrase pour le peintre : « Voir exemple de visuel ci-joint. » </p>
+<p>Le fichier s&#x27;arrête au mot d&#x27;avant : « à gauche. » </p>
+<p>Entre « gauche » et le point, la grappe — là où la phrase a été coupée. </p>
+<p>Avec la boussole, cela fait quatre. Et la cinquième donne même un indice de date. Le cahier des charges demandait au peintre les pattes du coq à hauteur de Bourges. </p>
+<p>Le tableau montre son œil. </p>
+<p>Le fichier dit : « Son oeil se trouve à hauteur de la ville de Bourges » — cicatrice entre « Son » et « oeil », la même grappe longue que pour la boussole. </p>
+<p>Cette phrase ne décrit plus la consigne. Elle décrit la toile. Notre lecture : elle a été écrite après la peinture. </p>
+<p>Cinq consignes, cinq grappes — chaque fois au point exact. </p>
+<h3 class="enigme sous">Le texte des énigmes, les explications, et le compte</h3>
+<p>Passons au texte des énigmes lui-même. Le cahier des charges a été publié en trois états ; de l&#x27;un à l&#x27;autre, des nombres ont changé, des vers ont été réécrits. Le fichier porte-t-il des traces là aussi ? </p>
+<p>Presque pas. Sur tout le texte des énigmes, quelques réglages d&#x27;interligne ; aucune grappe d&#x27;italique ou de police au milieu d&#x27;un vers. </p>
+<p>Reste le plus gros du fichier : les explications — les solutions elles-mêmes. Le cahier des charges n&#x27;en contient pas : rien à quoi les comparer. Mais les cicatrices y sont, et nombreuses. </p>
+<p>Un exemple, dans la 420 : le calcul de la distance. « La lumière frappe la cible en… » — et suit un nombre à quinze décimales de seconde. Devant ce nombre, deux paires de police, l&#x27;une derrière l&#x27;autre. </p>
+<p>Celle-là, nous savons la refaire : la même commande de police, passée deux fois, sans rien taper. Quelqu&#x27;un s&#x27;est arrêté devant ce nombre. Pour quoi faire : il n&#x27;y a pas d&#x27;état antérieur à comparer, et le fichier ne le dit pas. </p>
+<p>C&#x27;est pour ça qu&#x27;on ne vous montre pas seulement des cicatrices : à la fin, on compte. </p>
+<p>Les consignes au peintre : il y en a onze. Six ont changé depuis le cahier des charges : cinq portent une grappe. Les cinq autres, identiques, n&#x27;en portent aucune. </p>
+<p>Un curseur peut s&#x27;arrêter n&#x27;importe où. Cinq fois, il s&#x27;est arrêté là où le cahier des charges dit autre chose. </p>
+<p>Autrement dit : ces consignes ont été retouchées dans Ami Pro, au clavier, et le fichier en a gardé la marque. </p>
+<p>Deux limites, pour être complets. La sixième consigne modifiée, celle de la 500, a perdu une parenthèse entière sans laisser de trace. Une retouche faite lettre par lettre n&#x27;en laisse pas : la méthode la rate. </p>
+<p>Et l&#x27;inverse existe. Une consigne qui n&#x27;a jamais changé porte des balises en trop. En bout de ligne, pas au milieu d&#x27;une phrase : hors de notre compte. Mais elle en porte. </p>
+<p>Comptons maintenant, paragraphe par paragraphe, tout ce qui porte une cicatrice — au milieu d&#x27;une phrase, ou en bout de ligne. Dans le texte des énigmes : un paragraphe sur soixante-quinze. Dans les consignes au peintre : six sur seize — les cinq grappes, plus la consigne aux balises en trop. Dans les explications : quarante-trois sur deux cents — plus d&#x27;un sur cinq. C&#x27;est là qu&#x27;on s&#x27;est le plus souvent arrêté. </p>
+<p>Cinquième question : où le fichier a-t-il été retouché ? Réponse : sur les consignes au peintre, aux endroits exacts où elles s&#x27;écartent du cahier des charges — et, plus souvent encore, dans les explications. Presque jamais dans le texte des énigmes. </p>
+<p>Quand ces retouches ont-elles été faites ? Un seul changement donne un indice : l&#x27;œil du coq décrit la toile — écrit après la peinture, c&#x27;est notre lecture. Et le peintre l&#x27;a dit lui-même, en 2022 : l&#x27;œil, c&#x27;est lui qui l&#x27;a voulu. </p>
+<p>Et ses toiles, quand les a-t-il finies ? </p>
+<p>La consigne a donc suivi la toile : cette retouche est venue après la peinture. </p>
+<p>Cet œil, le même homme, devenu l&#x27;organisateur du jeu, s&#x27;en est servi en 2022. Il a déclaré « périmées » les solutions déposées chez l&#x27;huissier en janvier 1993 : une version « non aboutie », d&#x27;avant les derniers changements. </p>
+<p>Ces changements, il les énumère : un logo de couleur et un nombre pour chaque énigme, décidés pour le livre ; une épée dans la 470 ; et, pour la 530, l&#x27;œil du coq à la place des pattes — « pour désigner la ville de Bourges », écrit-il. Le coq désigne toujours Bourges. Rien, dans cette liste, ne change une réponse. </p>
+<p>Et le 19 mai 1993, toiles finies, livre sorti, l&#x27;huissier constate le dépôt des solutions. Pourquoi déposer une solution périmée ? Le dépôt est fait pour garantir le jeu. L&#x27;argument ne tient pas. </p>
+<p>Et par qui ces retouches ont-elles été faites ? Le fichier ne le dit pas. </p>
+<p>Ce qu&#x27;il dit, en revanche, et sans l&#x27;aide de personne, c&#x27;est avec quoi. </p>
+<h3 class="enigme">Sixième question — avec quel logiciel ?</h3>
+<p>Sixième question. Elle part de quatre pièces : le format du fichier — et, du côté de Max, une phrase de lui, le témoignage d&#x27;un chercheur, et une étiquette citée par un journal. Avec quel logiciel ? </p>
+<p>Un en-tête Ami Pro a deux formes. La forme courte, huit lignes : celle de la version un. </p>
+<p>La forme longue, vingt et une lignes : celle des versions deux et trois, qui ajoutent le nombre de pages, de mots, et surtout la durée totale pendant laquelle le document est resté ouvert. </p>
+<p>Celui de la disquette est court. Une version plus récente pouvait-elle écrire cette forme-là ? Nous avons installé les trois générations du logiciel — sous émulation : nous n&#x27;avons pas de machine de 1993 — et essayé toutes les options, y compris celle qui s&#x27;appelle « Format Ami Pro 1.2 ». </p>
+<p>Jamais. Seule la version un écrit cet en-tête. </p>
+<p>Situons ces versions. La version un est déjà en vente en 1990. </p>
+<p>La version deux, de 1991 : elle apporte deux choses que la version un n&#x27;a pas — un compteur de temps, et le chiffrement par mot de passe. </p>
+<p>La version trois est testée dans la presse en septembre 1992. </p>
+<p>Un détail de décor, au passage. Les douze styles du fichier sont en « Tms Rmn », le nom de la police de Windows d&#x27;avant 1992. Le texte, lui, est posé en Times New Roman par cinq cents balises : une police livrée avec Windows 3.1, sorti en avril 1992. Windows 3.1 d&#x27;un côté. La version un d&#x27;Ami Pro de l&#x27;autre. </p>
+<p>Le dernier enregistrement a donc été fait avec un logiciel vieux d&#x27;au moins deux ans. Mblond — <a class="vlink doc" href="https://lachouette.net/index.php?a=contrib&amp;cref=Mblond" target="_blank" rel="noopener" title="Les contributions de Mblond sur le forum de l&#x27;A2CO (inscription gratuite au forum)">le chercheur qui a reconstitué le fichier d&#x27;après l&#x27;impression</a> — l&#x27;a ouvert dans la version deux : la boîte d&#x27;information affiche une durée totale d&#x27;édition de zéro. Ce fichier ne porte aucun compteur de temps. </p>
+<h3 class="enigme sous">Max, lui, comptait</h3>
+<p>Pourquoi ça compte ? Parce que Max, lui, comptait. <span class="refs"><a class="ref" id="b-23_05_96_36-1" href="#m-23_05_96_36" title="voir le madit">↓ 23 mai 1996 · Respects Et Salutation</a></span></p>
+<p>Cent soixante-douze heures exactement pour la mise au point des énigmes. Et pourquoi « exactement » ? Parce que son traitement de texte a fait le calcul. </p>
+<p>Les énigmes conçues à la fin 1992. En 1992, donc, le traitement de texte de Max comptait le temps. <span class="refs"><a class="ref" id="b-14_04_99_36-1" href="#m-14_04_99_36" title="voir le madit">↓ 14 avril 1999 · Solution</a></span></p>
+<p>Et un chercheur, Meteor, raconte une soirée de 1993. Max sort une disquette de sa poche : « Tiens, il y a les solutions de la chouette sur cette disquette ! Dommage pour vous, elles sont cryptées ! » </p>
+<p>Ce traitement de texte, Max ne le nomme pas. Une étiquette le fait pour lui. </p>
+<p>En 1993, ses solutions sont scellées dans une enveloppe, remise à l&#x27;huissier. En février 2026, la justice saisit cette enveloppe, et Le Monde en cite l&#x27;étiquette : une disquette contenant le texte en format Ami Pro. </p>
+<p>Le traitement de texte de Max, c&#x27;est Ami Pro. Et un Ami Pro qui compte le temps, c&#x27;est une version deux ou une version trois : les seules à le faire. Les seules, aussi, à chiffrer un document : la version un ne sait pas. </p>
+<p>Un document chiffré par Ami Pro, voilà à quoi il ressemble. Nous en avons fait un dans la version deux : une balise qui annonce le chiffrement, et plus rien de lisible. Le fichier de la disquette, lui, s&#x27;ouvre sur le nom de son imprimante et sur « Reco HYUNDAI », en clair. </p>
+<p>Et le mot lui-même manque à la version un. Pour le savoir, nous avons ouvert les trois programmes dans un désassembleur : un outil qui retraduit le code de la machine en instructions lisibles. On lit le programme, on ne le lance pas. </p>
+<p>Dans le programme de la version un, la balise « encrypt » n&#x27;existe pas. Elle est dans ceux de la version deux et de la version trois. </p>
+<p>Max travaillait sous Ami Pro version deux au minimum. La déduction est de nous ; elle tient en trois pièces : une étiquette, un madit, et un témoignage. </p>
+<p>Même logiciel. Pas la même version. </p>
+<p>Une objection, et elle est sérieuse. Ce fichier a-t-il pu être travaillé dans une version récente, puis seulement enregistré, à la fin, dans la version un ? </p>
+<p>Les détours, d&#x27;abord : passer par le texte brut, ou par un format d&#x27;échange. Nous en avons essayé onze. Aucun ne transporte les cicatrices telles qu&#x27;elles sont dans ce fichier. </p>
+<p>Reste le chemin direct : ouvrir le fichier dans la version un, et enregistrer. Nous l&#x27;avons fait. Là, tout passe : l&#x27;en-tête devient court, les cicatrices restent. </p>
+<p>Mais ce voyage laisse des traces. Chaque fois qu&#x27;une version récente enregistre un document, elle y pose ses marques : dans la mise en page, dans les tableaux, dans les styles. Et la version un ne les enlève pas. </p>
+<p>Cette règle, nous l&#x27;avons lue dans le code. Avant d&#x27;écrire le fichier, la version deux et la version trois passent sur chaque cadre : s&#x27;il n&#x27;a pas de numéro, elles lui en donnent un. Dans la version un, nous n&#x27;avons trouvé aucune passe de ce genre — et sur soixante-sept essais, elle n&#x27;a jamais numéroté. </p>
+<p>Le fichier de la disquette n&#x27;en porte aucune. </p>
+<p>Sa feuille de styles le dit à sa façon. C&#x27;est la feuille française de Lotus, en Tms Rmn, et elle garde un réglage que la version deux et la version trois réécrivent à chaque enregistrement. Sur huit styles, il n&#x27;a jamais été réécrit. </p>
+<p>Nous en déduisons que ce document — sa mise en page, ses tableaux, ses styles — n&#x27;a jamais été enregistré par une version récente. </p>
+<p>Et les cicatrices elles-mêmes ? Souvenez-vous de la grappe de la boussole : elle refermait l&#x27;italique, la police — et l&#x27;interligne. Nous avons refait le même geste dans les trois versions. Seule la version un touche à l&#x27;interligne. </p>
+<p>Mieux : les versions récentes effacent ces marques-là. Nous avons ouvert la reconstitution du fichier dans la version deux, et enregistré. Elle portait quarante-trois grappes avec interligne, comme celle de la boussole. Il n&#x27;en reste plus une. </p>
+<p>Si une version récente avait enregistré ce fichier ensuite, elles auraient disparu. Elles sont là. C&#x27;est donc dans la version un que quelqu&#x27;un s&#x27;est arrêté sur la boussole et sur l&#x27;œil du coq. </p>
+<p>Reste une chose que le fichier ne permet pas d&#x27;écarter : que le texte ait d&#x27;abord été écrit ailleurs, puis apporté d&#x27;un bloc dans ce document. Mais tout ce qu&#x27;on y voit du travail — la mise en page, ces deux arrêts, le dernier enregistrement — est de la version un. </p>
+<p>Sixième question : avec quel logiciel ? Réponse : la version un d&#x27;Ami Pro — pas le logiciel qui a compté les cent soixante-douze heures de Max. </p>
+<h3 class="enigme">Synthèse</h3>
+<p>Rassemblons les éléments. Le fichier dont sort la solution Canard n&#x27;est pas une copie des solutions déposées chez l&#x27;huissier. </p>
+<p>C&#x27;est un document né deux mois plus tard, sous le nom « Reco HYUNDAI », et bâti sur les fichiers du cahier des charges. </p>
+<p>Ses consignes au peintre ont été retouchées, ses explications portent des cicatrices par dizaines, et il a été enregistré pour la dernière fois trois jours après le constat de l&#x27;huissier. </p>
+<p>Mis en page et enregistré dans la version un d&#x27;Ami Pro. </p>
+<p>Et la disquette de 2021, elle ? Depuis son arrivée, personne, en dehors de l&#x27;organisateur et de son huissière, ne l&#x27;a examinée : aucune expertise indépendante du support n&#x27;a été publiée. </p>
+<p>Tout ce que vous avez vu se refait chez vous : le logiciel, nos essais, le relevé des cicatrices sont dans le dossier, en lien sous la vidéo. </p>
+<p>Dans cette histoire, trois choses restent à expliquer. Un fichier en clair, alors que Max disait ses solutions cryptées. Des solutions enregistrées après leur dépôt. Une solution tirée d&#x27;un vieux fichier, jamais retouché ailleurs que dans la version un d&#x27;Ami Pro : elle ne vient pas des énigmes telles que Max les a finalisées. </p>
+<p>Ce fichier dit quand il est né, d&#x27;où vient son texte, où on l&#x27;a retouché, et avec quel logiciel. Il ne dit pas qui tenait le clavier, ni pourquoi ce document-là. </p>
+<p>Sur ce pourquoi, nous n&#x27;avons aucune pièce. Nous avons une hypothèse. Elle a été posée dans le dernier épisode de Débunkage, et rien, dans ce que nous avons trouvé depuis, ne l&#x27;écarte : un leurre. Une fausse solution, fabriquée par Max pour protéger la vraie. </p>
+<p>Une hypothèse n&#x27;est pas un fait. Personne n&#x27;a vu Max fabriquer ce fichier, et aucun document ne dit que c&#x27;en est un. Ce qu&#x27;on peut faire, c&#x27;est la mettre à l&#x27;épreuve : la confronter aux trois choses qui restent à expliquer, et voir si elle en rend compte. </p>
+<p>La première : un fichier en clair, alors que Max disait ses solutions cryptées. Un leurre est fait pour être pris, et lu par celui qui le prend. Le chiffrer n&#x27;aurait aucun sens. </p>
+<p>La deuxième : des solutions enregistrées après leur dépôt. Reprenons les dates. Le 15 mai 1993, le livre sort : la chasse commence, et sa solution devient un objet qu&#x27;on peut vouloir voler. Le 19 mai, l&#x27;huissier constate le dépôt des vraies solutions : elles sont à l&#x27;abri. Le 22, trois jours plus tard, ce fichier est enregistré pour la dernière fois. </p>
+<p>Un leurre tardif a sa logique. On ne le fabrique pas pour préparer le jeu, mais pour le protéger : une fois la chasse lancée, et les vraies solutions à l&#x27;abri. Ce n&#x27;est pas un objet à montrer. C&#x27;est un objet à faire prendre. </p>
+<p>La troisième : une solution tirée d&#x27;un vieux fichier, et non des énigmes finalisées. Écrire une fausse solution de toutes pièces, c&#x27;est réécrire onze énigmes, leurs consignes, leurs explications. Partir d&#x27;un vieux fichier, c&#x27;est garder toute la structure, et ne retoucher que ce qu&#x27;il faut — avec le logiciel qui l&#x27;a écrit. </p>
+<p>Elle rend compte des trois. Cela ne la prouve pas. Elle n&#x27;est pas la seule : quelqu&#x27;un d&#x27;autre, avec une vieille version, laisserait les mêmes traces. Et le fichier, à lui seul, ne permet pas de choisir. </p>
+<p>Le reste, c&#x27;est à vous de le peser — en attendant l&#x27;enveloppe de 1993, saisie par la justice. Le jour où elle sera ouverte, on saura si ce fichier était la solution de Max. </p>
+<p>Et pendant ce temps, la véritable contremarque, numérotée 1/8, attend toujours que quelqu&#x27;un trouve l&#x27;incroyable solution de cette chasse. Le mystère du jeu n&#x27;a pas été percé. La chouette attend encore celui ou celle qui la trouvera. </p>
+</section>
+
+<section class="madits">
+  <h2 class="chunk">Les madits cités — texte intégral</h2>
+<article class="madit" id="m-23_05_96_36">
+  <div class="m-head"><span class="m-date">23 mai 1996</span>
+    <span class="m-titre">RESPECTS ET SALUTATION</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Cher Max, combien de temps vous a-t-il été nécessaire pour créer cette affaire qui me prend un temps fou ainsi qu&#x27;aux autres je suppose ? Amitiés Loupgarou</p>
+  <p class="m-r"><span class="lbl">R</span>Environ 400 heures, dont 172 heures exactement pour la mise au point des énigmes (le reste étant consacré au peaufinage et aux recherches). Becker a mis autant de temps pour ses toiles. Amitiés -- Max PS : Je dis &quot;172h exactement&quot; car mon traitement de texte a fait le calcul.</p>
+  <div class="m-back"><a class="back" href="#b-23_05_96_36-1">↩ retour</a></div>
+</article>
+<article class="madit" id="m-14_04_99_36">
+  <div class="m-head"><span class="m-date">14 avril 1999</span>
+    <span class="m-titre">SOLUTION</span></div>
+  <p class="m-q"><span class="lbl">Q</span>Par rapport à l&#x27;enterrement de la chouette combien de temps avant aviez-vous fini de préparer cette chasse glouton</p>
+  <p class="m-r"><span class="lbl">R</span>Les énigmes avaient été conçues à la fin 1992, avant remise à l&#x27;éditeur. Amitiés -- max</p>
+  <div class="m-back"><a class="back" href="#b-14_04_99_36-1">↩ retour</a></div>
+</article>
+</section>
+
+<section class="prose" id="releve">
+  <h2 class="chunk">Le relevé des cicatrices</h2>
+
+<p>Une <b>cicatrice</b>, dans cette face, c'est une suite de balises qui ne met rien en forme : une balise qui ferme,
+une balise qui rouvre, et rien entre les deux (<code>&lt;-"&gt;&lt;+"&gt;</code> pour l'italique). Quand d'autres
+réglages étaient actifs à cet endroit, le logiciel les referme et les rouvre aussi : c'est la <b>grappe</b>
+(<code>&lt;-"&gt;&lt;:S-&gt;&lt;:f&gt;&lt;:S+130&gt;&lt;+"&gt;&lt;:f240,2Times New Roman,0,0,0&gt;</code> : italique,
+interligne, police). Tout ce qui suit se lit sur l'impression du fichier (livre d'octobre 2025, p. 102-149), dont la
+police à chasse fixe montre chaque balise.</p>
+
+<h3>Les onze consignes au peintre</h3>
+<p>Chaque énigme porte une consigne pour l'illustrateur, entre parenthèses (« Illustration : … »). On compare la
+consigne du fichier à celle de la <b>version définitive</b> du cahier des charges (<i>Les Cahiers secrets</i>,
+p. 72-81), et on regarde si une grappe se trouve <b>au milieu d'une phrase</b>, à l'endroit où le texte diffère.
+Les balises de fin de paragraphe sont laissées de côté : il n'y a rien à quoi les comparer.</p>
+<table class="tab">
+<tr><th>Énigme</th><th>Cahier des charges</th><th>Fichier (impression)</th><th>Ce qui a changé</th><th>Cicatrice au milieu de la phrase</th></tr>
+<tr><td>530</td><td>p. 73</td><td>p. 122</td><td>les pattes du coq à hauteur de Bourges → « Son oeil se trouve à hauteur de la ville de Bourges »</td><td><b>oui</b> — grappe longue, entre « Son » et « oeil »</td></tr>
+<tr><td>780</td><td>p. 74</td><td>p. 123</td><td>« une boussole dont la circonférence fait exactement 33 centimètres. » → « une boussole. »</td><td><b>oui</b> — grappe longue, après « boussole. », là où la phrase suivante est remontée</td></tr>
+<tr><td>470</td><td>p. 79</td><td>p. 124</td><td>« quelque chose qui évoque Roncevaux, ou Roland — Durandal fichée dans un rocher ? » → « Durandal fichée dans un rocher brisé. »</td><td><b>oui</b> — juste avant « Durandal »</td></tr>
+<tr><td>580</td><td>p. 81</td><td>p. 127</td><td>« et quelque chose qui évoque un instrument de musique — archer sur les cordes d'un violon ? » → « et un instrument de musique. »</td><td><b>oui</b> — juste après « et »</td></tr>
+<tr><td>560</td><td>p. 80</td><td>p. 136</td><td>la phrase finale « Voir exemple de visuel ci-joint. » retirée</td><td><b>oui</b> — entre « gauche » et le point</td></tr>
+<tr><td>500</td><td>p. 72</td><td>p. 131</td><td>la parenthèse « (le reste de la règle est caché) » retirée</td><td><b>non</b> — aucune trace : première limite</td></tr>
+<tr><td>B</td><td>p. 75</td><td>p. 120</td><td>rien</td><td>non — mais deux paragraphes vides chargés de codes, au-dessus et au-dessous : seconde limite</td></tr>
+<tr><td>600</td><td>p. 55 (premier état)</td><td>p. 128</td><td>rien</td><td>non</td></tr>
+<tr><td>420</td><td>p. 76</td><td></td><td>rien</td><td>non</td></tr>
+<tr><td>650</td><td></td><td></td><td>rien</td><td>non</td></tr>
+<tr><td>520</td><td></td><td></td><td>rien</td><td>non</td></tr>
+</table>
+<p>La consigne de la 600 ne se compare qu'au premier état du cahier des charges : la version définitive publiée ne
+reproduit pas ce feuillet. Pour la 420, la 650 et la 520, la comparaison a été faite à l'image sur la version
+définitive ; nous ne donnons ici que les pages que la vidéo montre.</p>
+<p><b>Le compte.</b> Six consignes ont changé, cinq portent une grappe au point exact du changement ; cinq n'ont pas
+changé, aucune n'en porte. Si l'on posait cinq grappes au hasard sur onze consignes, elles tomberaient toutes sur les
+six qui ont changé 6 fois sur 462, soit <b>une fois sur 77</b> (6 façons de choisir 5 consignes parmi les 6 modifiées,
+462 façons d'en choisir 5 parmi les 11). Le calcul est le nôtre, et le seuil aussi : nous avons décidé de ne retenir
+que les grappes du milieu d'une phrase.</p>
+<p><b>Les deux limites, montrées dans la vidéo.</b> La méthode rate la 500 : une retouche faite lettre par lettre ne
+laisse rien (voir les gestes, ci-dessous). Et elle a l'erreur inverse : la consigne de la B, identique dans le cahier
+des charges et dans le fichier, est entourée de deux paragraphes vides qui portent des codes d'interligne et
+d'italique. Ils sont en bout de ligne, donc hors de notre compte, mais ils sont là.</p>
+
+<h3>Le reste du fichier</h3>
+<p>Le relevé couvre les 417 paragraphes du fichier. Par genre de texte, lignes de gabarit exclues (« dif : »,
+« Explication : ») :</p>
+<table class="tab">
+<tr><th>Genre</th><th>Paragraphes</th><th>Paragraphes qui portent une trace de retouche</th></tr>
+<tr><td>Textes d'énigmes</td><td>75</td><td>1</td></tr>
+<tr><td>Consignes au peintre</td><td>16</td><td>6</td></tr>
+<tr><td>Explications (les solutions)</td><td>200</td><td>43, soit plus d'un sur cinq</td></tr>
+</table>
+<p>Les consignes occupent seize paragraphes pour onze énigmes : cinq tiennent sur deux paragraphes. Le cahier des
+charges ne contient pas les explications : là, il n'y a rien à quoi comparer, et une cicatrice dit seulement que
+quelqu'un s'est arrêté à cet endroit. L'exemple de la vidéo : dans la 420, devant le nombre à quinze décimales, deux
+paires de police l'une derrière l'autre — ce que donne la même commande de police passée deux fois sans rien taper.</p>
+<p><b>Réserves.</b> Ces comptes ont été faits sur la reconstitution relue contre l'impression, pas sur le fichier
+d'origine, que personne n'a publié. Le tri entre « retouche de texte » et « mise en forme » (les bascules
+d'interligne seules ne sont pas comptées) est le nôtre. Les cinq grappes des consignes, elles, ont été lues une à une
+sur l'impression.</p>
+
+</section>
+
+<section class="prose" id="gestes">
+  <h2 class="chunk">Les gestes et leurs fichiers d’essai</h2>
+
+<p>Tous les gestes ont été rejoués dans Ami Pro 1.2B, sur une même phrase mise en italique : la consigne de la 780
+dans sa forme du cahier des charges (« (Illustration : une boussole dont la circonférence fait exactement
+33 centimètres. Le nord est en bas de la page, et l'aiguille pointe donc vers le bas.) »). Fichier de départ :
+<a href="essais/GE_depart.SAM"><code>GE_depart.SAM</code></a>. Un fichier <code>.SAM</code> se lit avec n'importe quel éditeur de texte.</p>
+<table class="tab">
+<tr><th>Geste</th><th>Ce que le fichier enregistré en garde</th><th>Trace</th><th>Fichier</th></tr>
+<tr><td>« exactement » sélectionné, puis Suppr</td><td class="mono">…fait &lt;-"&gt;&lt;+"&gt; 33 centim…</td><td><b>une cicatrice</b></td><td><a href="essais/GE6_selection_effacee.SAM"><code>GE6_selection_effacee.SAM</code></a></td></tr>
+<tr><td>« exactement » sélectionné, puis « PILE » tapé par-dessus</td><td class="mono">…fait PILE&lt;-"&gt;&lt;+"&gt; 33 centim…</td><td><b>une cicatrice</b>, juste après le mot tapé</td><td><a href="essais/GE1_selection_remplacee.SAM"><code>GE1_selection_remplacee.SAM</code></a></td></tr>
+<tr><td>« exactement » effacé lettre par lettre (dix fois Suppr)</td><td class="mono">…fait  33 centim…</td><td>rien</td><td><a href="essais/GE2_mot_lettre_par_lettre.SAM"><code>GE2_mot_lettre_par_lettre.SAM</code></a></td></tr>
+<tr><td>toute la fin de la phrase effacée lettre par lettre (53 fois Suppr)</td><td class="mono">…une boussole. Le nord est…</td><td>rien</td><td><a href="essais/GE4_phrase_lettre_par_lettre.SAM"><code>GE4_phrase_lettre_par_lettre.SAM</code></a></td></tr>
+<tr><td>curseur posé devant « boussole », commande Italique passée, rien de tapé</td><td class="mono">(Illustration : une &lt;-"&gt;&lt;+"&gt;boussole et un pied…</td><td><b>une cicatrice</b></td><td><a href="essais/B06_avant.SAM"><code>B06_avant.SAM</code></a> → <a href="essais/B06_commande_sans_selection.SAM"><code>B06_commande_sans_selection.SAM</code></a></td></tr>
+<tr><td>la phrase coupée en deux paragraphes, puis un Suppr à la fin du premier</td><td class="mono">…centim…tres.&lt;-"&gt;&lt;+"&gt; Le nord est…</td><td><b>une cicatrice</b>, à la jonction</td><td><a href="essais/GE7A_deux_paragraphes.SAM"><code>GE7A_deux_paragraphes.SAM</code></a> → <a href="essais/GE7B_paragraphes_reunis.SAM"><code>GE7B_paragraphes_reunis.SAM</code></a></td></tr>
+<tr><td>un mot qui a sa propre mise en forme, effacé lettre par lettre</td><td class="mono">une&lt;:f&gt; &lt;-"&gt;&lt;+"&gt;&lt;:f240,…&gt; et</td><td><b>une paire vide reste</b></td><td><a href="essais/GE5A_mot_a_ses_attributs.SAM"><code>GE5A_mot_a_ses_attributs.SAM</code></a> → <a href="essais/GE5B_ce_mot_lettre_par_lettre.SAM"><code>GE5B_ce_mot_lettre_par_lettre.SAM</code></a></td></tr>
+</table>
+<p>D'où la phrase de la vidéo : effacer lettre par lettre ne laisse rien <b>dans un passage d'une seule mise en
+forme</b>. Le dernier essai du tableau en est la borne : un mot qui porte ses propres attributs laisse son tronçon
+vide derrière lui.</p>
+<p><b>Le modèle des tronçons est une lecture, la nôtre.</b> « Tout se passe comme si » le logiciel tenait son texte
+en tronçons, un par mise en forme, et posait une balise à chaque changement de tronçon sans jamais recoller deux
+voisins identiques. Cette lecture rend compte de tous nos essais ; nous ne l'avons pas lue dans le programme.</p>
+
+<h3>La prédiction de la 780</h3>
+<p>L'essai 25, celui qui ouvre la question : la consigne en italique (<a href="essais/25a_notice_italique_avant.SAM"><code>25a_notice_italique_avant.SAM</code></a>), la fin
+de la phrase sélectionnée et effacée (<a href="essais/25b_notice_apres_effacement.SAM"><code>25b_notice_apres_effacement.SAM</code></a>). La paire reste au point de la coupe :
+<code>une boussole&lt;-"&gt;&lt;+"&gt;. Le nord est en bas…</code></p>
+<p>Dans le fichier de la disquette, la grappe est <b>après le point</b>, et elle porte l'interligne et la police en
+plus de l'italique. L'essai refait sur la phrase mise en forme comme dans le fichier, en deux paragraphes
+(<a href="essais/A08_avant.SAM"><code>A08_avant.SAM</code></a>) : la fin de la phrase, son point et le saut de ligne sélectionnés, Suppr, un point retapé
+(<a href="essais/A08_grappe_de_la_boussole.SAM"><code>A08_grappe_de_la_boussole.SAM</code></a>). On y lit la grappe de l'impression, balise pour balise, au même endroit.</p>
+<p><b>Ce n'est pas le seul geste qui la donne.</b> Un seul Suppr à la fin de la première ligne produit la même grappe
+(<a href="essais/R08E_un_seul_suppr_en_fin_de_ligne.SAM"><code>R08E_un_seul_suppr_en_fin_de_ligne.SAM</code></a>) ; la phrase effacée lettre par lettre, puis le saut de ligne, aussi
+(<a href="essais/R08D_lettre_par_lettre_puis_saut.SAM"><code>R08D_lettre_par_lettre_puis_saut.SAM</code></a>). Tous ont le même effet : deux lignes n'en font plus qu'une. L'ordre ne compte pas : le point tapé d'abord, puis la fin
+de la phrase et le saut de ligne effacés, donne la même grappe (<a href="essais/S1_point_d_abord_puis_suppr.SAM"><code>S1_point_d_abord_puis_suppr.SAM</code></a>). En revanche,
+effacer la phrase puis, à part, le saut de ligne en laisse <b>deux</b> à la suite (<a href="essais/S3_en_deux_effacements.SAM"><code>S3_en_deux_effacements.SAM</code></a>) :
+le fichier n'en porte qu'une. Nous
+n'écrivons donc ni « le geste », ni que le point du fichier a été retapé. Ce qui est établi : deux paragraphes ont été
+réunis à cet endroit. Ce que nos essais ne reproduisent pas : l'espace qui suit la grappe dans le fichier, et la
+tête du paragraphe.</p>
+
+</section>
+
+<section class="prose" id="version">
+  <h2 class="chunk">Le logiciel — les versions, l’en-tête, le chiffrement</h2>
+
+<h3>Deux formes d'en-tête</h3>
+<p>Le bloc <code>[desc]</code> d'un fichier Ami Pro a deux formes. La courte, huit lignes : la description, les
+mots-clés, le dernier enregistrement, le nombre de sessions, la création. La longue, vingt et une lignes : elle ajoute
+le nombre de pages, de mots, de caractères, et la <b>durée totale d'édition</b>. Le fichier de la disquette a la
+forme courte (impression p. 102).</p>
+<table class="tab">
+<tr><th>Essai</th><th>Logiciel et geste</th><th>En-tête obtenu</th><th>Fichier</th></tr>
+<tr><td>01</td><td>Ami Pro 3.0, « Enregistrer sous »</td><td>long, 21 lignes</td><td><a href="essais/01_A1_ami30_entete_long.SAM"><code>01_A1_ami30_entete_long.SAM</code></a></td></tr>
+<tr><td>04</td><td>Ami Pro 3.0, case « Format Ami Pro 1.2 » cochée</td><td>long quand même</td><td><a href="essais/04_C12_ami30_case_format12.SAM"><code>04_C12_ami30_case_format12.SAM</code></a></td></tr>
+<tr><td>12</td><td>Ami Pro 2.0, même case cochée</td><td>long quand même</td><td><a href="essais/12_E20A_ami20_case_format12.SAM"><code>12_E20A_ami20_case_format12.SAM</code></a></td></tr>
+<tr><td>14</td><td>Ami Pro 1.2B, « Save As »</td><td><b>court, 8 lignes</b></td><td><a href="essais/14_R12_ami12_entete_court.SAM"><code>14_R12_ami12_entete_court.SAM</code></a></td></tr>
+<tr><td>22</td><td>Ami Pro 1.2B, dix-huit sessions, l'horloge réglée (essai de la Face A)</td><td>court ; les trois nombres de la disquette</td><td><a href="essais/22_reco_hyundai_18_sessions.SAM"><code>22_reco_hyundai_18_sessions.SAM</code></a></td></tr>
+</table>
+<p>Nous n'avons obtenu la forme courte d'aucune 2.0 ni d'aucune 3.0, quelle que soit l'option. Le fichier de
+l'essai 22 n'était pas joint au dossier de la Face A, pour ne rien dévoiler de cette question : il porte le même bloc
+<code>[desc]</code> qu'une pièce du dossier. Gardez-lui un nom qui dit ce qu'il est.</p>
+
+<h3>Les versions et leurs dates</h3>
+<table class="tab">
+<tr><th>Version</th><th>Repère de date</th><th>Compteur de temps</th><th>Chiffrement par mot de passe</th><th>Balise <code>[encrypt]</code> dans le programme</th></tr>
+<tr><td>1.2 / 1.2B</td><td>testée dans InfoWorld le 13 août 1990</td><td>non</td><td>non</td><td>absente</td></tr>
+<tr><td>2.0</td><td>1991, mois inconnu</td><td>oui</td><td>oui</td><td>présente</td></tr>
+<tr><td>3.0</td><td>essai publié le 18 septembre 1992</td><td>oui</td><td>oui</td><td>présente</td></tr>
+</table>
+<p>Ce sont des dates d'essais dans la presse, pas des dates de lancement : nous disons « déjà en vente en 1990 »,
+pas davantage. La dernière colonne vient de la lecture des trois programmes dans un désassembleur : la chaîne
+<code>[encrypt]</code> figure une fois dans l'exécutable de la 2.0, une fois dans celui de la 3.0, jamais dans celui
+de la 1.2B. Un seul exemplaire de chaque version a été lu.</p>
+<p><b>Un fichier chiffré par Ami Pro.</b> Un document protégé par mot de passe dans la 2.0 (mot de passe « test ») :
+<a href="essais/K28B_chiffre_par_ami20.SAM"><code>K28B_chiffre_par_ami20.SAM</code></a>. Il s'ouvre sur la section <code>[encrypt]</code>, et plus rien n'y est lisible.
+Le fichier de la disquette, lui, s'ouvre sur <code>[ver]</code>, le nom de son imprimante et « Reco HYUNDAI », en
+clair.</p>
+<p><b>Le décor : deux noms de police.</b> Les douze styles du fichier sont ceux de la feuille de styles française de
+Lotus, en « Tms Rmn » — onze l'écrivent ainsi, le douzième porte « Tma Rmn » dans la reconstitution, faute de saisie.
+Le texte courant, lui, est posé en « Times New Roman » : sur les 672 balises de police de la reconstitution, 519
+nomment Times New Roman (dont 513 en 12 points), 10 nomment Tms Rmn, 143 reviennent à la police du style. La voix dit
+« cinq cents » : c'est un arrondi. Une seule machine passée à Windows 3.1 avec son Ami Pro d'avant suffit à
+l'expliquer : ce n'est pas un argument pour deux machines.</p>
+<p><b>Ce que la boîte d'information affiche.</b> Mblond a ouvert sa reconstitution dans la version 2.0 : durée totale
+d'édition, 0 (sa notice, p. 8). Un fichier à en-tête court n'a pas de ligne pour ce compteur.</p>
+
+<h3>Max, lui, comptait : la déduction et ses trois pièces</h3>
+<p>« Max travaillait sous Ami Pro version deux au minimum » est <b>notre déduction</b>. Elle tient en trois pièces :
+le madit du 23 mai 1996 (son traitement de texte « a fait le calcul » des 172 heures), le témoignage de Meteor (une
+disquette de solutions « cryptées », en 1993), et l'étiquette de l'enveloppe de 1993 citée par <i>Le Monde</i>
+(« format AMI Pro »). Le madit ne nomme aucun logiciel ; l'étiquette ne nomme aucune version, et nous ne l'avons pas
+vue ; le témoignage ne dit pas avec quoi la disquette était chiffrée. C'est le maillon que l'ouverture de l'enveloppe
+peut casser, et la vidéo le dit.</p>
+
+</section>
+
+<section class="prose" id="objection">
+  <h2 class="chunk">L’objection — travaillé dans une version récente, enregistré dans la version un ?</h2>
+
+<p>L'objection : le fichier a-t-il pu être travaillé dans une version récente, puis seulement enregistré, à la fin,
+dans la version un ? Les essais portent sur 111 fichiers, dans trois logiciels : Ami Pro 1.2B anglais, 2.0 danois,
+3.0 français.</p>
+
+<h3>Onze détours</h3>
+<p>Le texte brut, et dix formats d'échange que la 1.2B sait lire : DCA/RFT, DCA/FFT, MultiMate, RTF, Samna Word,
+Windows Write, Word pour Windows 1.x, WordPerfect 4.2, WordPerfect 5.x, Word pour DOS. Le texte brut ne transporte
+aucune balise. Huit formats ne transportent aucune cicatrice de milieu de phrase. WordPerfect 5.x et Word pour DOS en
+transportent deux sur quatre, sous une autre forme, avec des marques de filtre que le fichier de la disquette ne porte
+pas. Word pour Windows 2.0 et WordStar ne s'ouvrent pas.</p>
+
+<h3>Le chemin direct</h3>
+<p>Un document à quatre cicatrices, né dans la 3.0, enregistré par la 2.0, puis ouvert et enregistré par la 1.2B :
+<a href="essais/T1_ami30_ami20_puis_ami12.SAM"><code>T1_ami30_ami20_puis_ami12.SAM</code></a>. L'en-tête est court, les cicatrices sont intactes. Ce chemin-là passe.</p>
+
+<h3>Les marques d'une version récente</h3>
+<p>Un même document né en 1.2B (<a href="essais/A12b_reste_en_ami12.SAM"><code>A12b_reste_en_ami12.SAM</code></a>), passé par la 3.0 et la 2.0, puis revenu en 1.2B
+(<a href="essais/C3020_passe_par_ami30_et_ami20.SAM"><code>C3020_passe_par_ami30_et_ami20.SAM</code></a>). Avant le texte, le fichier garde quatre marques du voyage :</p>
+<table class="tab">
+<tr><th>Où</th><th>Resté en 1.2B</th><th>Passé par une 2.0 ou une 3.0</th><th>Fichier de la disquette</th></tr>
+<tr><td>Haut et bas de page : 13<sup>e</sup> champ des deux blocs <code>[lyfrm]</code></td><td><code>0</code>, <code>0</code></td><td>numérotés (<code>3</code>, <code>4</code>, ou <code>1</code>, <code>2</code>)</td><td><code>0</code>, <code>0</code></td></tr>
+<tr><td>Styles : 6<sup>e</sup> champ de <code>[spec]</code></td><td><code>0</code>, sauf puces et liste numérotée</td><td><code>1</code> partout</td><td><code>0</code> sur huit styles ; <code>1</code> sur Puce 1, Puce 2, N° liste, Note bas page</td></tr>
+<tr><td>Tableaux : gouttière, en tête de <code>[tbl]</code></td><td><code>0</code></td><td><code>86</code></td><td><code>0</code></td></tr>
+<tr><td>Styles ajoutés d'office</td><td>aucun</td><td>ceux de la version traversée</td><td>les douze styles français, aucun autre</td></tr>
+</table>
+<p>Sur les 111 fichiers : les 44 qui sont passés par une 2.0 ou une 3.0 portent tous des blocs <code>[lyfrm]</code>
+numérotés ; les 67 restés en 1.2B portent <code>0</code>, <code>0</code>. Aucune exception. La vidéo montre trois de
+ces marques ; la quatrième dépend de la langue des logiciels, et nous n'avons pas pu l'essayer entre deux versions
+françaises.</p>
+<p><b>La règle lue dans le code.</b> Dans les programmes de la 2.0 et de la 3.0, la sauvegarde appelle, avant
+d'écrire, une passe qui donne à chaque cadre sans numéro le numéro suivant. Dans la 1.2B, le numéro est mis à zéro à
+la création du cadre, et nous n'avons trouvé aucune passe qui le change. La recherche dans le programme de la 1.2B
+n'est pas exhaustive : c'est pourquoi la voix dit « nous n'avons trouvé aucune », et s'appuie sur les soixante-sept
+essais.</p>
+<p><b>Les cicatrices elles-mêmes.</b> Quatorze gestes rejoués à l'identique dans les trois versions. Dès qu'un
+interligne est posé en code, la 1.2B le ferme et le rouvre dans ses cicatrices
+(<code>&lt;-"&gt;&lt;:S-&gt;&lt;:f&gt;&lt;:S+130&gt;&lt;+"&gt;…</code>) ; la 2.0 et la 3.0 écrivent la forme
+courte, sans interligne. Et elles effacent la forme longue : la reconstitution ouverte dans la 2.0, un caractère
+tapé à la fin, enregistrée, passe de 43 fermetures d'interligne à zéro (même résultat dans la 3.0). Sur les 149
+suites à paire vide de la reconstitution, 41 ont une forme que seule la 1.2B écrit, dont la grappe de la 780 ; 59
+sont identiques dans les trois versions ; 49 n'ont pas été rejouées telles quelles. Nous ne joignons pas ces deux
+fichiers : ils contiennent le texte entier de la reconstitution.</p>
+
+<h3>Ce que cela établit, et ce que cela n'établit pas</h3>
+<p><b>Établi :</b> le dernier enregistrement est d'une version un ; la mise en page, les styles et les tableaux du
+fichier n'ont pas été enregistrés par une version récente (déduction, la nôtre) ; les cicatrices à interligne, dont
+celles de la boussole et de l'œil du coq, ont été faites dans une version un, et aucune version récente n'a
+enregistré le fichier après elles.</p>
+<p><b>Non exclu :</b> que le texte courant ait d'abord été écrit ailleurs, puis apporté d'un bloc dans ce document
+(insertion d'un fichier dans un document neuf de la version un). La vidéo le dit.</p>
+<p><b>Limites des essais :</b> tout est fait sous émulation, sans matériel d'époque. Notre version un est anglaise,
+notre version deux danoise : nous n'avons trouvé ni 1.x ni 2.0 française. Un seul exemplaire de chaque version a été
+essayé. Les valeurs données pour le fichier de la disquette sont lues sur la reconstitution, relue contre
+l'impression.</p>
+
+</section>
+
+<section class="prose" id="enveloppe">
+  <h2 class="chunk">L’épreuve — l’enveloppe de 1993</h2>
+
+<p>L'enveloppe scellée de 1993 a été saisie par la justice en février 2026. Son étiquette, citée par <i>Le Monde</i>,
+annonce « une disquette contenant le texte en format AMI Pro et en format ASCII étendu ». La disquette de 2021 ne
+porte qu'un fichier de texte, au seul format Ami Pro : ce sont deux disquettes distinctes. Le jour où l'enveloppe sera
+ouverte, voici ce qui départagera :</p>
+<table class="tab">
+<tr><th>Ce qu'on y lirait</th><th>Ce que cela dirait</th></tr>
+<tr><td>Un en-tête long, avec un compteur de temps</td><td>Max travaillait sur une version à jour : le fichier de 2021 ne sort pas de cette version-là</td></tr>
+<tr><td>Un en-tête court</td><td>Max avait aussi la version un : la différence de version ne prouve plus rien</td></tr>
+</table>
+<p>Des six réponses de la vidéo, quatre tiennent quelle que soit l'issue. La première, celle des dates, tient si
+l'horloge de l'ordinateur disait vrai. La sixième, pour ce qu'elle dit de Max, attend l'enveloppe. Et la disquette de
+2021 elle-même n'a fait l'objet d'aucune expertise indépendante publiée.</p>
+
+</section>
+
+<section class="prose" id="refaire">
+  <h2 class="chunk">Refaire les essais chez soi</h2>
+
+<p>L'installation est décrite pas à pas dans le dossier de la Face A, section
+<a href="dossier_ep07a.html#refaire">« Refaire l'essai chez soi »</a> : les paquets, le téléchargement d'Ami Pro 1.2B avec
+son empreinte, l'installation sans l'installateur, le lancement, les outils joints. Elle vaut telle quelle pour cette
+face ; il n'y a pas d'horloge à régler.</p>
+<p><b>L'essai le plus court, à la main.</b> Dans Ami Pro 1.2B : tapez une phrase, sélectionnez-la toute, <i>Text /
+Italic</i> ; <i>File / Save As</i>, un nom. Sélectionnez quelques mots au milieu, touche Suppr ; <i>File / Save As</i>,
+un autre nom. Ouvrez les deux fichiers dans un éditeur de texte : dans le second, à l'endroit de la coupe, la paire
+<code>&lt;-"&gt;&lt;+"&gt;</code>. Recommencez en effaçant les mêmes mots lettre par lettre : rien.</p>
+<p><b>Les versions deux et trois</b> se téléchargent sur Internet Archive (liens dans les sources) et s'installent de
+la même façon. Ce sont des logiciels abandonnés, sous droits de leur éditeur : on les télécharge pour l'étude, on ne
+les redistribue pas.</p>
+
+</section>
+
+<section class="prose" id="relecture">
+  <h2 class="chunk">La relecture page par page</h2>
+
+<p>Ce que nous lisons du fichier, c'est <b>l'impression</b> publiée dans le livre d'octobre 2025 (p. 102-149), et, pour
+chercher vite, la <b>reconstitution</b> qu'en a faite Mblond (lecture optique, puis correction à la main — sa notice le
+dit elle-même : blancs et tabulations « invisibles sur le papier », « il reste sans doute de petites erreurs »).
+Nous avons relu cette reconstitution page par page contre l'impression, à 400 ou 600 points par pouce, en zoomant sur
+chaque point douteux.</p>
+<p>Les écarts relevés sont de trois sortes : des <b>points d'exclamation</b> là où l'impression a un point (une quinzaine,
+toujours en fin de phrase explicative) ; des <b>deux-points et des guillemets perdus</b>, surtout dans la liste de la
+charade de la 470 ; des <b>confusions de lecture optique</b> (« l » pour « 1 », une balise mal orthographiée, un
+espace double ramené à un simple). Ils ont tous été corrigés dans notre copie de travail. Aucun ne touche un passage
+cité dans la vidéo : tout ce qui est montré à l'écran a été lu sur l'impression, jamais sur la reconstitution, et les
+espaces ne se comptent que sur l'impression, dont la police à chasse fixe les rend visibles.</p>
+<p>Le tampon de l'étude, apposé sur chaque page, masque la fin d'une ligne à cinq endroits (p. 119, 123, 132, une page
+des explications finales, et la dernière ligne p. 144) : ces fragments ne sont pas vérifiables, et aucun passage cité dans
+la vidéo n'en dépend.</p>
+
+<p><b>Un écart de plus, relevé pour cette face.</b> Page 120, la ligne vide qui précède la consigne de la B se lit sur
+l'impression <code>&lt;+B&gt;&lt;:S+130&gt;&lt;-"&gt;&lt;:S-&gt;&lt;:S+130&gt;&lt;:S-&gt;&lt;:S+130&gt;…</code> ;
+la reconstitution y porte <code>&lt;:S&gt;</code> au lieu du premier <code>&lt;:S-&gt;</code>. C'est la seule
+occurrence de cette forme dans le fichier, et aucune version du logiciel ne l'écrit : une faute de saisie. La vidéo
+montre la ligne telle que l'impression la donne. En cas d'écart, l'impression fait foi, et nous ne modifions pas le
+fichier de Mblond.</p>
+
+</section>
+
+<section class="sources" id="sources">
+  <h2 class="chunk">Sources</h2>
+<h3 class="src-cat">Documents d&#x27;huissier (1993 → 2022)</h3>
+<ul class="src-list">
+  <li><a href="https://files.michelbecker.com/1/3.pdf" target="_blank" rel="noopener">Constat de Me Frédéric Llouquet, 19 mai 1993</a> — <span class="det">dépôt « d&#x27;une enveloppe scellée contenant les solutions de l&#x27;énigme et une disquette en reproduisant le texte » — PDF publié par l&#x27;organisateur · consulté le 14 octobre 2026</span></li>
+  <li><a href="https://files.michelbecker.com/1/14.pdf" target="_blank" rel="noopener">Procès-verbal de constat de Me Blanche Neige-Schmitt, 1er et 13 avril 2021</a> — <span class="det">« un fichier sous format &quot;.sam&quot; intitulé &quot;SOLUTION&quot; daté du 22-05-1993. Je l&#x27;ouvre, il s&#x27;agit d&#x27;un texte crypté » ; « Je restitue l&#x27;enveloppe ainsi que la disquette à Monsieur Michel BECKER » — PDF publié par l&#x27;organisateur · consulté le 14 octobre 2026</span></li>
+  <li><a href="https://files.michelbecker.com/1/15.pdf" target="_blank" rel="noopener">Procès-verbal de Me Neige-Schmitt, 22 et 25 octobre 2021</a> — <span class="det">la disquette revient à l&#x27;étude avec « une impression du texte qu&#x27;elle contient, soit 43 pages » — PDF publié par l&#x27;organisateur · consulté le 14 octobre 2026</span></li>
+  <li><a href="https://files.michelbecker.com/1/18.pdf" target="_blank" rel="noopener">Attestation de Me Neige-Schmitt, 11 avril 2022</a> — <span class="det">« imprimé par mes soins en deux exemplaires lors de mes constatations du 13 avril 2021 » — PDF publié par l&#x27;organisateur · consulté le 14 octobre 2026</span></li>
+</ul>
+<h3 class="src-cat">Publications de l&#x27;organisateur</h3>
+<ul class="src-list">
+  <li>Sur la trace de la Chouette d&#x27;Or — le livre d&#x27;octobre 2025 (Les Éditions de la Chouette d&#x27;Or) — <span class="det">p. 102 à 149 : l&#x27;impression du fichier SOLUTION.SAM, balisage compris. C&#x27;est cette impression, en police à chasse fixe, qui fait foi pour tout ce que la vidéo lit dans le fichier (p. 102, 120, 122, 123, 124, 127, 131, 136 citées à l&#x27;écran dans cette face)</span></li>
+  <li>Sur la trace de la Chouette d&#x27;Or — Les Cahiers secrets (Michel Becker, 2019) — <span class="det">le « cahier des charges » : premier état p. 52-62, version intermédiaire p. 68-69, version définitive p. 72-81 ; p. 72 (500), 73 (530), 74 (780), 75 (B), 79 (470), 80 (560), 81 (580) citées à l&#x27;écran dans cette face. Ces feuillets ne sont connus que par ce livre, qui les attribue à Max Valentin : aucune confirmation indépendante</span></li>
+</ul>
+<h3 class="src-cat">L&#x27;œil du coq et les solutions « périmées » (2022)</h3>
+<ul class="src-list">
+  <li><a href="https://www.youtube.com/watch?v=EApVTwBp4Qs&amp;t=5894s" target="_blank" rel="noopener">Vocal Discord du 17 avril 2022, chaîne YouTube « Les Éditions de la Chouette d&#x27;Or » — l&#x27;œil du coq, 01:38:14</a> — <span class="det">le peintre : « Moi, je lui ai juste dit que les pieds du coq pour marquer la ville de Bourges, c&#x27;était pas très précis. Donc j&#x27;ai préféré l&#x27;œil […] » — extrait joué dans la vidéo, sur un enregistrement mis en ligne par la chaîne de l&#x27;organisateur · consulté le 15 octobre 2026</span></li>
+  <li><a href="https://www.youtube.com/watch?v=EApVTwBp4Qs&amp;t=5928s" target="_blank" rel="noopener">Même vocal — la date des toiles, 01:38:48</a> — <span class="det">« Oh, elles ont été finies… février-mars 93, quelque chose comme ça. » — extrait joué dans la vidéo, la question du participant coupée · consulté le 15 octobre 2026</span></li>
+  <li><a href="https://sentierschouettedor.wordpress.com/wp-content/uploads/2022/06/communique_lco-30-04-2022-copie-1.pdf" target="_blank" rel="noopener">Communiqué de l&#x27;organisateur, 30 avril 2022 (PDF)</a> — <span class="det">p. 2 : l&#x27;enveloppe scellée initiale des solutions, du 26 janvier 1993, « […] s&#x27;en trouve de ce fait périmée, dépassée, et ne constitue plus qu&#x27;une version intermédiaire, non aboutie, non finalisée […] » ; p. 1-2, la liste des changements, dont « […] la modification du visuel de l&#x27;énigme 530 remplaçant les pattes […] par l&#x27;œil d&#x27;un coq, pour désigner la ville de Bourges […] ». Publié à l&#x27;origine sur la boutique en ligne de l&#x27;organisateur (cdn.shopify.com, adresse qui ne répond plus) ; copie mise en ligne en juin 2022 sur un blog de chercheurs, à l&#x27;adresse ci-contre · consulté le 15 octobre 2026</span></li>
+</ul>
+<h3 class="src-cat">Presse</h3>
+<ul class="src-list">
+  <li>Le Monde, série d&#x27;été « Les derniers mystères de la Chouette d&#x27;or », Morgane Tual — épisode 6/6, « L&#x27;épilogue de La Chouette d&#x27;or », 17 juillet 2026 — <span class="det">saisie judiciaire, en février 2026, de l&#x27;enveloppe scellée de 1993, et son étiquette : « Contenu : les solutions de la course au trésor publiée par les éditions Manya (copie sèche + une disquette contenant le texte en format AMI Pro et en format ASCII étendu). » Nous n&#x27;avons pas vu cette étiquette : nous citons l&#x27;article</span></li>
+  <li><a href="https://jvlone.com/info_rev.html" target="_blank" rel="noopener">InfoWorld, 13 août 1990, p. 55-78 — « Making a splash », comparatif de six traitements de texte graphiques, dont Ami Pro 1.2 (index des essais d&#x27;InfoWorld)</a> — <span class="det">repère de date de la version 1.2 : déjà testée à l&#x27;été 1990 · consulté le 14 octobre 2026</span></li>
+  <li><a href="https://www.islandnet.com/~kpolsson/comphist/comp1991.htm" target="_blank" rel="noopener">Chronologie « Personal Computers 1991 », Ken Polsson</a> — <span class="det">Ami Pro 2.0 : 1991, sans mois · consulté le 14 octobre 2026</span></li>
+  <li><a href="https://www.zisman.ca/Articles/1991-92/OCP_AmiPro.html" target="_blank" rel="noopener">Alan Zisman, « Ami Pro 3.0 », Our Computer Player, 18 septembre 1992</a> — <span class="det">repère de date de la version 3.0 · consulté le 14 octobre 2026</span></li>
+</ul>
+<h3 class="src-cat">Témoignage de Meteor et compte rendu de 2012</h3>
+<ul class="src-list">
+  <li><a href="https://lachouette.net/" target="_blank" rel="noopener">Meteor, forum de l&#x27;A2CO (lachouette.net), message du 18 octobre 2025</a> — <span class="det">« Ce dernier a sorti une disquette d&#x27;une poche de sa veste pendant la soirée et nous a dit en rigolant : &quot;Tiens, il y a les solutions de la chouette sur cette disquette ! Dommage pour vous, elles sont cryptées !&quot; » — la soirée est de 1993. Du même auteur, sur le même forum, le 20 juillet 2023 : « le fichier des solutions était crypté et inviolable »</span></li>
+  <li>Compte rendu public de l&#x27;A2CO, diffusé le 15 mai 2012 (rencontre du 24 avril 2012) — <span class="det">« une disquette 3 pouces ½ cryptée » — appui du témoignage, non montré à l&#x27;écran</span></li>
+</ul>
+<h3 class="src-cat">Reconstitution du fichier et notice de Mblond</h3>
+<ul class="src-list">
+  <li><a href="https://lachouette.net/index.php?a=contrib&amp;cref=Mblond" target="_blank" rel="noopener">Mblond — reconstitution du fichier SOLUTION.SAM, forum de l&#x27;A2CO (lachouette.net), 20 octobre 2025</a> — <span class="det">lecture optique de l&#x27;impression publiée dans le livre d&#x27;octobre 2025, puis correction à la main ; accessible après inscription gratuite au forum. C&#x27;est une RECONSTITUTION, pas le fichier d&#x27;origine : l&#x27;impression seule fait foi · consulté le 14 octobre 2026</span></li>
+  <li>Mblond — « Le fichier .SAM », notice de 8 pages, forum de l&#x27;A2CO, 20 octobre 2025 — <span class="det">p. 8 : la boîte d&#x27;information d&#x27;Ami Pro 2.0 ouverte sur sa reconstitution — durée totale d&#x27;édition : 0 ; accessible après inscription gratuite au forum</span></li>
+</ul>
+<h3 class="src-cat">Les logiciels</h3>
+<ul class="src-list">
+  <li><a href="https://archive.org/details/lotus-ami-pro-1.2b" target="_blank" rel="noopener">Lotus Ami Pro 1.2B, anglais (Internet Archive)</a> — <span class="det">la « version un » de nos essais · consulté le 14 octobre 2026</span></li>
+  <li><a href="https://archive.org/details/LotusAmiProCollection" target="_blank" rel="noopener">Lotus Ami Pro 2.0, danois (Internet Archive, collection Lotus Ami Pro)</a> — <span class="det">la « version deux » de nos essais : nous n&#x27;avons trouvé aucune 2.0 française · consulté le 14 octobre 2026</span></li>
+  <li><a href="https://archive.org/details/lotus-amipro3fra" target="_blank" rel="noopener">Lotus Ami Pro 3.0, français (Internet Archive)</a> — <span class="det">la « version trois » de nos essais · consulté le 14 octobre 2026</span></li>
+  <li><a href="https://ghidra-sre.org/" target="_blank" rel="noopener">Ghidra 12.1 (National Security Agency, logiciel libre)</a> — <span class="det">désassembleur avec lequel les trois programmes AMIPRO.EXE ont été lus, sans être exécutés</span></li>
+  <li>Ariya Hidayat, « Lotus AmiPro File Format », 16 mars 2002 (documentation du filtre d&#x27;import de KWord) — <span class="det">description publique du format .SAM ; sa table des balises d&#x27;attributs et d&#x27;alignement est confirmée par nos essais</span></li>
+</ul>
+<h3 class="src-cat">Madits</h3>
+<ul class="src-list">
+  <li><a href="https://lachouette.net/" target="_blank" rel="noopener">Serveur Minitel Maxval (1995-2001), archive « madits » sur lachouette.net</a> — <span class="det">les madits cités sont reproduits ci-dessus en version normalisée ; la date et le titre font foi · consulté le 14 octobre 2026</span></li>
+</ul>
+</section>
+
+<footer>
+  Madits : serveur Minitel Maxval (1995-2001), archive « madits » (« Max a dit ») sur
+  <a href="https://lachouette.net/">lachouette.net</a> — la <b>date et le titre</b> font foi. Les procès-verbaux
+  d’huissier sont cités pour leurs <b>constatations matérielles</b> ; les déductions qui en sont tirées sont les nôtres
+  et signalées comme telles. La vidéo ne rend aucun verdict sur la main qui a tenu le clavier : elle dit où le fichier
+  a été retouché, avec quel logiciel, et ce qui peut encore mettre ces réponses à l’épreuve. Liens consultés le 14 octobre 2026.
+</footer>
+</div>
+<script>
+(function(){
+  var saved = null;
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if (!a) return;
+    if (a.classList.contains('ref')) {
+      saved = window.scrollY;
+    } else if (a.classList.contains('back')) {
+      if (saved !== null) {
+        e.preventDefault();
+        window.scrollTo({ top: saved, behavior: 'smooth' });
+      }
+    }
+  });
+})();
+</script>
+</body>
+</html>

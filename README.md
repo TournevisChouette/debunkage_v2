@@ -39,18 +39,18 @@ des énigmes, a dit pendant six ans aux chercheurs. Série terminée.
 ## La disquette des solutions — « Le fichier »
 
 Le fichier SOLUTION.SAM, d'où sort la solution publiée en 2025 : ce qu'il est, quand il a été
-enregistré, d'où vient son texte. En deux faces.
+enregistré, d'où vient son texte, où il a été retouché et avec quel logiciel. En deux faces.
 
 | Titre | Contenu | Vidéo | Dossier |
 |---|---|---|---|
 | Le fichier — Face A | un document Ami Pro · ses dates · sa description · d'où vient son texte | [▶️ YouTube](https://youtu.be/EsxaPfM6Hao) | [`dossier_ep07a.html`](https://tournevischouette.github.io/debunkage_v2/dossier_ep07a.html) |
-| Le fichier — Face B | où le fichier a été retouché, et avec quel logiciel | à paraître | à paraître |
+| Le fichier — Face B | où le fichier a été retouché, et avec quel logiciel | [▶️ YouTube](https://youtu.be/B7AASdakV2M) | [`dossier_ep07b.html`](https://tournevischouette.github.io/debunkage_v2/dossier_ep07b.html) |
 
-Le dossier de la Face A est livré avec ses pièces, pour que les essais puissent être refaits :
+Les dossiers des deux faces sont livrés avec leurs pièces, pour que les essais puissent être refaits :
 
 - [`essais/`](essais/) — les fichiers `.SAM` produits par nos essais dans le logiciel d'époque
-  (Lotus Ami Pro 1.2B). Ils sont livrés à l'octet près et se lisent avec n'importe quel
-  éditeur de texte.
+  (Lotus Ami Pro 1.2B, 2.0 et 3.0). Ils sont livrés à l'octet près et se lisent avec n'importe
+  quel éditeur de texte.
 - [`outils/`](outils/) — de quoi installer le logiciel sous Linux, régler l'horloge qu'il
   voit et refaire l'essai des dates ; commencer par [`LISEZMOI.txt`](outils/LISEZMOI.txt).
   Le tout en une archive : [`outils_ami_pro.zip`](outils_ami_pro.zip). Le logiciel lui-même
